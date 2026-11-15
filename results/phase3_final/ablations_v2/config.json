@@ -1,0 +1,53 @@
+{
+  "configs": [
+    "full",
+    "no_gate",
+    "mean_gate",
+    "no_fallback",
+    "b4_only_policy",
+    "physics_twin"
+  ],
+  "gate": {
+    "k": 1.0,
+    "utilisation_limit": 1.0,
+    "max_relative_std": null,
+    "min_capacity": 1e-12
+  },
+  "policy": {
+    "checkpoint_id": "improved_stable",
+    "default_checkpoint": "C:\\Users\\DELL\\Documents\\Network_digital_twin\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\recommended_stable.pt",
+    "checkpoints": {
+      "improved_stable": "models/policy/improved/recommended_stable.pt",
+      "improved_best": "models/policy/improved/best_checkpoint.pt",
+      "general_3epoch": "models/policy/general_grl.pt"
+    },
+    "deterministic": true
+  },
+  "frozen_p1": "baseline_p1_reproduction\\BASELINE_FREEZE\\models\\grl_te_b4_freeze_seed100.pt",
+  "twins": {
+    "original": {
+      "path": "C:\\Users\\DELL\\Documents\\Network_digital_twin\\CNET phase 3\\phase3 implementation\\results\\twin\\models\\ensemble.pt",
+      "apply_conformal": false
+    },
+    "improved": {
+      "path": "C:\\Users\\DELL\\Documents\\Network_digital_twin\\CNET phase 3\\phase3 implementation\\results\\digital_twin\\improvements\\models\\ensemble_physics_anchored.pt",
+      "apply_conformal": false
+    },
+    "improved_calibrated": {
+      "path": "C:\\Users\\DELL\\Documents\\Network_digital_twin\\CNET phase 3\\phase3 implementation\\results\\digital_twin\\improvements\\models\\ensemble_physics_anchored_conformal.pt",
+      "apply_conformal": true
+    }
+  },
+  "no_fallback_initial_routing": "shortest path",
+  "lp_solver": "All LPs use SciPy HiGHS (scipy.optimize.linprog, method='highs'). No Gurobi licence was available, so Teal/FIGRET-style Gurobi LPs are replaced by HiGHS.",
+  "toy_tm_note": "UsCarrier and Kdl traffic matrices are synthetic all-ones toy templates; every index is an identical copy, so additional TM indices or seeds add no traffic diversity on these topologies.",
+  "environment": {
+    "python": "3.12.1",
+    "numpy": "2.5.3",
+    "scipy": "1.16.0",
+    "torch": "2.11.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_sha": "fd0a9b89c6f8144d2d021f9c79551e7cc6f1636a",
+    "time_utc": "2026-11-15T11:07:46Z"
+  }
+}

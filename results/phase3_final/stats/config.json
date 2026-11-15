@@ -1,0 +1,17 @@
+{
+  "grid_rows": 1744,
+  "ablation_rows": 1744,
+  "environment": {
+    "python": "3.12.1",
+    "numpy": "2.5.3",
+    "scipy": "1.16.0",
+    "torch": "2.11.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_sha": "781ce7270b90b07ba9a02c82f716e1ba338b1f62",
+    "time_utc": "2026-11-15T11:31:57Z"
+  },
+  "notes": [
+    "All LPs use SciPy HiGHS (scipy.optimize.linprog, method='highs'). No Gurobi licence was available, so Teal/FIGRET-style Gurobi LPs are replaced by HiGHS.",
+    "UsCarrier and Kdl traffic matrices are synthetic all-ones toy templates; every index is an identical copy, so additional TM indices or seeds add no traffic diversity on these topologies."
+  ]
+}

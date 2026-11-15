@@ -1,0 +1,23 @@
+{
+  "checkpoint": "models/policy/improved/recommended_stable.pt",
+  "val": {
+    "S": 1.1700203856658935,
+    "ratio_by_topology": {
+      "B4": 0.8853819420422704,
+      "UsCarrier": 1.6096205333913822,
+      "Cogentco": 1.0150586815640277
+    },
+    "mlu_by_topology": {
+      "B4": 0.8132900483906269,
+      "UsCarrier": 3.0674996078014374,
+      "Cogentco": 1.2149906605482101
+    },
+    "ratio_by_target": {
+      "0.5": 1.0274996423028815,
+      "0.7": 1.0275136067850765,
+      "0.9": 1.0277853663007437,
+      "1.1": 1.0280060400276259
+    }
+  },
+  "same_val_set_as_v2": true
+}

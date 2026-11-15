@@ -1,0 +1,68 @@
+{
+  "targets": [
+    0.5,
+    0.7,
+    0.9,
+    1.1
+  ],
+  "fixed_scales": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "lp_topologies": [
+    "B4",
+    "GEANT",
+    "UsCarrier",
+    "Cogentco"
+  ],
+  "plan": [
+    [
+      "B4",
+      "train"
+    ],
+    [
+      "B4",
+      "val"
+    ],
+    [
+      "UsCarrier",
+      "train"
+    ],
+    [
+      "UsCarrier",
+      "val"
+    ],
+    [
+      "Cogentco",
+      "train"
+    ],
+    [
+      "Cogentco",
+      "val"
+    ],
+    [
+      "GEANT",
+      "test"
+    ],
+    [
+      "Kdl",
+      "test"
+    ]
+  ],
+  "geant_subsample_seed": 2026,
+  "e3_geant_seed": 2027,
+  "feasibility_tolerance": 1e-09,
+  "lp_solver": "All LPs use SciPy HiGHS (scipy.optimize.linprog, method='highs'). No Gurobi licence was available, so Teal/FIGRET-style Gurobi LPs are replaced by HiGHS.",
+  "toy_tm_note": "UsCarrier and Kdl traffic matrices are synthetic all-ones toy templates; every index is an identical copy, so additional TM indices or seeds add no traffic diversity on these topologies.",
+  "environment": {
+    "python": "3.12.1",
+    "numpy": "2.5.3",
+    "scipy": "1.16.0",
+    "torch": "2.11.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_sha": "812f7d06f85e3f2afa9eabe567111d697d9b6c80",
+    "time_utc": "2026-11-15T09:38:51Z"
+  }
+}

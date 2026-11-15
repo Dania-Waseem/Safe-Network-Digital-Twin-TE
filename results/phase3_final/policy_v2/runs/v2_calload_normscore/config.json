@@ -1,0 +1,58 @@
+{
+  "actor_lr": 5e-05,
+  "batch_size": 1,
+  "max_epochs": 24,
+  "patience": 6,
+  "grad_clip": 1.0,
+  "seed": 2026,
+  "targets_per_tm_per_epoch": 2,
+  "train_plan": [
+    [
+      "B4",
+      null
+    ],
+    [
+      "UsCarrier",
+      4
+    ],
+    [
+      "Cogentco",
+      4
+    ]
+  ],
+  "val_plan": [
+    [
+      "B4",
+      null
+    ],
+    [
+      "UsCarrier",
+      2
+    ],
+    [
+      "Cogentco",
+      2
+    ]
+  ],
+  "targets": [
+    0.5,
+    0.7,
+    0.9,
+    1.1
+  ],
+  "changes_vs_recommended_stable": [
+    "calibrated-load training TMs",
+    "per-topology normalised val score S"
+  ],
+  "reference_run": "results/policy/improved/runs/lr5e5_bs1_e24 (recommended_stable.pt)",
+  "selection": "lowest S on validation (B4/UsCarrier/Cogentco val split only)",
+  "environment": {
+    "python": "3.12.1",
+    "numpy": "2.5.3",
+    "scipy": "1.16.0",
+    "torch": "2.11.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_sha": "c27544f83e11df8914060114a54dea0f15317804",
+    "time_utc": "2026-11-15T10:14:27Z"
+  }
+}

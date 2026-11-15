@@ -1,0 +1,81 @@
+{
+  "frozen_config_source": "results/safety_gate/improvements/eval_runs/af_eval_k1_calibrated_devtopos_v1/frozen_gate_improvements_config.json",
+  "gate": {
+    "k": 1.0,
+    "utilisation_limit": 1.0,
+    "max_relative_std": null,
+    "min_capacity": 1e-12
+  },
+  "variants": [
+    "A_policy_only",
+    "B_original_twin_mean",
+    "C_original_twin_uncertainty",
+    "D_improved_twin_mean",
+    "E_improved_twin_calibrated_uncertainty",
+    "F_physics_oracle"
+  ],
+  "twins": {
+    "original": {
+      "path": "C:\\Users\\DELL\\Documents\\Network_digital_twin\\CNET phase 3\\phase3 implementation\\results\\twin\\models\\ensemble.pt",
+      "apply_conformal": false
+    },
+    "improved": {
+      "path": "C:\\Users\\DELL\\Documents\\Network_digital_twin\\CNET phase 3\\phase3 implementation\\results\\digital_twin\\improvements\\models\\ensemble_physics_anchored.pt",
+      "apply_conformal": false
+    },
+    "improved_calibrated": {
+      "path": "C:\\Users\\DELL\\Documents\\Network_digital_twin\\CNET phase 3\\phase3 implementation\\results\\digital_twin\\improvements\\models\\ensemble_physics_anchored_conformal.pt",
+      "apply_conformal": true
+    }
+  },
+  "policy": {
+    "checkpoint_id": "improved_stable",
+    "default_checkpoint": "C:\\Users\\DELL\\Documents\\Network_digital_twin\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\recommended_stable.pt",
+    "checkpoints": {
+      "improved_stable": "models/policy/improved/recommended_stable.pt",
+      "improved_best": "models/policy/improved/best_checkpoint.pt",
+      "general_3epoch": "models/policy/general_grl.pt"
+    },
+    "deterministic": true
+  },
+  "fallback": {
+    "policy": "feasible_then_least_violating",
+    "candidates": [
+      "shortest",
+      "equal"
+    ],
+    "oracle": "physics_capacity_violations",
+    "notes": "Same candidate set for B\u2013E. Prefer feasible; else least violations then lowest MLU."
+  },
+  "fixed_scales": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "calibrated_targets": [
+    0.5,
+    0.7,
+    0.9,
+    1.1
+  ],
+  "calibration_index": "results/phase3_final/calibrated_traffic/scaled_tm_index.json",
+  "topology_authorization": {
+    "included": [
+      "GEANT",
+      "Kdl"
+    ],
+    "reason": "E2 holdout evaluation: single pass on the held-out test topologies; frozen thresholds, twins and conformal scale; no tuning or recalibration."
+  },
+  "lp_solver": "All LPs use SciPy HiGHS (scipy.optimize.linprog, method='highs'). No Gurobi licence was available, so Teal/FIGRET-style Gurobi LPs are replaced by HiGHS.",
+  "toy_tm_note": "UsCarrier and Kdl traffic matrices are synthetic all-ones toy templates; every index is an identical copy, so additional TM indices or seeds add no traffic diversity on these topologies.",
+  "environment": {
+    "python": "3.12.1",
+    "numpy": "2.5.3",
+    "scipy": "1.16.0",
+    "torch": "2.11.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_sha": "7ddeee44440dd6cffb3044ab74c9970e02e9596f",
+    "time_utc": "2026-11-15T09:46:39Z"
+  }
+}

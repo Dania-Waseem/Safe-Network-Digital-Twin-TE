@@ -1,0 +1,11 @@
+8 cases to run (1600 already done)
+[1/8] Kdl|pos=0|fixed=0.25|policy=improved_stable elapsed 53s eta 6.2min
+[2/8] Kdl|pos=0|fixed=0.5|policy=improved_stable elapsed 1.5min eta 4.5min
+[3/8] Kdl|pos=0|fixed=0.75|policy=improved_stable elapsed 2.2min eta 3.7min
+[4/8] Kdl|pos=0|fixed=1.0|policy=improved_stable elapsed 3.2min eta 3.2min
+[5/8] Kdl|pos=0|calibrated=0.5|policy=improved_stable elapsed 4.3min eta 2.6min
+[6/8] Kdl|pos=0|calibrated=0.7|policy=improved_stable elapsed 5.6min eta 1.9min
+[7/8] Kdl|pos=0|calibrated=0.9|policy=improved_stable elapsed 7.0min eta 60s
+[8/8] Kdl|pos=0|calibrated=1.1|policy=improved_stable elapsed 8.1min eta 0s
+wrote C:\Users\DELL\Documents\Network_digital_twin\CNET phase 3\phase3 implementation\results\phase3_final\e2_holdout_af
+DONE

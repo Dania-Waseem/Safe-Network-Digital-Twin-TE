@@ -1,0 +1,120 @@
+{
+  "name": "degraded_f50",
+  "seed": 2026,
+  "n_members": 5,
+  "hidden": 32,
+  "dropout": 0.1,
+  "lr": 0.0005,
+  "weight_decay": 0.0001,
+  "anchor_weight": 0.01,
+  "data_fraction": 0.5,
+  "epochs": 4,
+  "train_matrices_per_topology": {
+    "B4": 10,
+    "UsCarrier": 10,
+    "Cogentco": 10
+  },
+  "history": [
+    {
+      "epoch": 0,
+      "train_mse_normalised": 3.719934303199327e-05,
+      "val_mae_utilisation": 0.0016663981008058135,
+      "val_coverage_2std": 1.0,
+      "elapsed_s": 40.29682779312134
+    },
+    {
+      "epoch": 1,
+      "train_mse_normalised": 0.00012381701076830346,
+      "val_mae_utilisation": 0.00016987861690796765,
+      "val_coverage_2std": 1.0,
+      "elapsed_s": 100.03657579421997
+    },
+    {
+      "epoch": 2,
+      "train_mse_normalised": 0.00030943086451758916,
+      "val_mae_utilisation": 0.0021619845478898126,
+      "val_coverage_2std": 1.0,
+      "elapsed_s": 133.52863097190857
+    },
+    {
+      "epoch": 3,
+      "train_mse_normalised": 4.9593209442602704e-05,
+      "val_mae_utilisation": 0.0004974268902399799,
+      "val_coverage_2std": 0.9994708994708995,
+      "elapsed_s": 189.15627074241638
+    }
+  ],
+  "conformal_std_scale": 0.9545454545454546,
+  "conformal": {
+    "conformal_std_scale": 0.9545454545454546,
+    "target_coverage_2std": 0.9,
+    "val_coverage_2std": 0.9992063492063491,
+    "val_width_util": 0.002884918300818691,
+    "grid": [
+      {
+        "scale": 0.25,
+        "coverage_2std": 0.8536057221242406,
+        "width_util": 0.0007555738406906096
+      },
+      {
+        "scale": 0.9545454545454546,
+        "coverage_2std": 0.9992063492063491,
+        "width_util": 0.002884918300818691
+      },
+      {
+        "scale": 1.6590909090909092,
+        "coverage_2std": 1.0,
+        "width_util": 0.005014262760946773
+      },
+      {
+        "scale": 2.3636363636363638,
+        "coverage_2std": 1.0,
+        "width_util": 0.007143607221074853
+      },
+      {
+        "scale": 3.0681818181818183,
+        "coverage_2std": 1.0,
+        "width_util": 0.009272951681202936
+      },
+      {
+        "scale": 3.772727272727273,
+        "coverage_2std": 1.0,
+        "width_util": 0.011402296141331017
+      },
+      {
+        "scale": 4.4772727272727275,
+        "coverage_2std": 1.0,
+        "width_util": 0.013531640601459097
+      },
+      {
+        "scale": 5.181818181818182,
+        "coverage_2std": 1.0,
+        "width_util": 0.01566098506158718
+      },
+      {
+        "scale": 5.886363636363637,
+        "coverage_2std": 1.0,
+        "width_util": 0.017790329521715265
+      },
+      {
+        "scale": 6.590909090909092,
+        "coverage_2std": 1.0,
+        "width_util": 0.019919673981843345
+      },
+      {
+        "scale": 7.295454545454546,
+        "coverage_2std": 1.0,
+        "width_util": 0.02204901844197143
+      },
+      {
+        "scale": 8.0,
+        "coverage_2std": 1.0,
+        "width_util": 0.024178362902099508
+      }
+    ],
+    "selection": "min util interval width subject to val coverage_2std >= target; train/val topologies only"
+  },
+  "note": "Deliberately weakened twin for E4; same recipe as ensemble_physics_anchored with a reduced budget.",
+  "checkpoint": "ensemble_degraded_f50.pt",
+  "train_seconds": 209.92335724830627
+}

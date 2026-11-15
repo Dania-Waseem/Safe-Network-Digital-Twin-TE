@@ -1,0 +1,38 @@
+{
+  "levels": [
+    [
+      "degraded_f10",
+      0.1,
+      1
+    ],
+    [
+      "degraded_f25",
+      0.25,
+      2
+    ],
+    [
+      "degraded_f50",
+      0.5,
+      4
+    ]
+  ],
+  "reference_hyperparameters": {
+    "seed": 2026,
+    "n_members": 5,
+    "hidden": 32,
+    "dropout": 0.1,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "anchor_weight": 0.01
+  },
+  "reference_checkpoint": "models/twin_improved/ensemble_physics_anchored_conformal.pt",
+  "environment": {
+    "python": "3.12.1",
+    "numpy": "2.5.3",
+    "scipy": "1.16.0",
+    "torch": "2.11.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_sha": "edd86c77ad95bbd33be27cf4ec8b8406df7beb04",
+    "time_utc": "2026-11-15T09:55:44Z"
+  }
+}

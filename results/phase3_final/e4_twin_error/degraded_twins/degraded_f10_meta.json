@@ -1,0 +1,99 @@
+{
+  "name": "degraded_f10",
+  "seed": 2026,
+  "n_members": 5,
+  "hidden": 32,
+  "dropout": 0.1,
+  "lr": 0.0005,
+  "weight_decay": 0.0001,
+  "anchor_weight": 0.01,
+  "data_fraction": 0.1,
+  "epochs": 1,
+  "train_matrices_per_topology": {
+    "B4": 2,
+    "UsCarrier": 2,
+    "Cogentco": 2
+  },
+  "history": [
+    {
+      "epoch": 0,
+      "train_mse_normalised": 3.0107096445967737e-05,
+      "val_mae_utilisation": 6.790949405068574e-05,
+      "val_coverage_2std": 1.0,
+      "elapsed_s": 7.3351006507873535
+    }
+  ],
+  "conformal_std_scale": 0.25,
+  "conformal": {
+    "conformal_std_scale": 0.25,
+    "target_coverage_2std": 0.9,
+    "val_coverage_2std": 1.0,
+    "val_width_util": 0.0018199358469384854,
+    "grid": [
+      {
+        "scale": 0.25,
+        "coverage_2std": 1.0,
+        "width_util": 0.0018199358469384854
+      },
+      {
+        "scale": 0.9545454545454546,
+        "coverage_2std": 1.0,
+        "width_util": 0.006948845961037854
+      },
+      {
+        "scale": 1.6590909090909092,
+        "coverage_2std": 1.0,
+        "width_util": 0.012077756075137221
+      },
+      {
+        "scale": 2.3636363636363638,
+        "coverage_2std": 1.0,
+        "width_util": 0.01720666618923659
+      },
+      {
+        "scale": 3.0681818181818183,
+        "coverage_2std": 1.0,
+        "width_util": 0.022335576303335956
+      },
+      {
+        "scale": 3.772727272727273,
+        "coverage_2std": 1.0,
+        "width_util": 0.027464486417435326
+      },
+      {
+        "scale": 4.4772727272727275,
+        "coverage_2std": 1.0,
+        "width_util": 0.032593396531534695
+      },
+      {
+        "scale": 5.181818181818182,
+        "coverage_2std": 1.0,
+        "width_util": 0.03772230664563406
+      },
+      {
+        "scale": 5.886363636363637,
+        "coverage_2std": 1.0,
+        "width_util": 0.042851216759733426
+      },
+      {
+        "scale": 6.590909090909092,
+        "coverage_2std": 1.0,
+        "width_util": 0.0479801268738328
+      },
+      {
+        "scale": 7.295454545454546,
+        "coverage_2std": 1.0,
+        "width_util": 0.05310903698793216
+      },
+      {
+        "scale": 8.0,
+        "coverage_2std": 1.0,
+        "width_util": 0.058237947102031534
+      }
+    ],
+    "selection": "min util interval width subject to val coverage_2std >= target; train/val topologies only"
+  },
+  "note": "Deliberately weakened twin for E4; same recipe as ensemble_physics_anchored with a reduced budget.",
+  "checkpoint": "ensemble_degraded_f10.pt",
+  "train_seconds": 16.813563585281372
+}

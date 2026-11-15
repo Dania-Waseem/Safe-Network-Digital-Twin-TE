@@ -1,0 +1,100 @@
+{
+  "sigma0_framework": {
+    "dev": {
+      "no feasible k=4 routing exists (capacity/catalog infeasible)": 53,
+      "  of which proposal unsafe (policy out of distribution / overloaded)": 73,
+      "fallback infeasible, but a feasible k=4 routing exists (fallback limitation)": 20
+    },
+    "holdout": {
+      "fallback infeasible, but a feasible k=4 routing exists (fallback limitation)": 547,
+      "  of which proposal unsafe (policy out of distribution / overloaded)": 1095,
+      "no feasible k=4 routing exists (capacity/catalog infeasible)": 543,
+      "fallback infeasible (LP not available: Kdl)": 5
+    }
+  },
+  "oracle_counterfactual_sigma0": {
+    "dev": {
+      "framework_overloaded": 73,
+      "oracle_overloaded": 73,
+      "n": 136
+    },
+    "holdout": {
+      "framework_overloaded": 1095,
+      "oracle_overloaded": 1095,
+      "n": 1608
+    }
+  },
+  "twin_error_E1": {
+    "dev|sigma=0.0": {
+      "n": 136,
+      "oracle (F) overloaded applied": 73,
+      "rejected unsafe proposal -> fallback infeasible": 73,
+      "E1 overloaded applied": 73
+    },
+    "dev|sigma=0.05": {
+      "n": 408,
+      "oracle (F) overloaded applied": 219,
+      "false reject -> overloaded fallback": 18,
+      "E1 overloaded applied": 237,
+      "rejected unsafe proposal -> fallback infeasible": 219
+    },
+    "dev|sigma=0.1": {
+      "n": 408,
+      "oracle (F) overloaded applied": 219,
+      "false reject -> overloaded fallback": 18,
+      "E1 overloaded applied": 237,
+      "rejected unsafe proposal -> fallback infeasible": 219
+    },
+    "dev|sigma=0.2": {
+      "n": 408,
+      "oracle (F) overloaded applied": 219,
+      "false reject -> overloaded fallback": 18,
+      "E1 overloaded applied": 237,
+      "rejected unsafe proposal -> fallback infeasible": 219
+    },
+    "dev|sigma=0.4": {
+      "n": 408,
+      "oracle (F) overloaded applied": 219,
+      "false reject -> overloaded fallback": 18,
+      "E1 overloaded applied": 237,
+      "rejected unsafe proposal -> fallback infeasible": 219
+    },
+    "holdout|sigma=0.0": {
+      "n": 1608,
+      "oracle (F) overloaded applied": 1095,
+      "rejected unsafe proposal -> fallback infeasible": 1095,
+      "E1 overloaded applied": 1095
+    },
+    "holdout|sigma=0.05": {
+      "n": 4824,
+      "oracle (F) overloaded applied": 3285,
+      "rejected unsafe proposal -> fallback infeasible": 3285,
+      "E1 overloaded applied": 3286,
+      "unsafe accept: twin under-prediction (coverage OK)": 1
+    },
+    "holdout|sigma=0.1": {
+      "n": 4824,
+      "oracle (F) overloaded applied": 3285,
+      "rejected unsafe proposal -> fallback infeasible": 3285,
+      "E1 overloaded applied": 3288,
+      "unsafe accept: twin under-prediction (coverage OK)": 1,
+      "false reject -> overloaded fallback": 2
+    },
+    "holdout|sigma=0.2": {
+      "n": 4824,
+      "oracle (F) overloaded applied": 3285,
+      "rejected unsafe proposal -> fallback infeasible": 3285,
+      "E1 overloaded applied": 3291,
+      "unsafe accept: twin under-prediction (coverage OK)": 3,
+      "false reject -> overloaded fallback": 3
+    },
+    "holdout|sigma=0.4": {
+      "n": 4824,
+      "oracle (F) overloaded applied": 3285,
+      "rejected unsafe proposal -> fallback infeasible": 3284,
+      "E1 overloaded applied": 3289,
+      "false reject -> overloaded fallback": 3,
+      "unsafe accept: twin under-prediction (coverage OK)": 2
+    }
+  }
+}

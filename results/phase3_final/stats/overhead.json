@@ -1,0 +1,52 @@
+[
+  {
+    "topology": "B4",
+    "policy_ms (stable GNN)": 11.53679983690381,
+    "twin_ms (5-member ensemble)": 3.631850006058812,
+    "gate+fallback_ms (decision minus twin)": null,
+    "fallback_select_ms": 0.7646498270332813,
+    "lp_ms (min-MLU, HiGHS)": 3.9059000555425882,
+    "frozen_p1_actor_ms": 12.385600013658404,
+    "source": "grid rows + E2 case rows (GEANT/Kdl) + E4 cache (dev twin) + calibrated-load LP timings"
+  },
+  {
+    "topology": "UsCarrier",
+    "policy_ms (stable GNN)": 971.3928499259055,
+    "twin_ms (5-member ensemble)": 171.1527502629906,
+    "gate+fallback_ms (decision minus twin)": null,
+    "fallback_select_ms": 60.308950021862984,
+    "lp_ms (min-MLU, HiGHS)": 2610.756800044328,
+    "frozen_p1_actor_ms": 1037.4527003150433,
+    "source": "grid rows + E2 case rows (GEANT/Kdl) + E4 cache (dev twin) + calibrated-load LP timings"
+  },
+  {
+    "topology": "Cogentco",
+    "policy_ms (stable GNN)": 1183.6743000894785,
+    "twin_ms (5-member ensemble)": 234.48175005614758,
+    "gate+fallback_ms (decision minus twin)": null,
+    "fallback_select_ms": 90.67844995297492,
+    "lp_ms (min-MLU, HiGHS)": 6713.35474983789,
+    "frozen_p1_actor_ms": 1212.655499810353,
+    "source": "grid rows + E2 case rows (GEANT/Kdl) + E4 cache (dev twin) + calibrated-load LP timings"
+  },
+  {
+    "topology": "GEANT",
+    "policy_ms (stable GNN)": 17.36505003646016,
+    "twin_ms (5-member ensemble)": 1.7185499891638756,
+    "gate+fallback_ms (decision minus twin)": 0.43975026346743107,
+    "fallback_select_ms": 1.0088500566780567,
+    "lp_ms (min-MLU, HiGHS)": 11.51455007493496,
+    "frozen_p1_actor_ms": 18.148699775338173,
+    "source": "grid rows + E2 case rows (GEANT/Kdl) + E4 cache (dev twin) + calibrated-load LP timings"
+  },
+  {
+    "topology": "Kdl",
+    "policy_ms (stable GNN)": 17412.455799989402,
+    "twin_ms (5-member ensemble)": 3327.551400056109,
+    "gate+fallback_ms (decision minus twin)": 2646.2503497023135,
+    "fallback_select_ms": 1895.0879501644522,
+    "lp_ms (min-MLU, HiGHS)": null,
+    "frozen_p1_actor_ms": 17631.383949890733,
+    "source": "grid rows + E2 case rows (GEANT/Kdl) + E4 cache (dev twin) + calibrated-load LP timings"
+  }
+]

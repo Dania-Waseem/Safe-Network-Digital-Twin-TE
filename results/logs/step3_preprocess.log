@@ -1,0 +1,98 @@
+2026-11-07 20:39:53,445 INFO Loading B4
+2026-11-07 20:39:53,451 INFO B4: 12 nodes, 38 directed links, undirected connected=True
+2026-11-07 20:39:53,489 INFO B4 traffic real_mapped: 36 matrices, 0 invalid
+2026-11-07 20:39:53,497 INFO B4 paths (4 workers)
+2026-11-07 20:39:53,586 INFO B4 paths=528 fewer_than_4=0
+2026-11-07 20:39:53,626 INFO Loading UsCarrier
+2026-11-07 20:39:53,668 INFO UsCarrier: 158 nodes, 378 directed links, undirected connected=True
+2026-11-07 20:39:53,735 INFO UsCarrier traffic synthetic_toy: 36 matrices, 0 invalid
+2026-11-07 20:39:53,739 INFO UsCarrier paths (4 workers)
+2026-11-07 20:42:42,554 INFO UsCarrier paths=97974 fewer_than_4=602
+2026-11-07 20:42:44,120 INFO Loading GEANT
+2026-11-07 20:42:44,133 INFO GEANT: 22 nodes, 72 directed links, undirected connected=True
+2026-11-07 20:42:54,128 ERROR GEANT failed: Object of type ndarray is not JSON serializable
+2026-11-07 20:42:54,192 ERROR Traceback (most recent call last):
+  File "C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\preprocessing\preprocess.py", line 435, in main
+    rows.append(process_one(spec, args.jobs, log))
+  File "C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\preprocessing\preprocess.py", line 322, in process_one
+    _save_traffic(name, bundle)
+  File "C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\preprocessing\preprocess.py", line 154, in _save_traffic
+    dump_json(TM_DIR / "real" / f"{name}.json", summary)
+  File "C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\preprocessing\traffic.py", line 254, in dump_json
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ndarray is not JSON serializable
+
+2026-11-07 20:42:54,192 INFO Loading Cogentco
+2026-11-07 20:42:54,274 INFO Cogentco: 197 nodes, 486 directed links, undirected connected=True
+2026-11-07 20:42:55,208 INFO Cogentco traffic reconstructed_gravity: 36 matrices, 0 invalid
+2026-11-07 20:42:57,121 INFO Cogentco paths (4 workers)
+2026-11-07 20:47:20,129 INFO Cogentco paths=154026 fewer_than_4=158
+2026-11-07 20:47:22,254 INFO Wrote C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\data\processed\PREPROCESSING_REPORT.md
+2026-11-07 20:48:10,135 INFO Loading GEANT
+2026-11-07 20:48:10,143 INFO GEANT: 22 nodes, 72 directed links, undirected connected=True
+2026-11-07 20:48:18,626 INFO GEANT traffic real_figret: 10773 matrices, 0 invalid
+2026-11-07 20:48:26,232 INFO GEANT paths (4 workers)
+2026-11-07 20:48:26,582 INFO GEANT paths=1848 fewer_than_4=0
+2026-11-07 20:48:27,063 INFO Wrote C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\data\processed\PREPROCESSING_REPORT.md
+2026-11-07 20:48:57,551 INFO Loading Kdl
+2026-11-07 20:48:58,180 INFO Kdl: 754 nodes, 1790 directed links, undirected connected=True
+2026-11-07 20:48:58,889 INFO Kdl traffic synthetic_toy: 36 matrices, 0 invalid
+2026-11-07 20:48:58,913 INFO Kdl paths (7 workers)
+2026-11-07 21:11:50,269 INFO Kdl paths=2270012 fewer_than_4=404
+2026-11-07 21:12:41,673 INFO Loading ASN
+2026-11-07 21:12:47,767 INFO ASN: 1739 nodes, 8558 directed links, undirected connected=True
+2026-11-07 21:12:51,714 INFO ASN traffic synthetic_toy: 36 matrices, 0 invalid
+2026-11-07 21:12:51,836 INFO ASN paths (7 workers)
+2026-11-07 21:33:26,461 INFO Loading ASN
+2026-11-07 21:33:30,580 INFO ASN: 1739 nodes, 8558 directed links, undirected connected=True
+2026-11-07 21:33:33,741 INFO ASN traffic synthetic_toy: 36 matrices, 0 invalid
+2026-11-07 21:33:33,806 INFO ASN paths (7 workers)
+2026-11-08 02:09:59,733 INFO Loading Kdl
+2026-11-08 02:10:00,276 INFO Kdl: 754 nodes, 1790 directed links, undirected connected=True
+2026-11-08 02:10:01,351 INFO Kdl traffic synthetic_toy: 36 matrices, 0 invalid
+2026-11-08 02:10:01,379 INFO Kdl paths (7 workers)
+2026-11-08 02:10:11,416 INFO Loading ASN
+2026-11-08 02:10:27,263 INFO ASN: 1739 nodes, 8558 directed links, undirected connected=True
+2026-11-08 02:10:35,179 INFO ASN traffic synthetic_toy: 36 matrices, 0 invalid
+2026-11-08 02:10:35,301 INFO ASN paths (7 workers)
+2026-11-08 02:15:21,774 INFO Loading Kdl
+2026-11-08 02:15:22,222 INFO Kdl: 754 nodes, 1790 directed links, undirected connected=True
+2026-11-08 02:15:22,822 INFO Kdl traffic synthetic_toy: 36 matrices, 0 invalid
+2026-11-08 02:15:22,835 INFO Kdl reusing existing paths from C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\data\processed\candidate_paths\Kdl_yen4.npz
+2026-11-08 02:15:23,540 INFO Kdl reusing existing bipartite graph from C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\data\processed\graph_data\Kdl_bipartite.pt
+2026-11-08 02:15:23,594 INFO Wrote C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\data\processed\PREPROCESSING_REPORT.md
+2026-11-08 02:15:40,390 INFO Loading ASN
+2026-11-08 02:15:45,465 INFO ASN: 1739 nodes, 8558 directed links, undirected connected=True
+2026-11-08 02:15:48,844 INFO ASN traffic synthetic_toy: 36 matrices, 0 invalid
+2026-11-08 02:15:48,908 INFO ASN paths (7 workers)
+2026-11-08 04:00:26,238 ERROR ASN failed: A process in the process pool was terminated abruptly while the future was running or pending.
+2026-11-08 04:00:26,287 ERROR Traceback (most recent call last):
+  File "C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\preprocessing\preprocess.py", line 459, in main
+    rows.append(process_one(spec, args.jobs, log, reuse_paths=args.reuse_paths))
+  File "C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\preprocessing\preprocess.py", line 351, in process_one
+    paths = generate(topology, jobs=jobs, checkpoint=True)
+  File "C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\preprocessing\paths.py", line 333, in generate
+    part = future.result()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 451, in result
+    return self.__get_result()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+
+2026-11-08 04:00:26,319 INFO Wrote C:\Users\hp\Pictures\CNET phase 3\phase3 implementation\data\processed\PREPROCESSING_REPORT.md
+2026-11-08 15:15:55,596 INFO Loading ASN
+2026-11-08 15:16:09,504 INFO ASN: 1739 nodes, 8558 directed links, undirected connected=True
+2026-11-08 15:16:21,322 INFO ASN traffic synthetic_toy: 36 matrices, 0 invalid
+2026-11-08 15:16:21,766 INFO ASN paths (2 workers)

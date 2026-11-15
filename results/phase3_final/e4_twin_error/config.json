@@ -1,0 +1,87 @@
+{
+  "sigmas": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.4
+  ],
+  "replicates": 3,
+  "noise_seed": 4040,
+  "twins": [
+    "improved",
+    "degraded_f10",
+    "degraded_f25",
+    "degraded_f50"
+  ],
+  "variants": [
+    "A",
+    "D",
+    "E1",
+    "E2",
+    "E1r",
+    "F"
+  ],
+  "c_grid": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0,
+    5.25,
+    5.5,
+    5.75,
+    6.0,
+    6.25,
+    6.5,
+    6.75,
+    7.0,
+    7.25,
+    7.5,
+    7.75,
+    8.0,
+    10.0,
+    12.0,
+    16.0,
+    24.0,
+    32.0
+  ],
+  "fixed_scales": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "calibrated_targets": [
+    0.5,
+    0.7,
+    0.9,
+    1.1
+  ],
+  "toy_tm_note": "UsCarrier and Kdl traffic matrices are synthetic all-ones toy templates; every index is an identical copy, so additional TM indices or seeds add no traffic diversity on these topologies.",
+  "lp_solver": "All LPs use SciPy HiGHS (scipy.optimize.linprog, method='highs'). No Gurobi licence was available, so Teal/FIGRET-style Gurobi LPs are replaced by HiGHS.",
+  "environment": {
+    "python": "3.12.1",
+    "numpy": "2.5.3",
+    "scipy": "1.16.0",
+    "torch": "2.11.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_sha": "70f1a005efef781b072d4bd0785e9c5f0bd69583",
+    "time_utc": "2026-11-15T10:14:10Z"
+  }
+}

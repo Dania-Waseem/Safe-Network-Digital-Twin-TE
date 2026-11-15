@@ -1,0 +1,8 @@
+degraded_f10 epoch 1/1 val_mae_util=6.791e-05 (7s)
+degraded_f25 epoch 1/2 val_mae_util=0.001403 (20s)
+degraded_f25 epoch 2/2 val_mae_util=0.00295 (42s)
+degraded_f50 epoch 1/4 val_mae_util=0.001666 (40s)
+degraded_f50 epoch 2/4 val_mae_util=0.0001699 (100s)
+degraded_f50 epoch 3/4 val_mae_util=0.002162 (134s)
+degraded_f50 epoch 4/4 val_mae_util=0.0004974 (189s)
+EXIT=0

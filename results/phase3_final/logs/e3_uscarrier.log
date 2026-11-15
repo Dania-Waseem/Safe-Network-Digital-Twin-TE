@@ -1,0 +1,7 @@
+UsCarrier: 160 cases to run
+UsCarrier [50/160] elapsed 4.2min eta 9.1min
+UsCarrier [100/160] elapsed 10.0min eta 6.0min
+UsCarrier [150/160] elapsed 16.5min eta 66s
+UsCarrier [160/160] elapsed 17.6min eta 0s
+wrote C:\Users\DELL\Documents\Network_digital_twin\CNET phase 3\phase3 implementation\results\phase3_final\e3_link_failures
+EXIT=0
