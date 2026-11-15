@@ -1,0 +1,146 @@
+{
+  "n_rows": 840,
+  "expected_rows": 840,
+  "expected_cases": 140,
+  "row_accounting": {
+    "formula": "5 seeds \u00d7 (2+1+1+2+1 matrices) \u00d7 4 scales \u00d7 6 methods = 840",
+    "matrices_per_seed": 7,
+    "cases_per_seed": 28,
+    "methods": 6
+  },
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "topologies": [
+    "B4",
+    "Cogentco",
+    "GEANT",
+    "Kdl",
+    "UsCarrier"
+  ],
+  "scales": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "methods": [
+    "equal",
+    "frozen_p1",
+    "general_3epoch",
+    "improved_best",
+    "improved_stable",
+    "shortest"
+  ],
+  "findings": [
+    {
+      "level": "ok",
+      "code": "seeds",
+      "detail": "all five seeds present: [101, 202, 303, 404, 505]"
+    },
+    {
+      "level": "ok",
+      "code": "topologies",
+      "detail": "all five topologies present: ['B4', 'Cogentco', 'GEANT', 'Kdl', 'UsCarrier']"
+    },
+    {
+      "level": "ok",
+      "code": "scales",
+      "detail": "all four scales present: [0.25, 0.5, 0.75, 1.0]"
+    },
+    {
+      "level": "ok",
+      "code": "methods",
+      "detail": "both improved checkpoints and baselines present"
+    },
+    {
+      "level": "ok",
+      "code": "duplicates",
+      "detail": "no duplicate (seed,topology,matrix,scale,method) keys"
+    },
+    {
+      "level": "ok",
+      "code": "row_count",
+      "detail": "840 rows = 5 seeds \u00d7 7 matrices \u00d7 4 scales \u00d7 6 methods (140 traffic cases \u00d7 6 methods)"
+    },
+    {
+      "level": "ok",
+      "code": "paired_matrices",
+      "detail": "every traffic case has all six methods"
+    },
+    {
+      "level": "ok",
+      "code": "catalog",
+      "detail": "matrix ids match catalog.json for every seed/topology"
+    },
+    {
+      "level": "ok",
+      "code": "held_out",
+      "detail": "GEANT and Kdl appear only as unseen test splits"
+    },
+    {
+      "level": "ok",
+      "code": "feasibility",
+      "detail": "feasible_any_baseline matches zero violations under shortest or equal"
+    },
+    {
+      "level": "ok",
+      "code": "report_recompute",
+      "detail": "B4@0.25 improved_stable recomputed 0.250198\u00b10.001697 matches report"
+    },
+    {
+      "level": "info",
+      "code": "fallback_incompatibility",
+      "detail": "frozen_p1 applied MLU uses Step-7 Framework fallback; generalized methods use least-violating among last/shortest/equal. Actor-only MLU remains comparable."
+    },
+    {
+      "level": "info",
+      "code": "baseline_null_gate",
+      "detail": "shortest/equal rows have null acceptance/unsafe/false_reject/fallback fields by design"
+    }
+  ],
+  "n_errors": 0,
+  "checkpoint_inventory": {
+    "frozen_p1": {
+      "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\GRL_TE_Reproduction\\BASELINE_FREEZE\\models\\grl_te_b4_freeze_seed100.pt",
+      "exists": true,
+      "bytes": 332297
+    },
+    "general_3epoch": {
+      "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt",
+      "exists": true,
+      "bytes": 331579
+    },
+    "improved_best": {
+      "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\best_checkpoint.pt",
+      "exists": true,
+      "bytes": 332499
+    },
+    "improved_stable": {
+      "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\recommended_stable.pt",
+      "exists": true,
+      "bytes": 329873
+    },
+    "twin": {
+      "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\twin\\models\\ensemble.pt",
+      "exists": true,
+      "bytes": 35885
+    }
+  },
+  "held_out_training_claim": {
+    "geant_kdl_in_robustness": "test/unseen only",
+    "train_policy_topologies": [
+      "B4",
+      "UsCarrier",
+      "Cogentco"
+    ],
+    "improved_training_held_out": [
+      "GEANT",
+      "Kdl"
+    ]
+  }
+}

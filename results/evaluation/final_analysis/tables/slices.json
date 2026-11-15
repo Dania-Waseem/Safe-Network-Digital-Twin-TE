@@ -1,0 +1,98 @@
+[
+  {
+    "slice": "seen",
+    "ablation": "A_policy_only",
+    "checkpoint": "improved_stable",
+    "cases": 80,
+    "mlu_actor": 12.769393638100308,
+    "mlu_applied": 12.769393638100308,
+    "acceptance": 1.0,
+    "unsafe_accept": 0.5,
+    "false_reject": 0.0,
+    "runtime_s": 0.4128256862500166
+  },
+  {
+    "slice": "seen",
+    "ablation": "E_full_uncertainty_gate",
+    "checkpoint": "improved_stable",
+    "cases": 80,
+    "mlu_actor": 12.769393638100308,
+    "mlu_applied": 11.899025681048792,
+    "acceptance": 0.4875,
+    "unsafe_accept": 0.0,
+    "false_reject": 0.0125,
+    "runtime_s": 0.5405914924998342
+  },
+  {
+    "slice": "unseen",
+    "ablation": "A_policy_only",
+    "checkpoint": "improved_stable",
+    "cases": 60,
+    "mlu_actor": 5.094828477194079,
+    "mlu_applied": 5.094828477194079,
+    "acceptance": 1.0,
+    "unsafe_accept": 0.8666666666666667,
+    "false_reject": 0.0,
+    "runtime_s": 34.200308053333174
+  },
+  {
+    "slice": "unseen",
+    "ablation": "E_full_uncertainty_gate",
+    "checkpoint": "improved_stable",
+    "cases": 60,
+    "mlu_actor": 5.094828477194079,
+    "mlu_applied": 3.5683088866375927,
+    "acceptance": 0.13333333333333333,
+    "unsafe_accept": 0.0,
+    "false_reject": 0.0,
+    "runtime_s": 36.10655070999995
+  },
+  {
+    "slice": "without_cogentco",
+    "ablation": "A_policy_only",
+    "checkpoint": "improved_stable",
+    "cases": 120,
+    "mlu_actor": 4.006991712717809,
+    "mlu_applied": 4.006991712717809,
+    "acceptance": 1.0,
+    "unsafe_accept": 0.6,
+    "false_reject": 0.0,
+    "runtime_s": 17.229049761666587
+  },
+  {
+    "slice": "without_cogentco",
+    "ablation": "E_full_uncertainty_gate",
+    "checkpoint": "improved_stable",
+    "cases": 120,
+    "mlu_actor": 4.006991712717809,
+    "mlu_applied": 2.7699679881828767,
+    "acceptance": 0.39166666666666666,
+    "unsafe_accept": 0.0,
+    "false_reject": 0.008333333333333333,
+    "runtime_s": 18.218475450833346
+  },
+  {
+    "slice": "cogentco_only",
+    "ablation": "A_policy_only",
+    "checkpoint": "improved_stable",
+    "cases": 20,
+    "mlu_actor": 42.32010970767659,
+    "mlu_applied": 42.32010970767659,
+    "acceptance": 1.0,
+    "unsafe_accept": 1.0,
+    "false_reject": 0.0,
+    "runtime_s": 0.8779283350000696
+  },
+  {
+    "slice": "cogentco_only",
+    "ablation": "E_full_uncertainty_gate",
+    "checkpoint": "improved_stable",
+    "cases": 20,
+    "mlu_actor": 42.32010970767659,
+    "mlu_applied": 41.681221455010686,
+    "acceptance": 0.0,
+    "unsafe_accept": 0.0,
+    "false_reject": 0.0,
+    "runtime_s": 1.1711653949991159
+  }
+]

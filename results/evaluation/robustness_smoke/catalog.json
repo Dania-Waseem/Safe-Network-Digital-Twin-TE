@@ -1,0 +1,91 @@
+{
+  "seeds": [
+    101
+  ],
+  "topologies": {
+    "B4": {
+      "split": "val",
+      "count": 2,
+      "n_available": 8,
+      "unseen": false,
+      "by_seed": {
+        "101": {
+          "local_indices": [
+            2,
+            4
+          ],
+          "matrix_ids": [
+            22,
+            24
+          ]
+        }
+      }
+    },
+    "UsCarrier": {
+      "split": "val",
+      "count": 1,
+      "n_available": 8,
+      "unseen": false,
+      "by_seed": {
+        "101": {
+          "local_indices": [
+            6
+          ],
+          "matrix_ids": [
+            26
+          ]
+        }
+      }
+    },
+    "Cogentco": {
+      "split": "val",
+      "count": 1,
+      "n_available": 8,
+      "unseen": false,
+      "by_seed": {
+        "101": {
+          "local_indices": [
+            3
+          ],
+          "matrix_ids": [
+            23
+          ]
+        }
+      }
+    },
+    "GEANT": {
+      "split": "test",
+      "count": 2,
+      "n_available": 2693,
+      "unseen": true,
+      "by_seed": {
+        "101": {
+          "local_indices": [
+            1908,
+            2546
+          ],
+          "matrix_ids": [
+            1908,
+            2546
+          ]
+        }
+      }
+    },
+    "Kdl": {
+      "split": "test",
+      "count": 1,
+      "n_available": 8,
+      "unseen": true,
+      "by_seed": {
+        "101": {
+          "local_indices": [
+            4
+          ],
+          "matrix_ids": [
+            32
+          ]
+        }
+      }
+    }
+  }
+}

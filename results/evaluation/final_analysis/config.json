@@ -1,0 +1,79 @@
+{
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "scales": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "topology_spec": [
+    {
+      "topology": "B4",
+      "split": "val",
+      "count": 2,
+      "unseen": false
+    },
+    {
+      "topology": "UsCarrier",
+      "split": "val",
+      "count": 1,
+      "unseen": false
+    },
+    {
+      "topology": "Cogentco",
+      "split": "val",
+      "count": 1,
+      "unseen": false
+    },
+    {
+      "topology": "GEANT",
+      "split": "test",
+      "count": 2,
+      "unseen": true
+    },
+    {
+      "topology": "Kdl",
+      "split": "test",
+      "count": 1,
+      "unseen": true
+    }
+  ],
+  "checkpoints": {
+    "improved_best": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\best_checkpoint.pt",
+    "improved_stable": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\recommended_stable.pt"
+  },
+  "ablations": [
+    "A_policy_only",
+    "B_rl_twin",
+    "C_rl_oracle_gate",
+    "D_rl_twin_mean_gate",
+    "E_full_uncertainty_gate"
+  ],
+  "robustness_source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\evaluation\\robustness_v1",
+  "gate_full": {
+    "k": 2.0,
+    "utilisation_limit": 1.0,
+    "max_relative_std": 0.5,
+    "min_capacity": 1e-12,
+    "apply_shortest_if_all_fail": true
+  },
+  "gate_mean_only": {
+    "k": 0.0,
+    "utilisation_limit": 1.0,
+    "max_relative_std": null,
+    "min_capacity": 1e-12,
+    "apply_shortest_if_all_fail": true
+  },
+  "preserved": {
+    "robustness_v1": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\evaluation\\robustness_v1",
+    "twin": "models/twin/ensemble.pt",
+    "frozen_p1": "untouched",
+    "asn": "not read"
+  }
+}

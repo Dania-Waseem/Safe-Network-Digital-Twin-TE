@@ -1,0 +1,102 @@
+[
+  {
+    "topology": "B4",
+    "unseen": false,
+    "checkpoint": "improved_best",
+    "twin_mae": 0.4968874713820689,
+    "twin_rmse": 0.5736985896248358,
+    "coverage_1std": 1.0,
+    "coverage_2std": 1.0,
+    "corr_std_abserr": 0.9997712007982532
+  },
+  {
+    "topology": "B4",
+    "unseen": false,
+    "checkpoint": "improved_stable",
+    "twin_mae": 0.4691708712143722,
+    "twin_rmse": 0.5157550848655232,
+    "coverage_1std": 1.0,
+    "coverage_2std": 1.0,
+    "corr_std_abserr": 0.9996965508612004
+  },
+  {
+    "topology": "UsCarrier",
+    "unseen": false,
+    "checkpoint": "improved_best",
+    "twin_mae": 0.1747729871650759,
+    "twin_rmse": 0.2470413476298162,
+    "coverage_1std": 1.0,
+    "coverage_2std": 1.0,
+    "corr_std_abserr": 0.9997429976349549
+  },
+  {
+    "topology": "UsCarrier",
+    "unseen": false,
+    "checkpoint": "improved_stable",
+    "twin_mae": 0.17413235137039162,
+    "twin_rmse": 0.24774318706689497,
+    "coverage_1std": 1.0,
+    "coverage_2std": 1.0,
+    "corr_std_abserr": 0.9996703767628963
+  },
+  {
+    "topology": "Cogentco",
+    "unseen": false,
+    "checkpoint": "improved_best",
+    "twin_mae": 21.74186026920737,
+    "twin_rmse": 30.784999517395413,
+    "coverage_1std": 1.0,
+    "coverage_2std": 1.0,
+    "corr_std_abserr": 0.9999871939927498
+  },
+  {
+    "topology": "Cogentco",
+    "unseen": false,
+    "checkpoint": "improved_stable",
+    "twin_mae": 21.642441615967975,
+    "twin_rmse": 31.020302538137038,
+    "coverage_1std": 1.0,
+    "coverage_2std": 1.0,
+    "corr_std_abserr": 0.9999860727338964
+  },
+  {
+    "topology": "GEANT",
+    "unseen": true,
+    "checkpoint": "improved_best",
+    "twin_mae": 474312.8365363173,
+    "twin_rmse": 675662.7551508191,
+    "coverage_1std": 1.0,
+    "coverage_2std": 1.0,
+    "corr_std_abserr": 0.9997085811768777
+  },
+  {
+    "topology": "GEANT",
+    "unseen": true,
+    "checkpoint": "improved_stable",
+    "twin_mae": 412736.45399098186,
+    "twin_rmse": 604907.373390146,
+    "coverage_1std": 1.0,
+    "coverage_2std": 1.0,
+    "corr_std_abserr": 0.9996079166108961
+  },
+  {
+    "topology": "Kdl",
+    "unseen": true,
+    "checkpoint": "improved_best",
+    "twin_mae": 1.8473969112016237,
+    "twin_rmse": 3.6291147193564357,
+    "coverage_1std": 0.9125698324022347,
+    "coverage_2std": 0.9828212290502794,
+    "corr_std_abserr": 0.6878550198001218
+  },
+  {
+    "topology": "Kdl",
+    "unseen": true,
+    "checkpoint": "improved_stable",
+    "twin_mae": 1.8552918407159094,
+    "twin_rmse": 3.6776155516221087,
+    "coverage_1std": 0.9089385474860334,
+    "coverage_2std": 0.9824022346368716,
+    "corr_std_abserr": 0.6801638597629165
+  }
+]

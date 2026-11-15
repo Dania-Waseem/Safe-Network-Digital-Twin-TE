@@ -1,0 +1,21 @@
+{
+  "policy_checkpoint": "../models/baseline_p1/b4_freeze/grl_te_b4_freeze_seed100.pt",
+  "policy_mode": "deterministic frozen B4 actor, zero-shot on other topologies",
+  "h0": "raw capacity and raw demand, matching frozen H0_SCALING = false",
+  "admm": false,
+  "constraint_adjustment": false,
+  "twin_checkpoint": "models/twin/ensemble.pt",
+  "twin_updated": false,
+  "gate_config": "safety/gate_config.json",
+  "evaluation": {
+    "B4_val_stride": 2,
+    "GEANT_test_stride": 600,
+    "Kdl_test_matrices": 1,
+    "UsCarrier_val_matrices": 1
+  },
+  "notes": [
+    "The frozen repository is imported and its checkpoint is loaded read-only.",
+    "ADMM and P1 constraint adjustment are not part of this controller. The comparison is the actor split versus the gated actor versus shortest path.",
+    "ASN is not included."
+  ]
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "scenario": "feasible",
+    "checkpoint": "improved_best",
+    "ablation": "A_policy_only",
+    "cases": 42,
+    "mlu_applied_mean": 0.7633660139563962,
+    "acceptance_rate": 1.0,
+    "unsafe_accept_rate": 0.14285714285714285,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.0
+  },
+  {
+    "scenario": "feasible",
+    "checkpoint": "improved_best",
+    "ablation": "B_rl_twin",
+    "cases": 42,
+    "mlu_applied_mean": 0.7633660139563962,
+    "acceptance_rate": 1.0,
+    "unsafe_accept_rate": 0.14285714285714285,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.0
+  },
+  {
+    "scenario": "feasible",
+    "checkpoint": "improved_best",
+    "ablation": "C_rl_oracle_gate",
+    "cases": 42,
+    "mlu_applied_mean": 0.683226029101733,
+    "acceptance_rate": 0.8571428571428571,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.14285714285714285
+  },
+  {
+    "scenario": "feasible",
+    "checkpoint": "improved_best",
+    "ablation": "D_rl_twin_mean_gate",
+    "cases": 42,
+    "mlu_applied_mean": 0.683226029101733,
+    "acceptance_rate": 0.8571428571428571,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.14285714285714285
+  },
+  {
+    "scenario": "feasible",
+    "checkpoint": "improved_best",
+    "ablation": "E_full_uncertainty_gate",
+    "cases": 42,
+    "mlu_applied_mean": 0.683226029101733,
+    "acceptance_rate": 0.8571428571428571,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.14285714285714285
+  },
+  {
+    "scenario": "feasible",
+    "checkpoint": "improved_stable",
+    "ablation": "A_policy_only",
+    "cases": 42,
+    "mlu_applied_mean": 0.6579670138646317,
+    "acceptance_rate": 1.0,
+    "unsafe_accept_rate": 0.09523809523809523,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.0
+  },
+  {
+    "scenario": "feasible",
+    "checkpoint": "improved_stable",
+    "ablation": "B_rl_twin",
+    "cases": 42,
+    "mlu_applied_mean": 0.6579670138646317,
+    "acceptance_rate": 1.0,
+    "unsafe_accept_rate": 0.09523809523809523,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.0
+  },
+  {
+    "scenario": "feasible",
+    "checkpoint": "improved_stable",
+    "ablation": "C_rl_oracle_gate",
+    "cases": 42,
+    "mlu_applied_mean": 0.5906786396296835,
+    "acceptance_rate": 0.9047619047619048,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.09523809523809523
+  },
+  {
+    "scenario": "feasible",
+    "checkpoint": "improved_stable",
+    "ablation": "D_rl_twin_mean_gate",
+    "cases": 42,
+    "mlu_applied_mean": 0.5906786396296835,
+    "acceptance_rate": 0.9047619047619048,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.09523809523809523
+  },
+  {
+    "scenario": "feasible",
+    "checkpoint": "improved_stable",
+    "ablation": "E_full_uncertainty_gate",
+    "cases": 42,
+    "mlu_applied_mean": 0.5906786396296835,
+    "acceptance_rate": 0.9047619047619048,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.09523809523809523
+  },
+  {
+    "scenario": "infeasible",
+    "checkpoint": "improved_best",
+    "ablation": "A_policy_only",
+    "cases": 98,
+    "mlu_applied_mean": 13.180899858275666,
+    "acceptance_rate": 1.0,
+    "unsafe_accept_rate": 1.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.0
+  },
+  {
+    "scenario": "infeasible",
+    "checkpoint": "improved_best",
+    "ablation": "B_rl_twin",
+    "cases": 98,
+    "mlu_applied_mean": 13.180899858275666,
+    "acceptance_rate": 1.0,
+    "unsafe_accept_rate": 1.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.0
+  },
+  {
+    "scenario": "infeasible",
+    "checkpoint": "improved_best",
+    "ablation": "C_rl_oracle_gate",
+    "cases": 98,
+    "mlu_applied_mean": 11.655272785096487,
+    "acceptance_rate": 0.0,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 1.0
+  },
+  {
+    "scenario": "infeasible",
+    "checkpoint": "improved_best",
+    "ablation": "D_rl_twin_mean_gate",
+    "cases": 98,
+    "mlu_applied_mean": 11.655272785096487,
+    "acceptance_rate": 0.0,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 1.0
+  },
+  {
+    "scenario": "infeasible",
+    "checkpoint": "improved_best",
+    "ablation": "E_full_uncertainty_gate",
+    "cases": 98,
+    "mlu_applied_mean": 11.655272785096487,
+    "acceptance_rate": 0.0,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 1.0
+  },
+  {
+    "scenario": "infeasible",
+    "checkpoint": "improved_stable",
+    "ablation": "A_policy_only",
+    "cases": 98,
+    "mlu_applied_mean": 13.261291684666887,
+    "acceptance_rate": 1.0,
+    "unsafe_accept_rate": 0.8979591836734694,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.0
+  },
+  {
+    "scenario": "infeasible",
+    "checkpoint": "improved_stable",
+    "ablation": "B_rl_twin",
+    "cases": 98,
+    "mlu_applied_mean": 13.261291684666887,
+    "acceptance_rate": 1.0,
+    "unsafe_accept_rate": 0.8979591836734694,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.0
+  },
+  {
+    "scenario": "infeasible",
+    "checkpoint": "improved_stable",
+    "ablation": "C_rl_oracle_gate",
+    "cases": 98,
+    "mlu_applied_mean": 11.643507715603048,
+    "acceptance_rate": 0.10204081632653061,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.8979591836734694
+  },
+  {
+    "scenario": "infeasible",
+    "checkpoint": "improved_stable",
+    "ablation": "D_rl_twin_mean_gate",
+    "cases": 98,
+    "mlu_applied_mean": 11.643507715603048,
+    "acceptance_rate": 0.10204081632653061,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "fallback_rate": 0.8979591836734694
+  },
+  {
+    "scenario": "infeasible",
+    "checkpoint": "improved_stable",
+    "ablation": "E_full_uncertainty_gate",
+    "cases": 98,
+    "mlu_applied_mean": 11.645021273650126,
+    "acceptance_rate": 0.09183673469387756,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.01020408163265306,
+    "fallback_rate": 0.9081632653061225
+  }
+]

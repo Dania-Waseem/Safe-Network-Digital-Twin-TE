@@ -1,0 +1,62 @@
+{
+  "seeds": [
+    101
+  ],
+  "scales": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "topology_spec": [
+    {
+      "topology": "B4",
+      "split": "val",
+      "count": 2,
+      "unseen": false
+    },
+    {
+      "topology": "UsCarrier",
+      "split": "val",
+      "count": 1,
+      "unseen": false
+    },
+    {
+      "topology": "Cogentco",
+      "split": "val",
+      "count": 1,
+      "unseen": false
+    },
+    {
+      "topology": "GEANT",
+      "split": "test",
+      "count": 2,
+      "unseen": true
+    },
+    {
+      "topology": "Kdl",
+      "split": "test",
+      "count": 1,
+      "unseen": true
+    }
+  ],
+  "checkpoints": {
+    "frozen_p1": "C:\\Users\\hp\\Pictures\\CNET phase 3\\GRL_TE_Reproduction\\BASELINE_FREEZE\\models\\grl_te_b4_freeze_seed100.pt",
+    "general_3epoch": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt",
+    "improved_best": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\best_checkpoint.pt",
+    "improved_stable": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\recommended_stable.pt"
+  },
+  "improved_checkpoint_aliases": {
+    "improved_best": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\best_checkpoint.pt",
+    "improved_stable": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\recommended_stable.pt",
+    "general_3epoch": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt",
+    "also_referenced": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\best_checkpoint.pt"
+  },
+  "feasibility_rule": "shortest or equal has zero capacity violations",
+  "preserved": {
+    "frozen_p1": "C:\\Users\\hp\\Pictures\\CNET phase 3\\GRL_TE_Reproduction\\BASELINE_FREEZE\\models\\grl_te_b4_freeze_seed100.pt",
+    "twin": "models/twin/ensemble.pt",
+    "splits": "data/processed/splits",
+    "asn": "not read"
+  }
+}

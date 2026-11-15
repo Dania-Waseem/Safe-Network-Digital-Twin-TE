@@ -1,0 +1,121 @@
+{
+  "policy_checkpoint": "C:\\Users\\hp\\Pictures\\CNET phase 3\\GRL_TE_Reproduction\\BASELINE_FREEZE\\models\\grl_te_b4_freeze_seed100.pt",
+  "twin_checkpoint": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\twin\\models\\ensemble.pt",
+  "twin_retrained": false,
+  "jobs": [
+    {
+      "topology": "B4",
+      "split": "val",
+      "summary": {
+        "cases": 4,
+        "acceptance_rate": 0.0,
+        "fallback_rate": 1.0,
+        "mean_mlu_applied": 1.1140481779140625,
+        "mean_mlu_policy_only": 1.2265004219768487,
+        "mean_mlu_shortest": 1.1140481779140625,
+        "mean_violations_applied": 1.0,
+        "mean_violations_policy_only": 1.75,
+        "mean_violations_shortest": 1.0,
+        "violation_decision_rate_applied": 1.0,
+        "violation_decision_rate_policy_only": 1.0,
+        "violation_decision_rate_shortest": 1.0,
+        "mean_fit_applied": 0.9918668203277681,
+        "mean_fit_policy_only": 0.9852860537248556,
+        "mean_fit_shortest": 0.9918668203277681,
+        "mean_prediction_mae": 0.5409936463828867,
+        "mean_policy_s": 0.006924700000126904,
+        "mean_twin_ms": 7.956825000292156,
+        "mean_gate_ms": 0.334399999701418,
+        "all_actions_normalised": true
+      }
+    },
+    {
+      "topology": "GEANT",
+      "split": "test",
+      "summary": {
+        "cases": 5,
+        "acceptance_rate": 0.0,
+        "fallback_rate": 1.0,
+        "mean_mlu_applied": 3.424853098064516,
+        "mean_mlu_policy_only": 3.754336406837241,
+        "mean_mlu_shortest": 3.424853098064516,
+        "mean_violations_applied": 5.6,
+        "mean_violations_policy_only": 11.4,
+        "mean_violations_shortest": 5.6,
+        "violation_decision_rate_applied": 1.0,
+        "violation_decision_rate_policy_only": 1.0,
+        "violation_decision_rate_shortest": 1.0,
+        "mean_fit_applied": 0.9296240441748216,
+        "mean_fit_policy_only": 0.9317525346746909,
+        "mean_fit_shortest": 0.9296240441748216,
+        "mean_prediction_mae": 234539.68705427117,
+        "mean_policy_s": 0.011288059999787946,
+        "mean_twin_ms": 9.238279999772203,
+        "mean_gate_ms": 0.34322000028623734,
+        "all_actions_normalised": true
+      }
+    },
+    {
+      "topology": "UsCarrier",
+      "split": "val",
+      "summary": {
+        "cases": 1,
+        "acceptance_rate": 0.0,
+        "fallback_rate": 1.0,
+        "mean_mlu_applied": 7.48,
+        "mean_mlu_policy_only": 10.176666772105179,
+        "mean_mlu_shortest": 7.48,
+        "mean_violations_applied": 110.0,
+        "mean_violations_policy_only": 229.0,
+        "mean_violations_shortest": 110.0,
+        "violation_decision_rate_applied": 1.0,
+        "violation_decision_rate_policy_only": 1.0,
+        "violation_decision_rate_shortest": 1.0,
+        "mean_fit_applied": 0.9662434314065459,
+        "mean_fit_policy_only": 0.8300570196590089,
+        "mean_fit_shortest": 0.9662434314065459,
+        "mean_prediction_mae": 0.2292957998123562,
+        "mean_policy_s": 0.9470877000003384,
+        "mean_twin_ms": 349.4702000007237,
+        "mean_gate_ms": 0.5189999992580852,
+        "all_actions_normalised": true
+      }
+    },
+    {
+      "topology": "Kdl",
+      "split": "test",
+      "summary": {
+        "cases": 1,
+        "acceptance_rate": 0.0,
+        "fallback_rate": 1.0,
+        "mean_mlu_applied": 11.142,
+        "mean_mlu_policy_only": 17.099333338667464,
+        "mean_mlu_shortest": 11.142,
+        "mean_violations_applied": 510.0,
+        "mean_violations_policy_only": 798.0,
+        "mean_violations_shortest": 510.0,
+        "violation_decision_rate_applied": 1.0,
+        "violation_decision_rate_policy_only": 1.0,
+        "violation_decision_rate_shortest": 1.0,
+        "mean_fit_applied": 0.9426673924776267,
+        "mean_fit_policy_only": 0.8897006047909117,
+        "mean_fit_shortest": 0.9426673924776267,
+        "mean_prediction_mae": 1.977617070977894,
+        "mean_policy_s": 71.57875070000046,
+        "mean_twin_ms": 9135.105800001838,
+        "mean_gate_ms": 8.964900000137277,
+        "all_actions_normalised": true
+      }
+    }
+  ],
+  "failures": [],
+  "seen_completed": true,
+  "unseen_completed": true,
+  "limitations": [
+    "The actor is the frozen B4 checkpoint applied unchanged. It was not trained on UsCarrier, Cogentco, GEANT, or Kdl.",
+    "ADMM and P1's capacity adjustment are not applied. Policy-only is the actor split itself.",
+    "Full demand is routed. Capacity fit ratio is the share of carried flow that fits on the links, not P1's post-adjustment satisfaction.",
+    "Native traffic matrices in this corpus often exceed capacity under every split, so the gate rejects them and shortest-path last resort can still violate.",
+    "ASN remains incomplete and is excluded."
+  ]
+}

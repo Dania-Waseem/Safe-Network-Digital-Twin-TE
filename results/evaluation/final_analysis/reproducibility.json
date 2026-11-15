@@ -1,0 +1,279 @@
+{
+  "catalog": {
+    "seeds": [
+      101,
+      202,
+      303,
+      404,
+      505
+    ],
+    "topologies": {
+      "B4": {
+        "split": "val",
+        "count": 2,
+        "n_available": 8,
+        "unseen": false,
+        "by_seed": {
+          "101": {
+            "local_indices": [
+              2,
+              4
+            ],
+            "matrix_ids": [
+              22,
+              24
+            ]
+          },
+          "202": {
+            "local_indices": [
+              1,
+              6
+            ],
+            "matrix_ids": [
+              21,
+              26
+            ]
+          },
+          "303": {
+            "local_indices": [
+              3,
+              6
+            ],
+            "matrix_ids": [
+              23,
+              26
+            ]
+          },
+          "404": {
+            "local_indices": [
+              1,
+              5
+            ],
+            "matrix_ids": [
+              21,
+              25
+            ]
+          },
+          "505": {
+            "local_indices": [
+              0,
+              1
+            ],
+            "matrix_ids": [
+              20,
+              21
+            ]
+          }
+        }
+      },
+      "UsCarrier": {
+        "split": "val",
+        "count": 1,
+        "n_available": 8,
+        "unseen": false,
+        "by_seed": {
+          "101": {
+            "local_indices": [
+              6
+            ],
+            "matrix_ids": [
+              26
+            ]
+          },
+          "202": {
+            "local_indices": [
+              4
+            ],
+            "matrix_ids": [
+              24
+            ]
+          },
+          "303": {
+            "local_indices": [
+              1
+            ],
+            "matrix_ids": [
+              21
+            ]
+          },
+          "404": {
+            "local_indices": [
+              3
+            ],
+            "matrix_ids": [
+              23
+            ]
+          },
+          "505": {
+            "local_indices": [
+              7
+            ],
+            "matrix_ids": [
+              27
+            ]
+          }
+        }
+      },
+      "Cogentco": {
+        "split": "val",
+        "count": 1,
+        "n_available": 8,
+        "unseen": false,
+        "by_seed": {
+          "101": {
+            "local_indices": [
+              3
+            ],
+            "matrix_ids": [
+              23
+            ]
+          },
+          "202": {
+            "local_indices": [
+              6
+            ],
+            "matrix_ids": [
+              26
+            ]
+          },
+          "303": {
+            "local_indices": [
+              2
+            ],
+            "matrix_ids": [
+              22
+            ]
+          },
+          "404": {
+            "local_indices": [
+              0
+            ],
+            "matrix_ids": [
+              20
+            ]
+          },
+          "505": {
+            "local_indices": [
+              2
+            ],
+            "matrix_ids": [
+              22
+            ]
+          }
+        }
+      },
+      "GEANT": {
+        "split": "test",
+        "count": 2,
+        "n_available": 2693,
+        "unseen": true,
+        "by_seed": {
+          "101": {
+            "local_indices": [
+              1908,
+              2546
+            ],
+            "matrix_ids": [
+              1908,
+              2546
+            ]
+          },
+          "202": {
+            "local_indices": [
+              304,
+              2270
+            ],
+            "matrix_ids": [
+              304,
+              2270
+            ]
+          },
+          "303": {
+            "local_indices": [
+              1479,
+              2142
+            ],
+            "matrix_ids": [
+              1479,
+              2142
+            ]
+          },
+          "404": {
+            "local_indices": [
+              67,
+              586
+            ],
+            "matrix_ids": [
+              67,
+              586
+            ]
+          },
+          "505": {
+            "local_indices": [
+              422,
+              2193
+            ],
+            "matrix_ids": [
+              422,
+              2193
+            ]
+          }
+        }
+      },
+      "Kdl": {
+        "split": "test",
+        "count": 1,
+        "n_available": 8,
+        "unseen": true,
+        "by_seed": {
+          "101": {
+            "local_indices": [
+              4
+            ],
+            "matrix_ids": [
+              32
+            ]
+          },
+          "202": {
+            "local_indices": [
+              2
+            ],
+            "matrix_ids": [
+              30
+            ]
+          },
+          "303": {
+            "local_indices": [
+              6
+            ],
+            "matrix_ids": [
+              34
+            ]
+          },
+          "404": {
+            "local_indices": [
+              6
+            ],
+            "matrix_ids": [
+              34
+            ]
+          },
+          "505": {
+            "local_indices": [
+              1
+            ],
+            "matrix_ids": [
+              29
+            ]
+          }
+        }
+      }
+    }
+  },
+  "command": "python -m framework.ablation_study",
+  "notes": [
+    "Ablations reuse robustness catalog matrices.",
+    "One propose+twin forward per case; A\u2013E applied offline.",
+    "GEANT/Kdl test only."
+  ]
+}
