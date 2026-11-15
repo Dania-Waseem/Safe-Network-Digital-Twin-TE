@@ -1,0 +1,94 @@
+{
+  "audit_type": "read_only_research_evaluation_audit",
+  "audit_scope": "phase3 implementation + baseline_p1_reproduction freeze artifacts",
+  "no_experiments_run": true,
+  "no_source_or_result_modifications": true,
+  "verified_claims": {
+    "af_eval_k1_calibrated_devtopos_v1": {
+      "path": "results/safety_gate/improvements/eval_runs/af_eval_k1_calibrated_devtopos_v1/",
+      "cases": 80,
+      "decision_rows": 480,
+      "failed_cases": 0,
+      "topologies": ["B4", "UsCarrier", "Cogentco"],
+      "excluded_topologies": ["GEANT", "Kdl"],
+      "variants": ["A", "B", "C", "D", "E", "F"],
+      "unsafe_accept_A": 0.5,
+      "unsafe_accept_B_to_F": 0.0,
+      "D_equals_E_decisions": true,
+      "applied_overload_B_to_F": 0.5,
+      "evidence": ["AF_EVALUATION_REPORT.md", "summary.json", "decisions.jsonl", "tables/analysis.json"]
+    },
+    "fallback_investigation": {
+      "path": "results/safety_gate/improvements/fallback_investigation/",
+      "failure_count_E": 40,
+      "initially_labeled_infeasible_forced_lb": 35,
+      "initially_labeled_inconclusive": 5,
+      "note": "failure_cases.json still labels 5 as inconclusive; later final_five_case_lp proves those 5 catalog-feasible at MLU=0.785",
+      "evidence": ["FALLBACK_FAILURE_REPORT.md", "failure_cases.json", "feasibility_analysis.json"]
+    },
+    "final_five_case_lp": {
+      "path": "results/safety_gate/improvements/fallback_investigation/final_five_case_lp/",
+      "n_cases": 5,
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "catalog_optimal_mlu": 0.785,
+      "catalog_feasible": true,
+      "expanded_yen8_optimal_mlu": 0.785,
+      "shortest_mlu": 1.87,
+      "equal_mlu": 2.4525,
+      "evidence": ["FIVE_CASE_LP_REPORT.md", "solver_diagnostics.json", "five_case_results.csv"]
+    },
+    "lp_fallback_validation": {
+      "path": "results/safety_gate/improvements/lp_fallback_validation/",
+      "n_feasible": 5,
+      "lp_mlu": 0.785,
+      "mean_runtime_s": 6.007117509841919,
+      "beats_all_baselines": true,
+      "evidence": ["LP_FALLBACK_VALIDATION.md", "results.csv", "routing_allocations.json"]
+    },
+    "lp_fallback_ablation": {
+      "path": "results/safety_gate/improvements/lp_fallback_ablation/",
+      "n_cases": 80,
+      "lp_invocations": 5,
+      "lp_applied": 5,
+      "recovered_cases": 5,
+      "overloaded_cases_A": 40,
+      "overloaded_cases_B": 35,
+      "mean_lp_runtime_s": 8.751573324203491,
+      "p95_lp_runtime_s": 9.478091716766357,
+      "gate_decisions_changed": false,
+      "evidence": ["LP_FALLBACK_AB_REPORT.md", "paired_results.csv", "case_level_results.json", "lp_invocation_log.json"]
+    },
+    "twin_improvements": {
+      "path": "results/digital_twin/improvements/",
+      "val_mae_util_original": 0.000754602,
+      "val_mae_util_physics_anchored": 3.11354e-05,
+      "geant_mae_util_improved": 1.47235e-05,
+      "conformal_std_scale_approx": 0.954545,
+      "evidence": ["DIGITAL_TWIN_IMPROVEMENT_REPORT.md", "tables/comparison.json", "metrics_*.json"]
+    },
+    "robustness_v1_and_final_analysis": {
+      "path": "results/evaluation/",
+      "robustness_rows": 840,
+      "includes_GEANT_Kdl": true,
+      "paired_tests_present": true,
+      "evidence": ["robustness_v1/ROBUSTNESS_REPORT.md", "final_analysis/FINAL_COMPARATIVE_REPORT.md", "final_analysis/tables/paired_tests.json", "final_analysis/AUDIT_REPORT.md"]
+    },
+    "p1_reproduction": {
+      "path": "../baseline_p1_reproduction/",
+      "overall_status": "PARTIALLY_VERIFIED",
+      "b4_freeze_complete": true,
+      "table6_not_reproduced_under_equivalent_conditions": true,
+      "admm_deviation_documented": true,
+      "evidence": ["COMPLETE_P1_AUDIT/P1_COMPLETE_REPRODUCTION_AUDIT.md", "FINAL_P1_DEVIATIONS.md", "BASELINE_FREEZE/B4_REPRODUCIBILITY_REPORT.md"]
+    }
+  },
+  "topology_roles": {
+    "B4": {"train": true, "val": true, "seen_eval": true, "unseen_eval": false},
+    "UsCarrier": {"train": true, "val": true, "seen_eval": true, "unseen_eval": false, "traffic_note": "synthetic_toy in processed splits"},
+    "Cogentco": {"train": true, "val": true, "seen_eval": true, "unseen_eval": false},
+    "GEANT": {"train": false, "val": false, "seen_eval": false, "unseen_eval": true, "af_eval_included": false, "robustness_v1_included": true},
+    "Kdl": {"train": false, "val": false, "seen_eval": false, "unseen_eval": true, "af_eval_included": false, "robustness_v1_included": true},
+    "ASN": {"train": false, "val": false, "seen_eval": false, "unseen_eval": false, "status": "excluded_incomplete"}
+  }
+}
