@@ -1,0 +1,668 @@
+{
+  "raw": {
+    "teal": {
+      "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal",
+      "action": "moved"
+    },
+    "figret": {
+      "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\figret",
+      "action": "moved"
+    },
+    "topology_zoo": {
+      "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\topology_zoo",
+      "action": "moved"
+    }
+  },
+  "topologies": [
+    {
+      "name": "B4",
+      "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\topologies\\B4.json",
+      "nodes": 12,
+      "directed_edges": 38,
+      "capacity_min": 5000.0,
+      "capacity_max": 5000.0,
+      "capacity_sum": 190000.0,
+      "table5": {
+        "nodes": 12,
+        "directed_edges": 38,
+        "avg_sp": 2.3,
+        "diameter": 5
+      },
+      "size_matches_table5": true,
+      "undirected_edges": 19,
+      "undirected_connected": true,
+      "undirected_components": 1,
+      "avg_shortest_path_undirected": 2.3181818181818183,
+      "diameter_undirected": 5,
+      "strongly_connected": true,
+      "ordered_pairs_without_a_path": 0,
+      "sha256": "d30dd2f2c29ece5b88b7b3302ebbcdc0b2e72792df5a6b45006ddb73c85485cf",
+      "capacity_note": "Capacities copied from the TEAL topology file."
+    },
+    {
+      "name": "UsCarrier",
+      "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\topologies\\UsCarrier.json",
+      "nodes": 158,
+      "directed_edges": 378,
+      "capacity_min": 50.0,
+      "capacity_max": 5850.0,
+      "capacity_sum": 346400.0,
+      "table5": {
+        "nodes": 158,
+        "directed_edges": 378,
+        "avg_sp": 12.1,
+        "diameter": 35
+      },
+      "size_matches_table5": true,
+      "undirected_edges": 189,
+      "undirected_connected": true,
+      "undirected_components": 1,
+      "avg_shortest_path_undirected": 12.09030073369346,
+      "diameter_undirected": 35,
+      "strongly_connected": true,
+      "ordered_pairs_without_a_path": 0,
+      "sha256": "e2d4d448640d123d9821651b03be74b4cdb00103633a3c924721aaaad7401cbb",
+      "capacity_note": "Capacities copied from the TEAL topology file."
+    },
+    {
+      "name": "Kdl",
+      "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\topologies\\Kdl.json",
+      "nodes": 754,
+      "directed_edges": 1790,
+      "capacity_min": 500.0,
+      "capacity_max": 67500.0,
+      "capacity_sum": 14658500.0,
+      "table5": {
+        "nodes": 754,
+        "directed_edges": 1790,
+        "avg_sp": 22.7,
+        "diameter": 58
+      },
+      "size_matches_table5": true,
+      "undirected_edges": 895,
+      "undirected_connected": true,
+      "undirected_components": 1,
+      "avg_shortest_path_undirected": 22.72654386873373,
+      "diameter_undirected": 58,
+      "strongly_connected": true,
+      "ordered_pairs_without_a_path": 0,
+      "sha256": "03cf7cc55b87943e5173275542ffc14895cad6218ad43d200a26376136ac245c",
+      "capacity_note": "Capacities copied from the TEAL topology file."
+    },
+    {
+      "name": "ASN",
+      "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\topologies\\ASN2k.json",
+      "nodes": 1739,
+      "directed_edges": 8558,
+      "capacity_min": 250.0,
+      "capacity_max": 53750.0,
+      "capacity_sum": 10563000.0,
+      "table5": {
+        "nodes": 1739,
+        "directed_edges": 8558,
+        "avg_sp": 3.2,
+        "diameter": 8
+      },
+      "size_matches_table5": true,
+      "undirected_edges": 4279,
+      "undirected_connected": true,
+      "undirected_components": 1,
+      "avg_shortest_path_undirected": 3.235580413064927,
+      "diameter_undirected": 8,
+      "strongly_connected": true,
+      "ordered_pairs_without_a_path": 0,
+      "sha256": "9d6cdb72959950d256c96d9b86bebcaf2e5da4db9977b1b05524bd608ccd38e5",
+      "capacity_note": "Capacities copied from the TEAL topology file."
+    },
+    {
+      "name": "GEANT",
+      "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\figret\\Data\\GEANT\\GEANT.json",
+      "nodes": 22,
+      "directed_edges": 72,
+      "capacity_min": 155000000.0,
+      "capacity_max": 10000000000.0,
+      "capacity_sum": 398040000000.0,
+      "table5": {
+        "nodes": 22,
+        "directed_edges": 72,
+        "avg_sp": 2.53,
+        "diameter": 5
+      },
+      "size_matches_table5": true,
+      "undirected_edges": 36,
+      "undirected_connected": true,
+      "undirected_components": 1,
+      "avg_shortest_path_undirected": 2.5324675324675323,
+      "diameter_undirected": 5,
+      "strongly_connected": true,
+      "ordered_pairs_without_a_path": 0,
+      "sha256": "dff4be2aad72a8aa0d153396906c535cdb4114850e88447c8448e65ebb878279",
+      "capacity_unit": "Values in the FIGRET file (10e9, 2.4e9, 155e6). FIGRET's normalize_size divides capacities and demands by 1e9 at load time. This collection stores the published numbers unscaled.",
+      "rejected_alternative": "Topology Zoo Geant / Geant2001 / Geant2009 / Geant2010 / Geant2011 / Geant2012 are a different network family. They are kept under data/raw/topology_zoo and are not copied into processed topologies."
+    },
+    {
+      "name": "Cogentco",
+      "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\topology_zoo\\gml\\Cogentco.gml",
+      "nodes": 197,
+      "directed_edges": 486,
+      "capacity_min": 10000.0,
+      "capacity_max": 10000.0,
+      "capacity_sum": 4860000.0,
+      "table5": {
+        "nodes": 197,
+        "directed_edges": 486,
+        "avg_sp": 10.51,
+        "diameter": 28
+      },
+      "size_matches_table5": true,
+      "undirected_edges": 243,
+      "undirected_connected": true,
+      "undirected_components": 1,
+      "avg_shortest_path_undirected": 10.510411271107428,
+      "diameter_undirected": 28,
+      "strongly_connected": true,
+      "ordered_pairs_without_a_path": 0,
+      "sha256": "4bcea614980b8a5b722560f1df392e9cd6849dc44806bd2189f50f36f0242c52",
+      "node_order": "Zoo node ids are already 0..n-1 and are kept as matrix indices.",
+      "string_sort_matches_numeric": false,
+      "capacity_source": "placeholder_uniform_10000_not_measured",
+      "undirected_zoo_edges": 243
+    }
+  ],
+  "zoo_geant_rejected": [
+    {
+      "file": "Geant.gml",
+      "nodes": 37,
+      "undirected_edges": 55,
+      "used": false,
+      "reason": "Not the FIGRET 22-node, 72-directed-link topology required by P1 Table 5."
+    },
+    {
+      "file": "Geant2001.gml",
+      "nodes": 27,
+      "undirected_edges": 38,
+      "used": false,
+      "reason": "Not the FIGRET 22-node, 72-directed-link topology required by P1 Table 5."
+    },
+    {
+      "file": "Geant2009.gml",
+      "nodes": 34,
+      "undirected_edges": 52,
+      "used": false,
+      "reason": "Not the FIGRET 22-node, 72-directed-link topology required by P1 Table 5."
+    },
+    {
+      "file": "Geant2010.gml",
+      "nodes": 37,
+      "undirected_edges": 56,
+      "used": false,
+      "reason": "Not the FIGRET 22-node, 72-directed-link topology required by P1 Table 5."
+    },
+    {
+      "file": "Geant2011.gml",
+      "nodes": 40,
+      "undirected_edges": 59,
+      "used": false,
+      "reason": "Not the FIGRET 22-node, 72-directed-link topology required by P1 Table 5."
+    },
+    {
+      "file": "Geant2012.gml",
+      "nodes": 40,
+      "undirected_edges": 61,
+      "used": false,
+      "reason": "Not the FIGRET 22-node, 72-directed-link topology required by P1 Table 5."
+    }
+  ],
+  "traffic": [
+    {
+      "name": "B4",
+      "kind": "real",
+      "label": "TEAL public real matrices, Yates/Abilene demands mapped onto B4",
+      "not": "Not Microsoft WAN traffic. Not gravity-synthetic.",
+      "n": 36,
+      "shape": [
+        12,
+        12
+      ],
+      "dtype": "float64",
+      "diagonal": "already 0 in the TEAL files",
+      "mean_total_demand_all": 26877.934695609805,
+      "mean_total_demand_test_28_36": 27981.198604921876,
+      "p1_cited_test_mean": 27980,
+      "index_split": {
+        "train": [
+          0,
+          20
+        ],
+        "val": [
+          20,
+          28
+        ],
+        "test": [
+          28,
+          36
+        ]
+      },
+      "index_split_status": "Protocol assumption copied from the frozen B4 card (TEAL-style 20/8/8). Lu et al. do not publish the split.",
+      "source_dir": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\traffic-matrices\\real",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\traffic_matrices\\real\\B4.npz"
+    },
+    {
+      "name": "GEANT",
+      "kind": "real",
+      "label": "FIGRET published G\u00c9ANT demand histories",
+      "not": "Not generated by this project. Not the gravity matrices previously built on Topology Zoo Geant2012.",
+      "unit": "Raw file units, same scale as GEANT.json capacities. FIGRET normalize_size divides by 1e9 (decimal gigabit) when training. That scale is not applied in the stored arrays.",
+      "train_rows": 8080,
+      "test_rows": 2693,
+      "shape": [
+        22,
+        22
+      ],
+      "dtype": "float64",
+      "train_files": [
+        {
+          "file": "1.hist",
+          "rows": 2016
+        },
+        {
+          "file": "2.hist",
+          "rows": 2016
+        },
+        {
+          "file": "3.hist",
+          "rows": 2016
+        },
+        {
+          "file": "4.hist",
+          "rows": 2016
+        },
+        {
+          "file": "5.hist",
+          "rows": 16
+        }
+      ],
+      "test_files": [
+        {
+          "file": "6.hist",
+          "rows": 2016
+        },
+        {
+          "file": "7.hist",
+          "rows": 677
+        }
+      ],
+      "split": "FIGRET's own train/ and test/ directories. No validation cut is published, so none is invented here. File 5.hist is kept even though it contains only 16 rows.",
+      "mean_total_demand_train": 104838539651.71683,
+      "mean_total_demand_test": 37945068157.73561,
+      "diagonal_sum_train": 0.0,
+      "diagonal_sum_test": 0.0,
+      "p1_cited_mean_total": "43.94 billion (Lu et al. text). Compare with the measured means; do not rescale to force a match.",
+      "opt_mlu": "Per-matrix optimal MLU shipped in the sibling .opt files.",
+      "source_dir": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\figret\\Data\\GEANT",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\traffic_matrices\\real\\GEANT.npz"
+    },
+    {
+      "name": "UsCarrier",
+      "kind": "toy",
+      "label": "TEAL synthetic toy placeholder",
+      "real_ms_wan_traffic": false,
+      "reason": "The public TEAL repository states that Microsoft WAN traces cannot be shared. UsCarrier, Kdl, and ASN ship only toy matrices.",
+      "n": 36,
+      "shape": [
+        158,
+        158
+      ],
+      "source_dtype": "float16",
+      "all_entries_equal_1_including_diagonal": true,
+      "all_36_files_identical": true,
+      "source_total_if_ones": 24964,
+      "processed_demand_rule": "Off-diagonal demand is 1.0 and the diagonal is 0. No other values were invented. Matrices are not materialised, because every published file is the same all-ones array.",
+      "index_split": {
+        "train": [
+          0,
+          20
+        ],
+        "val": [
+          20,
+          28
+        ],
+        "test": [
+          28,
+          36
+        ]
+      },
+      "index_split_status": "Index convention only. These matrices are identical, so the cut is not a time split and cannot support a Table 6 claim.",
+      "source_dir": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\traffic-matrices\\toy"
+    },
+    {
+      "name": "Kdl",
+      "kind": "toy",
+      "label": "TEAL synthetic toy placeholder",
+      "real_ms_wan_traffic": false,
+      "reason": "The public TEAL repository states that Microsoft WAN traces cannot be shared. UsCarrier, Kdl, and ASN ship only toy matrices.",
+      "n": 36,
+      "shape": [
+        754,
+        754
+      ],
+      "source_dtype": "float16",
+      "all_entries_equal_1_including_diagonal": true,
+      "all_36_files_identical": true,
+      "source_total_if_ones": 568516,
+      "processed_demand_rule": "Off-diagonal demand is 1.0 and the diagonal is 0. No other values were invented. Matrices are not materialised, because every published file is the same all-ones array.",
+      "index_split": {
+        "train": [
+          0,
+          20
+        ],
+        "val": [
+          20,
+          28
+        ],
+        "test": [
+          28,
+          36
+        ]
+      },
+      "index_split_status": "Index convention only. These matrices are identical, so the cut is not a time split and cannot support a Table 6 claim.",
+      "source_dir": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\traffic-matrices\\toy"
+    },
+    {
+      "name": "ASN",
+      "kind": "toy",
+      "label": "TEAL synthetic toy placeholder",
+      "real_ms_wan_traffic": false,
+      "reason": "The public TEAL repository states that Microsoft WAN traces cannot be shared. UsCarrier, Kdl, and ASN ship only toy matrices.",
+      "n": 36,
+      "shape": [
+        1739,
+        1739
+      ],
+      "source_dtype": "float16",
+      "all_entries_equal_1_including_diagonal": true,
+      "all_36_files_identical": true,
+      "source_total_if_ones": 3024121,
+      "processed_demand_rule": "Off-diagonal demand is 1.0 and the diagonal is 0. No other values were invented. Matrices are not materialised, because every published file is the same all-ones array.",
+      "index_split": {
+        "train": [
+          0,
+          20
+        ],
+        "val": [
+          20,
+          28
+        ],
+        "test": [
+          28,
+          36
+        ]
+      },
+      "index_split_status": "Index convention only. These matrices are identical, so the cut is not a time split and cannot support a Table 6 claim.",
+      "source_dir": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\traffic-matrices\\toy"
+    },
+    {
+      "name": "Cogentco",
+      "kind": "reconstructed_gravity",
+      "real_traffic": false,
+      "formula": "T_ij = A_i A_j (i != j), A_i = max(degree(i), 1), degree = in+out",
+      "scale": "Each noisy matrix is not re-scaled; the noiseless base sums to the sum of placeholder capacities.",
+      "target_total_of_base": 4860000.0,
+      "n": 36,
+      "seed": 2025,
+      "noise": "lognormal(0, 0.15) per entry",
+      "numpy": "2.2.6",
+      "status": "reconstructed_synthetic",
+      "not_p1_dump": "Lu et al. do not publish Cogentco gravity constants. This series follows the frozen project's documented reconstruction so the method is explicit. It is not an author traffic dump.",
+      "mean_total_demand": 4915035.764690226,
+      "min_total_demand": 4902390.30259431,
+      "max_total_demand": 4922934.365471324,
+      "index_split": {
+        "train": [
+          0,
+          20
+        ],
+        "val": [
+          20,
+          28
+        ],
+        "test": [
+          28,
+          36
+        ]
+      },
+      "index_split_status": "There is no time axis. The 20/8/8 index cut is the same convention as the 36-matrix TEAL series, not an observed split.",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\traffic_matrices\\reconstructed\\Cogentco_gravity.npz"
+    }
+  ],
+  "b4": {
+    "name": "B4",
+    "kind": "real",
+    "label": "TEAL public real matrices, Yates/Abilene demands mapped onto B4",
+    "not": "Not Microsoft WAN traffic. Not gravity-synthetic.",
+    "n": 36,
+    "shape": [
+      12,
+      12
+    ],
+    "dtype": "float64",
+    "diagonal": "already 0 in the TEAL files",
+    "mean_total_demand_all": 26877.934695609805,
+    "mean_total_demand_test_28_36": 27981.198604921876,
+    "p1_cited_test_mean": 27980,
+    "index_split": {
+      "train": [
+        0,
+        20
+      ],
+      "val": [
+        20,
+        28
+      ],
+      "test": [
+        28,
+        36
+      ]
+    },
+    "index_split_status": "Protocol assumption copied from the frozen B4 card (TEAL-style 20/8/8). Lu et al. do not publish the split.",
+    "source_dir": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\traffic-matrices\\real",
+    "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\traffic_matrices\\real\\B4.npz"
+  },
+  "geant_tm": {
+    "name": "GEANT",
+    "kind": "real",
+    "label": "FIGRET published G\u00c9ANT demand histories",
+    "not": "Not generated by this project. Not the gravity matrices previously built on Topology Zoo Geant2012.",
+    "unit": "Raw file units, same scale as GEANT.json capacities. FIGRET normalize_size divides by 1e9 (decimal gigabit) when training. That scale is not applied in the stored arrays.",
+    "train_rows": 8080,
+    "test_rows": 2693,
+    "shape": [
+      22,
+      22
+    ],
+    "dtype": "float64",
+    "train_files": [
+      {
+        "file": "1.hist",
+        "rows": 2016
+      },
+      {
+        "file": "2.hist",
+        "rows": 2016
+      },
+      {
+        "file": "3.hist",
+        "rows": 2016
+      },
+      {
+        "file": "4.hist",
+        "rows": 2016
+      },
+      {
+        "file": "5.hist",
+        "rows": 16
+      }
+    ],
+    "test_files": [
+      {
+        "file": "6.hist",
+        "rows": 2016
+      },
+      {
+        "file": "7.hist",
+        "rows": 677
+      }
+    ],
+    "split": "FIGRET's own train/ and test/ directories. No validation cut is published, so none is invented here. File 5.hist is kept even though it contains only 16 rows.",
+    "mean_total_demand_train": 104838539651.71683,
+    "mean_total_demand_test": 37945068157.73561,
+    "diagonal_sum_train": 0.0,
+    "diagonal_sum_test": 0.0,
+    "p1_cited_mean_total": "43.94 billion (Lu et al. text). Compare with the measured means; do not rescale to force a match.",
+    "opt_mlu": "Per-matrix optimal MLU shipped in the sibling .opt files.",
+    "source_dir": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\figret\\Data\\GEANT",
+    "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\traffic_matrices\\real\\GEANT.npz"
+  },
+  "paths": [
+    {
+      "topology": "B4",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\candidate_paths\\B4_yen4_minhop.pkl",
+      "pairs": 132,
+      "pairs_missing": 0,
+      "pairs_padded_to_4": 0,
+      "mean_hops_shortest": 2.3181818181818183,
+      "seconds": 0.031
+    },
+    {
+      "topology": "GEANT",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\candidate_paths\\GEANT_yen4_minhop.pkl",
+      "pairs": 462,
+      "pairs_missing": 0,
+      "pairs_padded_to_4": 0,
+      "mean_hops_shortest": 2.5324675324675323,
+      "seconds": 0.185
+    },
+    {
+      "topology": "UsCarrier",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\candidate_paths\\UsCarrier_yen4_minhop.pkl",
+      "pairs": 24806,
+      "pairs_missing": 0,
+      "pairs_padded_to_4": 602,
+      "mean_hops_shortest": 12.09030073369346,
+      "seconds": 40.673
+    },
+    {
+      "topology": "Cogentco",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\candidate_paths\\Cogentco_yen4_minhop.pkl",
+      "pairs": 38612,
+      "pairs_missing": 0,
+      "pairs_padded_to_4": 158,
+      "mean_hops_shortest": 10.510411271107428,
+      "seconds": 69.231
+    }
+  ],
+  "figret_tunnels": {
+    "topology": "GEANT",
+    "kind": "figret_published_tunnels",
+    "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\candidate_paths\\GEANT_figret_tunnels.txt",
+    "pairs": 462,
+    "paths_per_pair_min": 3,
+    "paths_per_pair_max": 3,
+    "note": "FIGRET ships these tunnels (usually 3 paths). They are kept beside the Yen-4 paths and are not rewritten into 4 paths."
+  },
+  "failures": [
+    {
+      "topology": "B4",
+      "cases": 40,
+      "edges": 38
+    },
+    {
+      "topology": "GEANT",
+      "cases": 40,
+      "edges": 72
+    },
+    {
+      "topology": "UsCarrier",
+      "cases": 40,
+      "edges": 378
+    },
+    {
+      "topology": "Cogentco",
+      "cases": 40,
+      "edges": 486
+    },
+    {
+      "topology": "Kdl",
+      "cases": 40,
+      "edges": 1790
+    },
+    {
+      "topology": "ASN",
+      "cases": 40,
+      "edges": 8558
+    }
+  ],
+  "twin": [
+    {
+      "topology": "B4",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\B4_noise.npz",
+      "shape": [
+        10,
+        5,
+        38
+      ],
+      "generator_seed": 301
+    },
+    {
+      "topology": "GEANT",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\GEANT_noise.npz",
+      "shape": [
+        10,
+        5,
+        72
+      ],
+      "generator_seed": 302
+    },
+    {
+      "topology": "UsCarrier",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\UsCarrier_noise.npz",
+      "shape": [
+        10,
+        5,
+        378
+      ],
+      "generator_seed": 303
+    },
+    {
+      "topology": "Cogentco",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\Cogentco_noise.npz",
+      "shape": [
+        10,
+        5,
+        486
+      ],
+      "generator_seed": 304
+    },
+    {
+      "topology": "Kdl",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\Kdl_noise.npz",
+      "shape": [
+        10,
+        5,
+        1790
+      ],
+      "generator_seed": 305
+    },
+    {
+      "topology": "ASN",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\ASN_noise.npz",
+      "shape": [
+        10,
+        5,
+        8558
+      ],
+      "generator_seed": 306
+    }
+  ],
+  "p1_tree": "not modified"
+}

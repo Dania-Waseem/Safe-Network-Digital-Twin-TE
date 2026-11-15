@@ -1,0 +1,96 @@
+{
+  "purpose": "Synthetic twin-error scenarios for Phase 2 experiment E4. These are perturbations of a predicted link load. They are not traffic matrices and they do not fill in missing Microsoft WAN traces.",
+  "formula": "load_hat[e] = max(0, load_true[e] * (1 + sigma * z[seed_index, level_index, e]))",
+  "sigma": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.4
+  ],
+  "seeds": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+  ],
+  "seed_axis": "Axis 0 of z follows `seeds` in this order, not the numeric seed value.",
+  "z": "Standard normal, float32, stored per topology so the draw does not depend on regenerating NumPy.",
+  "generator_seeds": {
+    "B4": 301,
+    "GEANT": 302,
+    "UsCarrier": 303,
+    "Cogentco": 304,
+    "Kdl": 305,
+    "ASN": 306
+  },
+  "numpy": "2.2.6",
+  "topologies": [
+    {
+      "topology": "B4",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\B4_noise.npz",
+      "shape": [
+        10,
+        5,
+        38
+      ],
+      "generator_seed": 301
+    },
+    {
+      "topology": "GEANT",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\GEANT_noise.npz",
+      "shape": [
+        10,
+        5,
+        72
+      ],
+      "generator_seed": 302
+    },
+    {
+      "topology": "UsCarrier",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\UsCarrier_noise.npz",
+      "shape": [
+        10,
+        5,
+        378
+      ],
+      "generator_seed": 303
+    },
+    {
+      "topology": "Cogentco",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\Cogentco_noise.npz",
+      "shape": [
+        10,
+        5,
+        486
+      ],
+      "generator_seed": 304
+    },
+    {
+      "topology": "Kdl",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\Kdl_noise.npz",
+      "shape": [
+        10,
+        5,
+        1790
+      ],
+      "generator_seed": 305
+    },
+    {
+      "topology": "ASN",
+      "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\scenarios\\twin_errors\\ASN_noise.npz",
+      "shape": [
+        10,
+        5,
+        8558
+      ],
+      "generator_seed": 306
+    }
+  ]
+}

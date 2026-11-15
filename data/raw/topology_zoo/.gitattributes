@@ -1,0 +1,4 @@
+﻿# sources.tar.gz was previously LFS-tracked, but the 248MB object is not present locally.
+# The working tree file is only the pointer text (134 bytes). Unpacked content is in sources/.
+# sources.tar.gz filter=lfs diff=lfs merge=lfs -text
+

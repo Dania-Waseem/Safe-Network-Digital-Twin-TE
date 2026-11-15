@@ -1,0 +1,620 @@
+{
+  "topology": "GEANT",
+  "protocol": "Directed-edge failures, matching the frozen P1 Section 5.5 sampler: random.Random(seed) then, for n_failed in 0,1,2,3, sample n_failed edge indices without replacement. n_failed=0 draws nothing. Later draws in the same seed advance the RNG, so the 1-edge set is not a subset of the 2-edge set. A failed edge has its capacity set to 0; the opposite direction is removed only when it is also drawn.",
+  "num_edges": 72,
+  "edge_order": "Order of links in data/processed/topologies/{name}.json",
+  "seeds": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+  ],
+  "cases": [
+    {
+      "seed": 100,
+      "n_failed": 0,
+      "edge_indices": [],
+      "edges": []
+    },
+    {
+      "seed": 100,
+      "n_failed": 1,
+      "edge_indices": [
+        18
+      ],
+      "edges": [
+        [
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "seed": 100,
+      "n_failed": 2,
+      "edge_indices": [
+        58,
+        22
+      ],
+      "edges": [
+        [
+          17,
+          21
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "seed": 100,
+      "n_failed": 3,
+      "edge_indices": [
+        50,
+        44,
+        55
+      ],
+      "edges": [
+        [
+          14,
+          4
+        ],
+        [
+          12,
+          5
+        ],
+        [
+          16,
+          3
+        ]
+      ]
+    },
+    {
+      "seed": 200,
+      "n_failed": 0,
+      "edge_indices": [],
+      "edges": []
+    },
+    {
+      "seed": 200,
+      "n_failed": 1,
+      "edge_indices": [
+        5
+      ],
+      "edges": [
+        [
+          1,
+          6
+        ]
+      ]
+    },
+    {
+      "seed": 200,
+      "n_failed": 2,
+      "edge_indices": [
+        26,
+        3
+      ],
+      "edges": [
+        [
+          6,
+          2
+        ],
+        [
+          0,
+          15
+        ]
+      ]
+    },
+    {
+      "seed": 200,
+      "n_failed": 3,
+      "edge_indices": [
+        18,
+        34,
+        1
+      ],
+      "edges": [
+        [
+          4,
+          10
+        ],
+        [
+          8,
+          19
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "seed": 300,
+      "n_failed": 0,
+      "edge_indices": [],
+      "edges": []
+    },
+    {
+      "seed": 300,
+      "n_failed": 1,
+      "edge_indices": [
+        45
+      ],
+      "edges": [
+        [
+          12,
+          7
+        ]
+      ]
+    },
+    {
+      "seed": 300,
+      "n_failed": 2,
+      "edge_indices": [
+        44,
+        0
+      ],
+      "edges": [
+        [
+          12,
+          5
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "seed": 300,
+      "n_failed": 3,
+      "edge_indices": [
+        62,
+        44,
+        67
+      ],
+      "edges": [
+        [
+          19,
+          0
+        ],
+        [
+          12,
+          5
+        ],
+        [
+          21,
+          10
+        ]
+      ]
+    },
+    {
+      "seed": 400,
+      "n_failed": 0,
+      "edge_indices": [],
+      "edges": []
+    },
+    {
+      "seed": 400,
+      "n_failed": 1,
+      "edge_indices": [
+        39
+      ],
+      "edges": [
+        [
+          10,
+          21
+        ]
+      ]
+    },
+    {
+      "seed": 400,
+      "n_failed": 2,
+      "edge_indices": [
+        71,
+        32
+      ],
+      "edges": [
+        [
+          21,
+          18
+        ],
+        [
+          7,
+          12
+        ]
+      ]
+    },
+    {
+      "seed": 400,
+      "n_failed": 3,
+      "edge_indices": [
+        11,
+        62,
+        58
+      ],
+      "edges": [
+        [
+          3,
+          4
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          17,
+          21
+        ]
+      ]
+    },
+    {
+      "seed": 500,
+      "n_failed": 0,
+      "edge_indices": [],
+      "edges": []
+    },
+    {
+      "seed": 500,
+      "n_failed": 1,
+      "edge_indices": [
+        59
+      ],
+      "edges": [
+        [
+          18,
+          4
+        ]
+      ]
+    },
+    {
+      "seed": 500,
+      "n_failed": 2,
+      "edge_indices": [
+        67,
+        59
+      ],
+      "edges": [
+        [
+          21,
+          10
+        ],
+        [
+          18,
+          4
+        ]
+      ]
+    },
+    {
+      "seed": 500,
+      "n_failed": 3,
+      "edge_indices": [
+        32,
+        48,
+        27
+      ],
+      "edges": [
+        [
+          7,
+          12
+        ],
+        [
+          13,
+          6
+        ],
+        [
+          6,
+          4
+        ]
+      ]
+    },
+    {
+      "seed": 600,
+      "n_failed": 0,
+      "edge_indices": [],
+      "edges": []
+    },
+    {
+      "seed": 600,
+      "n_failed": 1,
+      "edge_indices": [
+        33
+      ],
+      "edges": [
+        [
+          8,
+          9
+        ]
+      ]
+    },
+    {
+      "seed": 600,
+      "n_failed": 2,
+      "edge_indices": [
+        44,
+        56
+      ],
+      "edges": [
+        [
+          12,
+          5
+        ],
+        [
+          16,
+          18
+        ]
+      ]
+    },
+    {
+      "seed": 600,
+      "n_failed": 3,
+      "edge_indices": [
+        19,
+        13,
+        49
+      ],
+      "edges": [
+        [
+          4,
+          12
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          14,
+          1
+        ]
+      ]
+    },
+    {
+      "seed": 700,
+      "n_failed": 0,
+      "edge_indices": [],
+      "edges": []
+    },
+    {
+      "seed": 700,
+      "n_failed": 1,
+      "edge_indices": [
+        21
+      ],
+      "edges": [
+        [
+          4,
+          18
+        ]
+      ]
+    },
+    {
+      "seed": 700,
+      "n_failed": 2,
+      "edge_indices": [
+        24,
+        57
+      ],
+      "edges": [
+        [
+          5,
+          17
+        ],
+        [
+          17,
+          5
+        ]
+      ]
+    },
+    {
+      "seed": 700,
+      "n_failed": 3,
+      "edge_indices": [
+        27,
+        67,
+        41
+      ],
+      "edges": [
+        [
+          6,
+          4
+        ],
+        [
+          21,
+          10
+        ],
+        [
+          11,
+          14
+        ]
+      ]
+    },
+    {
+      "seed": 800,
+      "n_failed": 0,
+      "edge_indices": [],
+      "edges": []
+    },
+    {
+      "seed": 800,
+      "n_failed": 1,
+      "edge_indices": [
+        63
+      ],
+      "edges": [
+        [
+          19,
+          8
+        ]
+      ]
+    },
+    {
+      "seed": 800,
+      "n_failed": 2,
+      "edge_indices": [
+        6,
+        60
+      ],
+      "edges": [
+        [
+          1,
+          13
+        ],
+        [
+          18,
+          16
+        ]
+      ]
+    },
+    {
+      "seed": 800,
+      "n_failed": 3,
+      "edge_indices": [
+        57,
+        65,
+        40
+      ],
+      "edges": [
+        [
+          17,
+          5
+        ],
+        [
+          20,
+          9
+        ],
+        [
+          11,
+          12
+        ]
+      ]
+    },
+    {
+      "seed": 900,
+      "n_failed": 0,
+      "edge_indices": [],
+      "edges": []
+    },
+    {
+      "seed": 900,
+      "n_failed": 1,
+      "edge_indices": [
+        29
+      ],
+      "edges": [
+        [
+          6,
+          13
+        ]
+      ]
+    },
+    {
+      "seed": 900,
+      "n_failed": 2,
+      "edge_indices": [
+        47,
+        12
+      ],
+      "edges": [
+        [
+          13,
+          1
+        ],
+        [
+          3,
+          16
+        ]
+      ]
+    },
+    {
+      "seed": 900,
+      "n_failed": 3,
+      "edge_indices": [
+        10,
+        31,
+        42
+      ],
+      "edges": [
+        [
+          2,
+          12
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          12,
+          2
+        ]
+      ]
+    },
+    {
+      "seed": 1000,
+      "n_failed": 0,
+      "edge_indices": [],
+      "edges": []
+    },
+    {
+      "seed": 1000,
+      "n_failed": 1,
+      "edge_indices": [
+        54
+      ],
+      "edges": [
+        [
+          15,
+          21
+        ]
+      ]
+    },
+    {
+      "seed": 1000,
+      "n_failed": 2,
+      "edge_indices": [
+        12,
+        50
+      ],
+      "edges": [
+        [
+          3,
+          16
+        ],
+        [
+          14,
+          4
+        ]
+      ]
+    },
+    {
+      "seed": 1000,
+      "n_failed": 3,
+      "edge_indices": [
+        45,
+        8,
+        59
+      ],
+      "edges": [
+        [
+          12,
+          7
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          18,
+          4
+        ]
+      ]
+    }
+  ]
+}
