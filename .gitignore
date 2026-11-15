@@ -1,0 +1,58 @@
+# Python caches / envs
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.ruff_cache/
+
+# Nested git metadata (do not embed foreign .git dirs)
+**/.git/
+
+# OS / editor junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+
+# Local env/secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# LFS pointer without local object (248MB blob missing). Unpacked content is in sources/
+data/raw/topology_zoo/sources.tar.gz
+
+# Phase 3 final experiments: large/binary experiment outputs (summaries and compact rows are committed)
+results/phase3_final/**/decisions.jsonl
+results/phase3_final/**/cache/
+results/phase3_final/**/*.pt
+results/phase3_final/**/*.npz
+baseline_p1_reproduction/phase3_final/**/*.pt
+submission/
+results/phase3_final/e3_link_failures/case_rows.jsonl
+
+# Local tool settings and packaging output (not part of the repository)
+.claude/
+.cursor/
+CLAUDE.md
+AGENTS.md
+.cursorrules
+PHASE3_COMPLETION_PROMPT.md
+PHASE3_COMPLETION_PLAN.md
+PHASE3_COMPLETION_PROGRESS.md
+submission/
+/23i2622_23i2618_Phase3_Implementation.zip
+submission.zip

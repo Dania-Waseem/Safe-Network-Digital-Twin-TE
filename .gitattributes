@@ -1,0 +1,4 @@
+# Model checkpoints (all of them) are stored with Git LFS
+models/**/*.pt filter=lfs diff=lfs merge=lfs -text
+# Large processed graph tensor (was already in LFS)
+data/processed/graph_data/Kdl_bipartite.pt filter=lfs diff=lfs merge=lfs -text

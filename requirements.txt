@@ -1,0 +1,12 @@
+# Versions used for the Phase 3 final results (Python 3.12.1, CPU only).
+# Graphviz (dot) 16.1.1 is needed only to re-render the diagrams.
+numpy==2.5.3
+scipy==1.16.0
+torch==2.11.0
+networkx==3.6.1
+pandas==2.3.1
+matplotlib==3.11.2
+scikit-posthocs==0.18.0
+statsmodels==0.15.0
+psutil==7.2.2
+pytest==9.1.1
