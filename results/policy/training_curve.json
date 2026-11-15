@@ -1,0 +1,36 @@
+{
+  "history": [
+    {
+      "epoch": 0,
+      "train_mlu": 3.25403972218434,
+      "val_mlu": {
+        "B4": 1.2140017300844193,
+        "UsCarrier": 3.25,
+        "Cogentco": 16.575777053833008
+      },
+      "val_mean_mlu": 7.013259594639142
+    },
+    {
+      "epoch": 1,
+      "train_mlu": 3.208599526435137,
+      "val_mlu": {
+        "B4": 1.177407681941986,
+        "UsCarrier": 3.237499952316284,
+        "Cogentco": 16.590791702270508
+      },
+      "val_mean_mlu": 7.001899778842926
+    },
+    {
+      "epoch": 2,
+      "train_mlu": 3.22281555707256,
+      "val_mlu": {
+        "B4": 1.081631377339363,
+        "UsCarrier": 3.117500066757202,
+        "Cogentco": 17.054290771484375
+      },
+      "val_mean_mlu": 7.084474071860313
+    }
+  ],
+  "best_val_mean_mlu": 7.001899778842926,
+  "checkpoint": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt"
+}

@@ -1,0 +1,162 @@
+{
+  "history": [
+    {
+      "epoch": 0,
+      "train_mlu": 4.858348548412323,
+      "train_loss": 1.0252150520017105,
+      "val_mlu": {
+        "B4": 1.1652361303567886,
+        "UsCarrier": 3.305000066757202,
+        "Cogentco": 16.576066970825195
+      },
+      "val_mean_mlu": 7.015434389313062,
+      "steps_done": 56
+    },
+    {
+      "epoch": 1,
+      "train_mlu": 4.869785196014813,
+      "train_loss": 1.02501119473683,
+      "val_mlu": {
+        "B4": 1.157778024673462,
+        "UsCarrier": 3.315000057220459,
+        "Cogentco": 16.559073448181152
+      },
+      "val_mean_mlu": 7.010617176691691,
+      "steps_done": 112
+    },
+    {
+      "epoch": 2,
+      "train_mlu": 4.869864495737212,
+      "train_loss": 1.0244395646399684,
+      "val_mlu": {
+        "B4": 1.1539338678121567,
+        "UsCarrier": 3.2674999237060547,
+        "Cogentco": 16.664228439331055
+      },
+      "val_mean_mlu": 7.028554076949756,
+      "steps_done": 168
+    },
+    {
+      "epoch": 3,
+      "train_mlu": 4.868835919669697,
+      "train_loss": 1.0225759183189698,
+      "val_mlu": {
+        "B4": 1.114549160003662,
+        "UsCarrier": 3.052500009536743,
+        "Cogentco": 16.76955509185791
+      },
+      "val_mean_mlu": 6.9788680871327715,
+      "steps_done": 224
+    },
+    {
+      "epoch": 4,
+      "train_mlu": 4.807744045874903,
+      "train_loss": 1.0104343446769886,
+      "val_mlu": {
+        "B4": 0.993058517575264,
+        "UsCarrier": 3.028749942779541,
+        "Cogentco": 16.930678367614746
+      },
+      "val_mean_mlu": 6.98416227598985,
+      "steps_done": 280
+    },
+    {
+      "epoch": 5,
+      "train_mlu": 4.79289155879191,
+      "train_loss": 1.0094316249846347,
+      "val_mlu": {
+        "B4": 0.9939722940325737,
+        "UsCarrier": 3.0225000381469727,
+        "Cogentco": 16.96416187286377
+      },
+      "val_mean_mlu": 6.993544735014439,
+      "steps_done": 336
+    },
+    {
+      "epoch": 6,
+      "train_mlu": 4.794007120920079,
+      "train_loss": 1.0095354061174606,
+      "val_mlu": {
+        "B4": 0.9906733334064484,
+        "UsCarrier": 3.0250000953674316,
+        "Cogentco": 16.944798469543457
+      },
+      "val_mean_mlu": 6.986823966105779,
+      "steps_done": 392
+    },
+    {
+      "epoch": 7,
+      "train_mlu": 4.798136128378766,
+      "train_loss": 1.0100611434318125,
+      "val_mlu": {
+        "B4": 0.9894446134567261,
+        "UsCarrier": 3.028749942779541,
+        "Cogentco": 16.990103721618652
+      },
+      "val_mean_mlu": 7.002766092618306,
+      "steps_done": 448
+    },
+    {
+      "epoch": 8,
+      "train_mlu": 4.804987645042794,
+      "train_loss": 1.0109423935812498,
+      "val_mlu": {
+        "B4": 0.9898636266589165,
+        "UsCarrier": 3.0299999713897705,
+        "Cogentco": 16.985936164855957
+      },
+      "val_mean_mlu": 7.001933254301548,
+      "steps_done": 504
+    }
+  ],
+  "best": {
+    "epoch": 3,
+    "val_mean_mlu": 6.9788680871327715,
+    "val_mlu": {
+      "B4": 1.114549160003662,
+      "UsCarrier": 3.052500009536743,
+      "Cogentco": 16.76955509185791
+    },
+    "normalization": "capacity and demand divided by max capacity",
+    "train_topologies": [
+      "B4",
+      "UsCarrier",
+      "Cogentco"
+    ],
+    "train_scales": {
+      "B4": [
+        1.0,
+        0.5
+      ],
+      "UsCarrier": [
+        0.25,
+        0.5
+      ],
+      "Cogentco": [
+        0.25,
+        0.5
+      ]
+    },
+    "val_used_for_selection": {
+      "B4": 1.114549160003662,
+      "UsCarrier": 3.052500009536743,
+      "Cogentco": 16.76955509185791
+    },
+    "test_topologies_not_used": [
+      "GEANT",
+      "Kdl"
+    ],
+    "config": {
+      "run_id": "lr1e4_bs1_e20",
+      "max_epochs": 20,
+      "patience": 5,
+      "actor_lr": 0.0001,
+      "batch_size": 1,
+      "seed": 2026,
+      "large_train_matrices": 4,
+      "large_val_matrices": 2,
+      "grad_clip": 1.0,
+      "max_steps": null
+    }
+  }
+}

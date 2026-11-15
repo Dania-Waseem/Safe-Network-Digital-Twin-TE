@@ -1,0 +1,330 @@
+{
+  "history": [
+    {
+      "epoch": 0,
+      "train_mlu": 4.846799509865897,
+      "train_loss": 1.0249281378595956,
+      "val_mlu": {
+        "B4": 1.186803936958313,
+        "UsCarrier": 3.2750000953674316,
+        "Cogentco": 16.644691467285156
+      },
+      "val_mean_mlu": 7.0354984998703,
+      "steps_done": 56
+    },
+    {
+      "epoch": 1,
+      "train_mlu": 4.88088234513998,
+      "train_loss": 1.0260661790546561,
+      "val_mlu": {
+        "B4": 1.1574766933918,
+        "UsCarrier": 3.3125,
+        "Cogentco": 16.591142654418945
+      },
+      "val_mean_mlu": 7.020373115936915,
+      "steps_done": 112
+    },
+    {
+      "epoch": 2,
+      "train_mlu": 4.877450136201722,
+      "train_loss": 1.025566480721214,
+      "val_mlu": {
+        "B4": 1.152055561542511,
+        "UsCarrier": 3.2925000190734863,
+        "Cogentco": 16.64348030090332
+      },
+      "val_mean_mlu": 7.029345293839772,
+      "steps_done": 168
+    },
+    {
+      "epoch": 3,
+      "train_mlu": 4.871500404817717,
+      "train_loss": 1.024428378591048,
+      "val_mlu": {
+        "B4": 1.1539668887853622,
+        "UsCarrier": 3.262500047683716,
+        "Cogentco": 16.6729679107666
+      },
+      "val_mean_mlu": 7.029811615745227,
+      "steps_done": 224
+    },
+    {
+      "epoch": 4,
+      "train_mlu": 4.874732268708093,
+      "train_loss": 1.0244812523680074,
+      "val_mlu": {
+        "B4": 1.156403511762619,
+        "UsCarrier": 3.262500047683716,
+        "Cogentco": 16.674582481384277
+      },
+      "val_mean_mlu": 7.031162013610204,
+      "steps_done": 280
+    },
+    {
+      "epoch": 5,
+      "train_mlu": 4.87415714774813,
+      "train_loss": 1.0243799021201474,
+      "val_mlu": {
+        "B4": 1.1566070765256882,
+        "UsCarrier": 3.262500047683716,
+        "Cogentco": 16.676990509033203
+      },
+      "val_mean_mlu": 7.032032544414203,
+      "steps_done": 336
+    },
+    {
+      "epoch": 6,
+      "train_mlu": 4.8746635775480955,
+      "train_loss": 1.0243660096478249,
+      "val_mlu": {
+        "B4": 1.1510977894067764,
+        "UsCarrier": 3.257499933242798,
+        "Cogentco": 16.682101249694824
+      },
+      "val_mean_mlu": 7.0302329907814665,
+      "steps_done": 392
+    },
+    {
+      "epoch": 7,
+      "train_mlu": 4.8633334540895055,
+      "train_loss": 1.0226055019801217,
+      "val_mlu": {
+        "B4": 1.1426545828580856,
+        "UsCarrier": 3.1212499141693115,
+        "Cogentco": 16.71005344390869
+      },
+      "val_mean_mlu": 6.991319313645363,
+      "steps_done": 448
+    },
+    {
+      "epoch": 8,
+      "train_mlu": 4.8375532531312535,
+      "train_loss": 1.0159439270916795,
+      "val_mlu": {
+        "B4": 1.1114503145217896,
+        "UsCarrier": 3.052500009536743,
+        "Cogentco": 16.77788734436035
+      },
+      "val_mean_mlu": 6.980612556139628,
+      "steps_done": 504
+    },
+    {
+      "epoch": 9,
+      "train_mlu": 4.812828606792858,
+      "train_loss": 1.01083878254784,
+      "val_mlu": {
+        "B4": 1.0113818496465683,
+        "UsCarrier": 3.015000104904175,
+        "Cogentco": 16.91756534576416
+      },
+      "val_mean_mlu": 6.981315766771634,
+      "steps_done": 560
+    },
+    {
+      "epoch": 10,
+      "train_mlu": 4.793118159153631,
+      "train_loss": 1.008487664495728,
+      "val_mlu": {
+        "B4": 0.995849184691906,
+        "UsCarrier": 3.009999990463257,
+        "Cogentco": 16.929255485534668
+      },
+      "val_mean_mlu": 6.978368220229943,
+      "steps_done": 616
+    },
+    {
+      "epoch": 11,
+      "train_mlu": 4.789776349706309,
+      "train_loss": 1.0083748324375068,
+      "val_mlu": {
+        "B4": 0.9926229566335678,
+        "UsCarrier": 3.018749952316284,
+        "Cogentco": 16.921266555786133
+      },
+      "val_mean_mlu": 6.977546488245328,
+      "steps_done": 672
+    },
+    {
+      "epoch": 12,
+      "train_mlu": 4.788042071142367,
+      "train_loss": 1.0081762932906193,
+      "val_mlu": {
+        "B4": 0.9918120726943016,
+        "UsCarrier": 3.015000104904175,
+        "Cogentco": 16.928914070129395
+      },
+      "val_mean_mlu": 6.97857541590929,
+      "steps_done": 728
+    },
+    {
+      "epoch": 13,
+      "train_mlu": 4.788312623543399,
+      "train_loss": 1.0081801157710808,
+      "val_mlu": {
+        "B4": 0.9917428120970726,
+        "UsCarrier": 3.0087499618530273,
+        "Cogentco": 16.934470176696777
+      },
+      "val_mean_mlu": 6.978320983548959,
+      "steps_done": 784
+    },
+    {
+      "epoch": 14,
+      "train_mlu": 4.787908800478492,
+      "train_loss": 1.0081227331289224,
+      "val_mlu": {
+        "B4": 0.9910679906606674,
+        "UsCarrier": 3.012500047683716,
+        "Cogentco": 16.935827255249023
+      },
+      "val_mean_mlu": 6.9797984311978025,
+      "steps_done": 840
+    },
+    {
+      "epoch": 15,
+      "train_mlu": 4.791055712848902,
+      "train_loss": 1.0085345668984311,
+      "val_mlu": {
+        "B4": 0.9900234937667847,
+        "UsCarrier": 3.012500047683716,
+        "Cogentco": 16.929621696472168
+      },
+      "val_mean_mlu": 6.977381745974223,
+      "steps_done": 896
+    },
+    {
+      "epoch": 16,
+      "train_mlu": 4.787703907915524,
+      "train_loss": 1.0081803953008992,
+      "val_mlu": {
+        "B4": 0.9898689240217209,
+        "UsCarrier": 3.009999990463257,
+        "Cogentco": 16.93186664581299
+      },
+      "val_mean_mlu": 6.977245186765988,
+      "steps_done": 952
+    },
+    {
+      "epoch": 17,
+      "train_mlu": 4.788922254528318,
+      "train_loss": 1.0082416809829218,
+      "val_mlu": {
+        "B4": 0.9907667189836502,
+        "UsCarrier": 3.012500047683716,
+        "Cogentco": 16.944087028503418
+      },
+      "val_mean_mlu": 6.982451265056928,
+      "steps_done": 1008
+    },
+    {
+      "epoch": 18,
+      "train_mlu": 4.790995659040553,
+      "train_loss": 1.0084512516457056,
+      "val_mlu": {
+        "B4": 0.9909217730164528,
+        "UsCarrier": 3.007499933242798,
+        "Cogentco": 16.954596519470215
+      },
+      "val_mean_mlu": 6.9843394085764885,
+      "steps_done": 1064
+    },
+    {
+      "epoch": 19,
+      "train_mlu": 4.789999400398561,
+      "train_loss": 1.0082433469194387,
+      "val_mlu": {
+        "B4": 0.9906816706061363,
+        "UsCarrier": 3.005000114440918,
+        "Cogentco": 16.954267501831055
+      },
+      "val_mean_mlu": 6.98331642895937,
+      "steps_done": 1120
+    },
+    {
+      "epoch": 20,
+      "train_mlu": 4.790580007646765,
+      "train_loss": 1.0081930382709419,
+      "val_mlu": {
+        "B4": 0.989759586751461,
+        "UsCarrier": 3.005000114440918,
+        "Cogentco": 16.95186996459961
+      },
+      "val_mean_mlu": 6.982209888597329,
+      "steps_done": 1176
+    },
+    {
+      "epoch": 21,
+      "train_mlu": 4.79186977658953,
+      "train_loss": 1.0083270712888666,
+      "val_mlu": {
+        "B4": 0.9898164868354797,
+        "UsCarrier": 3.009999990463257,
+        "Cogentco": 16.95786476135254
+      },
+      "val_mean_mlu": 6.985893746217092,
+      "steps_done": 1232
+    },
+    {
+      "epoch": 22,
+      "train_mlu": 4.792833051511219,
+      "train_loss": 1.0085849610290356,
+      "val_mlu": {
+        "B4": 0.9894593358039856,
+        "UsCarrier": 3.007499933242798,
+        "Cogentco": 16.957529067993164
+      },
+      "val_mean_mlu": 6.984829445679982,
+      "steps_done": 1288
+    }
+  ],
+  "best": {
+    "epoch": 16,
+    "val_mean_mlu": 6.977245186765988,
+    "val_mlu": {
+      "B4": 0.9898689240217209,
+      "UsCarrier": 3.009999990463257,
+      "Cogentco": 16.93186664581299
+    },
+    "normalization": "capacity and demand divided by max capacity",
+    "train_topologies": [
+      "B4",
+      "UsCarrier",
+      "Cogentco"
+    ],
+    "train_scales": {
+      "B4": [
+        1.0,
+        0.5
+      ],
+      "UsCarrier": [
+        0.25,
+        0.5
+      ],
+      "Cogentco": [
+        0.25,
+        0.5
+      ]
+    },
+    "val_used_for_selection": {
+      "B4": 0.9898689240217209,
+      "UsCarrier": 3.009999990463257,
+      "Cogentco": 16.93186664581299
+    },
+    "test_topologies_not_used": [
+      "GEANT",
+      "Kdl"
+    ],
+    "config": {
+      "run_id": "lr5e5_bs1_e24",
+      "max_epochs": 24,
+      "patience": 6,
+      "actor_lr": 5e-05,
+      "batch_size": 1,
+      "seed": 2026,
+      "large_train_matrices": 4,
+      "large_val_matrices": 2,
+      "grad_clip": 1.0,
+      "max_steps": null
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "run_id": "timing_smoke",
+  "best_val_mean_mlu": 6.989272822936376,
+  "best_epoch": 0,
+  "epochs_ran": 1,
+  "stopped_early": false,
+  "checkpoint": "results\\policy\\improved\\runs\\timing_smoke\\best.pt",
+  "config": {
+    "run_id": "timing_smoke",
+    "max_epochs": 1,
+    "patience": 1,
+    "actor_lr": 0.0001,
+    "batch_size": 1,
+    "seed": 2026,
+    "large_train_matrices": 1,
+    "large_val_matrices": 1,
+    "grad_clip": 1.0,
+    "max_steps": null
+  },
+  "legacy_checkpoint_untouched": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt"
+}

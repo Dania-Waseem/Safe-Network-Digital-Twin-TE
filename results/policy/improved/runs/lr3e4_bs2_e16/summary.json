@@ -1,0 +1,21 @@
+{
+  "run_id": "lr3e4_bs2_e16",
+  "best_val_mean_mlu": 7.098875259359677,
+  "best_epoch": 0,
+  "epochs_ran": 5,
+  "stopped_early": true,
+  "checkpoint": "results\\policy\\improved\\runs\\lr3e4_bs2_e16\\best.pt",
+  "config": {
+    "run_id": "lr3e4_bs2_e16",
+    "max_epochs": 16,
+    "patience": 4,
+    "actor_lr": 0.0003,
+    "batch_size": 2,
+    "seed": 2026,
+    "large_train_matrices": 4,
+    "large_val_matrices": 2,
+    "grad_clip": 1.0,
+    "max_steps": null
+  },
+  "legacy_checkpoint_untouched": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt"
+}

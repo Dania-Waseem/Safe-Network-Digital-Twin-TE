@@ -1,0 +1,23 @@
+{
+  "experiment_root": "results/policy/improved",
+  "legacy_checkpoint_untouched": "models/policy/general_grl.pt",
+  "best_checkpoint": "models/policy/improved/best_checkpoint.pt",
+  "normalization": "capacity and demand divided by max(link capacity)",
+  "train_topologies": ["B4", "UsCarrier", "Cogentco"],
+  "val_topologies": ["B4", "UsCarrier", "Cogentco"],
+  "test_topologies_held_out": ["GEANT", "Kdl"],
+  "path_padding": "four slots per demand; collapsed onto real paths for twin/gate",
+  "early_stopping": "validation mean MLU patience",
+  "search_grid": [
+    {"run_id": "lr1e4_bs1_e20", "actor_lr": 0.0001, "batch_size": 1, "max_epochs": 20, "patience": 5},
+    {"run_id": "lr3e4_bs2_e16", "actor_lr": 0.0003, "batch_size": 2, "max_epochs": 16, "patience": 4},
+    {"run_id": "lr5e5_bs1_e24", "actor_lr": 0.00005, "batch_size": 1, "max_epochs": 24, "patience": 6},
+    {"run_id": "lr1e4_bs4_e16", "actor_lr": 0.0001, "batch_size": 4, "max_epochs": 16, "patience": 4}
+  ],
+  "large_train_matrices": 4,
+  "large_val_matrices": 2,
+  "frozen_b4_checkpoint": "never loaded or written",
+  "digital_twin": "unchanged",
+  "safety_gate": "unchanged",
+  "splits": "unchanged"
+}

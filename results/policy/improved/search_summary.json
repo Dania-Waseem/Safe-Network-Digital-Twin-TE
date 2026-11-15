@@ -1,0 +1,104 @@
+{
+  "experiment_root": "results\\policy\\improved",
+  "runs": [
+    {
+      "run_id": "lr1e4_bs1_e20",
+      "best_val_mean_mlu": 6.9788680871327715,
+      "best_epoch": 3,
+      "epochs_ran": 9,
+      "stopped_early": true,
+      "checkpoint": "results\\policy\\improved\\runs\\lr1e4_bs1_e20\\best.pt",
+      "config": {
+        "run_id": "lr1e4_bs1_e20",
+        "max_epochs": 20,
+        "patience": 5,
+        "actor_lr": 0.0001,
+        "batch_size": 1,
+        "seed": 2026,
+        "large_train_matrices": 4,
+        "large_val_matrices": 2,
+        "grad_clip": 1.0,
+        "max_steps": null
+      },
+      "legacy_checkpoint_untouched": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt"
+    },
+    {
+      "run_id": "lr3e4_bs2_e16",
+      "best_val_mean_mlu": 7.098875259359677,
+      "best_epoch": 0,
+      "epochs_ran": 5,
+      "stopped_early": true,
+      "checkpoint": "results\\policy\\improved\\runs\\lr3e4_bs2_e16\\best.pt",
+      "config": {
+        "run_id": "lr3e4_bs2_e16",
+        "max_epochs": 16,
+        "patience": 4,
+        "actor_lr": 0.0003,
+        "batch_size": 2,
+        "seed": 2026,
+        "large_train_matrices": 4,
+        "large_val_matrices": 2,
+        "grad_clip": 1.0,
+        "max_steps": null
+      },
+      "legacy_checkpoint_untouched": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt"
+    },
+    {
+      "run_id": "lr5e5_bs1_e24",
+      "best_val_mean_mlu": 6.977245186765988,
+      "best_epoch": 16,
+      "epochs_ran": 23,
+      "stopped_early": true,
+      "checkpoint": "results\\policy\\improved\\runs\\lr5e5_bs1_e24\\best.pt",
+      "config": {
+        "run_id": "lr5e5_bs1_e24",
+        "max_epochs": 24,
+        "patience": 6,
+        "actor_lr": 5e-05,
+        "batch_size": 1,
+        "seed": 2026,
+        "large_train_matrices": 4,
+        "large_val_matrices": 2,
+        "grad_clip": 1.0,
+        "max_steps": null
+      },
+      "legacy_checkpoint_untouched": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt"
+    },
+    {
+      "run_id": "lr1e4_bs4_e16",
+      "best_val_mean_mlu": 6.969527915120125,
+      "best_epoch": 0,
+      "epochs_ran": 5,
+      "stopped_early": true,
+      "checkpoint": "results\\policy\\improved\\runs\\lr1e4_bs4_e16\\best.pt",
+      "config": {
+        "run_id": "lr1e4_bs4_e16",
+        "max_epochs": 16,
+        "patience": 4,
+        "actor_lr": 0.0001,
+        "batch_size": 4,
+        "seed": 2026,
+        "large_train_matrices": 4,
+        "large_val_matrices": 2,
+        "grad_clip": 1.0,
+        "max_steps": null
+      },
+      "legacy_checkpoint_untouched": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt"
+    }
+  ],
+  "best_run_id": "lr1e4_bs4_e16",
+  "best_val_mean_mlu": 6.969527915120125,
+  "best_checkpoint": "results\\policy\\improved\\best_checkpoint.pt",
+  "legacy_checkpoint": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\general_grl.pt",
+  "held_out": [
+    "GEANT",
+    "Kdl"
+  ],
+  "train_topologies": [
+    "B4",
+    "UsCarrier",
+    "Cogentco"
+  ],
+  "normalization": "capacity and demand divided by max capacity",
+  "path_padding": "four slots per demand; collapsed onto real paths"
+}

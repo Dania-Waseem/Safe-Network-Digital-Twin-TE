@@ -1,0 +1,12 @@
+{
+  "run_id": "timing_smoke",
+  "max_epochs": 1,
+  "patience": 1,
+  "actor_lr": 0.0001,
+  "batch_size": 1,
+  "seed": 2026,
+  "large_train_matrices": 1,
+  "large_val_matrices": 1,
+  "grad_clip": 1.0,
+  "max_steps": null
+}

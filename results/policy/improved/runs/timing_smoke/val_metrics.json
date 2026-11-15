@@ -1,0 +1,66 @@
+{
+  "history": [
+    {
+      "epoch": 0,
+      "train_mlu": 2.1684051088311453,
+      "train_loss": 0.39238337258046324,
+      "val_mlu": {
+        "B4": 1.1708411872386932,
+        "UsCarrier": 3.297499895095825,
+        "Cogentco": 16.49947738647461
+      },
+      "val_mean_mlu": 6.989272822936376,
+      "steps_done": 44
+    }
+  ],
+  "best": {
+    "epoch": 0,
+    "val_mean_mlu": 6.989272822936376,
+    "val_mlu": {
+      "B4": 1.1708411872386932,
+      "UsCarrier": 3.297499895095825,
+      "Cogentco": 16.49947738647461
+    },
+    "normalization": "capacity and demand divided by max capacity",
+    "train_topologies": [
+      "B4",
+      "UsCarrier",
+      "Cogentco"
+    ],
+    "train_scales": {
+      "B4": [
+        1.0,
+        0.5
+      ],
+      "UsCarrier": [
+        0.25,
+        0.5
+      ],
+      "Cogentco": [
+        0.25,
+        0.5
+      ]
+    },
+    "val_used_for_selection": {
+      "B4": 1.1708411872386932,
+      "UsCarrier": 3.297499895095825,
+      "Cogentco": 16.49947738647461
+    },
+    "test_topologies_not_used": [
+      "GEANT",
+      "Kdl"
+    ],
+    "config": {
+      "run_id": "timing_smoke",
+      "max_epochs": 1,
+      "patience": 1,
+      "actor_lr": 0.0001,
+      "batch_size": 1,
+      "seed": 2026,
+      "large_train_matrices": 1,
+      "large_val_matrices": 1,
+      "grad_clip": 1.0,
+      "max_steps": null
+    }
+  }
+}

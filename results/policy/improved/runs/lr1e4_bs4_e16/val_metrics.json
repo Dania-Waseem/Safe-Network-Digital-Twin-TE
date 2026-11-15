@@ -1,0 +1,114 @@
+{
+  "history": [
+    {
+      "epoch": 0,
+      "train_mlu": 4.847796843520233,
+      "train_loss": 1.026483388883727,
+      "val_mlu": {
+        "B4": 1.245081052184105,
+        "UsCarrier": 3.375,
+        "Cogentco": 16.28850269317627
+      },
+      "val_mean_mlu": 6.969527915120125,
+      "steps_done": 56
+    },
+    {
+      "epoch": 1,
+      "train_mlu": 4.880129569343159,
+      "train_loss": 1.0264244768103319,
+      "val_mlu": {
+        "B4": 1.1737619638442993,
+        "UsCarrier": 3.302500009536743,
+        "Cogentco": 16.63412570953369
+      },
+      "val_mean_mlu": 7.036795894304912,
+      "steps_done": 112
+    },
+    {
+      "epoch": 2,
+      "train_mlu": 4.883312810744558,
+      "train_loss": 1.0263210400007665,
+      "val_mlu": {
+        "B4": 1.1583893448114395,
+        "UsCarrier": 3.3125,
+        "Cogentco": 16.63603973388672
+      },
+      "val_mean_mlu": 7.035643026232719,
+      "steps_done": 168
+    },
+    {
+      "epoch": 3,
+      "train_mlu": 4.882202138858182,
+      "train_loss": 1.026139186695218,
+      "val_mlu": {
+        "B4": 1.1546600311994553,
+        "UsCarrier": 3.307499885559082,
+        "Cogentco": 16.640846252441406
+      },
+      "val_mean_mlu": 7.0343353897333145,
+      "steps_done": 224
+    },
+    {
+      "epoch": 4,
+      "train_mlu": 4.8799338681357245,
+      "train_loss": 1.025773691811732,
+      "val_mlu": {
+        "B4": 1.1527003049850464,
+        "UsCarrier": 3.302500009536743,
+        "Cogentco": 16.643410682678223
+      },
+      "val_mean_mlu": 7.032870332400004,
+      "steps_done": 280
+    }
+  ],
+  "best": {
+    "epoch": 0,
+    "val_mean_mlu": 6.969527915120125,
+    "val_mlu": {
+      "B4": 1.245081052184105,
+      "UsCarrier": 3.375,
+      "Cogentco": 16.28850269317627
+    },
+    "normalization": "capacity and demand divided by max capacity",
+    "train_topologies": [
+      "B4",
+      "UsCarrier",
+      "Cogentco"
+    ],
+    "train_scales": {
+      "B4": [
+        1.0,
+        0.5
+      ],
+      "UsCarrier": [
+        0.25,
+        0.5
+      ],
+      "Cogentco": [
+        0.25,
+        0.5
+      ]
+    },
+    "val_used_for_selection": {
+      "B4": 1.245081052184105,
+      "UsCarrier": 3.375,
+      "Cogentco": 16.28850269317627
+    },
+    "test_topologies_not_used": [
+      "GEANT",
+      "Kdl"
+    ],
+    "config": {
+      "run_id": "lr1e4_bs4_e16",
+      "max_epochs": 16,
+      "patience": 4,
+      "actor_lr": 0.0001,
+      "batch_size": 4,
+      "seed": 2026,
+      "large_train_matrices": 4,
+      "large_val_matrices": 2,
+      "grad_clip": 1.0,
+      "max_steps": null
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "checkpoint": "models/policy/general_grl.pt",
+  "normalization": "capacity and demand divided by max(link capacity)",
+  "train_topologies": ["B4", "UsCarrier", "Cogentco"],
+  "val_topologies": ["B4", "UsCarrier", "Cogentco"],
+  "test_topologies_held_out_until_eval": ["GEANT", "Kdl"],
+  "frozen_b4_checkpoint": "never loaded or written",
+  "path_padding": "four slots per demand; collapsed onto real paths for twin/gate",
+  "fallback_order": [
+    "accept proposed if gate says safe",
+    "otherwise choose among last_accepted, shortest, equal",
+    "prefer zero violations",
+    "else least violations then lowest MLU",
+    "report unavoidable_overload when every candidate violates"
+  ],
+  "epochs": 3,
+  "actor_lr": 0.0001
+}

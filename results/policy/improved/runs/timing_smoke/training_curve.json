@@ -1,0 +1,32 @@
+{
+  "history": [
+    {
+      "epoch": 0,
+      "train_mlu": 2.1684051088311453,
+      "train_loss": 0.39238337258046324,
+      "val_mlu": {
+        "B4": 1.1708411872386932,
+        "UsCarrier": 3.297499895095825,
+        "Cogentco": 16.49947738647461
+      },
+      "val_mean_mlu": 6.989272822936376,
+      "steps_done": 44
+    }
+  ],
+  "best_val_mean_mlu": 6.989272822936376,
+  "best_epoch": 0,
+  "stopped_early": false,
+  "checkpoint": "results\\policy\\improved\\runs\\timing_smoke\\best.pt",
+  "config": {
+    "run_id": "timing_smoke",
+    "max_epochs": 1,
+    "patience": 1,
+    "actor_lr": 0.0001,
+    "batch_size": 1,
+    "seed": 2026,
+    "large_train_matrices": 1,
+    "large_val_matrices": 1,
+    "grad_clip": 1.0,
+    "max_steps": null
+  }
+}

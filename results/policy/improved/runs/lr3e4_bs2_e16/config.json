@@ -1,0 +1,12 @@
+{
+  "run_id": "lr3e4_bs2_e16",
+  "max_epochs": 16,
+  "patience": 4,
+  "actor_lr": 0.0003,
+  "batch_size": 2,
+  "seed": 2026,
+  "large_train_matrices": 4,
+  "large_val_matrices": 2,
+  "grad_clip": 1.0,
+  "max_steps": null
+}

@@ -1,0 +1,80 @@
+{
+  "history": [
+    {
+      "epoch": 0,
+      "train_mlu": 4.87992857928787,
+      "train_loss": 1.02575154895229,
+      "val_mlu": {
+        "B4": 1.1216680258512497,
+        "UsCarrier": 3.1500000953674316,
+        "Cogentco": 17.02495765686035
+      },
+      "val_mean_mlu": 7.098875259359677,
+      "steps_done": 56
+    },
+    {
+      "epoch": 1,
+      "train_mlu": 4.90687865444592,
+      "train_loss": 1.0236174714352404,
+      "val_mlu": {
+        "B4": 1.0676322877407074,
+        "UsCarrier": 3.125,
+        "Cogentco": 17.125768661499023
+      },
+      "val_mean_mlu": 7.106133649746577,
+      "steps_done": 112
+    },
+    {
+      "epoch": 2,
+      "train_mlu": 4.897817338683775,
+      "train_loss": 1.0222263443283737,
+      "val_mlu": {
+        "B4": 1.0680996775627136,
+        "UsCarrier": 3.122499942779541,
+        "Cogentco": 17.147127151489258
+      },
+      "val_mean_mlu": 7.112575590610504,
+      "steps_done": 168
+    },
+    {
+      "epoch": 3,
+      "train_mlu": 4.898898881993124,
+      "train_loss": 1.0222981653974526,
+      "val_mlu": {
+        "B4": 1.0676909983158112,
+        "UsCarrier": 3.125,
+        "Cogentco": 17.12910556793213
+      },
+      "val_mean_mlu": 7.107265522082646,
+      "steps_done": 224
+    },
+    {
+      "epoch": 4,
+      "train_mlu": 4.896605806691306,
+      "train_loss": 1.0221040425156909,
+      "val_mlu": {
+        "B4": 1.067699983716011,
+        "UsCarrier": 3.125,
+        "Cogentco": 17.12910556793213
+      },
+      "val_mean_mlu": 7.107268517216046,
+      "steps_done": 280
+    }
+  ],
+  "best_val_mean_mlu": 7.098875259359677,
+  "best_epoch": 0,
+  "stopped_early": true,
+  "checkpoint": "results\\policy\\improved\\runs\\lr3e4_bs2_e16\\best.pt",
+  "config": {
+    "run_id": "lr3e4_bs2_e16",
+    "max_epochs": 16,
+    "patience": 4,
+    "actor_lr": 0.0003,
+    "batch_size": 2,
+    "seed": 2026,
+    "large_train_matrices": 4,
+    "large_val_matrices": 2,
+    "grad_clip": 1.0,
+    "max_steps": null
+  }
+}
