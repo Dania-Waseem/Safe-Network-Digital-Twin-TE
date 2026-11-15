@@ -1,0 +1,80 @@
+{
+  "catalog_yen4": {
+    "status": "optimal",
+    "solver_status_code": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "runtime_s": 4.563713550567627,
+    "optimal_mlu": 0.785,
+    "objective": 0.785,
+    "optimality_gap": 0.0,
+    "feasible_at_1": true,
+    "n_paths": 97974,
+    "n_demands": 24806,
+    "n_links": 378
+  },
+  "expanded_yen8": {
+    "status": "optimal",
+    "solver_status_code": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "runtime_s": 19.840296745300293,
+    "optimal_mlu": 0.785,
+    "objective": 0.785,
+    "optimality_gap": 0.0,
+    "feasible_at_1": true,
+    "n_paths": 194182,
+    "n_demands": 24806,
+    "n_links": 378
+  },
+  "forced_common_link_lower_bound": {
+    "mlu_lower_bound": 0.785,
+    "n_overloaded_forced_links": 0,
+    "n_demands_with_common_links": 21547,
+    "infeasible_proven": false
+  },
+  "catalog_validation": {
+    "recomputed": {
+      "mlu": 0.785,
+      "n_overloaded_links": 0,
+      "total_overload": 0.0,
+      "mean_util": 0.29669614853358256
+    }
+  },
+  "expanded_validation": {
+    "recomputed": {
+      "mlu": 0.7850000000000001,
+      "n_overloaded_links": 0,
+      "total_overload": 0.0,
+      "mean_util": 0.33592015813712683
+    }
+  },
+  "path_counts": {
+    "catalog_yen4": 97974,
+    "expanded_yen8": 194182,
+    "catalog_demands": 24806,
+    "expanded_demands": 24806
+  },
+  "baselines": {
+    "shortest": {
+      "mlu": 1.87,
+      "n_overloaded_links": 2,
+      "total_overload": 159.75,
+      "mean_util": 0.22432685641063832
+    },
+    "equal": {
+      "mlu": 2.4525,
+      "n_overloaded_links": 20,
+      "total_overload": 696.3541666666667,
+      "mean_util": 0.3583230434326788
+    },
+    "rebalance_heuristic": {
+      "mlu": 1.3534271399627453,
+      "n_overloaded_links": 11,
+      "total_overload": 99.83000082320234,
+      "feasible": false,
+      "n_iters": 60,
+      "iter": 59,
+      "method": "rebalance"
+    }
+  },
+  "total_demand": 6201.5
+}

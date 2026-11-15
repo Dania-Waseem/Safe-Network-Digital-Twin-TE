@@ -1,0 +1,35 @@
+{
+  "dev_topologies": [
+    "B4",
+    "UsCarrier",
+    "Cogentco"
+  ],
+  "scales": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "nominal_k": [
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+  ],
+  "threshold_seeds": [
+    404,
+    505
+  ],
+  "conformal_std_scale": 0.9545454545454546,
+  "catalog": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\evaluation\\robustness_v1\\catalog.json",
+  "policy": "improved_stable",
+  "twins": {
+    "improved": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\digital_twin\\improvements\\models\\ensemble_physics_anchored.pt",
+    "improved_calibrated": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\digital_twin\\improvements\\models\\ensemble_physics_anchored_conformal.pt"
+  },
+  "never_used": [
+    "GEANT",
+    "Kdl"
+  ]
+}

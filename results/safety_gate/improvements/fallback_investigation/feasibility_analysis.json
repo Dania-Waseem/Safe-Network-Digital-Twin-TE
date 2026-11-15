@@ -1,0 +1,1137 @@
+{
+  "cases": [
+    {
+      "case_id": "seed=101|topo=UsCarrier|split=val|mid=26|li=6|scale=0.25|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": {
+          "mlu": 1.3534271399627453,
+          "n_overloaded_links": 11,
+          "total_overload": 99.83000082320234,
+          "feasible": false,
+          "n_iters": 60,
+          "iter": 59,
+          "method": "rebalance",
+          "status": "no_witness",
+          "n_samples": 12
+        },
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 0.785,
+          "n_overloaded_forced_links": 0,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": false
+        },
+        "feasible_at_mlu_1": null,
+        "min_mlu": null,
+        "status": "inconclusive",
+        "method": "heuristic_only_large_graph",
+        "reason": "n_paths=97974 too large for reliable exact LP in this diagnostic; heuristic found no feasible witness (not a proof of infeasibility); forced-link MLU lower bound=0.7850",
+        "min_mlu_upper_bound_from_heuristic": 1.3534271399627453
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 1.87,
+      "proposed_mlu": 3.010000003988314,
+      "failure_cause_label": "inconclusive",
+      "physical_class": "inconclusive_feasibility"
+    },
+    {
+      "case_id": "seed=101|topo=UsCarrier|split=val|mid=26|li=6|scale=0.5|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.5,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 1.57,
+          "n_overloaded_forced_links": 1,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 1.57,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 3.74,
+      "proposed_mlu": 6.020000007976628,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=101|topo=UsCarrier|split=val|mid=26|li=6|scale=0.75|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.75,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 2.355,
+          "n_overloaded_forced_links": 10,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 2.355,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 5.61,
+      "proposed_mlu": 9.030000011965143,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=101|topo=UsCarrier|split=val|mid=26|li=6|scale=1.0|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 1.0,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 3.14,
+          "n_overloaded_forced_links": 36,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 3.14,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 7.48,
+      "proposed_mlu": 12.040000015953256,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=202|topo=UsCarrier|split=val|mid=24|li=4|scale=0.25|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": {
+          "mlu": 1.3534271399627453,
+          "n_overloaded_links": 11,
+          "total_overload": 99.83000082320234,
+          "feasible": false,
+          "n_iters": 60,
+          "iter": 59,
+          "method": "rebalance",
+          "status": "no_witness",
+          "n_samples": 12
+        },
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 0.785,
+          "n_overloaded_forced_links": 0,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": false
+        },
+        "feasible_at_mlu_1": null,
+        "min_mlu": null,
+        "status": "inconclusive",
+        "method": "heuristic_only_large_graph",
+        "reason": "n_paths=97974 too large for reliable exact LP in this diagnostic; heuristic found no feasible witness (not a proof of infeasibility); forced-link MLU lower bound=0.7850",
+        "min_mlu_upper_bound_from_heuristic": 1.3534271399627453
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 1.87,
+      "proposed_mlu": 3.010000003988314,
+      "failure_cause_label": "inconclusive",
+      "physical_class": "inconclusive_feasibility"
+    },
+    {
+      "case_id": "seed=202|topo=UsCarrier|split=val|mid=24|li=4|scale=0.5|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.5,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 1.57,
+          "n_overloaded_forced_links": 1,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 1.57,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 3.74,
+      "proposed_mlu": 6.020000007976628,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=202|topo=UsCarrier|split=val|mid=24|li=4|scale=0.75|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.75,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 2.355,
+          "n_overloaded_forced_links": 10,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 2.355,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 5.61,
+      "proposed_mlu": 9.030000011965143,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=202|topo=UsCarrier|split=val|mid=24|li=4|scale=1.0|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 1.0,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 3.14,
+          "n_overloaded_forced_links": 36,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 3.14,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 7.48,
+      "proposed_mlu": 12.040000015953256,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=303|topo=UsCarrier|split=val|mid=21|li=1|scale=0.25|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": {
+          "mlu": 1.3534271399627453,
+          "n_overloaded_links": 11,
+          "total_overload": 99.83000082320234,
+          "feasible": false,
+          "n_iters": 60,
+          "iter": 59,
+          "method": "rebalance",
+          "status": "no_witness",
+          "n_samples": 12
+        },
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 0.785,
+          "n_overloaded_forced_links": 0,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": false
+        },
+        "feasible_at_mlu_1": null,
+        "min_mlu": null,
+        "status": "inconclusive",
+        "method": "heuristic_only_large_graph",
+        "reason": "n_paths=97974 too large for reliable exact LP in this diagnostic; heuristic found no feasible witness (not a proof of infeasibility); forced-link MLU lower bound=0.7850",
+        "min_mlu_upper_bound_from_heuristic": 1.3534271399627453
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 1.87,
+      "proposed_mlu": 3.010000003988314,
+      "failure_cause_label": "inconclusive",
+      "physical_class": "inconclusive_feasibility"
+    },
+    {
+      "case_id": "seed=303|topo=UsCarrier|split=val|mid=21|li=1|scale=0.5|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.5,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 1.57,
+          "n_overloaded_forced_links": 1,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 1.57,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 3.74,
+      "proposed_mlu": 6.020000007976628,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=303|topo=UsCarrier|split=val|mid=21|li=1|scale=0.75|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.75,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 2.355,
+          "n_overloaded_forced_links": 10,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 2.355,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 5.61,
+      "proposed_mlu": 9.030000011965143,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=303|topo=UsCarrier|split=val|mid=21|li=1|scale=1.0|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 1.0,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 3.14,
+          "n_overloaded_forced_links": 36,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 3.14,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 7.48,
+      "proposed_mlu": 12.040000015953256,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=404|topo=UsCarrier|split=val|mid=23|li=3|scale=0.25|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": {
+          "mlu": 1.3534271399627453,
+          "n_overloaded_links": 11,
+          "total_overload": 99.83000082320234,
+          "feasible": false,
+          "n_iters": 60,
+          "iter": 59,
+          "method": "rebalance",
+          "status": "no_witness",
+          "n_samples": 12
+        },
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 0.785,
+          "n_overloaded_forced_links": 0,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": false
+        },
+        "feasible_at_mlu_1": null,
+        "min_mlu": null,
+        "status": "inconclusive",
+        "method": "heuristic_only_large_graph",
+        "reason": "n_paths=97974 too large for reliable exact LP in this diagnostic; heuristic found no feasible witness (not a proof of infeasibility); forced-link MLU lower bound=0.7850",
+        "min_mlu_upper_bound_from_heuristic": 1.3534271399627453
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 1.87,
+      "proposed_mlu": 3.010000003988314,
+      "failure_cause_label": "inconclusive",
+      "physical_class": "inconclusive_feasibility"
+    },
+    {
+      "case_id": "seed=404|topo=UsCarrier|split=val|mid=23|li=3|scale=0.5|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.5,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 1.57,
+          "n_overloaded_forced_links": 1,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 1.57,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 3.74,
+      "proposed_mlu": 6.020000007976628,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=404|topo=UsCarrier|split=val|mid=23|li=3|scale=0.75|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.75,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 2.355,
+          "n_overloaded_forced_links": 10,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 2.355,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 5.61,
+      "proposed_mlu": 9.030000011965143,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=404|topo=UsCarrier|split=val|mid=23|li=3|scale=1.0|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 1.0,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 3.14,
+          "n_overloaded_forced_links": 36,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 3.14,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 7.48,
+      "proposed_mlu": 12.040000015953256,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=505|topo=UsCarrier|split=val|mid=27|li=7|scale=0.25|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": {
+          "mlu": 1.3534271399627453,
+          "n_overloaded_links": 11,
+          "total_overload": 99.83000082320234,
+          "feasible": false,
+          "n_iters": 60,
+          "iter": 59,
+          "method": "rebalance",
+          "status": "no_witness",
+          "n_samples": 12
+        },
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 0.785,
+          "n_overloaded_forced_links": 0,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": false
+        },
+        "feasible_at_mlu_1": null,
+        "min_mlu": null,
+        "status": "inconclusive",
+        "method": "heuristic_only_large_graph",
+        "reason": "n_paths=97974 too large for reliable exact LP in this diagnostic; heuristic found no feasible witness (not a proof of infeasibility); forced-link MLU lower bound=0.7850",
+        "min_mlu_upper_bound_from_heuristic": 1.3534271399627453
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 1.87,
+      "proposed_mlu": 3.010000003988314,
+      "failure_cause_label": "inconclusive",
+      "physical_class": "inconclusive_feasibility"
+    },
+    {
+      "case_id": "seed=505|topo=UsCarrier|split=val|mid=27|li=7|scale=0.5|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.5,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 1.57,
+          "n_overloaded_forced_links": 1,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 1.57,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 3.74,
+      "proposed_mlu": 6.020000007976628,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=505|topo=UsCarrier|split=val|mid=27|li=7|scale=0.75|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.75,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 2.355,
+          "n_overloaded_forced_links": 10,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 2.355,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 5.61,
+      "proposed_mlu": 9.030000011965143,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=505|topo=UsCarrier|split=val|mid=27|li=7|scale=1.0|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 1.0,
+      "diagnostic": {
+        "n_paths": 97974,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 3.14,
+          "n_overloaded_forced_links": 36,
+          "n_demands_with_common_links": 21547,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 3.14,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 7.48,
+      "proposed_mlu": 12.040000015953256,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=101|topo=Cogentco|split=val|mid=23|li=3|scale=0.25|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.25,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 11.12149031904201,
+          "n_overloaded_forced_links": 108,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 11.12149031904201,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 16.210863113549284,
+      "proposed_mlu": 16.941846336778397,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=101|topo=Cogentco|split=val|mid=23|li=3|scale=0.5|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.5,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 22.24298063808402,
+          "n_overloaded_forced_links": 179,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 22.24298063808402,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 32.42172622709857,
+      "proposed_mlu": 33.883692673556794,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=101|topo=Cogentco|split=val|mid=23|li=3|scale=0.75|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.75,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 33.364470957126116,
+          "n_overloaded_forced_links": 211,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 33.364470957126116,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 48.63258934064851,
+      "proposed_mlu": 50.82553901033497,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=101|topo=Cogentco|split=val|mid=23|li=3|scale=1.0|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 1.0,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 44.48596127616804,
+          "n_overloaded_forced_links": 277,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 44.48596127616804,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 64.84345245419713,
+      "proposed_mlu": 67.77162695775912,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=202|topo=Cogentco|split=val|mid=26|li=6|scale=0.25|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.25,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 11.130527927856566,
+          "n_overloaded_forced_links": 108,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 11.130527927856566,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 16.215212688278662,
+      "proposed_mlu": 16.93521295519917,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=202|topo=Cogentco|split=val|mid=26|li=6|scale=0.5|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.5,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 22.26105585571313,
+          "n_overloaded_forced_links": 180,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 22.26105585571313,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 32.430425376557324,
+      "proposed_mlu": 33.87042591039834,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=202|topo=Cogentco|split=val|mid=26|li=6|scale=0.75|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.75,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 33.39158378356965,
+          "n_overloaded_forced_links": 208,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 33.39158378356965,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 48.64563806483573,
+      "proposed_mlu": 50.80563886559765,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=202|topo=Cogentco|split=val|mid=26|li=6|scale=1.0|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 1.0,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 44.52211171142626,
+          "n_overloaded_forced_links": 273,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 44.52211171142626,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 64.86085075311465,
+      "proposed_mlu": 67.74641610441164,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=303|topo=Cogentco|split=val|mid=22|li=2|scale=0.25|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.25,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 11.105241614845848,
+          "n_overloaded_forced_links": 109,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 11.105241614845848,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 16.185399596443393,
+      "proposed_mlu": 16.950125657181513,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=303|topo=Cogentco|split=val|mid=22|li=2|scale=0.5|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.5,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 22.210483229691697,
+          "n_overloaded_forced_links": 179,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 22.210483229691697,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 32.370799192886786,
+      "proposed_mlu": 33.900251314363025,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=303|topo=Cogentco|split=val|mid=22|li=2|scale=0.75|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.75,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 33.31572484453762,
+          "n_overloaded_forced_links": 209,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 33.31572484453762,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 48.55619878933121,
+      "proposed_mlu": 50.850376971544385,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=303|topo=Cogentco|split=val|mid=22|li=2|scale=1.0|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 1.0,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 44.42096645938339,
+          "n_overloaded_forced_links": 274,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 44.42096645938339,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 64.74159838577357,
+      "proposed_mlu": 67.80435821912738,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=404|topo=Cogentco|split=val|mid=20|li=0|scale=0.25|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.25,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 11.12867361672071,
+          "n_overloaded_forced_links": 108,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 11.12867361672071,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 16.173297713701615,
+      "proposed_mlu": 16.860744601428852,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=404|topo=Cogentco|split=val|mid=20|li=0|scale=0.5|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.5,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 22.25734723344142,
+          "n_overloaded_forced_links": 180,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 22.25734723344142,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 32.34659542740323,
+      "proposed_mlu": 33.721489202857704,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=404|topo=Cogentco|split=val|mid=20|li=0|scale=0.75|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.75,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 33.38602085016208,
+          "n_overloaded_forced_links": 208,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 33.38602085016208,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 48.5198931411047,
+      "proposed_mlu": 50.58223380428654,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=404|topo=Cogentco|split=val|mid=20|li=0|scale=1.0|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 1.0,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 44.51469446688284,
+          "n_overloaded_forced_links": 272,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 44.51469446688284,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 64.69319085480646,
+      "proposed_mlu": 67.44710340649017,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=505|topo=Cogentco|split=val|mid=22|li=2|scale=0.25|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.25,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 11.105241614845848,
+          "n_overloaded_forced_links": 109,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 11.105241614845848,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 16.185399596443393,
+      "proposed_mlu": 16.950125657181513,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=505|topo=Cogentco|split=val|mid=22|li=2|scale=0.5|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.5,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 22.210483229691697,
+          "n_overloaded_forced_links": 179,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 22.210483229691697,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 32.370799192886786,
+      "proposed_mlu": 33.900251314363025,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=505|topo=Cogentco|split=val|mid=22|li=2|scale=0.75|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 0.75,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 33.31572484453762,
+          "n_overloaded_forced_links": 209,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 33.31572484453762,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 48.55619878933121,
+      "proposed_mlu": 50.850376971544385,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    },
+    {
+      "case_id": "seed=505|topo=Cogentco|split=val|mid=22|li=2|scale=1.0|policy=improved_stable",
+      "topology": "Cogentco",
+      "scale": 1.0,
+      "diagnostic": {
+        "n_paths": 154026,
+        "heuristic": null,
+        "lp": null,
+        "forced_lower_bound": {
+          "mlu_lower_bound": 44.42096645938339,
+          "n_overloaded_forced_links": 274,
+          "n_demands_with_common_links": 32182,
+          "infeasible_proven": true
+        },
+        "feasible_at_mlu_1": false,
+        "min_mlu": 44.42096645938339,
+        "status": "solved",
+        "method": "forced_common_link_bound"
+      },
+      "shortest_feasible": false,
+      "equal_feasible": false,
+      "best_candidate_mlu": 64.74159838577357,
+      "proposed_mlu": 67.80435821912738,
+      "failure_cause_label": "physically_infeasible_on_catalog_paths",
+      "physical_class": "infeasible_under_path_set"
+    }
+  ],
+  "summary": {
+    "n_failure_cases_variant_E": 40,
+    "counts_by_variant": {
+      "B_original_twin_mean": 40,
+      "C_original_twin_uncertainty": 40,
+      "D_improved_twin_mean": 40,
+      "E_improved_twin_calibrated_uncertainty": 40,
+      "F_physics_oracle": 40
+    },
+    "cause_counts": {
+      "inconclusive": 5,
+      "physically_infeasible_on_catalog_paths": 35
+    },
+    "physical_class_counts": {
+      "inconclusive_feasibility": 5,
+      "infeasible_under_path_set": 35
+    },
+    "n_physically_infeasible_on_catalog_paths": 35,
+    "n_feasible_but_candidates_insufficient": 0,
+    "n_inconclusive_lp": 5,
+    "fallback_log_consistent": 40,
+    "least_violating_selection_matches": 40,
+    "topologies_with_failures": [
+      "Cogentco",
+      "UsCarrier"
+    ],
+    "b4_failures": 0,
+    "verified": {
+      "all_failures_have_both_candidates_infeasible": true,
+      "gate_rejected_all_failure_cases": true,
+      "fallback_triggered_all": true
+    }
+  }
+}

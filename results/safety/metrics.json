@@ -1,0 +1,178 @@
+{
+  "config": {
+    "k": 2.0,
+    "utilisation_limit": 1.0,
+    "max_relative_std": 0.5,
+    "min_capacity": 1e-12,
+    "apply_shortest_if_all_fail": true
+  },
+  "twin_checkpoint": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\twin\\models\\ensemble.pt",
+  "jobs": [
+    {
+      "topology": "B4",
+      "split": "val",
+      "stride": 1,
+      "summary": {
+        "cases": 32,
+        "acceptance_rate": 0.03125,
+        "fallback_rate": 0.96875,
+        "shortest_fallback_rate": 0.90625,
+        "last_accepted_fallback_rate": 0.0625,
+        "last_resort_rate": 0.90625,
+        "proposed_violation_rate": 0.96875,
+        "applied_violation_rate": 0.90625,
+        "unsafe_accept_rate": 0.0,
+        "false_reject_rate": 0.0,
+        "mean_twin_ms": 8.130949999838322,
+        "mean_gate_ms": 0.16006874989216158,
+        "mean_mlu_true_proposed": 2.101665255836732,
+        "mean_mlu_true_applied": 2.229774030849365,
+        "mean_mlu_upper": 2.104621839575357
+      }
+    },
+    {
+      "topology": "B4",
+      "split": "val",
+      "tag": "val_B4_feasible",
+      "stride": 1,
+      "demand_scale": 0.25,
+      "summary": {
+        "cases": 24,
+        "acceptance_rate": 1.0,
+        "fallback_rate": 0.0,
+        "shortest_fallback_rate": 0.0,
+        "last_accepted_fallback_rate": 0.0,
+        "last_resort_rate": 0.0,
+        "proposed_violation_rate": 0.0,
+        "applied_violation_rate": 0.0,
+        "unsafe_accept_rate": 0.0,
+        "false_reject_rate": 0.0,
+        "mean_twin_ms": 9.563254167157234,
+        "mean_gate_ms": 0.1390000001417017,
+        "mean_mlu_true_proposed": 0.27305134550311294,
+        "mean_mlu_true_applied": 0.27305134550311294,
+        "mean_mlu_upper": 0.27343960264604866
+      }
+    },
+    {
+      "topology": "UsCarrier",
+      "split": "val",
+      "stride": 1,
+      "summary": {
+        "cases": 24,
+        "acceptance_rate": 0.0,
+        "fallback_rate": 1.0,
+        "shortest_fallback_rate": 1.0,
+        "last_accepted_fallback_rate": 0.0,
+        "last_resort_rate": 1.0,
+        "proposed_violation_rate": 1.0,
+        "applied_violation_rate": 1.0,
+        "unsafe_accept_rate": 0.0,
+        "false_reject_rate": 0.0,
+        "mean_twin_ms": 306.77805000027547,
+        "mean_gate_ms": 0.2627499998197891,
+        "mean_mlu_true_proposed": 9.00790303347631,
+        "mean_mlu_true_applied": 7.48,
+        "mean_mlu_upper": 9.020391851287341
+      }
+    },
+    {
+      "topology": "Cogentco",
+      "split": "val",
+      "stride": 1,
+      "summary": {
+        "cases": 24,
+        "acceptance_rate": 0.0,
+        "fallback_rate": 1.0,
+        "shortest_fallback_rate": 1.0,
+        "last_accepted_fallback_rate": 0.0,
+        "last_resort_rate": 1.0,
+        "proposed_violation_rate": 1.0,
+        "applied_violation_rate": 1.0,
+        "unsafe_accept_rate": 0.0,
+        "false_reject_rate": 0.0,
+        "mean_twin_ms": 425.12652916646704,
+        "mean_gate_ms": 0.265654166848132,
+        "mean_mlu_true_proposed": 65.43284966461903,
+        "mean_mlu_true_applied": 66.7072949603827,
+        "mean_mlu_upper": 65.52319259002628
+      }
+    },
+    {
+      "topology": "GEANT",
+      "split": "test",
+      "stride": 20,
+      "summary": {
+        "cases": 405,
+        "acceptance_rate": 0.0,
+        "fallback_rate": 1.0,
+        "shortest_fallback_rate": 1.0,
+        "last_accepted_fallback_rate": 0.0,
+        "last_resort_rate": 1.0,
+        "proposed_violation_rate": 1.0,
+        "applied_violation_rate": 1.0,
+        "unsafe_accept_rate": 0.0,
+        "false_reject_rate": 0.0,
+        "mean_twin_ms": 7.710078765475047,
+        "mean_gate_ms": 0.21793901234312574,
+        "mean_mlu_true_proposed": 2.791981523979238,
+        "mean_mlu_true_applied": 2.8266981522808643,
+        "mean_mlu_upper": 2.7959487058249546
+      }
+    },
+    {
+      "topology": "Kdl",
+      "split": "test",
+      "stride": 2,
+      "summary": {
+        "cases": 12,
+        "acceptance_rate": 0.0,
+        "fallback_rate": 1.0,
+        "shortest_fallback_rate": 1.0,
+        "last_accepted_fallback_rate": 0.0,
+        "last_resort_rate": 1.0,
+        "proposed_violation_rate": 1.0,
+        "applied_violation_rate": 1.0,
+        "unsafe_accept_rate": 0.0,
+        "false_reject_rate": 0.0,
+        "mean_twin_ms": 7329.238516666919,
+        "mean_gate_ms": 0.5335250001129074,
+        "mean_mlu_true_proposed": 10.989533473769301,
+        "mean_mlu_true_applied": 11.141999999999998,
+        "mean_mlu_upper": 11.005364153107939
+      }
+    }
+  ],
+  "overall": {
+    "cases": 521,
+    "acceptance_rate": 0.04798464491362764,
+    "fallback_rate": 0.9520153550863724,
+    "shortest_fallback_rate": 0.9481765834932822,
+    "last_accepted_fallback_rate": 0.003838771593090211,
+    "last_resort_rate": 0.9481765834932822,
+    "proposed_violation_rate": 0.9520153550863724,
+    "applied_violation_rate": 0.9481765834932822,
+    "unsafe_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "mean_twin_ms": 209.46038867567916,
+    "mean_gate_ms": 0.22227927063397493,
+    "mean_mlu_true_proposed": 5.994263923474014,
+    "mean_mlu_true_applied": 6.020955531674067,
+    "mean_mlu_upper": 6.002648889861507
+  },
+  "assumptions": [
+    "Ground-truth load is the path-routing simulator, not a measured counter.",
+    "Upper bound is mean + k * ensemble std, compared with utilisation_limit * capacity.",
+    "Fallback order is last accepted action, then shortest-path routing.",
+    "If every candidate fails the gate, shortest-path is still applied and marked last_resort.",
+    "ASN is excluded; shards are not read.",
+    "GEANT uses FIGRET test histories with a stride. Kdl uses a subset of the identical toy matrices.",
+    "B4_feasible multiplies B4 validation demand by 0.25 so some native actions sit under capacity."
+  ],
+  "limitations": [
+    "The gate trusts the twin. An under-predicted load with a too-small std can be accepted unsafely.",
+    "Shortest-path is not guaranteed to be feasible when demand exceeds cut capacity.",
+    "Last-accepted is re-checked with the current traffic matrix before reuse.",
+    "Kdl and GEANT were never used to train the twin; their std may be miscalibrated."
+  ]
+}

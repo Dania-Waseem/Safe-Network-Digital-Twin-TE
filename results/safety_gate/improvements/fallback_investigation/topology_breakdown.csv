@@ -1,0 +1,3 @@
+topology,n_failures,mean_proposed_mlu,mean_applied_mlu,mean_best_candidate_mlu,mean_diagnostic_mlu,n_feasible_at_1,n_infeasible_at_1,n_inconclusive
+Cogentco,20,42.32010970767659,41.681221455010686,40.48508635420829,27.795587546655497,0,20,0
+UsCarrier,20,7.525000009970836,4.675,4.675,2.104606784990686,0,15,5

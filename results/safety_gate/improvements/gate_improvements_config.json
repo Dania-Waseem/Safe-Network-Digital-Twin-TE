@@ -1,0 +1,157 @@
+{
+  "notes": {
+    "purpose": "Frozen configuration for full paired A–F Safety Gate evaluation.",
+    "frozen_from": "uncertainty_diagnostics recommended_for_af (k=1.0, utilisation_limit=1.0, calibrated E).",
+    "tuning": "No further threshold tuning. GEANT/Kdl excluded from this run (see evaluation.topology_authorization).",
+    "ucb": "UCB = mean_utilisation + k * std_utilisation after converting absolute twin loads by capacity.",
+    "max_relative_std": "Disabled (null) by default so uncertain but low-mean actions are not blanket-rejected.",
+    "calibration": "Conformal scale is frozen from the improved Twin package (seen topologies only). Never refit on GEANT/Kdl."
+  },
+  "gate": {
+    "k": 1.0,
+    "utilisation_limit": 1.0,
+    "max_relative_std": null,
+    "min_capacity": 1e-12
+  },
+  "variants": {
+    "A_policy_only": {
+      "description": "Apply RL policy action with no Twin filtering.",
+      "gate": {}
+    },
+    "B_original_twin_mean": {
+      "description": "Original Twin mean-only filtering (k forced to 0).",
+      "twin": "original",
+      "gate": {
+        "k": 0.0,
+        "utilisation_limit": 1.0,
+        "max_relative_std": null
+      }
+    },
+    "C_original_twin_uncertainty": {
+      "description": "Original Twin uncertainty-aware UCB filtering.",
+      "twin": "original",
+      "gate": {
+        "k": 1.0,
+        "utilisation_limit": 1.0,
+        "max_relative_std": null
+      }
+    },
+    "D_improved_twin_mean": {
+      "description": "Improved Twin mean-only filtering (k forced to 0).",
+      "twin": "improved",
+      "gate": {
+        "k": 0.0,
+        "utilisation_limit": 1.0,
+        "max_relative_std": null
+      }
+    },
+    "E_improved_twin_calibrated_uncertainty": {
+      "description": "Improved Twin with conformal-calibrated uncertainty UCB.",
+      "twin": "improved_calibrated",
+      "gate": {
+        "k": 1.0,
+        "utilisation_limit": 1.0,
+        "max_relative_std": null
+      }
+    },
+    "F_physics_oracle": {
+      "description": "Independent physics capacity feasibility (evaluation reference only).",
+      "gate": {}
+    }
+  },
+  "twins": {
+    "original": {
+      "path": "models/twin/ensemble.pt",
+      "apply_conformal": false
+    },
+    "improved": {
+      "path": "models/twin_improved/ensemble_physics_anchored.pt",
+      "apply_conformal": false
+    },
+    "improved_calibrated": {
+      "path": "models/twin_improved/ensemble_physics_anchored_conformal.pt",
+      "apply_conformal": true
+    }
+  },
+  "policy": {
+    "checkpoint_id": "improved_stable",
+    "default_checkpoint": "models/policy/improved/recommended_stable.pt",
+    "checkpoints": {
+      "improved_stable": "models/policy/improved/recommended_stable.pt",
+      "improved_best": "models/policy/improved/best_checkpoint.pt",
+      "general_3epoch": "models/policy/general_grl.pt"
+    },
+    "deterministic": true
+  },
+  "fallback": {
+    "policy": "feasible_then_least_violating",
+    "candidates": ["shortest", "equal"],
+    "oracle": "physics_capacity_violations",
+    "notes": "Same candidate set for B–E. Prefer feasible; else least violations then lowest MLU."
+  },
+  "evaluation": {
+    "device": "cpu",
+    "seeds": [101, 202, 303, 404, 505],
+    "scales": [0.25, 0.5, 0.75, 1.0],
+    "seen_topologies": ["B4", "UsCarrier", "Cogentco"],
+    "authorized_topologies": ["B4", "UsCarrier", "Cogentco"],
+    "held_out_topologies": ["GEANT", "Kdl"],
+    "tune_on": ["B4", "UsCarrier", "Cogentco"],
+    "never_tune_on": ["GEANT", "Kdl"],
+    "robustness_catalog": "results/evaluation/robustness_v1/catalog.json",
+    "topology_authorization": {
+      "included": ["B4", "UsCarrier", "Cogentco"],
+      "excluded": ["GEANT", "Kdl"],
+      "reason": "User instruction requires GEANT/Kdl completely untouched; approved protocol authorizes development topologies for A–F without unambiguous holdout-eval authorization for this run. Ambiguity resolved by exclusion."
+    },
+    "output_dir": "results/safety_gate/improvements",
+    "variants": [
+      "A_policy_only",
+      "B_original_twin_mean",
+      "C_original_twin_uncertainty",
+      "D_improved_twin_mean",
+      "E_improved_twin_calibrated_uncertainty",
+      "F_physics_oracle"
+    ],
+    "topology_spec": [
+      {"name": "B4", "split": "val", "count": 2},
+      {"name": "UsCarrier", "split": "val", "count": 1},
+      {"name": "Cogentco", "split": "val", "count": 1}
+    ],
+    "smoke": {
+      "topologies": ["B4"],
+      "split": "val",
+      "n_matrices": 1,
+      "scales": [0.5, 1.0],
+      "seeds": [101],
+      "notes": "Limited integration smoke only. Not a full A–F experiment."
+    },
+    "diagnostics": {
+      "collect": [
+        "predicted_mean_utilisation",
+        "raw_uncertainty_utilisation",
+        "calibrated_uncertainty_utilisation",
+        "actual_utilisation",
+        "absolute_prediction_error",
+        "ucb_utilisation",
+        "oracle_feasible_proposed",
+        "acceptance",
+        "fallback_used",
+        "decision_runtime_ms"
+      ],
+      "group_by": ["topology", "scale", "capacity_proximity"]
+    }
+  },
+  "preservation": {
+    "do_not_modify": [
+      "implementation/safety/gate.py",
+      "implementation/safety/gate_config.json",
+      "models/twin/ensemble.pt",
+      "results/digital_twin/improvements/",
+      "implementation/framework/ablation_study.py",
+      "implementation/framework/general_policy.py",
+      "results/policy/",
+      "results/evaluation/"
+    ]
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "checks": [
+    {
+      "name": "paths_exist",
+      "passed": true,
+      "detail": "orig=True imp=True cal=True"
+    },
+    {
+      "name": "original_sha",
+      "passed": true,
+      "detail": "7b74fee96cdf3aa71c78aaa185adbc24c99f262f342689a4ec78d97b7db73685"
+    },
+    {
+      "name": "arch_match_members",
+      "passed": true,
+      "detail": "5"
+    },
+    {
+      "name": "arch_match_hidden",
+      "passed": true,
+      "detail": "32"
+    },
+    {
+      "name": "improved_vs_calibrated_weights_identical",
+      "passed": true,
+      "detail": "same=True"
+    },
+    {
+      "name": "calibrated_has_scale",
+      "passed": true,
+      "detail": "0.9545454545454546"
+    },
+    {
+      "name": "improved_anchored_scale_is_one",
+      "passed": true,
+      "detail": "1.0"
+    },
+    {
+      "name": "original_mean_matches_legacy",
+      "passed": true,
+      "detail": "maxabs=0.000e+00"
+    },
+    {
+      "name": "original_std_matches_legacy",
+      "passed": true,
+      "detail": "maxabs=0.000e+00"
+    },
+    {
+      "name": "original_true_matches",
+      "passed": true,
+      "detail": "maxabs=0.000e+00"
+    },
+    {
+      "name": "shapes_n_links",
+      "passed": true,
+      "detail": "mean=(38,) cap=(38,)"
+    },
+    {
+      "name": "units_absolute_load",
+      "passed": true,
+      "detail": "max_mean=5121 denom=5000.0"
+    },
+    {
+      "name": "improved_shapes",
+      "passed": true,
+      "detail": "(38,)"
+    },
+    {
+      "name": "calibrated_shapes",
+      "passed": true,
+      "detail": "(38,)"
+    },
+    {
+      "name": "D_E_means_identical_backends",
+      "passed": true,
+      "detail": "maxabs=0.000e+00"
+    },
+    {
+      "name": "E_scale_applied_once",
+      "passed": true,
+      "detail": "scale=0.9545454545454546 max|E-once|=0.000e+00"
+    },
+    {
+      "name": "D_std_unscaled",
+      "passed": true,
+      "detail": "max|D-raw|=0.000e+00"
+    },
+    {
+      "name": "E_loads_correct_ckpt",
+      "passed": true,
+      "detail": "ensemble_physics_anchored_conformal.pt"
+    },
+    {
+      "name": "D_loads_anchored_ckpt",
+      "passed": true,
+      "detail": "ensemble_physics_anchored.pt"
+    },
+    {
+      "name": "D_gate_k_zero",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "E_gate_k_positive",
+      "passed": true,
+      "detail": "1.0"
+    },
+    {
+      "name": "D_not_gate_used_uncertainty",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "E_gate_used_uncertainty",
+      "passed": true,
+      "detail": "True"
+    },
+    {
+      "name": "E_conformal_flag",
+      "passed": true,
+      "detail": "applied=True scale=0.9545454545454546"
+    },
+    {
+      "name": "D_no_conformal_flag",
+      "passed": true,
+      "detail": "applied=False scale=1.0"
+    },
+    {
+      "name": "mean_only_ucb_equals_mean_util",
+      "passed": true,
+      "detail": "maxdiff=0.000e+00"
+    },
+    {
+      "name": "uncertainty_ucb_uses_std",
+      "passed": true,
+      "detail": "max(ucb-mean)=4.715e-05"
+    },
+    {
+      "name": "positive_cap_accept",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "zero_cap_reject",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tiny_cap_reject_if_load",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nan_cap_invalid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "inf_cap_invalid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "zero_load_accept",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nan_mean_invalid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "inf_std_invalid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "negative_mean_rejected_as_invalid",
+      "passed": true,
+      "detail": "accepted=False reasons=['invalid_prediction']"
+    },
+    {
+      "name": "overload_reject",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "negative_capacity_rejects",
+      "passed": true,
+      "detail": "reasons=['invalid_prediction'] accepted=False"
+    },
+    {
+      "name": "fallback_candidates_default",
+      "passed": true,
+      "detail": "('shortest', 'equal')"
+    },
+    {
+      "name": "fallback_selected_in_set",
+      "passed": true,
+      "detail": "shortest"
+    },
+    {
+      "name": "fallback_feasibility_xor",
+      "passed": true,
+      "detail": "feas=False none=True"
+    },
+    {
+      "name": "fallback_distinguishes_B_original_twin_mean",
+      "passed": true,
+      "detail": "proposed=policy applied=shortest"
+    },
+    {
+      "name": "fallback_consistent_B_original_twin_mean",
+      "passed": true,
+      "detail": "row=shortest physics=shortest"
+    },
+    {
+      "name": "fallback_distinguishes_C_original_twin_uncertainty",
+      "passed": true,
+      "detail": "proposed=policy applied=shortest"
+    },
+    {
+      "name": "fallback_consistent_C_original_twin_uncertainty",
+      "passed": true,
+      "detail": "row=shortest physics=shortest"
+    },
+    {
+      "name": "fallback_distinguishes_D_improved_twin_mean",
+      "passed": true,
+      "detail": "proposed=policy applied=shortest"
+    },
+    {
+      "name": "fallback_consistent_D_improved_twin_mean",
+      "passed": true,
+      "detail": "row=shortest physics=shortest"
+    },
+    {
+      "name": "fallback_distinguishes_E_improved_twin_calibrated_uncertainty",
+      "passed": true,
+      "detail": "proposed=policy applied=shortest"
+    },
+    {
+      "name": "fallback_consistent_E_improved_twin_calibrated_uncertainty",
+      "passed": true,
+      "detail": "row=shortest physics=shortest"
+    },
+    {
+      "name": "low_scale_feasible_or_least",
+      "passed": true,
+      "detail": "outcome=feasible_fallback"
+    },
+    {
+      "name": "feasible_has_zero_viol",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "rl_stable_exists",
+      "passed": true,
+      "detail": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\recommended_stable.pt"
+    },
+    {
+      "name": "rl_best_exists",
+      "passed": true,
+      "detail": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\best_checkpoint.pt"
+    },
+    {
+      "name": "rl_payload_has_model",
+      "passed": true,
+      "detail": "['config', 'epoch', 'model', 'normalization', 'test_topologies_not_used', 'train_scales', 'train_topologies', 'val_mean_mlu', 'val_mlu', 'val_used_for_selection']"
+    },
+    {
+      "name": "cfg_points_to_stable",
+      "passed": true,
+      "detail": "C:/Users/hp/Pictures/results/policy/improved/recommended_stable.pt"
+    },
+    {
+      "name": "rl_action_shape",
+      "passed": true,
+      "detail": "action=(528,) n_path_nodes=528"
+    },
+    {
+      "name": "rl_action_finite",
+      "passed": true,
+      "detail": "True"
+    },
+    {
+      "name": "rl_action_nonneg",
+      "passed": true,
+      "detail": "min=1.030576846083875e-09"
+    },
+    {
+      "name": "rl_through_A",
+      "passed": true,
+      "detail": "accept=True applied=policy"
+    },
+    {
+      "name": "rl_through_E",
+      "passed": true,
+      "detail": "backend=improved_calibrated ckpt_id=improved_stable"
+    },
+    {
+      "name": "no_latent_double_scale_in_backend",
+      "passed": true,
+      "detail": "ratio=0.954545"
+    }
+  ],
+  "issues": [],
+  "warnings": [
+    {
+      "name": "full_af_not_started",
+      "detail": "No full A\u2013F eval_runs directory yet (expected until experiment stage)."
+    }
+  ],
+  "architecture": {
+    "original": {
+      "n_members": 5,
+      "hidden": 32,
+      "n_params": 6085
+    },
+    "improved": {
+      "n_members": 5,
+      "hidden": 32,
+      "n_params": 6085,
+      "conformal_std_scale": 1.0
+    },
+    "calibrated": {
+      "n_members": 5,
+      "hidden": 32,
+      "n_params": 6085,
+      "conformal_std_scale": 0.9545454545454546
+    }
+  },
+  "rl_checkpoint": {
+    "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\recommended_stable.pt",
+    "keys": [
+      "config",
+      "epoch",
+      "model",
+      "normalization",
+      "test_topologies_not_used",
+      "train_scales",
+      "train_topologies",
+      "val_mean_mlu",
+      "val_mlu",
+      "val_used_for_selection"
+    ],
+    "has_model": true,
+    "epoch": 16,
+    "cfg_policy_path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\policy\\improved\\recommended_stable.pt"
+  },
+  "summary": {
+    "n_checks": 61,
+    "n_passed": 61,
+    "n_failed": 0,
+    "n_warnings": 1,
+    "n_issues": 0,
+    "conformal_std_scale": 0.9545454545454546
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "config_path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\safety_gate\\improvements\\gate_improvements_config.json",
+  "output_dir": "results\\safety_gate\\improvements\\eval_runs\\af_eval_k1_calibrated_devtopos_v1",
+  "smoke": false,
+  "allow_full": true,
+  "resume": true,
+  "n_cases": 80,
+  "n_rows": 480,
+  "n_logged_lines": 480,
+  "n_cases_skipped_resume": 80,
+  "n_cases_failed": 0,
+  "variants": [
+    "A_policy_only",
+    "B_original_twin_mean",
+    "C_original_twin_uncertainty",
+    "D_improved_twin_mean",
+    "E_improved_twin_calibrated_uncertainty",
+    "F_physics_oracle"
+  ],
+  "preservation": {
+    "original_twin_sha256_expected": "7b74fee96cdf3aa71c78aaa185adbc24c99f262f342689a4ec78d97b7db73685"
+  },
+  "resume_verification": {
+    "second_pass_skipped_cases": 80,
+    "n_rows_unchanged": 480,
+    "incomplete_blocks": 0,
+    "fingerprint_violations": 0
+  },
+  "topology_authorization": {
+    "included": [
+      "B4",
+      "UsCarrier",
+      "Cogentco"
+    ],
+    "excluded": [
+      "GEANT",
+      "Kdl"
+    ],
+    "reason": "User instruction requires GEANT/Kdl completely untouched; approved protocol authorizes development topologies for A\u00e2\u20ac\u201cF without unambiguous holdout-eval authorization for this run. Ambiguity resolved by exclusion."
+  },
+  "preservation_hashes": {
+    "original_twin": "7b74fee96cdf3aa71c78aaa185adbc24c99f262f342689a4ec78d97b7db73685",
+    "gate_py": "bb8399b9c8ad639c32b375e9245c4fd93dae6394a89aba57fba599382f7aca2d"
+  }
+}

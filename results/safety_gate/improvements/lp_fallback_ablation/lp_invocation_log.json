@@ -1,0 +1,80 @@
+{
+  "invocations": [
+    {
+      "case_id": "seed=101|topo=UsCarrier|split=val|mid=26|li=6|scale=0.25|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "local_index": 6,
+      "forced_mlu_lower_bound": 0.785,
+      "lp_status": "optimal",
+      "lp_runtime_s": 8.161122560501099,
+      "lp_optimal_mlu": 0.785,
+      "lp_recomputed_mlu": 0.785,
+      "lp_feasible_verified": true,
+      "lp_applied": true,
+      "max_demand_residual": 0.0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "case_id": "seed=202|topo=UsCarrier|split=val|mid=24|li=4|scale=0.25|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "local_index": 4,
+      "forced_mlu_lower_bound": 0.785,
+      "lp_status": "optimal",
+      "lp_runtime_s": 8.8074631690979,
+      "lp_optimal_mlu": 0.785,
+      "lp_recomputed_mlu": 0.785,
+      "lp_feasible_verified": true,
+      "lp_applied": true,
+      "max_demand_residual": 0.0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "case_id": "seed=303|topo=UsCarrier|split=val|mid=21|li=1|scale=0.25|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "local_index": 1,
+      "forced_mlu_lower_bound": 0.785,
+      "lp_status": "optimal",
+      "lp_runtime_s": 7.846014976501465,
+      "lp_optimal_mlu": 0.785,
+      "lp_recomputed_mlu": 0.785,
+      "lp_feasible_verified": true,
+      "lp_applied": true,
+      "max_demand_residual": 0.0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "case_id": "seed=404|topo=UsCarrier|split=val|mid=23|li=3|scale=0.25|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "local_index": 3,
+      "forced_mlu_lower_bound": 0.785,
+      "lp_status": "optimal",
+      "lp_runtime_s": 9.482397556304932,
+      "lp_optimal_mlu": 0.785,
+      "lp_recomputed_mlu": 0.785,
+      "lp_feasible_verified": true,
+      "lp_applied": true,
+      "max_demand_residual": 0.0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "case_id": "seed=505|topo=UsCarrier|split=val|mid=27|li=7|scale=0.25|policy=improved_stable",
+      "topology": "UsCarrier",
+      "scale": 0.25,
+      "local_index": 7,
+      "forced_mlu_lower_bound": 0.785,
+      "lp_status": "optimal",
+      "lp_runtime_s": 9.46086835861206,
+      "lp_optimal_mlu": 0.785,
+      "lp_recomputed_mlu": 0.785,
+      "lp_feasible_verified": true,
+      "lp_applied": true,
+      "max_demand_residual": 0.0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    }
+  ],
+  "n": 5
+}

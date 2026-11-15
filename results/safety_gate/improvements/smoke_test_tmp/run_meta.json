@@ -1,0 +1,23 @@
+{
+  "config_path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\safety_gate\\improvements\\gate_improvements_config.json",
+  "output_dir": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\safety_gate\\improvements\\smoke_test_tmp",
+  "smoke": true,
+  "allow_full": false,
+  "resume": true,
+  "n_cases": 2,
+  "n_rows": 12,
+  "n_logged_lines": 12,
+  "n_cases_skipped_resume": 0,
+  "n_cases_failed": 0,
+  "variants": [
+    "A_policy_only",
+    "B_original_twin_mean",
+    "C_original_twin_uncertainty",
+    "D_improved_twin_mean",
+    "E_improved_twin_calibrated_uncertainty",
+    "F_physics_oracle"
+  ],
+  "preservation": {
+    "original_twin_sha256_expected": "7b74fee96cdf3aa71c78aaa185adbc24c99f262f342689a4ec78d97b7db73685"
+  }
+}

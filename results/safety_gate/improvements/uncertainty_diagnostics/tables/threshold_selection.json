@@ -1,0 +1,836 @@
+{
+  "selection_seeds": [
+    404,
+    505
+  ],
+  "holdout_seeds_for_sensitivity": [
+    101,
+    202,
+    303
+  ],
+  "grid": {
+    "k": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "utilisation_limit": [
+      0.95,
+      1.0,
+      1.05
+    ]
+  },
+  "objective": "score = error_detection_rate - 0.5*false_alarm_rate - 0.02*k on selection seeds",
+  "selected": {
+    "uncertainty": "calibrated",
+    "unc_key": "cal_std_util",
+    "k": 0.5,
+    "utilisation_limit": 1.0,
+    "selection": {
+      "n_cases": 32.0,
+      "n_unsafe": 16.0,
+      "n_safe": 16.0,
+      "error_detection_rate": 1.0,
+      "false_alarm_rate": 0.0,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_acceptance_rate": 1.0
+    },
+    "holdout_diagnostic_seeds": {
+      "n_cases": 48.0,
+      "n_unsafe": 24.0,
+      "n_safe": 24.0,
+      "error_detection_rate": 1.0,
+      "false_alarm_rate": 0.0,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_acceptance_rate": 1.0
+    },
+    "score": 0.99
+  },
+  "best_raw_comparator": {
+    "uncertainty": "raw",
+    "unc_key": "raw_std_util",
+    "k": 0.5,
+    "utilisation_limit": 1.0,
+    "selection": {
+      "n_cases": 32.0,
+      "n_unsafe": 16.0,
+      "n_safe": 16.0,
+      "error_detection_rate": 1.0,
+      "false_alarm_rate": 0.0,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_acceptance_rate": 1.0
+    },
+    "holdout_diagnostic_seeds": {
+      "n_cases": 48.0,
+      "n_unsafe": 24.0,
+      "n_safe": 24.0,
+      "error_detection_rate": 1.0,
+      "false_alarm_rate": 0.0,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_acceptance_rate": 1.0
+    },
+    "score": 0.99
+  },
+  "all_candidates": [
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 0.5,
+      "utilisation_limit": 0.95,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "score": 0.865
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 0.5,
+      "utilisation_limit": 1.0,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.99
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 0.5,
+      "utilisation_limit": 1.05,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.99
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 1.0,
+      "utilisation_limit": 0.95,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "score": 0.855
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 1.0,
+      "utilisation_limit": 1.0,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.98
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 1.0,
+      "utilisation_limit": 1.05,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.98
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 1.5,
+      "utilisation_limit": 0.95,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "score": 0.845
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 1.5,
+      "utilisation_limit": 1.0,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.97
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 1.5,
+      "utilisation_limit": 1.05,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.97
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 2.0,
+      "utilisation_limit": 0.95,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "score": 0.835
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 2.0,
+      "utilisation_limit": 1.0,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.96
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 2.0,
+      "utilisation_limit": 1.05,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.96
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 2.5,
+      "utilisation_limit": 0.95,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "score": 0.825
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 2.5,
+      "utilisation_limit": 1.0,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.95
+    },
+    {
+      "uncertainty": "calibrated",
+      "unc_key": "cal_std_util",
+      "k": 2.5,
+      "utilisation_limit": 1.05,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.95
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 0.5,
+      "utilisation_limit": 0.95,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "score": 0.865
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 0.5,
+      "utilisation_limit": 1.0,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.99
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 0.5,
+      "utilisation_limit": 1.05,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.99
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 1.0,
+      "utilisation_limit": 0.95,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "score": 0.855
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 1.0,
+      "utilisation_limit": 1.0,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.98
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 1.0,
+      "utilisation_limit": 1.05,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.98
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 1.5,
+      "utilisation_limit": 0.95,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "score": 0.845
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 1.5,
+      "utilisation_limit": 1.0,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.97
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 1.5,
+      "utilisation_limit": 1.05,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.97
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 2.0,
+      "utilisation_limit": 0.95,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "score": 0.835
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 2.0,
+      "utilisation_limit": 1.0,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.96
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 2.0,
+      "utilisation_limit": 1.05,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.96
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 2.5,
+      "utilisation_limit": 0.95,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.25,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 0.75
+      },
+      "score": 0.825
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 2.5,
+      "utilisation_limit": 1.0,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.95
+    },
+    {
+      "uncertainty": "raw",
+      "unc_key": "raw_std_util",
+      "k": 2.5,
+      "utilisation_limit": 1.05,
+      "selection": {
+        "n_cases": 32.0,
+        "n_unsafe": 16.0,
+        "n_safe": 16.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "holdout_diagnostic_seeds": {
+        "n_cases": 48.0,
+        "n_unsafe": 24.0,
+        "n_safe": 24.0,
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_acceptance_rate": 1.0
+      },
+      "score": 0.95
+    }
+  ],
+  "rationale": "Thresholds chosen on val matrices for B4/UsCarrier/Cogentco using seeds (404, 505) only. GEANT/Kdl unused. Diagnostic seeds [101, 202, 303] used for sensitivity, not selection.",
+  "recommended_for_af": {
+    "uncertainty": "calibrated",
+    "k": 1.0,
+    "utilisation_limit": 1.0,
+    "max_relative_std": null,
+    "note": "Preferred over mechanical k=0.5 winner because detection/FAR tied across grid; aligns with gate default and conformal multi-sigma regime."
+  }
+}

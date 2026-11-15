@@ -1,0 +1,100 @@
+{
+  "overall": {
+    "n": 12,
+    "acceptance_rate": 1.0,
+    "fallback_rate": 0.0,
+    "oracle_feasible_rate": 1.0,
+    "mean_actual_mlu": 0.7409050994279035,
+    "mean_twin_mae_util": 6.846728195485316e-05,
+    "mean_decision_runtime_ms": 2.738916666203295,
+    "mean_raw_unc_max": 0.00022799113821767735,
+    "mean_cal_unc_max": 0.00022696011592762515
+  },
+  "groups": {
+    "topology": {
+      "B4": {
+        "n": 12,
+        "acceptance_rate": 1.0,
+        "fallback_rate": 0.0,
+        "oracle_feasible_rate": 1.0,
+        "mean_actual_mlu": 0.7409050994279035,
+        "mean_twin_mae_util": 6.846728195485316e-05,
+        "mean_decision_runtime_ms": 2.738916666203295,
+        "mean_raw_unc_max": 0.00022799113821767735,
+        "mean_cal_unc_max": 0.00022696011592762515
+      }
+    },
+    "scale": {
+      "0.5": {
+        "n": 6,
+        "acceptance_rate": 1.0,
+        "fallback_rate": 0.0,
+        "oracle_feasible_rate": 1.0,
+        "mean_actual_mlu": 0.4940744690495464,
+        "mean_twin_mae_util": 4.6132671597756836e-05,
+        "mean_decision_runtime_ms": 4.235449999517489,
+        "mean_raw_unc_max": 0.00015250055692726233,
+        "mean_cal_unc_max": 0.00015181521389199325
+      },
+      "1.0": {
+        "n": 6,
+        "acceptance_rate": 1.0,
+        "fallback_rate": 0.0,
+        "oracle_feasible_rate": 1.0,
+        "mean_actual_mlu": 0.9877357298062609,
+        "mean_twin_mae_util": 9.08018923119495e-05,
+        "mean_decision_runtime_ms": 1.2423833328891003,
+        "mean_raw_unc_max": 0.00030348171950809235,
+        "mean_cal_unc_max": 0.000302105017963257
+      }
+    },
+    "capacity_proximity": {
+      "far_below": {
+        "n": 6,
+        "acceptance_rate": 1.0,
+        "fallback_rate": 0.0,
+        "oracle_feasible_rate": 1.0,
+        "mean_actual_mlu": 0.4940744690495464,
+        "mean_twin_mae_util": 4.6132671597756836e-05,
+        "mean_decision_runtime_ms": 4.235449999517489,
+        "mean_raw_unc_max": 0.00015250055692726233,
+        "mean_cal_unc_max": 0.00015181521389199325
+      },
+      "near_limit": {
+        "n": 6,
+        "acceptance_rate": 1.0,
+        "fallback_rate": 0.0,
+        "oracle_feasible_rate": 1.0,
+        "mean_actual_mlu": 0.9877357298062609,
+        "mean_twin_mae_util": 9.08018923119495e-05,
+        "mean_decision_runtime_ms": 1.2423833328891003,
+        "mean_raw_unc_max": 0.00030348171950809235,
+        "mean_cal_unc_max": 0.000302105017963257
+      }
+    }
+  },
+  "n_cases": 2,
+  "n_rows": 12,
+  "n_variants": 6,
+  "elapsed_s": 0.19850799999767332,
+  "smoke": true,
+  "policy_checkpoint": "results\\policy\\improved\\recommended_stable.pt",
+  "policy_checkpoint_id": "improved_stable",
+  "graph_cache": [],
+  "fairness": {
+    "paired_action_fingerprint_unique_per_case": true,
+    "note": "Each case block shares one policy_action_fingerprint across A\u2013F."
+  },
+  "protocol": {
+    "never_tune_on": [
+      "GEANT",
+      "Kdl"
+    ],
+    "tune_on": [
+      "B4",
+      "UsCarrier",
+      "Cogentco"
+    ],
+    "calibration_topologies": "B4/UsCarrier/Cogentco only (frozen twin conformal; not refit here)"
+  }
+}
