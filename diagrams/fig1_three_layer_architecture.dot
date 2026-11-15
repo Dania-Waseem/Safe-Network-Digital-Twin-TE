@@ -1,0 +1,51 @@
+digraph arch { fontname="Helvetica" fontsize=13 bgcolor="white" pad=0.3 nodesep=0.35 ranksep=0.45 splines=ortho node [fontname="Helvetica" fontsize=12 shape=box style="rounded,filled" penwidth=1.4 margin="0.18,0.10"] edge [fontname="Helvetica" fontsize=10.5 penwidth=1.6 arrowsize=0.8] rankdir=TB newrank=true compound=true
+  label="Three-layer closed-loop architecture: AI-driven network digital twin for safe decision testing" labelloc=t fontsize=16 fontname="Helvetica-Bold"
+  subgraph cluster_data { label="" style="rounded,filled" fillcolor="#F4F9FE" color="#3F75B0" penwidth=1.6
+  h_data [label="PHYSICAL / DATA LAYER" fillcolor="#A9CBEF" color="#2B5C94" fontname="Helvetica-Bold" fontsize="14"];
+  teal [label="Teal repository\nB4 real TMs · UsCarrier, Kdl (toy)" fillcolor="#DCEBFA" color="#3F75B0"];
+  figret [label="FIGRET repository\nGEANT 22/72 real TMs" fillcolor="#DCEBFA" color="#3F75B0"];
+  zoo [label="Topology Zoo\nCogentco + gravity TMs" fillcolor="#DCEBFA" color="#3F75B0"];
+  prep [label="Preprocessing\nvalidation · Yen k=4 paths · normalisation\nlink–path bipartite graph · splits" fillcolor="#DCEBFA" color="#3F75B0" fontname="Helvetica-Bold"];
+  d_data [label="Data pipeline details\l•  topology validation, capacity units checked\l•  Yen k = 4 min-hop candidate paths per OD pair\l•  capacities and demands ÷ max link capacity\l•  link–path bipartite graph (GNN input)\l•  train / val / held-aside time splits; GEANT, Kdl unseen\l•  calibrated load levels (LP-referenced MLU targets)\l" fillcolor="#FFFFFF" color="#8C8C8C" style="rounded,dashed,filled" fontsize="10.5" penwidth="1.2"];
+  { rank=same; teal; figret; zoo; }
+  }
+  subgraph cluster_twin { label="" style="rounded,filled" fillcolor="#F3FBF4" color="#3F8E4C" penwidth=1.6
+  h_twin [label="VIRTUAL / DIGITAL-TWIN LAYER" fillcolor="#A8DBB0" color="#2C6E37" fontname="Helvetica-Bold" fontsize="14"];
+  twin [label="5-member physics-anchored\nensemble twin" fillcolor="#DDF1DF" color="#3F8E4C" fontname="Helvetica-Bold"];
+  pred [label="Predicted link loads\nmean μ and uncertainty σ" fillcolor="#DDF1DF" color="#3F8E4C"];
+  conf [label="Conformal calibration\n(validation only, c = 0.955)" fillcolor="#DDF1DF" color="#3F8E4C"];
+  d_twin [label="Twin details\l•  path features: demand, split fraction, hop count\l•  per-member MLP multiplier, initialised at physics (= 1)\l•  loss: MSE + anchor penalty (multiplier − 1)²\l•  μ = ensemble mean, σ = ensemble spread\l•  calibrated so 2σ coverage ≥ 0.9 on validation\l" fillcolor="#FFFFFF" color="#8C8C8C" style="rounded,dashed,filled" fontsize="10.5" penwidth="1.2"];
+  { rank=same; twin; pred; conf; }
+  }
+  subgraph cluster_dec { label="" style="rounded,filled" fillcolor="#FFF8F0" color="#D27A1F" penwidth=1.6
+  h_dec [label="SERVICE / DECISION LAYER" fillcolor="#F7C08A" color="#A85A0E" fontname="Helvetica-Bold" fontsize="14"];
+  policy [label="Graph RL policy\n(TopoFlowNet-style GNN)\nsplits each demand over 4 paths" fillcolor="#FDE3C8" color="#D27A1F" fontname="Helvetica-Bold"];
+  gate [label="Safety gate\naccept iff μ + kσ ≤ capacity\non every link (k = 1)" fillcolor="#FDE3C8" color="#D27A1F" fontname="Helvetica-Bold" penwidth="2.2"];
+  accept [label="Accept →\napply proposal" fillcolor="#FDE3C8" color="#D27A1F"];
+  fallback [label="Reject → fallback\nlast accepted · shortest · equal\n(conditional LP, optional)" fillcolor="#FDE3C8" color="#D27A1F"];
+  d_dec [label="Decision details\l•  GNN on the link–path bipartite graph\l•  per-demand 4-way softmax split\l•  gate: utilisation-space UCB, limit 1.0\l•  optional relative-σ veto (off in frozen config)\l•  fallback: feasible first, else least-violating\l•  LP only if a forced-link lower bound ≤ 1\l" fillcolor="#FFFFFF" color="#8C8C8C" style="rounded,dashed,filled" fontsize="10.5" penwidth="1.2"];
+  { rank=same; policy; gate; accept; }
+  }
+  net [label="NETWORK  (flow-level simulator / physical proxy)\napplies the routing and returns realised link loads" fillcolor="#EEF1F4" color="#5B6B7A" fontname="Helvetica-Bold" width="9"];
+  loop [label="Closed-loop safe decision testing" fillcolor="#FFF1A8" color="#C99A06" fontname="Helvetica-Bold" shape="box" style="rounded,filled,bold" penwidth="2"];
+  h_data -> teal [style=invis]; h_twin -> twin [style=invis]; h_dec -> policy [style=invis];
+  d_data -> h_twin [style=invis weight=20]; d_twin -> h_dec [style=invis weight=20];
+  d_dec -> net [style=invis weight=20]; fallback -> net [style=invis];
+  prep -> d_data [style=invis]; twin -> d_twin [style=invis]; gate -> d_dec [style=invis];
+  h_data -> h_twin [style=invis weight=50]; h_twin -> h_dec [style=invis weight=50];
+  teal -> prep [color="#2F6DB5" fontcolor="#2F6DB5"];
+  figret -> prep [color="#2F6DB5" fontcolor="#2F6DB5"];
+  zoo -> prep [color="#2F6DB5" fontcolor="#2F6DB5"];
+  prep -> twin [color="#2F6DB5" fontcolor="#2F6DB5" xlabel=" topology, paths, TMs " constraint="false"];
+  prep -> policy [color="#2F6DB5" fontcolor="#2F6DB5" xlabel=" bipartite graph, TM " constraint="false"];
+  policy -> twin [color="#E07B00" fontcolor="#E07B00" xlabel=" proposed action " constraint="false"];
+  twin -> pred [color="#3C9A4B" fontcolor="#3C9A4B"];
+  conf -> pred [color="#3C9A4B" fontcolor="#3C9A4B" xlabel=" scale c "];
+  pred -> gate [color="#3C9A4B" fontcolor="#3C9A4B" xlabel=" μ, σ " constraint="false"];
+  gate -> accept [color="#E07B00" fontcolor="#E07B00" xlabel=" accept "];
+  gate -> fallback [color="#E07B00" fontcolor="#E07B00" xlabel=" reject "];
+  accept -> net [color="#E07B00" fontcolor="#E07B00" xlabel=" applied action "];
+  fallback -> net [color="#E07B00" fontcolor="#E07B00" xlabel=" applied action "];
+  net -> twin [color="#7E57C2" fontcolor="#7E57C2" xlabel=" realised loads / recalibration " style="dashed" constraint="false"];
+  loop -> net [color="#7E57C2" fontcolor="#7E57C2" style="invis"];
+}

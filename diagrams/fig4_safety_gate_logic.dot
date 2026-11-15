@@ -1,0 +1,39 @@
+digraph gate { fontname="Helvetica" fontsize=13 bgcolor="white" pad=0.3 nodesep=0.35 ranksep=0.45 splines=ortho node [fontname="Helvetica" fontsize=12 shape=box style="rounded,filled" penwidth=1.4 margin="0.18,0.10"] edge [fontname="Helvetica" fontsize=10.5 penwidth=1.6 arrowsize=0.8] rankdir=TB
+  label="Safety-gate decision logic and fallback order" labelloc=t fontsize=16 fontname="Helvetica-Bold"
+  in [label="Proposed split a\n(from graph RL policy)" fillcolor="#FDE3C8" color="#D27A1F"];
+  tw [label="Twin ensemble (5 members)\nlink loads l_1(e) ... l_5(e)" fillcolor="#DDF1DF" color="#3F8E4C"];
+  mu [label="μ(e) = mean_j l_j(e)\nσ(e) = c · std_j l_j(e)\nc = conformal scale (validation, 0.955)" fillcolor="#DDF1DF" color="#3F8E4C"];
+  util [label="Utilisation space\nu(e) = μ(e) / cap(e),   s(e) = σ(e) / cap(e)" fillcolor="#DDF1DF" color="#3F8E4C"];
+  q0 [label="All predictions\nfinite?" fillcolor="#FFF1A8" color="#C99A06" shape="diamond" style="dashed,filled" fontname="Helvetica-Bold"];
+  q1 [label="Relative-σ check\ns(e) ≤ s_max for all e ?\n(optional; off in frozen config)" fillcolor="#FFF1A8" color="#C99A06" shape="diamond" style="dashed,filled"];
+  q2 [label="Capacity check\nu(e) + k · s(e) ≤ 1 for all links e\n(k = 1;  k = 0 gives mean-only gate D)" fillcolor="#F7C08A" color="#A85A0E" shape="diamond" style="dashed,filled" fontname="Helvetica-Bold" penwidth="2.2"];
+  acc [label="ACCEPT\napply proposal" fillcolor="#CDEFD2" color="#3F8E4C" fontname="Helvetica-Bold"];
+  rej [label="REJECT\n(record reason)" fillcolor="#F7C08A" color="#A85A0E" fontname="Helvetica-Bold"];
+  f1 [label="1. last accepted routing, if still feasible\n(sequential controller only; not used in\nthe frozen paired A–F evaluation)" fillcolor="#FDE3C8" color="#D27A1F"];
+  f2 [label="2. shortest path / equal split\nfeasible first, else least-violating" fillcolor="#FDE3C8" color="#D27A1F"];
+  q3 [label="Forced-link lower bound\n≤ 1 ?" fillcolor="#FFF1A8" color="#C99A06" shape="diamond" style="dashed,filled"];
+  lp [label="3. Conditional LP\n(min-MLU over k = 4 paths, HiGHS)\napplied only if verified feasible" fillcolor="#FDE3C8" color="#D27A1F"];
+  keep [label="keep step-2 fallback\n(no feasible route exists)" fillcolor="#EEF1F4" color="#5B6B7A"];
+  net [label="Applied routing → network" fillcolor="#EEF1F4" color="#5B6B7A" fontname="Helvetica-Bold"];
+  in -> tw [color="#E07B00" fontcolor="#E07B00" xlabel=" proposed action "];
+  tw -> mu [color="#3C9A4B" fontcolor="#3C9A4B"];
+  mu -> util [color="#3C9A4B" fontcolor="#3C9A4B"];
+  util -> q0 [color="#3C9A4B" fontcolor="#3C9A4B"];
+  q0 -> q1 [color="#555555" fontcolor="#555555" xlabel=" yes "];
+  q0 -> rej [color="#555555" fontcolor="#555555" xlabel=" no "];
+  q1 -> q2 [color="#555555" fontcolor="#555555" xlabel=" yes "];
+  q1 -> rej [color="#555555" fontcolor="#555555" xlabel=" no "];
+  q2 -> acc [color="#E07B00" fontcolor="#E07B00" xlabel=" yes "];
+  q2 -> rej [color="#E07B00" fontcolor="#E07B00" xlabel=" no "];
+  rej -> f1 [color="#E07B00" fontcolor="#E07B00"];
+  f1 -> f2 [color="#E07B00" fontcolor="#E07B00" xlabel=" infeasible "];
+  f2 -> q3 [color="#E07B00" fontcolor="#E07B00" xlabel=" still overloads "];
+  q3 -> lp [color="#E07B00" fontcolor="#E07B00" xlabel=" yes "];
+  q3 -> keep [color="#E07B00" fontcolor="#E07B00" xlabel=" no "];
+  acc -> net [color="#E07B00" fontcolor="#E07B00"];
+  f1 -> net [color="#E07B00" fontcolor="#E07B00" xlabel=" feasible "];
+  f2 -> net [color="#E07B00" fontcolor="#E07B00" xlabel=" feasible "];
+  lp -> net [color="#E07B00" fontcolor="#E07B00"];
+  keep -> net [color="#E07B00" fontcolor="#E07B00"];
+  { rank=same; acc; rej; }
+}

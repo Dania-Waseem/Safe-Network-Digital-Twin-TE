@@ -1,0 +1,48 @@
+digraph flow { fontname="Helvetica" fontsize=13 bgcolor="white" pad=0.3 nodesep=0.35 ranksep=0.45 splines=ortho node [fontname="Helvetica" fontsize=12 shape=box style="rounded,filled" penwidth=1.4 margin="0.18,0.10"] edge [fontname="Helvetica" fontsize=10.5 penwidth=1.6 arrowsize=0.8] rankdir=TB
+  label="Operational workflow: training (first run) and per-TM safe decision testing" labelloc=t fontsize=16 fontname="Helvetica-Bold"
+  start [label="Start" fillcolor="#CDEFD2" color="#3F8E4C" shape="box" style="rounded,filled,bold" fontname="Helvetica-Bold"];
+  load [label="Load topology + traffic matrices" fillcolor="#DCEBFA" color="#3F75B0"];
+  q1 [label="Trained policy\nand twin exist?" fillcolor="#FFF1A8" color="#C99A06" shape="diamond" style="dashed,filled" fontname="Helvetica-Bold"];
+  pp [label="Preprocess\n(paths, bipartite graph, splits)" fillcolor="#DCEBFA" color="#3F75B0"];
+  tt [label="Train twin ensemble\n(physics-anchored)" fillcolor="#DDF1DF" color="#3F8E4C"];
+  cal [label="Calibrate twin\n(conformal, validation)" fillcolor="#DDF1DF" color="#3F8E4C"];
+  tp [label="Train policy (GNN)" fillcolor="#FDE3C8" color="#D27A1F"];
+  sel [label="Select checkpoint\non validation only" fillcolor="#FDE3C8" color="#D27A1F"];
+  lc [label="Load checkpoints\n(policy, twin, conformal scale)" fillcolor="#DCEBFA" color="#3F75B0"];
+  loop_tm [label="For each traffic matrix" fillcolor="#EEF1F4" color="#5B6B7A" fontname="Helvetica-Bold"];
+  prop [label="Policy proposes a split" fillcolor="#FDE3C8" color="#D27A1F"];
+  tw [label="Twin predicts μ, σ\nper link" fillcolor="#DDF1DF" color="#3F8E4C"];
+  q2 [label="Gate accepts?\nμ + kσ ≤ capacity" fillcolor="#F7C08A" color="#A85A0E" shape="diamond" style="dashed,filled" fontname="Helvetica-Bold" penwidth="2.2"];
+  apply [label="Apply proposal" fillcolor="#FDE3C8" color="#D27A1F"];
+  fb [label="Fallback\n(last accepted / shortest /\nequal / conditional LP)" fillcolor="#F7C08A" color="#A85A0E" fontname="Helvetica-Bold"];
+  q3 [label="Failure or twin-error\nscenario?" fillcolor="#FFF1A8" color="#C99A06" shape="diamond" style="dashed,filled" fontname="Helvetica-Bold"];
+  scen [label="Inject scenario\n(link failures E3 / twin error E4)" fillcolor="#ECE1F6" color="#7B55A6"];
+  ev [label="Evaluate metrics\nsatisfaction · MLU · unsafe accept · false reject" fillcolor="#ECE1F6" color="#7B55A6" fontname="Helvetica-Bold"];
+  rep [label="Results dashboard / reports" fillcolor="#ECE1F6" color="#7B55A6"];
+  end [label="End" fillcolor="#CDEFD2" color="#3F8E4C" shape="box" style="rounded,filled,bold" fontname="Helvetica-Bold"];
+  start -> load [color="#555555" fontcolor="#555555"];
+  load -> q1 [color="#555555" fontcolor="#555555"];
+  q1 -> pp [color="#555555" fontcolor="#555555" xlabel=" No "];
+  pp -> tt [color="#2F6DB5" fontcolor="#2F6DB5"];
+  tt -> cal [color="#3C9A4B" fontcolor="#3C9A4B"];
+  cal -> tp [color="#E07B00" fontcolor="#E07B00"];
+  tp -> sel [color="#E07B00" fontcolor="#E07B00"];
+  sel -> loop_tm [color="#E07B00" fontcolor="#E07B00"];
+  q1 -> lc [color="#555555" fontcolor="#555555" xlabel=" Yes "];
+  lc -> loop_tm [color="#2F6DB5" fontcolor="#2F6DB5"];
+  loop_tm -> q3 [color="#555555" fontcolor="#555555"];
+  q3 -> scen [color="#555555" fontcolor="#555555" xlabel=" Yes "];
+  q3 -> prop [color="#555555" fontcolor="#555555" xlabel=" No "];
+  scen -> prop [color="#555555" fontcolor="#555555"];
+  prop -> tw [color="#E07B00" fontcolor="#E07B00" xlabel=" proposed action "];
+  tw -> q2 [color="#3C9A4B" fontcolor="#3C9A4B" xlabel=" μ, σ "];
+  q2 -> apply [color="#E07B00" fontcolor="#E07B00" xlabel=" Yes "];
+  q2 -> fb [color="#E07B00" fontcolor="#E07B00" xlabel=" No "];
+  apply -> ev [color="#E07B00" fontcolor="#E07B00"];
+  fb -> ev [color="#E07B00" fontcolor="#E07B00"];
+  ev -> loop_tm [color="#7E57C2" fontcolor="#7E57C2" xlabel=" next TM " style="dashed" constraint="false"];
+  ev -> rep [color="#555555" fontcolor="#555555" xlabel=" all TMs done "];
+  rep -> end [color="#555555" fontcolor="#555555"];
+  { rank=same; pp; lc; }
+  { rank=same; apply; fb; }
+}

@@ -1,0 +1,35 @@
+digraph exp { fontname="Helvetica" fontsize=13 bgcolor="white" pad=0.3 nodesep=0.35 ranksep=0.45 splines=ortho node [fontname="Helvetica" fontsize=12 shape=box style="rounded,filled" penwidth=1.4 margin="0.18,0.10"] edge [fontname="Helvetica" fontsize=10.5 penwidth=1.6 arrowsize=0.8] rankdir=LR splines=spline compound=true newrank=true
+  label="Experimental design" labelloc=t fontsize=16 fontname="Helvetica-Bold"
+  subgraph cluster_s { label="" style="rounded,filled" fillcolor="#F4F9FE" color="#3F75B0"
+  te [label="Unseen test topologies\nGEANT (FIGRET test) · Kdl" fillcolor="#DCEBFA" color="#3F75B0" fontname="Helvetica-Bold"];
+  ha [label="Held aside (never used)\nTM 28–35" fillcolor="#DCEBFA" color="#3F75B0" style="rounded,dashed,filled"];
+  va [label="Validation (tuning / selection only)\nsame topologies, TM 20–27" fillcolor="#DCEBFA" color="#3F75B0"];
+  tr [label="Train topologies\nB4 · UsCarrier · Cogentco\nTM indices 0–19" fillcolor="#DCEBFA" color="#3F75B0"];
+  h_s [label="DATA SPLITS" fillcolor="#A9CBEF" color="#2B5C94" fontname="Helvetica-Bold" fontsize="14"];
+  }
+  subgraph cluster_e { label="" style="rounded,filled" fillcolor="#FBF8FE" color="#7B55A6"
+  cl [label="Calibrated load\nreference MLU = 0.5 / 0.7 / 0.9 / 1.1" fillcolor="#FFF1A8" color="#C99A06" fontname="Helvetica-Bold"];
+  e4 [label="E4  twin-error levels\nmember-wise σ, degraded twins" fillcolor="#ECE1F6" color="#7B55A6"];
+  e3 [label="E3  link failures\n0–3 failed links, 10 seeds" fillcolor="#ECE1F6" color="#7B55A6"];
+  e2 [label="E2  unseen topologies\nholdout A–F on GEANT, Kdl" fillcolor="#ECE1F6" color="#7B55A6"];
+  e1 [label="E1  seen topologies\n(P1 setting; B4 baseline freeze)" fillcolor="#ECE1F6" color="#7B55A6"];
+  h_e [label="EXPERIMENTS" fillcolor="#CDB5E8" color="#5C3A86" fontname="Helvetica-Bold" fontsize="14"];
+  }
+  subgraph cluster_b { label="" style="rounded,filled" fillcolor="#FFF8F0" color="#D27A1F"
+  ab [label="Ablations\l•  (a) no gate\l•  (b) gate without uncertainty\l•  (c) no fallback\l•  (d) single-topology (B4-only) policy\l•  (e) twin without learned residual\l•  Dm: mean-only gate with tuned margin\l" fillcolor="#FFFFFF" color="#8C8C8C" style="rounded,dashed,filled" fontsize="10.5" penwidth="1.2"];
+  bl [label="Baselines\l•  shortest path, ECMP / equal split\l•  LP (min-MLU; max-throughput for P1)\l•  frozen P1 GRL-TE (B4, GEANT)\l•  policy without twin or gate (A)\l•  gate without uncertainty (D)\l•  Teal, FIGRET, NCFlow: quoted from P1\l" fillcolor="#FFFFFF" color="#8C8C8C" style="rounded,dashed,filled" fontsize="10.5" penwidth="1.2"];
+  h_b [label="BASELINES & ABLATIONS" fillcolor="#F7C08A" color="#A85A0E" fontname="Helvetica-Bold" fontsize="14"];
+  }
+  subgraph cluster_m { label="" style="rounded,filled" fillcolor="#F3FBF4" color="#3F8E4C"
+  st [label="Statistics\l•  mean ± SD over seeds\l•  paired Wilcoxon, Holm correction, Cliff's δ\l•  McNemar for paired accept/reject\l•  Friedman + Nemenyi across topologies\l" fillcolor="#FFFFFF" color="#8C8C8C" style="rounded,dashed,filled" fontsize="10.5" penwidth="1.2"];
+  mt [label="Metrics\l•  demand satisfaction (P1)\l•  max link utilisation\l•  violation rate\l•  unsafe-accept, false-reject rates\l•  generalization gap (seen − unseen)\l•  decision time per component\l" fillcolor="#FFFFFF" color="#8C8C8C" style="rounded,dashed,filled" fontsize="10.5" penwidth="1.2"];
+  h_m [label="METRICS & STATISTICS" fillcolor="#A8DBB0" color="#2C6E37" fontname="Helvetica-Bold" fontsize="14"];
+  }
+  va -> e2 [color="#2F6DB5" fontcolor="#2F6DB5" ltail="cluster_s" lhead="cluster_e"];
+  e2 -> ab [color="#E07B00" fontcolor="#E07B00" ltail="cluster_e" lhead="cluster_b"];
+  ab -> st [color="#3C9A4B" fontcolor="#3C9A4B" ltail="cluster_b" lhead="cluster_m"];
+  { rank=same; h_s; tr; va; ha; te; }
+  { rank=same; h_e; e1; e2; e3; e4; cl; }
+  { rank=same; h_b; bl; ab; }
+  { rank=same; h_m; mt; st; }
+}
