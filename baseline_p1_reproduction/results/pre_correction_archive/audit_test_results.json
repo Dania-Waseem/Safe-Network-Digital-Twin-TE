@@ -1,0 +1,127 @@
+[
+  {
+    "test": "import_and_deps",
+    "passed": true,
+    "detail": "torch/numpy/networkx modules imported"
+  },
+  {
+    "test": "topology_integrity",
+    "passed": true,
+    "detail": "nodes=12 edges=38 directed=True cap_unique=[5000.0]"
+  },
+  {
+    "test": "dataset_count_b4",
+    "passed": true,
+    "detail": "n_tms=36"
+  },
+  {
+    "test": "b4_mean_total_demand",
+    "passed": true,
+    "detail": "mean_total_demand=26877.93 (P1 text: 27.98 thousand)"
+  },
+  {
+    "test": "other_topologies_present",
+    "passed": false,
+    "detail": "missing=['UsCarrier', 'Cogentco', 'Kdl', 'ASN', 'GEANT', 'G\u00c9ANT']"
+  },
+  {
+    "test": "candidate_paths",
+    "passed": true,
+    "detail": "pairs=132 path_count_range=(4,4) unique_path_min=4 edges_ok=True bad=None"
+  },
+  {
+    "test": "bipartite_connectivity",
+    "passed": true,
+    "detail": "demands=132 path_nodes=528 incidences=1696 only_cross_partition=True bidirectional=True"
+  },
+  {
+    "test": "bipartite_path0_links",
+    "passed": true,
+    "detail": "expected=[0] got=[0]"
+  },
+  {
+    "test": "h0_shape",
+    "passed": true,
+    "detail": "h0=(566, 1)"
+  },
+  {
+    "test": "h0_is_scaled",
+    "passed": true,
+    "detail": "scaled_max=1.0000 raw_max=5000.0000 (P1 eq.5 uses raw)"
+  },
+  {
+    "test": "topoflownet_layer_dims",
+    "passed": true,
+    "detail": "layer_shapes=[(566, 1), (566, 2), (566, 3), (566, 4), (566, 5), (566, 6), (566, 7)] path_emb=(528, 7)"
+  },
+  {
+    "test": "gin_shared_mlp",
+    "passed": true,
+    "detail": "single gin_mlp per layer for link and path nodes"
+  },
+  {
+    "test": "actor_softmax",
+    "passed": true,
+    "detail": "shape=(132, 4) row_sum_min=1.000000 row_sum_max=1.000000"
+  },
+  {
+    "test": "actor_gaussian_heads",
+    "passed": true,
+    "detail": "mean=(132, 4) std=(132, 4) logp=(132,)"
+  },
+  {
+    "test": "critic_scalar_value",
+    "passed": true,
+    "detail": "value_shape=() value=0.0159 (aggregation=mean over |D| critic heads; not specified in P1)"
+  },
+  {
+    "test": "deployment_uses_mean",
+    "passed": true,
+    "detail": "deterministic raw == mean"
+  },
+  {
+    "test": "a2c_gradients",
+    "passed": true,
+    "detail": "grad_l1 topoflownet=810.6174 actor=47.0058 critic=71.2821"
+  },
+  {
+    "test": "final_allocation_constraints",
+    "passed": true,
+    "detail": "demand_ok=True capacity_ok=True nonnegative=True sat_raw=1.0000 sat_admm=3.5516 sat_final=0.9989 mlu_final=1.0000 viol_final=0"
+  },
+  {
+    "test": "admm_runs_fixed_iters",
+    "passed": true,
+    "detail": "B4 iters=2 rho=1 g1_actor_absmean=3.84e-08 post_admm_demand_overflow_mean=17.4189 (solver is derived, not published)"
+  },
+  {
+    "test": "one_step_a2c_no_td",
+    "passed": true,
+    "detail": "gamma=False next_state_value=False"
+  },
+  {
+    "test": "init_reproducibility_seed100",
+    "passed": true,
+    "detail": "max_abs=0.000e+00"
+  },
+  {
+    "test": "hyperparams_config",
+    "passed": true,
+    "detail": "episodes=3 actor_lr=0.0001 critic_lr=0.001 rho=1.0 n_seeds_listed=10 b4_admm=2"
+  },
+  {
+    "test": "ten_seed_loop_executed",
+    "passed": false,
+    "detail": "config lists seeds 100..1000 but experiments/b4.py runs a single --seed (default 100)"
+  },
+  {
+    "test": "tm_split",
+    "passed": true,
+    "detail": "splits={'train': (0, 20), 'val': (20, 28), 'test': (28, 36)} (P1 does not publish a split; this is TEAL's default)"
+  },
+  {
+    "test": "reward_is_not_F_total",
+    "passed": true,
+    "detail": "train.py uses feasible.sum()/total_demand, not P1 eq.(30) r_t=F_total"
+  }
+]

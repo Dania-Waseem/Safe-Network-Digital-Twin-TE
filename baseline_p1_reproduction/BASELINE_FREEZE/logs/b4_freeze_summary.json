@@ -1,0 +1,326 @@
+{
+  "protocol_id": "B4_GRLTE_FREEZE_v1",
+  "protocol_date": "2026-11-07",
+  "disclaimer": "This is a qualified B4 research baseline under an explicit protocol. Overall P1 reproduction status remains PARTIALLY VERIFIED. Frozen ADMM is Teal-order (stable deploy), labeled as a known deviation from P1's printed F\u2192z\u2192\u03be\u2192\u03bb iteration order.",
+  "claims_forbidden": [
+    "Do NOT claim reproduction of P1 Table 6 B4 GRL-TE 92.39%.",
+    "Do NOT claim six-topology / 89.36% average reproduction.",
+    "Do NOT average teal_admm and p1_admm results.",
+    "Do NOT describe Teal-order ADMM as P1 eqs. (49)-(52)."
+  ],
+  "topology": {
+    "name": "B4",
+    "nodes": 12,
+    "edges": 38
+  },
+  "traffic": {
+    "source": "TEAL public real TMs (data/traffic_matrices/B4/*_real_*)",
+    "n_tms": 36,
+    "split": {
+      "train": [
+        0,
+        20
+      ],
+      "val": [
+        20,
+        28
+      ],
+      "test": [
+        28,
+        36
+      ]
+    },
+    "split_source": "TEAL-style consecutive split of 36 public B4 matrices; P1 does not publish the split (UNKNOWN vs authors)",
+    "n_test": 8
+  },
+  "paths": {
+    "generator": "yen_k_shortest",
+    "k": 4,
+    "metric": "min-hop",
+    "edge_disjoint": false
+  },
+  "admm": {
+    "frozen_reference_variant": "teal",
+    "frozen_order": "s -> lambda -> z -> x",
+    "diagnostic_variant": "p1",
+    "diagnostic_order": "F -> z -> xi -> lambda",
+    "rho": 1.0,
+    "iters": 2
+  },
+  "seeds": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+  ],
+  "episodes": 3,
+  "baselines": {
+    "lp": {
+      "demand_satisfaction": 0.9973685517907143,
+      "max_link_utilization": 0.9999999850988388
+    },
+    "ecmp": {
+      "demand_satisfaction": 0.9873945638537407,
+      "max_link_utilization": 1.0000001415610313
+    },
+    "shortest_path": {
+      "demand_satisfaction": 0.9776438623666763,
+      "max_link_utilization": 0.9999999701976776
+    }
+  },
+  "channels": {
+    "teal_admm": {
+      "mean": 0.9744480364024639,
+      "std": 0.016821108115457038,
+      "n": 10,
+      "pct_mean": 97.44480364024639,
+      "pct_std": 1.6821108115457037,
+      "role": "FROZEN reference baseline"
+    },
+    "p1_admm": {
+      "mean": 0.9856945186853409,
+      "std": 0.007344909798609219,
+      "n": 10,
+      "pct_mean": 98.56945186853409,
+      "pct_std": 0.7344909798609219,
+      "role": "DIAGNOSTIC only \u2014 do not mix with teal"
+    },
+    "no_admm": {
+      "mean": 0.9651111453771591,
+      "std": 0.027500063623643413,
+      "n": 10,
+      "pct_mean": 96.51111453771591,
+      "pct_std": 2.750006362364341,
+      "role": "ablation"
+    }
+  },
+  "archive_comparison": {
+    "archived_teal_era_mean_std_pct": [
+      97.44480364024639,
+      1.6821108115457037
+    ],
+    "reeval_teal_matches_archive_per_seed": true,
+    "max_abs_teal_minus_archive": 0.0,
+    "p1_published_b4_grl_te_pct": 92.39,
+    "note": "92.39 is P1 Table 6 \u2014 NOT claimed as matched"
+  },
+  "per_seed": [
+    {
+      "seed": 100,
+      "ckpt": "results\\models\\grl_te_b4_seed100.pt",
+      "grl_te_no_admm": 0.9520183652639389,
+      "grl_te_teal_admm": 0.9676084741950035,
+      "grl_te_p1_admm": 0.9766571223735809,
+      "teal_flow_over_demand_mean": 0.984767878639543,
+      "p1_flow_over_demand_mean": 3.0724641132773565,
+      "archived_grl_te": 0.9676084741950035,
+      "archived_grl_te_no_admm": 0.9520183652639389,
+      "teal_minus_archive": 0.0,
+      "no_admm_minus_archive": 0.0,
+      "channels_summary": {
+        "none_sat": 0.9520183652639389,
+        "teal_sat": 0.9676084741950035,
+        "p1_sat": 0.9766571223735809,
+        "teal_fod": 0.984767878639543,
+        "p1_fod": 3.0724641132773565
+      }
+    },
+    {
+      "seed": 200,
+      "ckpt": "results\\models\\grl_te_b4_seed200.pt",
+      "grl_te_no_admm": 0.9489465430378914,
+      "grl_te_teal_admm": 0.9674410745501518,
+      "grl_te_p1_admm": 0.9938744008541107,
+      "teal_flow_over_demand_mean": 0.9795799477911803,
+      "p1_flow_over_demand_mean": 3.1022383168430583,
+      "archived_grl_te": 0.9674410745501518,
+      "archived_grl_te_no_admm": 0.9489465430378914,
+      "teal_minus_archive": 0.0,
+      "no_admm_minus_archive": 0.0,
+      "channels_summary": {
+        "none_sat": 0.9489465430378914,
+        "teal_sat": 0.9674410745501518,
+        "p1_sat": 0.9938744008541107,
+        "teal_fod": 0.9795799477911803,
+        "p1_fod": 3.1022383168430583
+      }
+    },
+    {
+      "seed": 300,
+      "ckpt": "results\\models\\grl_te_b4_seed300.pt",
+      "grl_te_no_admm": 0.8963441327214241,
+      "grl_te_teal_admm": 0.9349156022071838,
+      "grl_te_p1_admm": 0.971734993159771,
+      "teal_flow_over_demand_mean": 0.9664384576166606,
+      "p1_flow_over_demand_mean": 2.863341626959423,
+      "archived_grl_te": 0.9349156022071838,
+      "archived_grl_te_no_admm": 0.8963441327214241,
+      "teal_minus_archive": 0.0,
+      "no_admm_minus_archive": 0.0,
+      "channels_summary": {
+        "none_sat": 0.8963441327214241,
+        "teal_sat": 0.9349156022071838,
+        "p1_sat": 0.971734993159771,
+        "teal_fod": 0.9664384576166606,
+        "p1_fod": 2.863341626959423
+      }
+    },
+    {
+      "seed": 400,
+      "ckpt": "results\\models\\grl_te_b4_seed400.pt",
+      "grl_te_no_admm": 0.9639612212777138,
+      "grl_te_teal_admm": 0.9707244709134102,
+      "grl_te_p1_admm": 0.980096660554409,
+      "teal_flow_over_demand_mean": 0.9882072094459771,
+      "p1_flow_over_demand_mean": 3.106809236132035,
+      "archived_grl_te": 0.9707244709134102,
+      "archived_grl_te_no_admm": 0.9639612212777138,
+      "teal_minus_archive": 0.0,
+      "no_admm_minus_archive": 0.0,
+      "channels_summary": {
+        "none_sat": 0.9639612212777138,
+        "teal_sat": 0.9707244709134102,
+        "p1_sat": 0.980096660554409,
+        "teal_fod": 0.9882072094459771,
+        "p1_fod": 3.106809236132035
+      }
+    },
+    {
+      "seed": 500,
+      "ckpt": "results\\models\\grl_te_b4_seed500.pt",
+      "grl_te_no_admm": 0.9965870380401611,
+      "grl_te_teal_admm": 0.9968063533306122,
+      "grl_te_p1_admm": 0.9939218088984489,
+      "teal_flow_over_demand_mean": 0.9988138519066463,
+      "p1_flow_over_demand_mean": 3.458231810187656,
+      "archived_grl_te": 0.9968063533306122,
+      "archived_grl_te_no_admm": 0.9965870380401611,
+      "teal_minus_archive": 0.0,
+      "no_admm_minus_archive": 0.0,
+      "channels_summary": {
+        "none_sat": 0.9965870380401611,
+        "teal_sat": 0.9968063533306122,
+        "p1_sat": 0.9939218088984489,
+        "teal_fod": 0.9988138519066463,
+        "p1_fod": 3.458231810187656
+      }
+    },
+    {
+      "seed": 600,
+      "ckpt": "results\\models\\grl_te_b4_seed600.pt",
+      "grl_te_no_admm": 0.9744607582688332,
+      "grl_te_teal_admm": 0.9786201566457748,
+      "grl_te_p1_admm": 0.9833441600203514,
+      "teal_flow_over_demand_mean": 0.990838087397202,
+      "p1_flow_over_demand_mean": 3.2716510239445613,
+      "archived_grl_te": 0.9786201566457748,
+      "archived_grl_te_no_admm": 0.9744607582688332,
+      "teal_minus_archive": 0.0,
+      "no_admm_minus_archive": 0.0,
+      "channels_summary": {
+        "none_sat": 0.9744607582688332,
+        "teal_sat": 0.9786201566457748,
+        "p1_sat": 0.9833441600203514,
+        "teal_fod": 0.990838087397202,
+        "p1_fod": 3.2716510239445613
+      }
+    },
+    {
+      "seed": 700,
+      "ckpt": "results\\models\\grl_te_b4_seed700.pt",
+      "grl_te_no_admm": 0.9610424339771271,
+      "grl_te_teal_admm": 0.9646766558289528,
+      "grl_te_p1_admm": 0.984000101685524,
+      "teal_flow_over_demand_mean": 0.9860359271821159,
+      "p1_flow_over_demand_mean": 3.0736700553625678,
+      "archived_grl_te": 0.9646766558289528,
+      "archived_grl_te_no_admm": 0.9610424339771271,
+      "teal_minus_archive": 0.0,
+      "no_admm_minus_archive": 0.0,
+      "channels_summary": {
+        "none_sat": 0.9610424339771271,
+        "teal_sat": 0.9646766558289528,
+        "p1_sat": 0.984000101685524,
+        "teal_fod": 0.9860359271821159,
+        "p1_fod": 3.0736700553625678
+      }
+    },
+    {
+      "seed": 800,
+      "ckpt": "results\\models\\grl_te_b4_seed800.pt",
+      "grl_te_no_admm": 0.9839596152305603,
+      "grl_te_teal_admm": 0.9868684336543083,
+      "grl_te_p1_admm": 0.9907184615731239,
+      "teal_flow_over_demand_mean": 0.9946006258419751,
+      "p1_flow_over_demand_mean": 3.2364096310296544,
+      "archived_grl_te": 0.9868684336543083,
+      "archived_grl_te_no_admm": 0.9839596152305603,
+      "teal_minus_archive": 0.0,
+      "no_admm_minus_archive": 0.0,
+      "channels_summary": {
+        "none_sat": 0.9839596152305603,
+        "teal_sat": 0.9868684336543083,
+        "p1_sat": 0.9907184615731239,
+        "teal_fod": 0.9946006258419751,
+        "p1_fod": 3.2364096310296544
+      }
+    },
+    {
+      "seed": 900,
+      "ckpt": "results\\models\\grl_te_b4_seed900.pt",
+      "grl_te_no_admm": 0.9863967821002007,
+      "grl_te_teal_admm": 0.9882589429616928,
+      "grl_te_p1_admm": 0.9907745644450188,
+      "teal_flow_over_demand_mean": 0.9951066092914547,
+      "p1_flow_over_demand_mean": 3.276013380643655,
+      "archived_grl_te": 0.9882589429616928,
+      "archived_grl_te_no_admm": 0.9863967821002007,
+      "teal_minus_archive": 0.0,
+      "no_admm_minus_archive": 0.0,
+      "channels_summary": {
+        "none_sat": 0.9863967821002007,
+        "teal_sat": 0.9882589429616928,
+        "p1_sat": 0.9907745644450188,
+        "teal_fod": 0.9951066092914547,
+        "p1_fod": 3.276013380643655
+      }
+    },
+    {
+      "seed": 1000,
+      "ckpt": "results\\models\\grl_te_b4_seed1000.pt",
+      "grl_te_no_admm": 0.9873945638537407,
+      "grl_te_teal_admm": 0.9885601997375488,
+      "grl_te_p1_admm": 0.9918229132890701,
+      "teal_flow_over_demand_mean": 0.996010098710001,
+      "p1_flow_over_demand_mean": 3.1749427511515753,
+      "archived_grl_te": 0.9885601997375488,
+      "archived_grl_te_no_admm": 0.9873945638537407,
+      "teal_minus_archive": 0.0,
+      "no_admm_minus_archive": 0.0,
+      "channels_summary": {
+        "none_sat": 0.9873945638537407,
+        "teal_sat": 0.9885601997375488,
+        "p1_sat": 0.9918229132890701,
+        "teal_fod": 0.996010098710001,
+        "p1_fod": 3.1749427511515753
+      }
+    }
+  ],
+  "retrain": {
+    "seed": 100,
+    "ckpt": "BASELINE_FREEZE\\models\\grl_te_b4_freeze_seed100.pt",
+    "train_time_s": 3.37352599999997,
+    "steps": 60,
+    "grl_te_teal_admm": 0.9676084741950035,
+    "grl_te_p1_admm": 0.9766571223735809,
+    "grl_te_no_admm": 0.9520183652639389,
+    "teal_flow_over_demand_mean": 0.984767878639543,
+    "p1_flow_over_demand_mean": 3.0724641132773565
+  }
+}

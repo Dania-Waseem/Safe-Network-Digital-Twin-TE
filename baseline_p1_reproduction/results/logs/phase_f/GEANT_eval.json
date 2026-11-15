@@ -1,0 +1,52 @@
+{
+  "name": "GEANT",
+  "nodes": 40,
+  "edges": 122,
+  "p1_table5": [
+    22,
+    72
+  ],
+  "size_match": false,
+  "n_tms": 36,
+  "tm_shape": [
+    40,
+    40
+  ],
+  "mean_demand": 563076974948.7172,
+  "test_mean_demand": 563971278304.2462,
+  "n_demands": 1560,
+  "n_path_nodes": 6240,
+  "splits": {
+    "train": [
+      0,
+      19
+    ],
+    "val": [
+      19,
+      28
+    ],
+    "test": [
+      28,
+      36
+    ]
+  },
+  "admm_iters": 100,
+  "p1_table6": {
+    "LP": 88.4,
+    "NCFlow": 88.99,
+    "GRL-TE": 86.41
+  },
+  "path_gen": "Yen k-shortest min-hop (P1: '4 shortest paths')",
+  "setup_s": 4.597547699999723,
+  "grl_te": [
+    {
+      "seed": 100,
+      "train_time_s": 6.34682789999988,
+      "sat_teal_admm": 0.2737794630229473,
+      "sat_no_admm": 0.04966837028041482,
+      "mlu_teal": 1.0000001192092896,
+      "viol_teal": 0.0,
+      "runtime_s": 0.8992236874999548
+    }
+  ]
+}

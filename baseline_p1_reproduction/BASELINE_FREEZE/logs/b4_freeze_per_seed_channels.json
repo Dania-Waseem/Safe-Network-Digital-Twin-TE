@@ -1,0 +1,625 @@
+{
+  "protocol_id": "B4_GRLTE_FREEZE_v1",
+  "per_seed_channels": [
+    {
+      "seed": 100,
+      "channels": {
+        "none": {
+          "admm_variant": "none",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9520183652639389,
+          "demand_satisfaction_std": 0.009117654494292042,
+          "max_link_utilization_mean": 0.9999998956918716,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": null,
+          "per_tm_satisfaction": [
+            0.9386324882507324,
+            0.9549932479858398,
+            0.9598249197006226,
+            0.9552037715911865,
+            0.941544234752655,
+            0.954645037651062,
+            0.9441859126091003,
+            0.9671173095703125
+          ]
+        },
+        "teal": {
+          "admm_variant": "teal",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9676084741950035,
+          "demand_satisfaction_std": 0.00535282277388214,
+          "max_link_utilization_mean": 1.0000000596046448,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 0.984767878639543,
+          "per_tm_satisfaction": [
+            0.9587242603302002,
+            0.969476044178009,
+            0.9718659520149231,
+            0.9703810214996338,
+            0.9625476598739624,
+            0.9710180163383484,
+            0.9620081782341003,
+            0.9748466610908508
+          ]
+        },
+        "p1": {
+          "admm_variant": "p1",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9766571223735809,
+          "demand_satisfaction_std": 0.005871674683806656,
+          "max_link_utilization_mean": 1.0000000447034836,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 3.0724641132773565,
+          "per_tm_satisfaction": [
+            0.9672741293907166,
+            0.9793707132339478,
+            0.9812073111534119,
+            0.9773751497268677,
+            0.9714187383651733,
+            0.9819525480270386,
+            0.9701597094535828,
+            0.9844986796379089
+          ]
+        }
+      }
+    },
+    {
+      "seed": 200,
+      "channels": {
+        "none": {
+          "admm_variant": "none",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9489465430378914,
+          "demand_satisfaction_std": 0.008450400601388798,
+          "max_link_utilization_mean": 1.0000000074505806,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": null,
+          "per_tm_satisfaction": [
+            0.9405772089958191,
+            0.9593256711959839,
+            0.9620575904846191,
+            0.9506275653839111,
+            0.939949631690979,
+            0.9474380016326904,
+            0.938191294670105,
+            0.9534053802490234
+          ]
+        },
+        "teal": {
+          "admm_variant": "teal",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9674410745501518,
+          "demand_satisfaction_std": 0.005963957845373765,
+          "max_link_utilization_mean": 0.9999999925494194,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 0.9795799477911803,
+          "per_tm_satisfaction": [
+            0.9615433812141418,
+            0.9742552042007446,
+            0.9770119190216064,
+            0.9690680503845215,
+            0.9602441191673279,
+            0.9655613303184509,
+            0.9609652757644653,
+            0.970879316329956
+          ]
+        },
+        "p1": {
+          "admm_variant": "p1",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9938744008541107,
+          "demand_satisfaction_std": 0.006605809540858627,
+          "max_link_utilization_mean": 0.9967885091900826,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 3.1022383168430583,
+          "per_tm_satisfaction": [
+            0.9845219850540161,
+            1.0,
+            0.999274492263794,
+            0.9956105351448059,
+            0.9942280054092407,
+            1.0,
+            0.9815977811813354,
+            0.9957624077796936
+          ]
+        }
+      }
+    },
+    {
+      "seed": 300,
+      "channels": {
+        "none": {
+          "admm_variant": "none",
+          "n": 8,
+          "demand_satisfaction_mean": 0.8963441327214241,
+          "demand_satisfaction_std": 0.01354130527933355,
+          "max_link_utilization_mean": 1.0000000149011612,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": null,
+          "per_tm_satisfaction": [
+            0.8894288539886475,
+            0.9103293418884277,
+            0.899330198764801,
+            0.8936359882354736,
+            0.9091541171073914,
+            0.9124606251716614,
+            0.8702846169471741,
+            0.8861293196678162
+          ]
+        },
+        "teal": {
+          "admm_variant": "teal",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9349156022071838,
+          "demand_satisfaction_std": 0.008914987703546843,
+          "max_link_utilization_mean": 0.9999998807907104,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 0.9664384576166606,
+          "per_tm_satisfaction": [
+            0.9316269755363464,
+            0.9403964877128601,
+            0.9339697360992432,
+            0.9327147603034973,
+            0.9471970200538635,
+            0.9469810128211975,
+            0.9201199412345886,
+            0.926318883895874
+          ]
+        },
+        "p1": {
+          "admm_variant": "p1",
+          "n": 8,
+          "demand_satisfaction_mean": 0.971734993159771,
+          "demand_satisfaction_std": 0.006734905177257827,
+          "max_link_utilization_mean": 1.0000000074505806,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 2.863341626959423,
+          "per_tm_satisfaction": [
+            0.9651302099227905,
+            0.9777652621269226,
+            0.9771617650985718,
+            0.9687018394470215,
+            0.9783580899238586,
+            0.9787597060203552,
+            0.9600386023521423,
+            0.9679644703865051
+          ]
+        }
+      }
+    },
+    {
+      "seed": 400,
+      "channels": {
+        "none": {
+          "admm_variant": "none",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9639612212777138,
+          "demand_satisfaction_std": 0.005859393097850802,
+          "max_link_utilization_mean": 1.0000000149011612,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": null,
+          "per_tm_satisfaction": [
+            0.9565229415893555,
+            0.9667039513587952,
+            0.9695064425468445,
+            0.9633565545082092,
+            0.9661319851875305,
+            0.9724278450012207,
+            0.9537721276283264,
+            0.9632679224014282
+          ]
+        },
+        "teal": {
+          "admm_variant": "teal",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9707244709134102,
+          "demand_satisfaction_std": 0.004887771171918721,
+          "max_link_utilization_mean": 0.9999999925494194,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 0.9882072094459771,
+          "per_tm_satisfaction": [
+            0.9646886587142944,
+            0.9729268550872803,
+            0.9753955006599426,
+            0.9702315926551819,
+            0.9725680947303772,
+            0.9778218269348145,
+            0.9621512293815613,
+            0.9700120091438293
+          ]
+        },
+        "p1": {
+          "admm_variant": "p1",
+          "n": 8,
+          "demand_satisfaction_mean": 0.980096660554409,
+          "demand_satisfaction_std": 0.006248966305756672,
+          "max_link_utilization_mean": 1.0000001192092896,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 3.106809236132035,
+          "per_tm_satisfaction": [
+            0.9718167185783386,
+            0.9833829402923584,
+            0.985213041305542,
+            0.9802363514900208,
+            0.9831751585006714,
+            0.9884292483329773,
+            0.9687919020652771,
+            0.9797279238700867
+          ]
+        }
+      }
+    },
+    {
+      "seed": 500,
+      "channels": {
+        "none": {
+          "admm_variant": "none",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9965870380401611,
+          "demand_satisfaction_std": 0.0045142298158048644,
+          "max_link_utilization_mean": 0.99710913002491,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": null,
+          "per_tm_satisfaction": [
+            0.9900022745132446,
+            0.9999460577964783,
+            1.0,
+            0.997319757938385,
+            0.9973456859588623,
+            1.0,
+            0.9880825281143188,
+            1.0
+          ]
+        },
+        "teal": {
+          "admm_variant": "teal",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9968063533306122,
+          "demand_satisfaction_std": 0.004454001083667956,
+          "max_link_utilization_mean": 0.997088186442852,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 0.9988138519066463,
+          "per_tm_satisfaction": [
+            0.9906819462776184,
+            0.9999330043792725,
+            0.9999587535858154,
+            0.9980053901672363,
+            0.9980189204216003,
+            0.9999597072601318,
+            0.9879351258277893,
+            0.9999579787254333
+          ]
+        },
+        "p1": {
+          "admm_variant": "p1",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9939218088984489,
+          "demand_satisfaction_std": 0.006880246620973425,
+          "max_link_utilization_mean": 0.998614713549614,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 3.458231810187656,
+          "per_tm_satisfaction": [
+            0.9836851358413696,
+            0.9989038109779358,
+            0.9981701970100403,
+            0.9955117702484131,
+            0.9960008263587952,
+            0.9999999403953552,
+            0.9809186458587646,
+            0.9981841444969177
+          ]
+        }
+      }
+    },
+    {
+      "seed": 600,
+      "channels": {
+        "none": {
+          "admm_variant": "none",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9744607582688332,
+          "demand_satisfaction_std": 0.0066857050582091486,
+          "max_link_utilization_mean": 0.9999999403953552,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": null,
+          "per_tm_satisfaction": [
+            0.9634552001953125,
+            0.9751282930374146,
+            0.9818695187568665,
+            0.9776942133903503,
+            0.9701186418533325,
+            0.9810317754745483,
+            0.9659335017204285,
+            0.9804549217224121
+          ]
+        },
+        "teal": {
+          "admm_variant": "teal",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9786201566457748,
+          "demand_satisfaction_std": 0.005748088030896915,
+          "max_link_utilization_mean": 0.9999999403953552,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 0.990838087397202,
+          "per_tm_satisfaction": [
+            0.9692421555519104,
+            0.9790530800819397,
+            0.9850533604621887,
+            0.9814531803131104,
+            0.974851667881012,
+            0.984271764755249,
+            0.9712647795677185,
+            0.9837712645530701
+          ]
+        },
+        "p1": {
+          "admm_variant": "p1",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9833441600203514,
+          "demand_satisfaction_std": 0.006467970310259751,
+          "max_link_utilization_mean": 1.0000000447034836,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 3.2716510239445613,
+          "per_tm_satisfaction": [
+            0.9730696678161621,
+            0.9863356351852417,
+            0.989465594291687,
+            0.9852644205093384,
+            0.9802554845809937,
+            0.9897965788841248,
+            0.9735585451126099,
+            0.9890073537826538
+          ]
+        }
+      }
+    },
+    {
+      "seed": 700,
+      "channels": {
+        "none": {
+          "admm_variant": "none",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9610424339771271,
+          "demand_satisfaction_std": 0.009800862448949878,
+          "max_link_utilization_mean": 1.000000186264515,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": null,
+          "per_tm_satisfaction": [
+            0.9474729895591736,
+            0.9704777598381042,
+            0.9698680639266968,
+            0.9601622223854065,
+            0.9630748629570007,
+            0.9693101048469543,
+            0.9429281949996948,
+            0.9650452733039856
+          ]
+        },
+        "teal": {
+          "admm_variant": "teal",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9646766558289528,
+          "demand_satisfaction_std": 0.008948265577294938,
+          "max_link_utilization_mean": 1.0000000298023224,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 0.9860359271821159,
+          "per_tm_satisfaction": [
+            0.9523546099662781,
+            0.9732751846313477,
+            0.9727276563644409,
+            0.9638424515724182,
+            0.9665421843528748,
+            0.9722538590431213,
+            0.9480912089347839,
+            0.9683260917663574
+          ]
+        },
+        "p1": {
+          "admm_variant": "p1",
+          "n": 8,
+          "demand_satisfaction_mean": 0.984000101685524,
+          "demand_satisfaction_std": 0.009595501671975105,
+          "max_link_utilization_mean": 1.0000000596046448,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 3.0736700553625678,
+          "per_tm_satisfaction": [
+            0.9704393148422241,
+            0.9926061630249023,
+            0.9920803308486938,
+            0.9835224151611328,
+            0.9842843413352966,
+            0.9935550093650818,
+            0.9667164087295532,
+            0.9887968301773071
+          ]
+        }
+      }
+    },
+    {
+      "seed": 800,
+      "channels": {
+        "none": {
+          "admm_variant": "none",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9839596152305603,
+          "demand_satisfaction_std": 0.006591605452015987,
+          "max_link_utilization_mean": 1.000000074505806,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": null,
+          "per_tm_satisfaction": [
+            0.9745811223983765,
+            0.9887228608131409,
+            0.9892899990081787,
+            0.9848307371139526,
+            0.9852929711341858,
+            0.9906997084617615,
+            0.9715827107429504,
+            0.986676812171936
+          ]
+        },
+        "teal": {
+          "admm_variant": "teal",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9868684336543083,
+          "demand_satisfaction_std": 0.006909207939592129,
+          "max_link_utilization_mean": 1.0000000074505806,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 0.9946006258419751,
+          "per_tm_satisfaction": [
+            0.9767217636108398,
+            0.9918244481086731,
+            0.9922549724578857,
+            0.9879833459854126,
+            0.9886633157730103,
+            0.9933422207832336,
+            0.9739206433296204,
+            0.990236759185791
+          ]
+        },
+        "p1": {
+          "admm_variant": "p1",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9907184615731239,
+          "demand_satisfaction_std": 0.007805975231203905,
+          "max_link_utilization_mean": 1.000000111758709,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 3.2364096310296544,
+          "per_tm_satisfaction": [
+            0.979283332824707,
+            0.996519923210144,
+            0.99632328748703,
+            0.9915749430656433,
+            0.9919865727424622,
+            0.9988794326782227,
+            0.9763681292533875,
+            0.9948120713233948
+          ]
+        }
+      }
+    },
+    {
+      "seed": 900,
+      "channels": {
+        "none": {
+          "admm_variant": "none",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9863967821002007,
+          "demand_satisfaction_std": 0.007851134281597226,
+          "max_link_utilization_mean": 1.0,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": null,
+          "per_tm_satisfaction": [
+            0.9754014015197754,
+            0.993536114692688,
+            0.989550769329071,
+            0.9865682721138,
+            0.9889535307884216,
+            0.9977291226387024,
+            0.9731185436248779,
+            0.9863165020942688
+          ]
+        },
+        "teal": {
+          "admm_variant": "teal",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9882589429616928,
+          "demand_satisfaction_std": 0.007773410463634305,
+          "max_link_utilization_mean": 1.0000000447034836,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 0.9951066092914547,
+          "per_tm_satisfaction": [
+            0.9769414663314819,
+            0.9953555464744568,
+            0.9921834468841553,
+            0.9891722798347473,
+            0.9894168376922607,
+            0.9985049366950989,
+            0.9748271703720093,
+            0.9896698594093323
+          ]
+        },
+        "p1": {
+          "admm_variant": "p1",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9907745644450188,
+          "demand_satisfaction_std": 0.00800690946534693,
+          "max_link_utilization_mean": 1.0000001192092896,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 3.276013380643655,
+          "per_tm_satisfaction": [
+            0.9795883297920227,
+            0.997922420501709,
+            0.9980177879333496,
+            0.9919539093971252,
+            0.9878383874893188,
+            0.9978788495063782,
+            0.9768251776695251,
+            0.9961716532707214
+          ]
+        }
+      }
+    },
+    {
+      "seed": 1000,
+      "channels": {
+        "none": {
+          "admm_variant": "none",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9873945638537407,
+          "demand_satisfaction_std": 0.009140643103810658,
+          "max_link_utilization_mean": 1.0000001415610313,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": null,
+          "per_tm_satisfaction": [
+            0.9744158983230591,
+            0.9948758482933044,
+            0.994033694267273,
+            0.9865174889564514,
+            0.987301230430603,
+            0.9980769753456116,
+            0.9713346362113953,
+            0.9926007390022278
+          ]
+        },
+        "teal": {
+          "admm_variant": "teal",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9885601997375488,
+          "demand_satisfaction_std": 0.008378558906068265,
+          "max_link_utilization_mean": 1.0000000596046448,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 0.996010098710001,
+          "per_tm_satisfaction": [
+            0.9766675233840942,
+            0.995384156703949,
+            0.9946250319480896,
+            0.987805187702179,
+            0.9885264039039612,
+            0.9983435273170471,
+            0.9738020300865173,
+            0.9933277368545532
+          ]
+        },
+        "p1": {
+          "admm_variant": "p1",
+          "n": 8,
+          "demand_satisfaction_mean": 0.9918229132890701,
+          "demand_satisfaction_std": 0.008427288712703608,
+          "max_link_utilization_mean": 0.9990255683660507,
+          "capacity_violations_mean": 0.0,
+          "admm_flow_over_demand_mean": 3.1749427511515753,
+          "per_tm_satisfaction": [
+            0.9795665144920349,
+            0.9985876679420471,
+            0.9983055591583252,
+            0.9917898774147034,
+            0.9922242164611816,
+            1.0,
+            0.9766228199005127,
+            0.9974866509437561
+          ]
+        }
+      }
+    }
+  ]
+}

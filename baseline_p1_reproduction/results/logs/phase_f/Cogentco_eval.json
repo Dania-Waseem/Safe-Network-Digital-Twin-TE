@@ -1,0 +1,13 @@
+{
+  "name": "Cogentco",
+  "nodes": 197,
+  "edges": 486,
+  "p1_table5": [197, 486],
+  "size_match": true,
+  "n_tms": 36,
+  "tm_shape": [197, 197],
+  "traffic": "Reconstructed gravity (degree attractiveness); P1 gravity constants unpublished",
+  "n_demands": 38612,
+  "grl_te": [],
+  "blocker": "Yen path generation ~38k pairs not fully trained; topology size MATCHES Table 5"
+}

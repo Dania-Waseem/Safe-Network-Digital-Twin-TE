@@ -1,0 +1,18 @@
+{
+  "n_pairs": 132,
+  "identical_lists": 6,
+  "first_path_identical": 118,
+  "teal_mean_unique_among_4_slots": 2.3484848484848486,
+  "p1_text": "4 shortest paths (no edge-disjoint)",
+  "decision": "KEEP Yen as default \u2014 switching to TEAL edge-disjoint would follow Teal, not P1 text",
+  "yen_minhop": {
+    "lp_sat": 0.9973685517907143,
+    "ecmp_sat": 0.9873945638537407,
+    "lp_mlu": 0.9999999850988388
+  },
+  "teal_edge_disjoint": {
+    "lp_sat": 0.9973685666918755,
+    "ecmp_sat": 0.9420112147927284,
+    "lp_mlu": 0.9999999850988388
+  }
+}

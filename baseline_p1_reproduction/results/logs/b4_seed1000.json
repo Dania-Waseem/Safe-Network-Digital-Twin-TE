@@ -1,0 +1,60 @@
+{
+  "seed": 1000,
+  "episodes": 3,
+  "device": "cpu",
+  "train_time_s": 1.381817599999522,
+  "ours": {
+    "demand_satisfaction": 0.9885601997375488,
+    "max_link_utilization": 1.0000000596046448,
+    "capacity_violations": 0.0,
+    "violation_rate": 0.0,
+    "runtime_s": 0.010921737500098061,
+    "total_allocated": 27659.73095703125,
+    "total_demand": 27981.198974609375,
+    "n": 8
+  },
+  "ours_no_admm": {
+    "demand_satisfaction": 0.9873945638537407,
+    "max_link_utilization": 1.0000001415610313,
+    "capacity_violations": 0.0,
+    "violation_rate": 0.0,
+    "runtime_s": 0.005866562500045802,
+    "total_allocated": 27626.979248046875,
+    "total_demand": 27981.198974609375,
+    "n": 8
+  },
+  "lp": {
+    "demand_satisfaction": 0.9973685517907143,
+    "max_link_utilization": 0.9999999850988388,
+    "capacity_violations": 0.0,
+    "runtime_s": 0.02012018749996969,
+    "n": 8
+  },
+  "ecmp": {
+    "demand_satisfaction": 0.9873945638537407,
+    "max_link_utilization": 1.0000001415610313,
+    "capacity_violations": 0.0,
+    "runtime_s": 0.00046799999995528196,
+    "n": 8
+  },
+  "shortest_path": {
+    "demand_satisfaction": 0.9776438623666763,
+    "max_link_utilization": 0.9999999701976776,
+    "capacity_violations": 0.0,
+    "runtime_s": 0.0003446249997978157,
+    "n": 8
+  },
+  "p1_published_b4": {
+    "LP": 99.83,
+    "NCFlow": 98.9,
+    "Teal": 84.77,
+    "Figret": 99.24,
+    "GRL-TE": 92.39
+  },
+  "notes": [
+    "P1 does not publish the TM split; we use TEAL's 20/8/8 split of the 36 public B4 matrices.",
+    "P1 ADMM subproblems (49)-(51) are implemented as closed-form minimizers of (48) plus ReLU.",
+    "GNN inputs are scaled by max capacity; ADMM/reward use physical units.",
+    "Reward is F_total / total_demand, a positive constant times P1 eq. (30) within each TM."
+  ]
+}

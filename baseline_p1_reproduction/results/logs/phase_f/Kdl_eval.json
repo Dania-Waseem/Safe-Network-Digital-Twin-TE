@@ -1,0 +1,15 @@
+{
+  "name": "Kdl",
+  "nodes": 754,
+  "edges": 1790,
+  "p1_table5": [754, 1790],
+  "size_match": true,
+  "n_tms": 36,
+  "tm_shape": [754, 754],
+  "mean_demand": 567762.0,
+  "n_demands": 567762,
+  "n_path_nodes_if_4paths": 2271048,
+  "traffic": "TEAL public toy (all entries 1.0) — NOT Table-6 comparable",
+  "grl_te": [],
+  "blocker": "Path-form GRL-TE ~2.3M path nodes; 10-seed training not executed on this machine"
+}

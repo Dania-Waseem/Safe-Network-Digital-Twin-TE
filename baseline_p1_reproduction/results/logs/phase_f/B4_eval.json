@@ -1,0 +1,44 @@
+{
+  "name": "B4",
+  "nodes": 12,
+  "edges": 38,
+  "p1_table5": [
+    12,
+    38
+  ],
+  "size_match": true,
+  "n_tms": 36,
+  "tm_shape": [
+    12,
+    12
+  ],
+  "mean_demand": 26877.934695609805,
+  "test_mean_demand": 27981.198604921876,
+  "n_demands": 132,
+  "n_path_nodes": 528,
+  "splits": {
+    "train": [
+      0,
+      20
+    ],
+    "val": [
+      20,
+      28
+    ],
+    "test": [
+      28,
+      36
+    ]
+  },
+  "admm_iters": 2,
+  "p1_table6": {
+    "LP": 99.83,
+    "NCFlow": 98.9,
+    "Teal": 84.77,
+    "Figret": 99.24,
+    "GRL-TE": 92.39
+  },
+  "path_gen": "Yen k-shortest min-hop (P1: '4 shortest paths')",
+  "setup_s": 0.03487519999998767,
+  "grl_te": []
+}

@@ -1,0 +1,42 @@
+{
+  "name": "UsCarrier",
+  "nodes": 158,
+  "edges": 378,
+  "p1_table5": [
+    158,
+    378
+  ],
+  "size_match": true,
+  "n_tms": 36,
+  "tm_shape": [
+    158,
+    158
+  ],
+  "mean_demand": 24806.0,
+  "test_mean_demand": 24806.0,
+  "n_demands": 24806,
+  "n_path_nodes": 99224,
+  "splits": {
+    "train": [
+      0,
+      19
+    ],
+    "val": [
+      19,
+      28
+    ],
+    "test": [
+      28,
+      36
+    ]
+  },
+  "admm_iters": 25,
+  "p1_table6": {
+    "LP": 92.83,
+    "NCFlow": 72.15,
+    "GRL-TE": 91.82
+  },
+  "path_gen": "Yen k-shortest min-hop (P1: '4 shortest paths')",
+  "setup_s": 275.2219273999999,
+  "grl_te": []
+}

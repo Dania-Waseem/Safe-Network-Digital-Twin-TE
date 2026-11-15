@@ -1,0 +1,15 @@
+{
+  "name": "ASN",
+  "nodes": 1739,
+  "edges": 8558,
+  "p1_table5": [1739, 8558],
+  "size_match": true,
+  "n_tms": 36,
+  "tm_shape": [1739, 1739],
+  "mean_demand": 3022382.0,
+  "n_demands": 3022382,
+  "n_path_nodes_if_4paths": 12089528,
+  "traffic": "TEAL public toy (all entries 1.0) — NOT Table-6 comparable",
+  "grl_te": [],
+  "blocker": "Path-form GRL-TE ~12M path nodes; training/LP not executed"
+}

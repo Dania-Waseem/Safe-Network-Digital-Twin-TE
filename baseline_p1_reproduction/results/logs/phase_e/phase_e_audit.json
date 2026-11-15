@@ -1,0 +1,232 @@
+{
+  "topology": {
+    "name": "B4",
+    "num_nodes": 12,
+    "num_edges": 38,
+    "p1_table5": {
+      "nodes": 12,
+      "edges": 38,
+      "avg_sp": 2.3,
+      "diameter": 5
+    },
+    "ours_avg_sp_undirected": 2.3181818181818183,
+    "ours_diameter_undirected": 5,
+    "diameter_error": null,
+    "capacity_min": 5000.0,
+    "capacity_max": 5000.0,
+    "capacity_mean": 5000.0,
+    "capacity_unique": [
+      5000.0
+    ],
+    "matches_p1_nodes_edges": true,
+    "identical_to_ref_teal_json": true
+  },
+  "traffic": {
+    "n_matrices": 36,
+    "shape": [
+      12,
+      12
+    ],
+    "all_shapes_equal": true,
+    "filename_pattern": "B4.json_real_{i}_1.0_traffic-matrix.pkl",
+    "scale_suffix": "1.0",
+    "traffic_type": "TEAL 'real' (measured/public TEAL dump), NOT gravity-synthetic",
+    "mean_total_demand": 26877.934695609805,
+    "std_total_demand": 917.1764711160902,
+    "min_total_demand": 24947.87786015625,
+    "max_total_demand": 29260.921286875004,
+    "p1_cited_b4_mean_demand": 27980.0,
+    "mean_vs_p1_ratio": 0.9606123908366621,
+    "mean_nnz_od_pairs": 132.0,
+    "max_possible_od": 132,
+    "splits_used": {
+      "train": [
+        0,
+        20
+      ],
+      "val": [
+        20,
+        28
+      ],
+      "test": [
+        28,
+        36
+      ]
+    },
+    "split_source": "TEAL-style 20/8/8 \u2014 NOT published in P1",
+    "train_mean_demand": 26408.16534410547,
+    "test_mean_demand": 27981.198604921876
+  },
+  "paths": {
+    "num_od_pairs": 132,
+    "paths_per_pair": 4,
+    "algorithm": "Yen k-shortest min-hop (networkx)",
+    "p1_text": "precompute 4 shortest paths",
+    "mean_unique_paths_per_pair": 4.0,
+    "min_unique": 4,
+    "max_unique": 4,
+    "mean_hops": 3.212121212121212,
+    "teal_comparison": {
+      "teal_pickle": "B4.json-4-paths_edge-disjoint-True_dist-metric-min-hop-dict.pkl",
+      "ours_pairs": 132,
+      "teal_pairs": 132,
+      "common_pairs": 132,
+      "identical_path_lists_sampled": 6,
+      "partial_overlap_sampled": 126,
+      "note": "P1: '4 shortest paths'; TEAL public often edge-disjoint; we use Yen min-hop"
+    }
+  },
+  "metrics": {
+    "demand_satisfaction_ours": "sum(allocated_path_flows) / sum(demands) after eqs 23-28",
+    "p1_term": "average demand satisfaction rate / total satisfied demand (Fig 6, Table 6)",
+    "p1_exact_formula": "NOT algebraically printed; inferred as satisfied throughput / offered demand",
+    "reward_train": "r_t = F_total = sum of feasible allocations (eq 29-30)",
+    "mlu": "max_e load(e)/c(e)",
+    "congestion": "capacity_violations count if load > 1.001*c (ours); P1 discusses violations qualitatively",
+    "comparable_if": "same TMs, capacities, path set, and post-processing feasibility"
+  },
+  "methodology": {
+    "topo_nodes_edges": {
+      "p1": "12/38",
+      "ours": "12/38",
+      "status": "MATCH"
+    },
+    "capacities_source": {
+      "p1": "Teal",
+      "ours": "TEAL B4.json",
+      "status": "MATCH_SOURCE"
+    },
+    "tm_source": {
+      "p1": "Teal",
+      "ours": "TEAL real_*_1.0 pkl",
+      "status": "MATCH_SOURCE"
+    },
+    "tm_mean_demand": {
+      "p1": "27.98k",
+      "ours": "~26.9k",
+      "status": "CLOSE_NOT_IDENTICAL"
+    },
+    "candidate_paths": {
+      "p1": "4 shortest",
+      "ours": "Yen min-hop (not edge-disjoint)",
+      "status": "AMBIGUOUS"
+    },
+    "train_episodes": {
+      "p1": 3,
+      "ours_table6_protocol": 3,
+      "phase_d_extra": 20,
+      "status": "MATCH_FOR_3EP"
+    },
+    "seeds": {
+      "p1": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900,
+        1000
+      ],
+      "ours": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900,
+        1000
+      ],
+      "status": "MATCH"
+    },
+    "actor_lr": {
+      "p1": 0.0001,
+      "ours": 0.0001,
+      "status": "MATCH"
+    },
+    "critic_lr": {
+      "p1": 0.001,
+      "ours": 0.001,
+      "status": "MATCH"
+    },
+    "admm_rho": {
+      "p1": 1.0,
+      "ours": 1.0,
+      "status": "MATCH"
+    },
+    "admm_iters_b4": {
+      "p1": 2,
+      "ours": 2,
+      "status": "MATCH"
+    },
+    "admm_solver": {
+      "p1": "unpublished argmins order F-z-xi-lambda",
+      "ours": "Teal order for stable deploy; P1-order available but unstable",
+      "status": "DEVIATES"
+    },
+    "tm_split": {
+      "p1": "unspecified",
+      "ours": "20/8/8 TEAL",
+      "status": "UNSPECIFIED_ASSUMPTION"
+    },
+    "grad_clip": {
+      "p1": "not stated",
+      "ours": 1.0,
+      "status": "EXTRA"
+    },
+    "hardware": {
+      "p1": "RTX 4090",
+      "ours": "local CPU/GPU may differ",
+      "status": "DEVIATES_ENV"
+    }
+  },
+  "baselines_and_gaps": {
+    "test_lp_sat": 0.9973685517907143,
+    "test_ecmp_sat": 0.9873945638537407,
+    "all36_lp_sat": 0.9992373122109307,
+    "p1_table6_b4": {
+      "LP": 99.83,
+      "NCFlow": 98.9,
+      "Teal": 84.77,
+      "Figret": 99.24,
+      "GRL-TE": 92.39
+    },
+    "phase_d_grl_te_no_admm_20ep": 0.9772930398583413,
+    "phase_d_grl_te_teal_admm_20ep": 0.9813108533620835,
+    "archived_10seed_3ep_grl_teal": 0.9744480364024639,
+    "archived_10seed_3ep_no_admm": 0.9651111453771591,
+    "lp_gap_to_p1_pp": -0.0931448209285719,
+    "grl_gap_to_p1_pp_3ep_teal": 5.054803640246391
+  },
+  "comparability": {
+    "directly_comparable_to_table6_92_39": false,
+    "reason": "LP nearly matches P1 (same TE instance family), but GRL-TE differs by 5.05 pp. Likely causes: path-set ambiguity, unpublished TM split, ADMM numerical solver deviation, and/or unstated eval details. Our higher sat must NOT be claimed as beating P1.",
+    "same_data_family": true,
+    "tm_mean_ratio_to_p1": 0.9606123908366621
+  },
+  "corrections": {
+    "applied": [],
+    "recommended_not_applied": [
+      {
+        "item": "Do not retune to 92.39%",
+        "why": "Would violate fidelity rules; gap is protocol/solver ambiguity"
+      },
+      {
+        "item": "Optional path-set A/B with TEAL edge-disjoint",
+        "why": "P1 says shortest not edge-disjoint; A/B would diagnose gap but is not a silent 'fix'"
+      },
+      {
+        "item": "Publish both 3-ep (P1 protocol) and 20-ep (Phase D) numbers separately",
+        "why": "Already done; Table-6 comparisons must use 3-ep + documented ADMM variant"
+      }
+    ],
+    "necessary_code_corrections": "NONE for B4 data integrity \u2014 topology/TM source match TEAL as P1 cites; deviations are documented assumptions"
+  },
+  "overall_verdict": "PARTIALLY VERIFIED",
+  "verdict_reason": "B4 topology size, TEAL TM/capacity source, hyperparams, and metric definition are largely faithful; TM mean is close but not identical to P1's 27.98k; path algorithm and TM split are underspecified; ADMM solver is not exact P1; therefore 97\u201398% is NOT directly comparable to published 92.39% as an improvement claim."
+}

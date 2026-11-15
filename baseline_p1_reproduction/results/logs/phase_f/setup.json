@@ -1,0 +1,135 @@
+{
+  "topologies": [
+    {
+      "name": "B4",
+      "src": "C:\\Users\\hp\\Pictures\\CNET phase 3\\_ref_teal\\topologies\\B4.json",
+      "nodes": 12,
+      "edges": 38,
+      "p1": [
+        12,
+        38
+      ],
+      "match_p1_size": true
+    },
+    {
+      "name": "UsCarrier",
+      "src": "C:\\Users\\hp\\Pictures\\CNET phase 3\\_ref_teal\\topologies\\UsCarrier.json",
+      "nodes": 158,
+      "edges": 378,
+      "p1": [
+        158,
+        378
+      ],
+      "match_p1_size": true
+    },
+    {
+      "name": "Kdl",
+      "src": "C:\\Users\\hp\\Pictures\\CNET phase 3\\_ref_teal\\topologies\\Kdl.json",
+      "nodes": 754,
+      "edges": 1790,
+      "p1": [
+        754,
+        1790
+      ],
+      "match_p1_size": true
+    },
+    {
+      "name": "ASN",
+      "src": "C:\\Users\\hp\\Pictures\\CNET phase 3\\_ref_teal\\topologies\\ASN2k.json",
+      "nodes": 1739,
+      "edges": 8558,
+      "p1": [
+        1739,
+        8558
+      ],
+      "match_p1_size": true
+    },
+    {
+      "name": "Cogentco",
+      "src": "C:\\Users\\hp\\Pictures\\CNET phase 3\\GRL_TE_Reproduction\\data\\raw_zoo\\Cogentco.gml",
+      "nodes": 197,
+      "edges": 486,
+      "p1": [
+        197,
+        486
+      ],
+      "match_p1_size": true
+    },
+    {
+      "name": "GEANT",
+      "src": "C:\\Users\\hp\\Pictures\\CNET phase 3\\GRL_TE_Reproduction\\data\\raw_zoo\\GEANT.gml",
+      "nodes": 40,
+      "edges": 122,
+      "p1": [
+        22,
+        72
+      ],
+      "match_p1_size": false
+    }
+  ],
+  "traffic": [
+    {
+      "name": "B4",
+      "source": "TEAL real Yates-mapped (already in data/traffic_matrices/B4)",
+      "type": "public measured-mapped, NOT Microsoft WAN"
+    },
+    {
+      "name": "UsCarrier",
+      "n": 36,
+      "shape": [
+        158,
+        158
+      ],
+      "mean_total": 24806.0,
+      "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\_ref_teal\\traffic-matrices\\toy",
+      "note": "TEAL toy TMs are unit-demand float16 originally; converted to float64",
+      "p1_claim": "P1 says Teal TMs; public Teal only ships toy unit-demand"
+    },
+    {
+      "name": "Kdl",
+      "n": 36,
+      "shape": [
+        754,
+        754
+      ],
+      "mean_total": 567762.0,
+      "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\_ref_teal\\traffic-matrices\\toy",
+      "note": "TEAL toy TMs are unit-demand float16 originally; converted to float64",
+      "p1_claim": "P1 says Teal TMs; public Teal only ships toy unit-demand"
+    },
+    {
+      "name": "ASN",
+      "n": 36,
+      "shape": [
+        1739,
+        1739
+      ],
+      "mean_total": 3022382.0,
+      "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\_ref_teal\\traffic-matrices\\toy",
+      "note": "TEAL toy TMs are unit-demand float16 originally; converted to float64",
+      "p1_claim": "P1 says Teal TMs; public Teal only ships toy unit-demand"
+    },
+    {
+      "name": "Cogentco",
+      "n": 36,
+      "mean_total": 4914414.463361552,
+      "type": "synthetic gravity (degree attractiveness) \u2014 reconstructed, not P1 dump"
+    }
+  ],
+  "downloads": {
+    "Cogentco": {
+      "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\GRL_TE_Reproduction\\data\\raw_zoo\\Cogentco.gml",
+      "ok": true
+    },
+    "GEANT": {
+      "path": "C:\\Users\\hp\\Pictures\\CNET phase 3\\GRL_TE_Reproduction\\data\\raw_zoo\\GEANT.gml",
+      "ok": true
+    }
+  },
+  "limitations": [
+    "Downloaded GEANT graph is 40/122; P1 Table 5 is 22/72. FIGRET/Uhlig 22-node TM pack was not present locally and Zoo Geant2012 differs.",
+    "P1 unpublished: TM split, Yen vs edge-disjoint, ADMM closed forms, Cogentco gravity constants, FIGRET G\u00c9ANT files.",
+    "Public TEAL UsCarrier/Kdl/ASN TMs are toy (all entries 1.0) \u2014 not Microsoft WAN traces used in Teal's paper.",
+    "Do not treat toy-TM results as Table 6 reproductions."
+  ]
+}

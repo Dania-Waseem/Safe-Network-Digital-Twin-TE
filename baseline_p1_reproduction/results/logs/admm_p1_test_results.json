@@ -1,0 +1,96 @@
+{
+  "n_pass": 6,
+  "n_total": 7,
+  "n_expected_fail": 1,
+  "n_unexpected_fail": 0,
+  "results": [
+    {
+      "name": "update_order_F_z_xi_lambda",
+      "pass": true,
+      "order": [
+        "F",
+        "z",
+        "xi",
+        "lambda"
+      ],
+      "expected": [
+        "F",
+        "z",
+        "xi",
+        "lambda"
+      ]
+    },
+    {
+      "name": "residuals_nonneg_structure",
+      "pass": true,
+      "numerical_stable_at_b4_2iters": false,
+      "iter0_flow_over_demand_ok": true,
+      "orders_ok": true,
+      "flow_over_demand": 3.213654171349373,
+      "F_sum_max": 257.59156698820675,
+      "g1_abs_mean": 17.479148056168953,
+      "g3_abs_mean": 22.847687178803568,
+      "g4_abs_mean": 56.60042675414379,
+      "note": "P1 closed forms from (48) are implemented; B4 \u03c1=1 / 2-iter hyperparams leave large G residuals / F>1 (see Phase B report)."
+    },
+    {
+      "name": "feasibility_after_eq28",
+      "pass": true,
+      "capacity_violations": 0,
+      "demand_satisfaction": 0.9795666058686641,
+      "demand_overflow_max": 1.1368683772161603e-13,
+      "mlu": 0.9999999999999997
+    },
+    {
+      "name": "xi_stationarity_on_positive",
+      "pass": true,
+      "err1_max": 0.0,
+      "err3_max": 0.0,
+      "n_xi1_pos": 0,
+      "n_xi3_pos": 36
+    },
+    {
+      "name": "p1_vs_teal_identical_warmstart",
+      "pass": true,
+      "p1_flow_over_demand": 3.213654171349373,
+      "teal_flow_over_demand": 0.990951609193954,
+      "p1_g1": 17.479148056168953,
+      "p1_g3": 22.847687178803568,
+      "p1_g4": 56.60042675414379,
+      "teal_g1": 1.7419774362793579,
+      "teal_g3": 0.6206074398779061,
+      "teal_g4": 0.6361849200973716,
+      "p1_sat_after_28": 0.9795666058686641,
+      "teal_sat_after_28": 0.9766674228450982,
+      "flow_l1_diff": 61418.26456782137,
+      "p1_order": [
+        "F",
+        "z",
+        "xi",
+        "lambda"
+      ],
+      "teal_order": [
+        "s",
+        "lambda",
+        "z",
+        "x"
+      ]
+    },
+    {
+      "name": "random_softmax_warmstart_feasibility_eq28",
+      "pass": true,
+      "numerical_stable": false,
+      "flow_over_demand": 3.1902946640486176,
+      "sat_after_28": 0.9818946382787054,
+      "g3_iter0": 3.6787192522507497,
+      "g3_iter1": 25.743454794192242
+    },
+    {
+      "name": "b4_2iter_numerical_stability",
+      "pass": false,
+      "expected_fail": true,
+      "flow_over_demand": 3.1902946640486176,
+      "detail": "Documented: derived argmins of (48) with ReLU, \u03c1=1, 2 iters do not keep \u03a3F\u22481. Not patched with non-P1 projections."
+    }
+  ]
+}

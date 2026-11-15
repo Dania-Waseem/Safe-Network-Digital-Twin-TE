@@ -1,0 +1,51 @@
+seed 100: training on 1000 TMs x 3 episodes (unit=1000000000.0)
+Episode 1/3: mean sat=0.8168 mean r=36.5
+Episode 2/3: mean sat=0.7910 mean r=35.2
+Episode 3/3: mean sat=0.7891 mean r=35.1
+seed 100: none=0.7678 teal=0.9670 p1=failed train 186s eval 85s
+seed 200: training on 1000 TMs x 3 episodes (unit=1000000000.0)
+Episode 1/3: mean sat=0.7766 mean r=34.6
+Episode 2/3: mean sat=0.7541 mean r=33.4
+Episode 3/3: mean sat=0.8077 mean r=36.0
+seed 200: none=0.8834 teal=0.9672 p1=failed train 167s eval 54s
+seed 300: training on 1000 TMs x 3 episodes (unit=1000000000.0)
+Episode 1/3: mean sat=0.8120 mean r=36.3
+Episode 2/3: mean sat=0.8141 mean r=36.4
+Episode 3/3: mean sat=0.7897 mean r=35.3
+seed 300: none=0.7638 teal=0.9667 p1=failed train 133s eval 82s
+seed 400: training on 1000 TMs x 3 episodes (unit=1000000000.0)
+Episode 1/3: mean sat=0.7760 mean r=34.5
+Episode 2/3: mean sat=0.7791 mean r=34.6
+Episode 3/3: mean sat=0.7749 mean r=34.4
+seed 400: none=0.7781 teal=0.9672 p1=failed train 270s eval 111s
+seed 500: training on 1000 TMs x 3 episodes (unit=1000000000.0)
+Episode 1/3: mean sat=0.8239 mean r=36.8
+Episode 2/3: mean sat=0.8232 mean r=36.8
+Episode 3/3: mean sat=0.8246 mean r=36.9
+seed 500: none=0.8849 teal=0.9675 p1=failed train 241s eval 88s
+seed 600: training on 1000 TMs x 3 episodes (unit=1000000000.0)
+Episode 1/3: mean sat=0.8487 mean r=37.8
+Episode 2/3: mean sat=0.8601 mean r=38.4
+Episode 3/3: mean sat=0.8584 mean r=38.3
+seed 600: none=0.8858 teal=0.9674 p1=failed train 136s eval 64s
+seed 700: training on 1000 TMs x 3 episodes (unit=1000000000.0)
+Episode 1/3: mean sat=0.7432 mean r=33.0
+Episode 2/3: mean sat=0.7302 mean r=32.4
+Episode 3/3: mean sat=0.7310 mean r=32.5
+seed 700: none=0.7113 teal=0.9666 p1=failed train 118s eval 48s
+seed 800: training on 1000 TMs x 3 episodes (unit=1000000000.0)
+Episode 1/3: mean sat=0.8198 mean r=36.6
+Episode 2/3: mean sat=0.8201 mean r=36.6
+Episode 3/3: mean sat=0.8195 mean r=36.6
+seed 800: none=0.8969 teal=0.9674 p1=failed train 119s eval 47s
+seed 900: training on 1000 TMs x 3 episodes (unit=1000000000.0)
+Episode 1/3: mean sat=0.8181 mean r=36.5
+Episode 2/3: mean sat=0.8079 mean r=36.0
+Episode 3/3: mean sat=0.8066 mean r=35.9
+seed 900: none=0.8681 teal=0.9669 p1=failed train 95s eval 32s
+seed 1000: training on 1000 TMs x 3 episodes (unit=1000000000.0)
+Episode 1/3: mean sat=0.8553 mean r=38.2
+Episode 2/3: mean sat=0.8500 mean r=38.0
+Episode 3/3: mean sat=0.8488 mean r=38.0
+seed 1000: none=0.8829 teal=0.9672 p1=failed train 72s eval 30s
+EXIT=0

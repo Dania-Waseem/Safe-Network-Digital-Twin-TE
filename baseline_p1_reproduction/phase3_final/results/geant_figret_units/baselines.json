@@ -1,0 +1,24 @@
+{
+  "unit": 1000000000.0,
+  "lp_max_throughput": {
+    "demand_satisfaction": 0.9751088297367096,
+    "max_link_utilization": 1.0000000047683715,
+    "capacity_violations": 0.0,
+    "runtime_s": 0.10211516452487558,
+    "n": 200
+  },
+  "ecmp": {
+    "demand_satisfaction": 0.8828948697447777,
+    "max_link_utilization": 1.000000147819519,
+    "capacity_violations": 0.0,
+    "runtime_s": 0.0014829660067334771,
+    "n": 200
+  },
+  "shortest_path": {
+    "demand_satisfaction": 0.9122655406594277,
+    "max_link_utilization": 1.000000134408474,
+    "capacity_violations": 0.0,
+    "runtime_s": 0.0017547734966501594,
+    "n": 200
+  }
+}
