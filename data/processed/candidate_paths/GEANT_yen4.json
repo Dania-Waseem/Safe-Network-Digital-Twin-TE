@@ -1,0 +1,13 @@
+{
+  "topology": "GEANT",
+  "k_requested": 4,
+  "padded": false,
+  "backend": "networkx.shortest_simple_paths",
+  "cost": "min-hop; positive-capacity edge weight 1 (P1 generate_paths._weighted_copy)",
+  "tie_break": "NetworkX Yen heap order. This is the call used by frozen P1 generate_paths.py.",
+  "difference_from_p1": "P1 preprocessing/generate_paths.py _pad_paths repeats the shortest path when fewer than 4 simple paths exist. Paths are not repeated here.",
+  "demands": 462,
+  "paths_generated": 1848,
+  "demands_with_fewer_than_4": 0,
+  "demands_with_no_path": 0
+}

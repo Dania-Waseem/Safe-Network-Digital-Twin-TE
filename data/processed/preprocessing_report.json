@@ -1,0 +1,299 @@
+{
+  "rows": [
+    {
+      "topology": "B4",
+      "nodes": 12,
+      "directed_links": 38,
+      "undirected_links": 19,
+      "connectivity": {
+        "weakly_connected": true,
+        "strongly_connected": true,
+        "undirected_connected": true,
+        "weak_component_sizes": [
+          12
+        ],
+        "undirected_component_sizes": [
+          12
+        ],
+        "ordered_pairs_without_a_directed_path": 0
+      },
+      "traffic_kind": "real_mapped",
+      "traffic_label": "TEAL public real matrices: Yates/Abilene demands mapped onto B4. Not Microsoft WAN traffic.",
+      "traffic_matrices": 36,
+      "valid_traffic_matrices": 36,
+      "invalid_traffic_matrices": 0,
+      "valid_od_demands": 4752,
+      "positive_od_demands": 4752,
+      "zero_od_demands": 0,
+      "invalid_od_entries": 0,
+      "self_demand_nonzero_entries": 0,
+      "candidate_paths": 528,
+      "demands_with_fewer_than_4_paths": 0,
+      "demands_with_no_path": 0,
+      "path_backend": "networkx.shortest_simple_paths",
+      "paths_padded": false,
+      "path_validation_problems": [],
+      "path_validation_problem_count": 0,
+      "normalisation": {
+        "method": "p1_initial_features_scale_true",
+        "denominator": 5000.0,
+        "uses_traffic_matrices": false,
+        "p1_training_default": "unscaled"
+      },
+      "bipartite": {
+        "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\graph_data\\B4_bipartite.pt",
+        "link_nodes": 38,
+        "path_nodes": 528,
+        "incidence_edges_one_direction": 1696,
+        "matrices": 36
+      },
+      "excluded_links": [],
+      "warnings": []
+    },
+    {
+      "topology": "UsCarrier",
+      "nodes": 158,
+      "directed_links": 378,
+      "undirected_links": 189,
+      "connectivity": {
+        "weakly_connected": true,
+        "strongly_connected": true,
+        "undirected_connected": true,
+        "weak_component_sizes": [
+          158
+        ],
+        "undirected_component_sizes": [
+          158
+        ],
+        "ordered_pairs_without_a_directed_path": 0
+      },
+      "traffic_kind": "synthetic_toy",
+      "traffic_label": "TEAL toy placeholder. The public repository does not include Microsoft WAN traces for this topology. Not real traffic.",
+      "traffic_matrices": 36,
+      "valid_traffic_matrices": 36,
+      "invalid_traffic_matrices": 0,
+      "valid_od_demands": 893016,
+      "positive_od_demands": 893016,
+      "zero_od_demands": 0,
+      "invalid_od_entries": 0,
+      "self_demand_nonzero_entries": 5688,
+      "candidate_paths": 97974,
+      "demands_with_fewer_than_4_paths": 602,
+      "demands_with_no_path": 0,
+      "path_backend": "networkx.shortest_simple_paths",
+      "paths_padded": false,
+      "path_validation_problems": [],
+      "path_validation_problem_count": 0,
+      "normalisation": {
+        "method": "p1_initial_features_scale_true",
+        "denominator": 5850.0,
+        "uses_traffic_matrices": false,
+        "p1_training_default": "unscaled"
+      },
+      "bipartite": {
+        "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\graph_data\\UsCarrier_bipartite.pt",
+        "link_nodes": 378,
+        "path_nodes": 97974,
+        "incidence_edges_one_direction": 1331330,
+        "matrices": 36
+      },
+      "excluded_links": [],
+      "warnings": []
+    },
+    {
+      "topology": "Kdl",
+      "nodes": 754,
+      "directed_links": 1790,
+      "undirected_links": 895,
+      "connectivity": {
+        "weakly_connected": true,
+        "strongly_connected": true,
+        "undirected_connected": true,
+        "weak_component_sizes": [
+          754
+        ],
+        "undirected_component_sizes": [
+          754
+        ],
+        "ordered_pairs_without_a_directed_path": 0
+      },
+      "traffic_kind": "synthetic_toy",
+      "traffic_label": "TEAL toy placeholder. The public repository does not include Microsoft WAN traces for this topology. Not real traffic.",
+      "traffic_matrices": 36,
+      "valid_traffic_matrices": 36,
+      "invalid_traffic_matrices": 0,
+      "valid_od_demands": 20439432,
+      "positive_od_demands": 20439432,
+      "zero_od_demands": 0,
+      "invalid_od_entries": 0,
+      "self_demand_nonzero_entries": 27144,
+      "candidate_paths": 2270012,
+      "demands_with_fewer_than_4_paths": 404,
+      "demands_with_no_path": 0,
+      "path_backend": "yen_bfs_unit_weight",
+      "paths_padded": false,
+      "path_validation_problems": [],
+      "path_validation_problem_count": 0,
+      "normalisation": {
+        "method": "p1_initial_features_scale_true",
+        "denominator": 67500.0,
+        "uses_traffic_matrices": false,
+        "p1_training_default": "unscaled"
+      },
+      "bipartite": {
+        "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\graph_data\\Kdl_bipartite.pt",
+        "link_nodes": 1790,
+        "path_nodes": 2270012,
+        "incidence_edges_one_direction": 53899592,
+        "matrices": 36,
+        "reused": true
+      },
+      "excluded_links": [],
+      "warnings": []
+    },
+    {
+      "topology": "GEANT",
+      "nodes": 22,
+      "directed_links": 72,
+      "undirected_links": 36,
+      "connectivity": {
+        "weakly_connected": true,
+        "strongly_connected": true,
+        "undirected_connected": true,
+        "weak_component_sizes": [
+          22
+        ],
+        "undirected_component_sizes": [
+          22
+        ],
+        "ordered_pairs_without_a_directed_path": 0
+      },
+      "traffic_kind": "real_figret",
+      "traffic_label": "FIGRET published G\u00c9ANT demand histories. Not synthesised in this project.",
+      "traffic_matrices": 10773,
+      "valid_traffic_matrices": 10773,
+      "invalid_traffic_matrices": 0,
+      "valid_od_demands": 4977126,
+      "positive_od_demands": 4491280,
+      "zero_od_demands": 485846,
+      "invalid_od_entries": 0,
+      "self_demand_nonzero_entries": 0,
+      "candidate_paths": 1848,
+      "demands_with_fewer_than_4_paths": 0,
+      "demands_with_no_path": 0,
+      "path_backend": "networkx.shortest_simple_paths",
+      "paths_padded": false,
+      "path_validation_problems": [],
+      "path_validation_problem_count": 0,
+      "normalisation": {
+        "method": "p1_initial_features_scale_true",
+        "denominator": 10000000000.0,
+        "uses_traffic_matrices": false,
+        "p1_training_default": "unscaled"
+      },
+      "bipartite": {
+        "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\graph_data\\GEANT_bipartite.pt",
+        "link_nodes": 72,
+        "path_nodes": 1848,
+        "incidence_edges_one_direction": 6492,
+        "matrices": 10773
+      },
+      "excluded_links": [],
+      "warnings": []
+    },
+    {
+      "topology": "Cogentco",
+      "nodes": 197,
+      "directed_links": 486,
+      "undirected_links": 243,
+      "connectivity": {
+        "weakly_connected": true,
+        "strongly_connected": true,
+        "undirected_connected": true,
+        "weak_component_sizes": [
+          197
+        ],
+        "undirected_component_sizes": [
+          197
+        ],
+        "ordered_pairs_without_a_directed_path": 0
+      },
+      "traffic_kind": "reconstructed_gravity",
+      "traffic_label": "Reconstructed degree-gravity traffic. Not a measured Cogentco trace. T_ij = A_i A_j, A_i = max(degree(i), 1), lognormal noise seed 2025, sigma 0.15. P1 does not publish the author constants.",
+      "traffic_matrices": 36,
+      "valid_traffic_matrices": 36,
+      "invalid_traffic_matrices": 0,
+      "valid_od_demands": 1390032,
+      "positive_od_demands": 1390032,
+      "zero_od_demands": 0,
+      "invalid_od_entries": 0,
+      "self_demand_nonzero_entries": 0,
+      "candidate_paths": 154026,
+      "demands_with_fewer_than_4_paths": 158,
+      "demands_with_no_path": 0,
+      "path_backend": "networkx.shortest_simple_paths",
+      "paths_padded": false,
+      "path_validation_problems": [],
+      "path_validation_problem_count": 0,
+      "normalisation": {
+        "method": "p1_initial_features_scale_true",
+        "denominator": 10000.0,
+        "uses_traffic_matrices": false,
+        "p1_training_default": "unscaled"
+      },
+      "bipartite": {
+        "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\graph_data\\Cogentco_bipartite.pt",
+        "link_nodes": 486,
+        "path_nodes": 154026,
+        "incidence_edges_one_direction": 1822212,
+        "matrices": 36
+      },
+      "excluded_links": [
+        {
+          "index": 70,
+          "reason": "duplicate undirected edge",
+          "source": 42,
+          "target": 143
+        },
+        {
+          "index": 124,
+          "reason": "duplicate undirected edge",
+          "source": 80,
+          "target": 81
+        }
+      ],
+      "warnings": [
+        "Cogentco GML has no link speed. Each undirected Zoo edge is stored as two directed edges with placeholder capacity 10000. This is not a measured capacity.",
+        "duplicate undirected edge 42-143 was not added again",
+        "duplicate undirected edge 80-81 was not added again"
+      ]
+    }
+  ],
+  "failures": [],
+  "pending": [
+    {
+      "topology": "ASN",
+      "status": "pending_incomplete",
+      "error_previous": "BrokenProcessPool during path generation; job paused before merge.",
+      "nodes_expected": 1739,
+      "shards_present": 1700,
+      "shard_index_min": 0,
+      "shard_index_max": 1699,
+      "shards_missing": 39,
+      "merged_paths_file": false,
+      "bipartite_file": false,
+      "checkpoint_dir": "data/processed/candidate_paths/ASN_shards",
+      "checkpoints_preserved": true,
+      "note": "Do not delete ASN_shards. Resume later with --only ASN after approving a new run.",
+      "updated_at": "2026-11-08T13:00:48.403193+00:00"
+    }
+  ],
+  "ready_for_experiments": [
+    "B4",
+    "UsCarrier",
+    "Kdl",
+    "GEANT",
+    "Cogentco"
+  ],
+  "experiment_note": "Use data/processed/splits for train/val/test. ASN is excluded until path merge completes."
+}

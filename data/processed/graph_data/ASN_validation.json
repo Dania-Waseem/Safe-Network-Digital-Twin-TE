@@ -1,0 +1,19 @@
+{
+  "nodes": 1739,
+  "directed_edges": 8558,
+  "undirected_edges": 4279,
+  "weakly_connected": true,
+  "weak_component_sizes": [
+    1739
+  ],
+  "undirected_connected": true,
+  "undirected_component_sizes": [
+    1739
+  ],
+  "strongly_connected": true,
+  "ordered_pairs_without_a_directed_path": 0,
+  "excluded_link_records": 0,
+  "warnings": [],
+  "capacity_note": "Capacities copied from the TEAL topology file.",
+  "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\topologies\\ASN2k.json"
+}

@@ -1,0 +1,13 @@
+{
+  "topology": "Kdl",
+  "k_requested": 4,
+  "padded": false,
+  "backend": "yen_bfs_unit_weight",
+  "cost": "min-hop; positive-capacity edge weight 1 (P1 generate_paths._weighted_copy)",
+  "tie_break": "Equal-length paths follow adjacency order in the processed edge list. This can differ from NetworkX when several paths have the same hop count. The cost is still hop count, which is P1's min-hop weight.",
+  "difference_from_p1": "P1 preprocessing/generate_paths.py _pad_paths repeats the shortest path when fewer than 4 simple paths exist. Paths are not repeated here.",
+  "demands": 567762,
+  "paths_generated": 2270012,
+  "demands_with_fewer_than_4": 404,
+  "demands_with_no_path": 0
+}

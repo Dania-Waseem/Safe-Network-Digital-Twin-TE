@@ -1,0 +1,36 @@
+{
+  "topology": "UsCarrier",
+  "traffic_kind": "synthetic_toy",
+  "topology_file": "data/processed/topologies/UsCarrier.json",
+  "paths_file": "data/processed/candidate_paths/UsCarrier_yen4.npz",
+  "paths_meta_file": "data/processed/candidate_paths/UsCarrier_yen4.json",
+  "bipartite_file": "data/processed/graph_data/UsCarrier_bipartite.pt",
+  "normalization_file": "data/processed/normalization/UsCarrier.json",
+  "traffic_source_file": "data/processed/traffic_matrices/toy/UsCarrier_template.npz",
+  "present": true,
+  "entry_name": "UsCarrier_future_traffic",
+  "split_role": "held_aside_seen_topology_future_traffic",
+  "matrix_count": 8,
+  "matrix_shape": [
+    8,
+    158,
+    158
+  ],
+  "matrix_indices": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "index_range": [
+    28,
+    36
+  ],
+  "time_split_note": "Late indices on train topologies. Kept out of train/val to prevent future-traffic leakage. Not a topology-generalization test.",
+  "demand_file": "data/processed/splits/held_aside/UsCarrier_future_traffic_demand.npz",
+  "mean_total_demand": 24964.0
+}

@@ -1,0 +1,19 @@
+{
+  "nodes": 22,
+  "directed_edges": 72,
+  "undirected_edges": 36,
+  "weakly_connected": true,
+  "weak_component_sizes": [
+    22
+  ],
+  "undirected_connected": true,
+  "undirected_component_sizes": [
+    22
+  ],
+  "strongly_connected": true,
+  "ordered_pairs_without_a_directed_path": 0,
+  "excluded_link_records": 0,
+  "warnings": [],
+  "capacity_note": "FIGRET file units (capacities such as 1e10, 2.4e9, 1.55e8). FIGRET divides by 1e9 at training time. That conversion is not applied here; P1's scale, when used, divides by the maximum capacity of this graph.",
+  "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\figret\\Data\\GEANT\\GEANT.json"
+}

@@ -1,0 +1,13 @@
+{
+  "ASN": {
+    "status": "pending_incomplete",
+    "reason": "Path merge and bipartite graph were not finished. Preprocessing paused.",
+    "nodes_expected": 1739,
+    "shards_present": 1700,
+    "shards_missing": 39,
+    "merged_paths": false,
+    "bipartite": false,
+    "shard_dir": "data/processed/candidate_paths/ASN_shards",
+    "note": "Existing ASN_shards checkpoints must be preserved; do not delete."
+  }
+}

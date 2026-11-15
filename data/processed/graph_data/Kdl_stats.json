@@ -1,0 +1,25 @@
+{
+  "name": "Kdl",
+  "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\topologies\\Kdl.json",
+  "nodes": 754,
+  "directed_edges": 1790,
+  "capacity_min": 500.0,
+  "capacity_max": 67500.0,
+  "capacity_sum": 14658500.0,
+  "table5": {
+    "nodes": 754,
+    "directed_edges": 1790,
+    "avg_sp": 22.7,
+    "diameter": 58
+  },
+  "size_matches_table5": true,
+  "undirected_edges": 895,
+  "undirected_connected": true,
+  "undirected_components": 1,
+  "avg_shortest_path_undirected": 22.72654386873373,
+  "diameter_undirected": 58,
+  "strongly_connected": true,
+  "ordered_pairs_without_a_path": 0,
+  "sha256": "03cf7cc55b87943e5173275542ffc14895cad6218ad43d200a26376136ac245c",
+  "capacity_note": "Capacities copied from the TEAL topology file."
+}

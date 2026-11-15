@@ -1,0 +1,69 @@
+{
+  "kind": "real_mapped",
+  "label": "TEAL public real matrices: Yates/Abilene demands mapped onto B4. Not Microsoft WAN traffic.",
+  "files": [
+    "B4.json_real_0_1.0_traffic-matrix.pkl",
+    "B4.json_real_1_1.0_traffic-matrix.pkl",
+    "B4.json_real_2_1.0_traffic-matrix.pkl",
+    "B4.json_real_3_1.0_traffic-matrix.pkl",
+    "B4.json_real_4_1.0_traffic-matrix.pkl",
+    "B4.json_real_5_1.0_traffic-matrix.pkl",
+    "B4.json_real_6_1.0_traffic-matrix.pkl",
+    "B4.json_real_7_1.0_traffic-matrix.pkl",
+    "B4.json_real_8_1.0_traffic-matrix.pkl",
+    "B4.json_real_9_1.0_traffic-matrix.pkl",
+    "B4.json_real_10_1.0_traffic-matrix.pkl",
+    "B4.json_real_11_1.0_traffic-matrix.pkl",
+    "B4.json_real_12_1.0_traffic-matrix.pkl",
+    "B4.json_real_13_1.0_traffic-matrix.pkl",
+    "B4.json_real_14_1.0_traffic-matrix.pkl",
+    "B4.json_real_15_1.0_traffic-matrix.pkl",
+    "B4.json_real_16_1.0_traffic-matrix.pkl",
+    "B4.json_real_17_1.0_traffic-matrix.pkl",
+    "B4.json_real_18_1.0_traffic-matrix.pkl",
+    "B4.json_real_19_1.0_traffic-matrix.pkl",
+    "B4.json_real_20_1.0_traffic-matrix.pkl",
+    "B4.json_real_21_1.0_traffic-matrix.pkl",
+    "B4.json_real_22_1.0_traffic-matrix.pkl",
+    "B4.json_real_23_1.0_traffic-matrix.pkl",
+    "B4.json_real_24_1.0_traffic-matrix.pkl",
+    "B4.json_real_25_1.0_traffic-matrix.pkl",
+    "B4.json_real_26_1.0_traffic-matrix.pkl",
+    "B4.json_real_27_1.0_traffic-matrix.pkl",
+    "B4.json_real_28_1.0_traffic-matrix.pkl",
+    "B4.json_real_29_1.0_traffic-matrix.pkl",
+    "B4.json_real_30_1.0_traffic-matrix.pkl",
+    "B4.json_real_31_1.0_traffic-matrix.pkl",
+    "B4.json_real_32_1.0_traffic-matrix.pkl",
+    "B4.json_real_33_1.0_traffic-matrix.pkl",
+    "B4.json_real_34_1.0_traffic-matrix.pkl",
+    "B4.json_real_35_1.0_traffic-matrix.pkl"
+  ],
+  "split": {
+    "train": [
+      0,
+      20
+    ],
+    "val": [
+      20,
+      28
+    ],
+    "test": [
+      28,
+      36
+    ],
+    "status": "Frozen P1 config.B4_SPLITS (20/8/8). Lu et al. do not publish the cut."
+  },
+  "summary": {
+    "matrices": 36,
+    "valid_matrices": 36,
+    "invalid_matrices": 0,
+    "negative_entries": 0,
+    "non_finite_entries": 0,
+    "zero_off_diagonal_entries": 0,
+    "positive_off_diagonal_entries": 4752,
+    "self_demand_nonzero_entries": 0
+  },
+  "invalid_matrix_reasons": [],
+  "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\traffic_matrices\\real\\B4.npz"
+}

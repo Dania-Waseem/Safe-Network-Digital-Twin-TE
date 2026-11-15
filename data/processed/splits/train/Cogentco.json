@@ -1,0 +1,48 @@
+{
+  "topology": "Cogentco",
+  "traffic_kind": "reconstructed_gravity",
+  "topology_file": "data/processed/topologies/Cogentco.json",
+  "paths_file": "data/processed/candidate_paths/Cogentco_yen4.npz",
+  "paths_meta_file": "data/processed/candidate_paths/Cogentco_yen4.json",
+  "bipartite_file": "data/processed/graph_data/Cogentco_bipartite.pt",
+  "normalization_file": "data/processed/normalization/Cogentco.json",
+  "traffic_source_file": "data/processed/traffic_matrices/reconstructed/Cogentco_gravity.npz",
+  "present": true,
+  "entry_name": "Cogentco",
+  "split_role": "train",
+  "matrix_count": 20,
+  "matrix_shape": [
+    20,
+    197,
+    197
+  ],
+  "matrix_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "index_range": [
+    0,
+    20
+  ],
+  "time_split_note": "TEAL-style early slice; see traffic status notes.",
+  "demand_file": "data/processed/splits/train/Cogentco_demand.npz",
+  "mean_total_demand": 4915200.5509103695
+}

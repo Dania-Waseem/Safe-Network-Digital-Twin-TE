@@ -1,0 +1,25 @@
+{
+  "name": "ASN",
+  "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\topologies\\ASN2k.json",
+  "nodes": 1739,
+  "directed_edges": 8558,
+  "capacity_min": 250.0,
+  "capacity_max": 53750.0,
+  "capacity_sum": 10563000.0,
+  "table5": {
+    "nodes": 1739,
+    "directed_edges": 8558,
+    "avg_sp": 3.2,
+    "diameter": 8
+  },
+  "size_matches_table5": true,
+  "undirected_edges": 4279,
+  "undirected_connected": true,
+  "undirected_components": 1,
+  "avg_shortest_path_undirected": 3.235580413064927,
+  "diameter_undirected": 8,
+  "strongly_connected": true,
+  "ordered_pairs_without_a_path": 0,
+  "sha256": "9d6cdb72959950d256c96d9b86bebcaf2e5da4db9977b1b05524bd608ccd38e5",
+  "capacity_note": "Capacities copied from the TEAL topology file."
+}

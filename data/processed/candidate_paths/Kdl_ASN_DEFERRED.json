@@ -1,0 +1,8 @@
+{
+  "topologies": [
+    "Kdl",
+    "ASN"
+  ],
+  "reason": "Yen-4 over every ordered pair is about 0.57 million pairs on Kdl and 3.0 million pairs on ASN. Path generation is a later preprocessing job, not part of publishing the collected matrices. Reachability is already recorded in graph_data/*_stats.json.",
+  "algorithm_when_run": "Same Yen-4 min-hop generator as preprocessing/collect_datasets.py generate_paths"
+}

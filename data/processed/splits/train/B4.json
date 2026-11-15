@@ -1,0 +1,48 @@
+{
+  "topology": "B4",
+  "traffic_kind": "real_mapped",
+  "topology_file": "data/processed/topologies/B4.json",
+  "paths_file": "data/processed/candidate_paths/B4_yen4.npz",
+  "paths_meta_file": "data/processed/candidate_paths/B4_yen4.json",
+  "bipartite_file": "data/processed/graph_data/B4_bipartite.pt",
+  "normalization_file": "data/processed/normalization/B4.json",
+  "traffic_source_file": "data/processed/traffic_matrices/real/B4.npz",
+  "present": true,
+  "entry_name": "B4",
+  "split_role": "train",
+  "matrix_count": 20,
+  "matrix_shape": [
+    20,
+    12,
+    12
+  ],
+  "matrix_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "index_range": [
+    0,
+    20
+  ],
+  "time_split_note": "Frozen P1/TEAL 20/8/8 early slice. Future indices are excluded.",
+  "demand_file": "data/processed/splits/train/B4_demand.npz",
+  "mean_total_demand": 26408.16534410547
+}

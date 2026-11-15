@@ -1,0 +1,25 @@
+{
+  "name": "UsCarrier",
+  "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\topologies\\UsCarrier.json",
+  "nodes": 158,
+  "directed_edges": 378,
+  "capacity_min": 50.0,
+  "capacity_max": 5850.0,
+  "capacity_sum": 346400.0,
+  "table5": {
+    "nodes": 158,
+    "directed_edges": 378,
+    "avg_sp": 12.1,
+    "diameter": 35
+  },
+  "size_matches_table5": true,
+  "undirected_edges": 189,
+  "undirected_connected": true,
+  "undirected_components": 1,
+  "avg_shortest_path_undirected": 12.09030073369346,
+  "diameter_undirected": 35,
+  "strongly_connected": true,
+  "ordered_pairs_without_a_path": 0,
+  "sha256": "e2d4d448640d123d9821651b03be74b4cdb00103633a3c924721aaaad7401cbb",
+  "capacity_note": "Capacities copied from the TEAL topology file."
+}

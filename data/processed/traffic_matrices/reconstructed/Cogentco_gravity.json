@@ -1,0 +1,31 @@
+{
+  "kind": "reconstructed_gravity",
+  "label": "Reconstructed degree-gravity traffic. Not a measured Cogentco trace. T_ij = A_i A_j, A_i = max(degree(i), 1), lognormal noise seed 2025, sigma 0.15. P1 does not publish the author constants.",
+  "split": {
+    "train": [
+      0,
+      20
+    ],
+    "val": [
+      20,
+      28
+    ],
+    "test": [
+      28,
+      36
+    ],
+    "status": "There is no time axis. The 20/8/8 index cut is a convention, not an observed split."
+  },
+  "summary": {
+    "matrices": 36,
+    "valid_matrices": 36,
+    "invalid_matrices": 0,
+    "negative_entries": 0,
+    "non_finite_entries": 0,
+    "zero_off_diagonal_entries": 0,
+    "positive_off_diagonal_entries": 1390032,
+    "self_demand_nonzero_entries": 0
+  },
+  "invalid_matrix_reasons": [],
+  "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\traffic_matrices\\reconstructed\\Cogentco_gravity.npz"
+}

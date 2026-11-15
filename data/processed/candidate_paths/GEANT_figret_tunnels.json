@@ -1,0 +1,9 @@
+{
+  "topology": "GEANT",
+  "kind": "figret_published_tunnels",
+  "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\candidate_paths\\GEANT_figret_tunnels.txt",
+  "pairs": 462,
+  "paths_per_pair_min": 3,
+  "paths_per_pair_max": 3,
+  "note": "FIGRET ships these tunnels (usually 3 paths). They are kept beside the Yen-4 paths and are not rewritten into 4 paths."
+}

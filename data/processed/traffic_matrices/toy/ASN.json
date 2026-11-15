@@ -1,0 +1,71 @@
+{
+  "kind": "synthetic_toy",
+  "label": "TEAL toy placeholder. The public repository does not include Microsoft WAN traces for this topology. Not real traffic.",
+  "files": [
+    "ASN2k.json_toy_0_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_1_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_2_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_3_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_4_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_5_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_6_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_7_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_8_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_9_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_10_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_11_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_12_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_13_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_14_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_15_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_16_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_17_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_18_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_19_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_20_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_21_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_22_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_23_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_24_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_25_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_26_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_27_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_28_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_29_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_30_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_31_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_32_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_33_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_34_1.0_traffic-matrix.pkl",
+    "ASN2k.json_toy_35_1.0_traffic-matrix.pkl"
+  ],
+  "identical_files": true,
+  "split": {
+    "train": [
+      0,
+      20
+    ],
+    "val": [
+      20,
+      28
+    ],
+    "test": [
+      28,
+      36
+    ],
+    "status": "Index convention only. The matrices are identical, so this is not a time split and is not used to fit normalisation."
+  },
+  "summary": {
+    "matrices": 36,
+    "valid_matrices": 36,
+    "invalid_matrices": 0,
+    "negative_entries": 0,
+    "non_finite_entries": 0,
+    "zero_off_diagonal_entries": 0,
+    "positive_off_diagonal_entries": 108805752,
+    "self_demand_nonzero_entries": 62604
+  },
+  "invalid_matrix_reasons": [],
+  "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\traffic_matrices\\toy\\ASN_template.npz",
+  "preserved_as": "one template; every source file matched this array"
+}

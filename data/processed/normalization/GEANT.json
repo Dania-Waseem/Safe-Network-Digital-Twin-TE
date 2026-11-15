@@ -1,0 +1,19 @@
+{
+  "method": "p1_initial_features_scale_true",
+  "formula": "x_normalised = x_original / max_link_capacity",
+  "denominator": 10000000000.0,
+  "denominator_source": "maximum directed-link capacity of this topology",
+  "uses_traffic_matrices": false,
+  "leakage": "none; the denominator is not computed from demands",
+  "p1_training_default": "unscaled",
+  "p1_reference": "baseline_p1_reproduction/preprocessing/build_bipartite_graph.py initial_features(scale=True); frozen H0_SCALING is False",
+  "topology": "GEANT",
+  "split": {
+    "train_rows": 8080,
+    "test_rows": 2693,
+    "val_rows": 0,
+    "order": "train files 1..5 in numeric order, then test files 6..7. No validation split exists.",
+    "status": "FIGRET's published train/ and test/ directories. A validation cut was not invented."
+  },
+  "traffic_kind": "real_figret"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "GEANT",
+  "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\figret\\Data\\GEANT\\GEANT.json",
+  "nodes": 22,
+  "directed_edges": 72,
+  "capacity_min": 155000000.0,
+  "capacity_max": 10000000000.0,
+  "capacity_sum": 398040000000.0,
+  "table5": {
+    "nodes": 22,
+    "directed_edges": 72,
+    "avg_sp": 2.53,
+    "diameter": 5
+  },
+  "size_matches_table5": true,
+  "undirected_edges": 36,
+  "undirected_connected": true,
+  "undirected_components": 1,
+  "avg_shortest_path_undirected": 2.5324675324675323,
+  "diameter_undirected": 5,
+  "strongly_connected": true,
+  "ordered_pairs_without_a_path": 0,
+  "sha256": "dff4be2aad72a8aa0d153396906c535cdb4114850e88447c8448e65ebb878279",
+  "capacity_unit": "Values in the FIGRET file (10e9, 2.4e9, 155e6). FIGRET's normalize_size divides capacities and demands by 1e9 at load time. This collection stores the published numbers unscaled.",
+  "rejected_alternative": "Topology Zoo Geant / Geant2001 / Geant2009 / Geant2010 / Geant2011 / Geant2012 are a different network family. They are kept under data/raw/topology_zoo and are not copied into processed topologies."
+}

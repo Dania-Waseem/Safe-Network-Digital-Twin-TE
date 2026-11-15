@@ -1,0 +1,23 @@
+{
+  "nodes": 197,
+  "directed_edges": 486,
+  "undirected_edges": 243,
+  "weakly_connected": true,
+  "weak_component_sizes": [
+    197
+  ],
+  "undirected_connected": true,
+  "undirected_component_sizes": [
+    197
+  ],
+  "strongly_connected": true,
+  "ordered_pairs_without_a_directed_path": 0,
+  "excluded_link_records": 2,
+  "warnings": [
+    "Cogentco GML has no link speed. Each undirected Zoo edge is stored as two directed edges with placeholder capacity 10000. This is not a measured capacity.",
+    "duplicate undirected edge 42-143 was not added again",
+    "duplicate undirected edge 80-81 was not added again"
+  ],
+  "capacity_note": "placeholder 10000 on every directed edge because the Zoo file has no LinkSpeed",
+  "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\topology_zoo\\gml\\Cogentco.gml"
+}

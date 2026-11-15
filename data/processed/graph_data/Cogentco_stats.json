@@ -1,0 +1,28 @@
+{
+  "name": "Cogentco",
+  "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\topology_zoo\\gml\\Cogentco.gml",
+  "nodes": 197,
+  "directed_edges": 486,
+  "capacity_min": 10000.0,
+  "capacity_max": 10000.0,
+  "capacity_sum": 4860000.0,
+  "table5": {
+    "nodes": 197,
+    "directed_edges": 486,
+    "avg_sp": 10.51,
+    "diameter": 28
+  },
+  "size_matches_table5": true,
+  "undirected_edges": 243,
+  "undirected_connected": true,
+  "undirected_components": 1,
+  "avg_shortest_path_undirected": 10.510411271107428,
+  "diameter_undirected": 28,
+  "strongly_connected": true,
+  "ordered_pairs_without_a_path": 0,
+  "sha256": "4bcea614980b8a5b722560f1df392e9cd6849dc44806bd2189f50f36f0242c52",
+  "node_order": "Zoo node ids are already 0..n-1 and are kept as matrix indices.",
+  "string_sort_matches_numeric": false,
+  "capacity_source": "placeholder_uniform_10000_not_measured",
+  "undirected_zoo_edges": 243
+}

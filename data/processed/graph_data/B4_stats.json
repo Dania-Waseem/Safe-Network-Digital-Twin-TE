@@ -1,0 +1,25 @@
+{
+  "name": "B4",
+  "source": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\raw\\teal\\topologies\\B4.json",
+  "nodes": 12,
+  "directed_edges": 38,
+  "capacity_min": 5000.0,
+  "capacity_max": 5000.0,
+  "capacity_sum": 190000.0,
+  "table5": {
+    "nodes": 12,
+    "directed_edges": 38,
+    "avg_sp": 2.3,
+    "diameter": 5
+  },
+  "size_matches_table5": true,
+  "undirected_edges": 19,
+  "undirected_connected": true,
+  "undirected_components": 1,
+  "avg_shortest_path_undirected": 2.3181818181818183,
+  "diameter_undirected": 5,
+  "strongly_connected": true,
+  "ordered_pairs_without_a_path": 0,
+  "sha256": "d30dd2f2c29ece5b88b7b3302ebbcdc0b2e72792df5a6b45006ddb73c85485cf",
+  "capacity_note": "Capacities copied from the TEAL topology file."
+}

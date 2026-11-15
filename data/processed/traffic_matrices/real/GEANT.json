@@ -1,0 +1,55 @@
+{
+  "kind": "real_figret",
+  "label": "FIGRET published G\u00c9ANT demand histories. Not synthesised in this project.",
+  "train_files": [
+    {
+      "file": "1.hist",
+      "rows": 2016
+    },
+    {
+      "file": "2.hist",
+      "rows": 2016
+    },
+    {
+      "file": "3.hist",
+      "rows": 2016
+    },
+    {
+      "file": "4.hist",
+      "rows": 2016
+    },
+    {
+      "file": "5.hist",
+      "rows": 16
+    }
+  ],
+  "test_files": [
+    {
+      "file": "6.hist",
+      "rows": 2016
+    },
+    {
+      "file": "7.hist",
+      "rows": 677
+    }
+  ],
+  "split": {
+    "train_rows": 8080,
+    "test_rows": 2693,
+    "val_rows": 0,
+    "order": "train files 1..5 in numeric order, then test files 6..7. No validation split exists.",
+    "status": "FIGRET's published train/ and test/ directories. A validation cut was not invented."
+  },
+  "summary": {
+    "matrices": 10773,
+    "valid_matrices": 10773,
+    "invalid_matrices": 0,
+    "negative_entries": 0,
+    "non_finite_entries": 0,
+    "zero_off_diagonal_entries": 485846,
+    "positive_off_diagonal_entries": 4491280,
+    "self_demand_nonzero_entries": 0
+  },
+  "invalid_matrix_reasons": [],
+  "file": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\data\\processed\\traffic_matrices\\real\\GEANT.npz"
+}

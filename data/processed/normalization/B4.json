@@ -1,0 +1,27 @@
+{
+  "method": "p1_initial_features_scale_true",
+  "formula": "x_normalised = x_original / max_link_capacity",
+  "denominator": 5000.0,
+  "denominator_source": "maximum directed-link capacity of this topology",
+  "uses_traffic_matrices": false,
+  "leakage": "none; the denominator is not computed from demands",
+  "p1_training_default": "unscaled",
+  "p1_reference": "baseline_p1_reproduction/preprocessing/build_bipartite_graph.py initial_features(scale=True); frozen H0_SCALING is False",
+  "topology": "B4",
+  "split": {
+    "train": [
+      0,
+      20
+    ],
+    "val": [
+      20,
+      28
+    ],
+    "test": [
+      28,
+      36
+    ],
+    "status": "Frozen P1 config.B4_SPLITS (20/8/8). Lu et al. do not publish the cut."
+  },
+  "traffic_kind": "real_mapped"
+}

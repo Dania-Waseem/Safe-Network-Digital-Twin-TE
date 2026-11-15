@@ -1,0 +1,36 @@
+{
+  "topology": "Kdl",
+  "traffic_kind": "synthetic_toy",
+  "topology_file": "data/processed/topologies/Kdl.json",
+  "paths_file": "data/processed/candidate_paths/Kdl_yen4.npz",
+  "paths_meta_file": "data/processed/candidate_paths/Kdl_yen4.json",
+  "bipartite_file": "data/processed/graph_data/Kdl_bipartite.pt",
+  "normalization_file": "data/processed/normalization/Kdl.json",
+  "traffic_source_file": "data/processed/traffic_matrices/toy/Kdl_template.npz",
+  "present": true,
+  "entry_name": "Kdl",
+  "split_role": "test_unseen_topology",
+  "matrix_count": 8,
+  "matrix_shape": [
+    8,
+    754,
+    754
+  ],
+  "matrix_indices": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "index_range": [
+    28,
+    36
+  ],
+  "time_split_note": "Unseen topology. Uses late index convention only; toy matrices are identical.",
+  "demand_file": "data/processed/splits/test/Kdl_demand.npz",
+  "mean_total_demand": 568516.0
+}

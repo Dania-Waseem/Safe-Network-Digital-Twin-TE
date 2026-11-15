@@ -1,0 +1,48 @@
+{
+  "topology": "UsCarrier",
+  "traffic_kind": "synthetic_toy",
+  "topology_file": "data/processed/topologies/UsCarrier.json",
+  "paths_file": "data/processed/candidate_paths/UsCarrier_yen4.npz",
+  "paths_meta_file": "data/processed/candidate_paths/UsCarrier_yen4.json",
+  "bipartite_file": "data/processed/graph_data/UsCarrier_bipartite.pt",
+  "normalization_file": "data/processed/normalization/UsCarrier.json",
+  "traffic_source_file": "data/processed/traffic_matrices/toy/UsCarrier_template.npz",
+  "present": true,
+  "entry_name": "UsCarrier",
+  "split_role": "train",
+  "matrix_count": 20,
+  "matrix_shape": [
+    20,
+    158,
+    158
+  ],
+  "matrix_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "index_range": [
+    0,
+    20
+  ],
+  "time_split_note": "Toy files are identical; index cuts are protocol only.",
+  "demand_file": "data/processed/splits/train/UsCarrier_demand.npz",
+  "mean_total_demand": 24964.0
+}
