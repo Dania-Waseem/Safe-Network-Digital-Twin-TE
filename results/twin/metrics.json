@@ -1,0 +1,213 @@
+{
+  "architecture": {
+    "type": "ensemble of path-multiplier MLPs with link scatter",
+    "members": 5,
+    "hidden": 32,
+    "features": [
+      "demand/max_capacity",
+      "routing_fraction",
+      "hop_count/16"
+    ],
+    "prediction": "link load = scatter(demand * action * softplus(MLP(features)))",
+    "uncertainty": "variance across ensemble members, reported as std of link load",
+    "label": "simulator link load from the same routing action"
+  },
+  "training": {
+    "topologies": [
+      "B4",
+      "UsCarrier",
+      "Cogentco"
+    ],
+    "epochs": 8,
+    "lr": 0.001,
+    "seed": 2026,
+    "loss": "mean squared error on load / max(link capacity)",
+    "bootstrap": "each member resamples training matrices with replacement each epoch",
+    "actions": [
+      "equal split",
+      "shortest path",
+      "Dirichlet split"
+    ],
+    "history": [
+      {
+        "epoch": 0,
+        "mse_normalised_load": 5.2038495547543306e-05
+      },
+      {
+        "epoch": 1,
+        "mse_normalised_load": 4.336966803043139e-05
+      },
+      {
+        "epoch": 2,
+        "mse_normalised_load": 2.1900599742241493e-05
+      },
+      {
+        "epoch": 3,
+        "mse_normalised_load": 2.8869953027792053e-05
+      },
+      {
+        "epoch": 4,
+        "mse_normalised_load": 1.654422008921897e-05
+      },
+      {
+        "epoch": 5,
+        "mse_normalised_load": 1.8256510814592962e-05
+      },
+      {
+        "epoch": 6,
+        "mse_normalised_load": 1.24291188071682e-05
+      },
+      {
+        "epoch": 7,
+        "mse_normalised_load": 7.872719427352908e-06
+      }
+    ]
+  },
+  "evaluation": {
+    "train_and_val": "all matrices, three actions",
+    "GEANT_test_stride": 10,
+    "Kdl_test": "all Step 4 test matrices (identical toy traffic), three actions",
+    "unseen_topologies": [
+      "GEANT",
+      "Kdl"
+    ],
+    "ready_topologies": [
+      "B4",
+      "UsCarrier",
+      "Cogentco",
+      "GEANT",
+      "Kdl"
+    ],
+    "excluded": "ASN (path merge incomplete; shards not read)"
+  },
+  "splits": [
+    {
+      "mae_load": 0.612608876748876,
+      "rmse_load": 0.7096374603246252,
+      "mae_utilisation": 0.00012252177534977546,
+      "mlu_abs_error": 0.00030543400256270264,
+      "mean_predictive_std": 1.1837332818495208,
+      "coverage_1std": 1.0,
+      "coverage_2std": 1.0,
+      "std_error_correlation": 0.9996798748996347,
+      "all_finite": true,
+      "topology": "B4",
+      "split": "train",
+      "cases": 60,
+      "stride": 1,
+      "traffic_kind": "real_mapped"
+    },
+    {
+      "mae_load": 0.6271040876803938,
+      "rmse_load": 0.7270869852152487,
+      "mae_utilisation": 0.00012542081753607825,
+      "mlu_abs_error": 0.0003147766623410181,
+      "mean_predictive_std": 1.212272522568534,
+      "coverage_1std": 1.0,
+      "coverage_2std": 1.0,
+      "std_error_correlation": 0.9996813741271972,
+      "all_finite": true,
+      "topology": "B4",
+      "split": "val",
+      "cases": 24,
+      "stride": 1,
+      "traffic_kind": "real_mapped"
+    },
+    {
+      "mae_load": 0.2520331129612382,
+      "rmse_load": 0.3853029498060125,
+      "mae_utilisation": 0.00036710588060185636,
+      "mlu_abs_error": 0.002643168124618711,
+      "mean_predictive_std": 0.4693313189164439,
+      "coverage_1std": 1.0,
+      "coverage_2std": 1.0,
+      "std_error_correlation": 0.9999505767116185,
+      "all_finite": true,
+      "topology": "UsCarrier",
+      "split": "train",
+      "cases": 60,
+      "stride": 1,
+      "traffic_kind": "synthetic_toy"
+    },
+    {
+      "mae_load": 0.252015476060166,
+      "rmse_load": 0.38527755089073895,
+      "mae_utilisation": 0.0003670668914472329,
+      "mlu_abs_error": 0.0026413301358312324,
+      "mean_predictive_std": 0.4693148478798113,
+      "coverage_1std": 1.0,
+      "coverage_2std": 1.0,
+      "std_error_correlation": 0.9999514623990988,
+      "all_finite": true,
+      "topology": "UsCarrier",
+      "split": "val",
+      "cases": 24,
+      "stride": 1,
+      "traffic_kind": "synthetic_toy"
+    },
+    {
+      "mae_load": 31.27119304910836,
+      "rmse_load": 47.48442542075631,
+      "mae_utilisation": 0.003127119304910835,
+      "mlu_abs_error": 0.01885441463153583,
+      "mean_predictive_std": 59.07741161932767,
+      "coverage_1std": 1.0,
+      "coverage_2std": 1.0,
+      "std_error_correlation": 0.9999783779051408,
+      "all_finite": true,
+      "topology": "Cogentco",
+      "split": "train",
+      "cases": 60,
+      "stride": 1,
+      "traffic_kind": "reconstructed_gravity"
+    },
+    {
+      "mae_load": 31.28964270370606,
+      "rmse_load": 47.514646869538375,
+      "mae_utilisation": 0.003128964270370601,
+      "mlu_abs_error": 0.018905496278971867,
+      "mean_predictive_std": 59.10310316845757,
+      "coverage_1std": 1.0,
+      "coverage_2std": 1.0,
+      "std_error_correlation": 0.9999813048134517,
+      "all_finite": true,
+      "topology": "Cogentco",
+      "split": "val",
+      "cases": 24,
+      "stride": 1,
+      "traffic_kind": "reconstructed_gravity"
+    },
+    {
+      "mae_load": 416430.587322386,
+      "rmse_load": 590216.7036375538,
+      "mae_utilisation": 0.00012809877860877329,
+      "mlu_abs_error": 0.0008213676430367752,
+      "mean_predictive_std": 813631.4744875926,
+      "coverage_1std": 1.0,
+      "coverage_2std": 1.0,
+      "std_error_correlation": 0.9996179599310513,
+      "all_finite": true,
+      "topology": "GEANT",
+      "split": "test",
+      "cases": 810,
+      "stride": 10,
+      "traffic_kind": "real_figret"
+    },
+    {
+      "mae_load": 2.5448147287690905,
+      "rmse_load": 5.080520929085211,
+      "mae_utilisation": 0.0003117150924832547,
+      "mlu_abs_error": 0.0027457794418358126,
+      "mean_predictive_std": 3.9466679659480763,
+      "coverage_1std": 0.9297951582867784,
+      "coverage_2std": 0.9694599627560522,
+      "std_error_correlation": 0.7661063790399733,
+      "all_finite": true,
+      "topology": "Kdl",
+      "split": "test",
+      "cases": 24,
+      "stride": 1,
+      "traffic_kind": "synthetic_toy"
+    }
+  ]
+}

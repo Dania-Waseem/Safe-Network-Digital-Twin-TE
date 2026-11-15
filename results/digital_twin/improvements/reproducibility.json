@@ -1,0 +1,14 @@
+{
+  "original_checkpoint": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\twin\\models\\ensemble.pt",
+  "original_sha256": "7b74fee96cdf3aa71c78aaa185adbc24c99f262f342689a4ec78d97b7db73685",
+  "out_dir": "C:\\Users\\hp\\Pictures\\CNET phase 3\\phase3 implementation\\results\\digital_twin\\improvements",
+  "held_out": [
+    "GEANT",
+    "Kdl"
+  ],
+  "train_topologies": [
+    "B4",
+    "UsCarrier",
+    "Cogentco"
+  ]
+}

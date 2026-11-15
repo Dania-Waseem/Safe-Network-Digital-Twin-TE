@@ -1,0 +1,69 @@
+{
+  "conformal_std_scale": 0.9545454545454546,
+  "target_coverage_2std": 0.9,
+  "val_coverage_2std": 1.0,
+  "val_width_util": 0.0010457771485298621,
+  "grid": [
+    {
+      "scale": 0.25,
+      "coverage_2std": 0.5285003919263178,
+      "width_util": 0.00027389401509115435
+    },
+    {
+      "scale": 0.9545454545454546,
+      "coverage_2std": 1.0,
+      "width_util": 0.0010457771485298621
+    },
+    {
+      "scale": 1.6590909090909092,
+      "coverage_2std": 1.0,
+      "width_util": 0.0018176602819685698
+    },
+    {
+      "scale": 2.3636363636363638,
+      "coverage_2std": 1.0,
+      "width_util": 0.0025895434154072777
+    },
+    {
+      "scale": 3.0681818181818183,
+      "coverage_2std": 1.0,
+      "width_util": 0.0033614265488459854
+    },
+    {
+      "scale": 3.772727272727273,
+      "coverage_2std": 1.0,
+      "width_util": 0.004133309682284693
+    },
+    {
+      "scale": 4.4772727272727275,
+      "coverage_2std": 1.0,
+      "width_util": 0.0049051928157234
+    },
+    {
+      "scale": 5.181818181818182,
+      "coverage_2std": 1.0,
+      "width_util": 0.005677075949162108
+    },
+    {
+      "scale": 5.886363636363637,
+      "coverage_2std": 1.0,
+      "width_util": 0.006448959082600816
+    },
+    {
+      "scale": 6.590909090909092,
+      "coverage_2std": 1.0,
+      "width_util": 0.007220842216039525
+    },
+    {
+      "scale": 7.295454545454546,
+      "coverage_2std": 1.0,
+      "width_util": 0.007992725349478232
+    },
+    {
+      "scale": 8.0,
+      "coverage_2std": 1.0,
+      "width_util": 0.00876460848291694
+    }
+  ],
+  "selection": "min util interval width subject to val coverage_2std >= target; train/val topologies only"
+}

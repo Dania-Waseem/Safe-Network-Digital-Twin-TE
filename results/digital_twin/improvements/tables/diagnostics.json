@@ -1,0 +1,136 @@
+{
+  "rows": [
+    {
+      "topology": "B4",
+      "split": "val",
+      "denominator": 5000.0,
+      "n_links": 38,
+      "capacity_min": 5000.0,
+      "capacity_max": 5000.0,
+      "demand_norm_max": 0.27650684118270874,
+      "hop_norm_max": 0.375,
+      "true_load_mean": 2331.9219871679684,
+      "true_load_max": 5119.491776210935,
+      "mae_abs": 0.6855930828468367,
+      "mae_util": 0.00013711861656936735,
+      "mae_rel_load": 0.00029557128780446787,
+      "member_mult_means": [
+        1.0001764297485352,
+        0.9998544454574585,
+        1.0000159740447998,
+        1.0014430284500122,
+        1.0000193119049072
+      ],
+      "member_mult_max_dev_from_1": 0.001443028450012207
+    },
+    {
+      "topology": "UsCarrier",
+      "split": "val",
+      "denominator": 5850.0,
+      "n_links": 378,
+      "capacity_min": 50.0,
+      "capacity_max": 5850.0,
+      "demand_norm_max": 0.0001709401694824919,
+      "hop_norm_max": 2.25,
+      "true_load_mean": 884.1807760141095,
+      "true_load_max": 4700.5,
+      "mae_abs": 0.2723311630375478,
+      "mae_util": 0.00042983189328173703,
+      "mae_rel_load": 0.0003008305803310776,
+      "member_mult_means": [
+        1.000197172164917,
+        0.9998645782470703,
+        1.000018835067749,
+        1.0013705492019653,
+        1.000008225440979
+      ],
+      "member_mult_max_dev_from_1": 0.001370549201965332
+    },
+    {
+      "topology": "Cogentco",
+      "split": "val",
+      "denominator": 10000.0,
+      "n_links": 486,
+      "capacity_min": 10000.0,
+      "capacity_max": 10000.0,
+      "demand_norm_max": 0.1434909552335739,
+      "hop_norm_max": 1.8125,
+      "true_load_mean": 112356.48127831586,
+      "true_load_max": 646931.9085480646,
+      "mae_abs": 32.831586505775014,
+      "mae_util": 0.003283158650577501,
+      "mae_rel_load": 0.00029272224349197293,
+      "member_mult_means": [
+        1.000199317932129,
+        0.9998648762702942,
+        1.0000190734863281,
+        1.0013741254806519,
+        1.000009536743164
+      ],
+      "member_mult_max_dev_from_1": 0.0013741254806518555
+    },
+    {
+      "topology": "GEANT",
+      "split": "test",
+      "denominator": 10000000000.0,
+      "n_links": 72,
+      "capacity_min": 155000000.0,
+      "capacity_max": 10000000000.0,
+      "demand_norm_max": 0.29789096117019653,
+      "hop_norm_max": 0.5,
+      "true_load_mean": 1281283865.0659723,
+      "true_load_max": 4234452152.75,
+      "mae_abs": 374345.33762413927,
+      "mae_util": 0.00012625627272532918,
+      "mae_rel_load": 0.0002969214546101617,
+      "member_mult_means": [
+        1.0001901388168335,
+        0.9998556971549988,
+        1.0000171661376953,
+        1.00144624710083,
+        1.0000194311141968
+      ],
+      "member_mult_max_dev_from_1": 0.0014462471008300781
+    },
+    {
+      "topology": "Kdl",
+      "split": "test",
+      "denominator": 67500.0,
+      "n_links": 1790,
+      "capacity_min": 500.0,
+      "capacity_max": 67500.0,
+      "demand_norm_max": 1.4814814676356036e-05,
+      "hop_norm_max": 3.6875,
+      "true_load_mean": 7528.1947858473,
+      "true_load_max": 59864.75,
+      "mae_abs": 3.5535947383403994,
+      "mae_util": 0.0003761008617873086,
+      "mae_rel_load": 0.0003394114669057055,
+      "member_mult_means": [
+        1.0001729726791382,
+        0.9998735785484314,
+        1.000016689300537,
+        1.00136137008667,
+        0.9999924898147583
+      ],
+      "member_mult_max_dev_from_1": 0.0013613700866699219
+    }
+  ],
+  "primary_findings": [
+    "Original twin multipliers stay within ~0.15% of 1.0 (near exact physics).",
+    "GEANT max capacity / B4 max capacity = 2e+06; absolute load MAE scales with this factor.",
+    "Utilisation MAE on GEANT remains ~1e-4, comparable to seen topologies \u2014 absolute MAE is a scale artifact.",
+    "Ensemble std tracks load magnitude (near-perfect corr on seen graphs) \u2192 intervals are wide/conservative (coverage\u22481).",
+    "Hop feature hops/16 exceeds 1.0 on UsCarrier/Kdl; GEANT hop_norm stays \u22640.5 (in-distribution).",
+    "No evidence of catastrophic GEANT feature failure; the ablation's huge absolute twin MAE was scale-dominated."
+  ],
+  "selected_strategy": {
+    "accuracy": "Physics-anchored training (MSE + L2(multiplier-1)) with weight decay and val early stopping to shrink systematic bias that dominates absolute GEANT error.",
+    "uncertainty": "Validation-only conformal rescaling of ensemble std to target ~90% 2\u03c3 coverage with sharper intervals; no GEANT/Kdl labels used.",
+    "not_selected": [
+      "MC dropout \u2014 ensemble already present.",
+      "Heteroscedastic head \u2014 would change gate interfaces and risk overfitting tiny residuals.",
+      "Heavy GNN redesign \u2014 labels are exact physics; residual bias is the main absolute-error driver."
+    ]
+  }
+}
