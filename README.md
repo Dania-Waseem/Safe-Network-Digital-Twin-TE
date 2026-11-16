@@ -40,7 +40,7 @@ All linear programs (min-MLU and max-throughput path LPs) are solved with SciPy 
 
 | Folder | Contents |
 |---|---|
-| [`implementation/`](implementation/) | Proposed-method code. `preprocessing/` builds topologies, traffic matrices, candidate paths, graph tensors and splits; `twin/` holds the ensemble digital twin; `safety/` holds the safety gate, fallbacks and the A–F evaluation runner; `framework/` holds the GNN policy, its training and the end-to-end evaluations; `phase3_final/` holds the final experiments (calibrated load, E2–E4, ablations, statistics, figures, results summary); `tests/` holds 94 unit tests; `scripts/` holds the run scripts. `repo_paths.py` defines every repository location. |
+| [`implementation/`](implementation/) | Proposed-method code. `preprocessing/` builds topologies, traffic matrices, candidate paths, graph tensors and splits; `twin/` holds the ensemble digital twin; `safety/` holds the safety gate, fallbacks and the A–F evaluation runner; `framework/` holds the GNN policy, its training and the end-to-end evaluations; `phase3_final/` holds the final experiments (calibrated load, E2–E4, ablations, statistics, figures, results summary); `tests/` holds 98 unit tests; `scripts/` holds the run scripts. `repo_paths.py` defines every repository location. |
 | [`baseline_p1_reproduction/`](baseline_p1_reproduction/) | Reproduction of P1 GRL-TE: TopoFlowNet with one-step A2C, ADMM refinement and constraint adjustment, its configuration, the frozen B4 protocol (`BASELINE_FREEZE/`), audits of the reproduction, the GEANT 22/72 and B4 link-failure experiments (`phase3_final/`), and their results. |
 | [`data/`](data/) | Raw datasets (`raw/`: TEAL, FIGRET, Topology Zoo), processed data (`processed/`: topologies, traffic matrices, candidate paths, graph tensors, normalisation statistics, train/validation/test splits), and scenarios (`scenarios/`: link failures, twin errors). `DATASET_CATALOG.md` documents every source. |
 | [`results/`](results/) | Experiment outputs. `phase3_final/` holds the final results, figures, statistics and `RESULTS_SUMMARY.md`; the other folders hold the earlier development stages (twin, safety gate, policy, framework evaluations, audits). |
@@ -60,6 +60,8 @@ All linear programs (min-MLU and max-throughput path LPs) are solved with SciPy 
 | GEANT | 22 / 72 | FIGRET real demand histories | unseen test |
 | Kdl | 754 / 1790 | TEAL synthetic toy template | unseen test |
 | ASN | 1739 / 8558 | TEAL synthetic toy template | excluded (path generation incomplete) |
+| Abilene | 12 / 30 | SNDlib measured traffic (Zhang, 5-min, Mar–Sep 2004); related to the B4 training traffic, see below | unseen test (additional) |
+| Germany50 | 50 / 176 | SNDlib measured traffic (DFN, 5-min, one day in Feb 2005) | unseen test (additional) |
 
 Traffic-matrix indices 0–19 are used for training, 20–27 for validation and model selection, and
 28–35 are held aside and never used; GEANT and Kdl are used only for the final evaluation. The
@@ -67,6 +69,11 @@ UsCarrier and Kdl traffic matrices are identical copies of one toy template, so 
 no traffic diversity on these topologies. Load is studied at fixed scales and at *calibrated* levels,
 where each matrix is scaled so that its reference MLU (path LP, or shortest path on Kdl) equals a
 target between 0.5 and 1.1.
+
+Abilene and Germany50 come from SNDlib (`data/raw/sndlib/`, with `SOURCE.md` and `QUALITY_REPORT.md`) and
+are evaluated at the calibrated levels only, with 200 seeded matrices each. The B4 traffic is a gravity
+estimate of the Abilene network on 1 March 2004 (00:00–02:55); those slots are excluded from the Abilene
+sample, which therefore counts as an unseen topology with related traffic.
 
 ## Experiments
 
@@ -80,6 +87,7 @@ target between 0.5 and 1.1.
 | Policy generalization | Policy MLU relative to shortest path on seen and unseen topologies, and a second policy trained at calibrated load | `results/phase3_final/policy_v2/` |
 | Ablations | Removing the gate, the uncertainty term, the fallback or the learned twin residual, and replacing the policy with the single-topology P1 policy | `results/phase3_final/ablations_v2/` |
 | Statistics | Friedman/Nemenyi ranks, paired Wilcoxon and exact McNemar tests with Holm correction, Cliff's δ, run-time overhead and a failure taxonomy | `results/phase3_final/stats/` |
+| SNDlib topologies | Holdout A–F, link failures and the twin-error sweep on Abilene and Germany50 with the frozen stack, and the statistics pooled over all four unseen topologies | `results/holdout_sndlib/`, `results/link_failures_sndlib/`, `results/twin_error_sndlib/`, `results/stats_sndlib/` |
 | P1 baseline | GRL-TE on B4 (10 seeds), on the FIGRET GEANT 22/72 graph (10 seeds) and under B4 link failures, against LP, ECMP and shortest path | `baseline_p1_reproduction/BASELINE_FREEZE/`, `baseline_p1_reproduction/phase3_final/results/` |
 
 Figures in `results/phase3_final/figures/` are produced by `implementation/phase3_final/figures.py`, and

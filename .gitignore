@@ -56,3 +56,7 @@ PHASE3_COMPLETION_PROGRESS.md
 submission/
 /23i2622_23i2618_Phase3_Implementation.zip
 submission.zip
+
+# SNDlib experiments: twin member caches and the uncompressed link-failure rows (a .gz copy is committed)
+results/twin_error_sndlib/cache/
+results/link_failures_sndlib/case_rows.jsonl

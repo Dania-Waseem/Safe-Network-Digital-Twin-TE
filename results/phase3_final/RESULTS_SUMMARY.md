@@ -365,3 +365,227 @@ All in `results/phase3_final/figures/` (300-dpi PNG + PDF); sources listed in `f
 
 The comparison is qualitative (design properties), except for the P1 numbers in §2, which are measured.
 
+
+## 15. Additional unseen topologies with real traffic: SNDlib Abilene and Germany50
+
+Two further unseen topologies with measured traffic, evaluated with the frozen stack of §4–§6 (same policy, twins, conformal scale 0.955, gate k = 1, fallback; nothing trained, recalibrated or tuned on them). All experiments use the calibrated load levels 0.5 / 0.7 / 0.9 / 1.1 (k = 4 min-MLU LP reference). Data checks: `data/raw/sndlib/QUALITY_REPORT.md`.
+
+### 15.1 Data
+
+| Topology | Nodes | Directed links | Matrices (resolution, range) | Removed | Sampled (link-failure subset) | Capacity used (Mbit/s) | Relation to training data |
+|---|---:|---:|---|---:|---:|---|---|
+| Abilene | 12 | 30 | 48,096 (5min, 20040301-0000 – 20040910-2355) | 1 | 200 (50) | 2,480 × 2, 9,920 × 28 | unseen topology with related traffic: B4's training traffic is a gravity estimate of Abilene on 2004-03-01 00:00–02:55 (these 36 slots are excluded) |
+| Germany50 | 50 | 176 | 288 (5min, 20050215-0000 – 20050215-2355) | 0 | 200 (50) | 40,000 × 176 | none (DFN 2005) |
+
+*Source: `data/processed/sndlib/Abilene_quality.json`; `data/processed/sndlib/Germany50_quality.json`; `data/processed/sndlib/abilene_b4_overlap.json`*
+
+- Demands are in Mbit/s in both archives. Abilene capacities are SNDlib's pre-installed values (OC-192 / OC-48 payload). Germany50 has no installed capacity in SNDlib; one 40-unit module per link, read as 40 Gbit/s, is used. Under calibrated load this constant cancels for everything except the raw-feature frozen P1 actor.
+- Abilene: 155 distinct days and all 24 hours in the sample. Germany50: the five-minute archive covers one day (15 Feb 2005), so its 200 matrices span the hours of a single day.
+- Overlap check: B4 = Yates `abilene.txt` / 10⁵; every Yates matrix is rank one (simple gravity estimate, max deviation 1e-08); no SNDlib matrix matches a B4 matrix under any node permutation and scale (best sorted L1 0.038); the time slots coincide (median rank 7 of 48,096 for the hypothesised slot; total-demand correlation 0.96).
+
+### 15.2 Holdout A–F
+
+| Topology | Variant | Unsafe accept | Unsafe acc. given unsafe | False rej. given safe | Fallback | Applied overload | Applied MLU | Applied sat. | ms/decision |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Abilene | A | 0.975 | 1.000 | 0.000 | 0.000 | 0.975 | 2.446 | 0.6551 | 0.1 |
+| Abilene | B | 0.000 | 0.000 | 0.000 | 0.975 | 0.896 | 1.900 | 0.9105 | 2.4 |
+| Abilene | C | 0.000 | 0.000 | 0.000 | 0.975 | 0.896 | 1.900 | 0.9105 | 2.1 |
+| Abilene | D | 0.000 | 0.000 | 0.000 | 0.975 | 0.896 | 1.900 | 0.9105 | 2.1 |
+| Abilene | E | 0.000 | 0.000 | 0.000 | 0.975 | 0.896 | 1.900 | 0.9105 | 2.1 |
+| Abilene | F | 0.000 | 0.000 | 0.000 | 0.975 | 0.896 | 1.900 | 0.9105 | 0.3 |
+| Germany50 | A | 0.740 | 1.000 | 0.000 | 0.000 | 0.740 | 1.257 | 0.9305 | 0.6 |
+| Germany50 | B | 0.000 | 0.000 | 0.000 | 0.740 | 0.646 | 1.168 | 0.9491 | 6.3 |
+| Germany50 | C | 0.000 | 0.000 | 0.000 | 0.740 | 0.646 | 1.168 | 0.9491 | 5.9 |
+| Germany50 | D | 0.000 | 0.000 | 0.000 | 0.740 | 0.646 | 1.168 | 0.9491 | 5.9 |
+| Germany50 | E | 0.000 | 0.000 | 0.000 | 0.740 | 0.646 | 1.168 | 0.9491 | 5.8 |
+| Germany50 | F | 0.000 | 0.000 | 0.000 | 0.740 | 0.646 | 1.168 | 0.9491 | 1.0 |
+
+Baselines on the same scaled matrices:
+
+| Topology | Method | Satisfaction | MLU | Overload rate | median ms |
+|---|---|---:|---:|---:|---:|
+| Abilene | shortest path | 0.8961 | 2.017 | 0.921 | 0.0 |
+| Abilene | ECMP / equal split | 0.7106 | 3.320 | 1.000 | 0.0 |
+| Abilene | LP (min-MLU) | 0.9820 | 0.800 | 0.250 | 8.4 |
+| Abilene | frozen P1 actor | 0.7454 | 2.600 | 0.969 | 2.9 |
+| Abilene | policy only (A) | 0.6551 | 2.446 | 0.975 | 3.2 |
+| Abilene | policy v2 actor | 0.6576 | 2.357 | 0.974 | 2.9 |
+| Germany50 | shortest path | 0.9178 | 1.463 | 0.757 | 0.0 |
+| Germany50 | ECMP / equal split | 0.9493 | 1.155 | 0.646 | 0.0 |
+| Germany50 | LP (min-MLU) | 0.9891 | 0.800 | 0.250 | 59.5 |
+| Germany50 | frozen P1 actor | 0.9346 | 1.232 | 0.689 | 17.8 |
+| Germany50 | policy only (A) | 0.9305 | 1.257 | 0.740 | 18.4 |
+| Germany50 | policy v2 actor | 0.9354 | 1.227 | 0.690 | 17.7 |
+
+*Source: `results/holdout_sndlib/summary.json`*
+
+Each topology: 200 TMs × 4 calibrated targets = 800 cases (780 unsafe proposals) on Abilene and 800 cases (592 unsafe proposals) on Germany50. Per-level tables and the D/E/F discordance are in `results/holdout_sndlib/HOLDOUT_SNDLIB_REPORT.md`.
+
+### 15.3 All unseen topologies (calibrated levels 0.5–1.1)
+
+| Topology | TMs × levels | Unsafe proposals | A unsafe acc. | E unsafe acc. | E false rej. given safe | E fallback | A sat. | E sat. | LP sat. | Shortest sat. | ECMP sat. | Frozen P1 sat. | A overload | E overload | LP overload | E ms (median) |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| GEANT | 200 × 4 = 800 | 731 | 0.914 | 0.000 | 0.000 | 0.914 | 0.8964 | 0.9842 | 0.9934 | 0.9831 | 0.9805 | 0.9650 | 0.914 | 0.698 | 0.250 | 2.1 |
+| Kdl | 1 × 4 = 4 | 3 | 0.750 | 0.000 | 0.000 | 0.750 | 0.9926 | 0.9998 | – | 0.9998 | 0.9997 | 0.9931 | 0.750 | 0.250 | – | 6967.3 |
+| Abilene | 200 × 4 = 800 | 780 | 0.975 | 0.000 | 0.000 | 0.975 | 0.6551 | 0.9105 | 0.9820 | 0.8961 | 0.7106 | 0.7454 | 0.975 | 0.896 | 0.250 | 1.8 |
+| Germany50 | 200 × 4 = 800 | 592 | 0.740 | 0.000 | 0.000 | 0.740 | 0.9305 | 0.9491 | 0.9891 | 0.9178 | 0.9493 | 0.9346 | 0.740 | 0.646 | 0.250 | 5.5 |
+
+*Source: `results/phase3_final/e2_holdout_af/case_rows.jsonl`; `results/phase3_final/stats/main_grid_rows.jsonl`; `results/holdout_sndlib/case_rows.jsonl`*
+
+GEANT and Kdl rows are the frozen-stack holdout rows restricted to the four calibrated levels (the §4 table also includes the fixed scales). Kdl has no LP (not tractable); its frozen P1 value comes from the statistics grid. A = policy only, E = full framework (gate k = 1 + fallback).
+
+### 15.4 Link failures (0–3 failed directed links, paths recomputed)
+
+Levels 0.7 and 0.9 (the calibrated levels shared with the GEANT run); 50 TMs × 10 failure seeds per failure count.
+
+| Topology | Method | Sat. 0 | Sat. 1 | Sat. 2 | Sat. 3 | Overload 0 → 3 | Unsafe accept 0/1/2/3 |
+|---|---|---:|---:|---:|---:|---|---|
+| GEANT | policy only (A) | 88.28 | 90.26 | 91.09 | 91.14 | 1.00 → 0.97 | 1.00/0.99/0.98/0.97 |
+| GEANT | gate D | 98.65 | 98.27 | 98.64 | 97.90 | 0.92 → 0.88 | 0.00/0.00/0.00/0.00 |
+| GEANT | framework (gate E) | 98.65 | 98.27 | 98.64 | 97.90 | 0.92 → 0.88 | 0.00/0.00/0.00/0.00 |
+| GEANT | shortest | 98.46 | 98.12 | 98.43 | 97.80 | 0.98 → 0.96 | – |
+| GEANT | ECMP | 98.35 | 97.75 | 98.24 | 96.73 | 0.93 → 0.92 | – |
+| GEANT | LP (min-MLU) | 100.00 | 99.40 | 99.69 | 98.16 | 0.00 → 0.33 | – |
+| GEANT | frozen P1 actor | 96.00 | 96.19 | 95.60 | 95.09 | 1.00 → 0.96 | – |
+| Abilene | policy only (A) | 63.79 | 64.06 | 65.68 | 71.25 | 0.97 → 0.94 | 0.97/0.98/0.98/0.94 |
+| Abilene | gate D | 91.61 | 87.29 | 78.81 | 80.21 | 0.94 → 0.85 | 0.00/0.00/0.00/0.00 |
+| Abilene | framework (gate E) | 91.61 | 87.29 | 78.81 | 80.21 | 0.94 → 0.85 | 0.00/0.00/0.00/0.00 |
+| Abilene | shortest | 89.47 | 85.36 | 77.33 | 79.13 | 0.97 → 0.86 | – |
+| Abilene | ECMP | 71.94 | 68.44 | 63.01 | 64.57 | 1.00 → 0.99 | – |
+| Abilene | LP (min-MLU) | 100.00 | 92.36 | 85.06 | 84.73 | 0.00 → 0.58 | – |
+| Abilene | frozen P1 actor | 75.83 | 66.14 | 63.28 | 68.07 | 0.95 → 0.98 | – |
+| Germany50 | policy only (A) | 93.80 | 93.70 | 93.26 | 93.07 | 0.98 → 0.91 | 0.98/0.92/0.91/0.91 |
+| Germany50 | gate D | 96.25 | 96.17 | 95.80 | 94.60 | 0.80 → 0.82 | 0.00/0.00/0.00/0.00 |
+| Germany50 | framework (gate E) | 96.25 | 96.17 | 95.80 | 94.60 | 0.80 → 0.82 | 0.00/0.00/0.00/0.00 |
+| Germany50 | shortest | 92.11 | 92.07 | 91.07 | 89.96 | 0.99 → 0.99 | – |
+| Germany50 | ECMP | 96.24 | 96.15 | 95.80 | 94.64 | 0.80 → 0.82 | – |
+| Germany50 | LP (min-MLU) | 100.00 | 99.97 | 99.93 | 98.68 | 0.00 → 0.24 | – |
+| Germany50 | frozen P1 actor | 94.41 | 93.86 | 93.36 | 93.36 | 0.86 → 0.89 | – |
+
+*Source: `results/phase3_final/e3_link_failures/summary.json`; `results/link_failures_sndlib/summary.json`*
+
+GEANT values are the n-weighted mean of its calibrated 0.7 and 0.9 rows. All four calibrated levels for the SNDlib topologies: `results/link_failures_sndlib/LINK_FAILURES_SNDLIB_REPORT.md`.
+
+### 15.5 Twin-error sweep (member-wise perturbation)
+
+UA = unsafe accepts / unsafe proposals; FR = false rejects / safe proposals. GEANT: calibrated-level rows of §6.
+
+| Topology | σ | D UA / FR | Dm UA / FR | E UA / FR | F UA / FR |
+|---|---:|---|---|---|---|
+| GEANT | 0.0 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 |
+| GEANT | 0.05 | 0.001 / 0.053 | 0.000 / 0.208 | 0.000 / 0.164 | 0.000 / 0.000 |
+| GEANT | 0.1 | 0.007 / 0.082 | 0.000 / 0.295 | 0.000 / 0.324 | 0.000 / 0.000 |
+| GEANT | 0.2 | 0.009 / 0.155 | 0.000 / 0.647 | 0.001 / 0.628 | 0.000 / 0.000 |
+| GEANT | 0.4 | 0.014 / 0.324 | 0.001 / 0.870 | 0.001 / 0.836 | 0.000 / 0.000 |
+| Abilene | 0.0 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 |
+| Abilene | 0.05 | 0.003 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 |
+| Abilene | 0.1 | 0.003 / 0.000 | 0.000 / 0.017 | 0.000 / 0.050 | 0.000 / 0.000 |
+| Abilene | 0.2 | 0.004 / 0.017 | 0.000 / 0.333 | 0.000 / 0.317 | 0.000 / 0.000 |
+| Abilene | 0.4 | 0.002 / 0.133 | 0.000 / 0.733 | 0.000 / 0.600 | 0.000 / 0.000 |
+| Germany50 | 0.0 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 |
+| Germany50 | 0.05 | 0.016 / 0.021 | 0.000 / 0.082 | 0.001 / 0.067 | 0.000 / 0.000 |
+| Germany50 | 0.1 | 0.032 / 0.037 | 0.002 / 0.085 | 0.000 / 0.090 | 0.000 / 0.000 |
+| Germany50 | 0.2 | 0.051 / 0.051 | 0.001 / 0.269 | 0.001 / 0.232 | 0.000 / 0.000 |
+| Germany50 | 0.4 | 0.058 / 0.141 | 0.001 / 0.740 | 0.001 / 0.710 | 0.000 / 0.000 |
+
+*Source: `results/phase3_final/e4_twin_error/sweep.csv`; `results/twin_error_sndlib/sweep.csv`*
+
+### 15.6 Statistics
+
+Paired Wilcoxon (framework E vs policy only A, applied outcome; Holm within the family) with Cliff's δ, and exact McNemar on applied overload:
+
+| Comparison | n | mean diff | p (Holm) | δ |
+|---|---:|---:|---:|---:|
+| framework (E) vs policy only (A) · Abilene · applied sat | 800 | +0.2554 | 8.1e-112 * | +0.722 |
+| framework (E) vs policy only (A) · Abilene · applied mlu | 800 | -0.5456 | 3.2e-80 * | -0.416 |
+| applied overload framework (E) vs policy only (A) · Abilene (E-better 63, A-better 0) | 800 | -0.0787 | 2.2e-19 * | – |
+| framework (E) vs policy only (A) · Germany50 · applied sat | 800 | +0.0186 | 9.3e-94 * | +0.151 |
+| framework (E) vs policy only (A) · Germany50 · applied mlu | 800 | -0.0891 | 3.2e-93 * | -0.144 |
+| applied overload framework (E) vs policy only (A) · Germany50 (E-better 75, A-better 0) | 800 | -0.0938 | 1.1e-22 * | – |
+| framework (E) vs policy only (A) · GEANT (calibrated) · applied sat | 800 | +0.0879 | 4.4e-120 * | +0.659 |
+| framework (E) vs policy only (A) · GEANT (calibrated) · applied mlu | 800 | -0.7196 | 5.8e-112 * | -0.484 |
+| applied overload framework (E) vs policy only (A) · GEANT (calibrated) (E-better 173, A-better 0) | 800 | -0.2162 | 6.7e-52 * | – |
+| framework (E) vs policy only (A) · SNDlib pooled (Abilene + Germany50) · applied sat | 1600 | +0.1370 | 1.7e-196 * | +0.382 |
+| framework (E) vs policy only (A) · SNDlib pooled (Abilene + Germany50) · applied mlu | 1600 | -0.3173 | 8.4e-158 * | -0.228 |
+| applied overload framework (E) vs policy only (A) · SNDlib pooled (Abilene + Germany50) (E-better 138, A-better 0) | 1600 | -0.0863 | 1.7e-41 * | – |
+| framework (E) vs policy only (A) · all unseen pooled (GEANT + Kdl + Abilene + Germany50, calibrated) · applied sat | 2404 | +0.1204 | 0 * | +0.439 |
+| framework (E) vs policy only (A) · all unseen pooled (GEANT + Kdl + Abilene + Germany50, calibrated) · applied mlu | 2404 | -0.4513 | 8e-266 * | -0.307 |
+| applied overload framework (E) vs policy only (A) · all unseen pooled (GEANT + Kdl + Abilene + Germany50, calibrated) (E-better 313, A-better 0) | 2404 | -0.1302 | 9.3e-94 * | – |
+
+Exact McNemar, D vs E under twin error (left = D, right = E; Holm within the family):
+
+| Comparison | pairs | D-only | E-only | p (Holm) |
+|---|---:|---:|---:|---:|
+| unsafe accept D vs E · Abilene · sigma=0.05 | 2400 | 6 | 0 | 0.562 |
+| false reject D vs E · Abilene · sigma=0.05 | 2400 | 0 | 0 | 1.000 |
+| unsafe accept D vs E · Abilene · sigma=0.1 | 2400 | 6 | 0 | 0.562 |
+| false reject D vs E · Abilene · sigma=0.1 | 2400 | 0 | 3 | 1.000 |
+| unsafe accept D vs E · Abilene · sigma=0.2 | 2400 | 9 | 0 | 0.082 |
+| false reject D vs E · Abilene · sigma=0.2 | 2400 | 0 | 18 | 0.00018 * |
+| unsafe accept D vs E · Abilene · sigma=0.4 | 2400 | 5 | 0 | 0.938 |
+| false reject D vs E · Abilene · sigma=0.4 | 2400 | 0 | 28 | 1.9e-07 * |
+| unsafe accept D vs E · Germany50 · sigma=0.05 | 2400 | 27 | 0 | 3.6e-07 * |
+| false reject D vs E · Germany50 · sigma=0.05 | 2400 | 0 | 29 | 1e-07 * |
+| unsafe accept D vs E · Germany50 · sigma=0.1 | 2400 | 56 | 0 | 8.6e-16 * |
+| false reject D vs E · Germany50 · sigma=0.1 | 2400 | 0 | 33 | 6.8e-09 * |
+| unsafe accept D vs E · Germany50 · sigma=0.2 | 2400 | 89 | 0 | 1.1e-25 * |
+| false reject D vs E · Germany50 · sigma=0.2 | 2400 | 0 | 113 | 7.1e-33 * |
+| unsafe accept D vs E · Germany50 · sigma=0.4 | 2400 | 101 | 0 | 2.8e-29 * |
+| false reject D vs E · Germany50 · sigma=0.4 | 2400 | 0 | 355 | 1.1e-105 * |
+| unsafe accept D vs E · SNDlib pooled · sigma=0.05 | 4800 | 33 | 0 | 6.8e-09 * |
+| false reject D vs E · SNDlib pooled · sigma=0.05 | 4800 | 0 | 29 | 1e-07 * |
+| unsafe accept D vs E · SNDlib pooled · sigma=0.1 | 4800 | 62 | 0 | 1.4e-17 * |
+| false reject D vs E · SNDlib pooled · sigma=0.1 | 4800 | 0 | 36 | 8.7e-10 * |
+| unsafe accept D vs E · SNDlib pooled · sigma=0.2 | 4800 | 98 | 0 | 2.1e-28 * |
+| false reject D vs E · SNDlib pooled · sigma=0.2 | 4800 | 0 | 131 | 2.8e-38 * |
+| unsafe accept D vs E · SNDlib pooled · sigma=0.4 | 4800 | 106 | 0 | 8.9e-31 * |
+| false reject D vs E · SNDlib pooled · sigma=0.4 | 4800 | 0 | 383 | 4.1e-114 * |
+
+Friedman test with the SNDlib blocks added:
+
+| Block set | Test | Blocks | χ² | p | Mean ranks (1 = best) |
+|---|---|---:|---:|---:|---|
+| all_blocks_with_sndlib | without_LP_all_topologies|sat | 48 | 93.0 | 1.5e-18 | framework 1.84, shortest 2.82, equal 3.29, frozen_p1 3.46, actor_v2 4.67, actor_stable 4.92 |
+| all_blocks_with_sndlib | without_LP_all_topologies|mlu | 48 | 81.5 | 4e-16 | framework 2.24, equal 2.33, shortest 3.23, frozen_p1 4.10, actor_v2 4.22, actor_stable 4.88 |
+| all_blocks_with_sndlib | with_LP_excluding_Kdl|sat | 40 | 88.2 | 7.3e-17 | framework 2.40, lp 2.44, shortest 3.67, equal 4.15, frozen_p1 4.28, actor_v2 5.25, actor_stable 5.81 |
+| all_blocks_with_sndlib | with_LP_excluding_Kdl|mlu | 40 | 133.2 | 2.7e-26 | lp 1.00, framework 3.17, equal 3.58, shortest 4.36, actor_v2 4.97, frozen_p1 5.15, actor_stable 5.76 |
+| calibrated_blocks_with_sndlib | without_LP_all_topologies|sat | 28 | 45.4 | 1.2e-08 | framework 1.95, shortest 3.09, equal 3.30, frozen_p1 3.32, actor_v2 4.39, actor_stable 4.95 |
+| calibrated_blocks_with_sndlib | without_LP_all_topologies|mlu | 28 | 44.2 | 2.1e-08 | framework 2.05, equal 2.57, shortest 3.38, actor_v2 4.02, frozen_p1 4.18, actor_stable 4.80 |
+| calibrated_blocks_with_sndlib | with_LP_excluding_Kdl|sat | 24 | 58.0 | 1.2e-10 | lp 1.85, framework 2.71, shortest 4.10, equal 4.21, frozen_p1 4.21, actor_v2 5.00, actor_stable 5.92 |
+| calibrated_blocks_with_sndlib | with_LP_excluding_Kdl|mlu | 24 | 80.4 | 3e-15 | lp 1.00, framework 2.96, equal 3.79, shortest 4.50, actor_v2 4.79, frozen_p1 5.25, actor_stable 5.71 |
+| unseen_calibrated_blocks | without_LP_all_topologies|sat | 16 | 44.3 | 2.1e-08 | framework 1.44, shortest 2.97, equal 3.00, frozen_p1 3.56, actor_v2 4.75, actor_stable 5.28 |
+| unseen_calibrated_blocks | without_LP_all_topologies|mlu | 16 | 34.7 | 1.7e-06 | framework 1.75, equal 2.50, shortest 3.38, actor_v2 4.09, frozen_p1 4.19, actor_stable 5.09 |
+| unseen_calibrated_blocks | with_LP_excluding_Kdl|sat | 12 | 53.7 | 8.5e-10 | lp 1.25, framework 2.04, equal 3.88, shortest 4.08, frozen_p1 4.67, actor_v2 5.50, actor_stable 6.58 |
+| unseen_calibrated_blocks | with_LP_excluding_Kdl|mlu | 12 | 46.3 | 2.5e-08 | lp 1.00, framework 2.46, equal 3.92, shortest 4.62, actor_v2 4.67, frozen_p1 5.33, actor_stable 6.00 |
+| previous_without_sndlib | without_LP_all_topologies|sat | 40 | 74.8 | 1e-14 | framework 1.98, shortest 2.67, equal 3.33, frozen_p1 3.45, actor_v2 4.75, actor_stable 4.83 |
+| previous_without_sndlib | without_LP_all_topologies|mlu | 40 | 78.9 | 1.4e-15 | equal 2.10, framework 2.38, shortest 3.09, frozen_p1 4.03, actor_v2 4.46, actor_stable 4.95 |
+| previous_without_sndlib | with_LP_excluding_Kdl|sat | 32 | 60.6 | 3.4e-11 | framework 2.48, lp 2.75, shortest 3.45, equal 4.17, frozen_p1 4.22, actor_v2 5.25, actor_stable 5.67 |
+| previous_without_sndlib | with_LP_excluding_Kdl|mlu | 32 | 110.4 | 1.7e-21 | lp 1.00, framework 3.33, equal 3.34, shortest 4.22, frozen_p1 5.06, actor_v2 5.22, actor_stable 5.83 |
+
+*Source: `results/stats_sndlib/statistics.json`*; full tables: `results/stats_sndlib/STATISTICS_SNDLIB_REPORT.md`
+
+### 15.7 Findings on the new topologies
+
+Status rules as in §11: *holds* = effect in the claimed direction on the topology and, where a test applies, significant after Holm; *partially* = direction holds with a documented qualification; *does not hold* = null or opposite effect.
+
+| Claim | Abilene | Germany50 | Evidence |
+|---|---|---|---|
+| Gate removes unsafe policy decisions (A → E unsafe accepts) | holds | holds | Abilene: 0.975 → 0.000; Germany50: 0.740 → 0.000 |
+| Framework raises applied satisfaction over policy only | holds | holds | Abilene: 0.6551 → 0.9105 (p_Holm 8.1e-112); Germany50: 0.9305 → 0.9491 (p_Holm 9.3e-94) |
+| Applied routing is safe (no overload) after gate + fallback | partially | partially | Abilene: overload A 0.975 → E 0.896, LP 0.250; Germany50: overload A 0.740 → E 0.646, LP 0.250 |
+| No false rejects without twin error | holds | holds | Abilene: 0.000; Germany50: 0.000 |
+| Framework matches the LP optimum | does not hold | does not hold | Abilene: E 0.9105 vs LP 0.9820; Germany50: E 0.9491 vs LP 0.9891 |
+| E beats D under twin error (fewer unsafe accepts) | partially | holds | Abilene: D-only 26 vs E-only 0 unsafe accepts over σ > 0; Germany50: D-only 273 vs E-only 0 unsafe accepts over σ > 0 |
+| E's advantage over a dev-tuned mean-only margin (Dm) | does not hold | does not hold | Abilene: Dm-only 1 vs E-only 0 unsafe accepts over σ > 0, none significant; Germany50: Dm-only 5 vs E-only 5 unsafe accepts over σ > 0, none significant |
+| Framework beats the best fixed routing (shortest or ECMP) | holds | does not hold | Abilene: E 0.9105 vs best of shortest/ECMP 0.8961; Germany50: E 0.9491 vs best of shortest/ECMP 0.9493 |
+
+LP overload 0.250 is the 1.1 target, where no feasible k = 4 routing exists by construction. On Germany50 the gate rejects 74% of proposals and the fallback almost always picks the equal split, so the framework's satisfaction coincides with ECMP's; on Abilene the fallback is mostly shortest path, and the framework stays 7 points below the LP because the shortest/ECMP fallback cannot find the feasible routings the LP finds.
+
+### 15.8 Figures
+
+| Figure | Source |
+|---|---|
+| `results/holdout_sndlib/figures/holdout_sat_unsafe_A_vs_E` | `results/holdout_sndlib/case_rows.jsonl`; GEANT panel: `results/phase3_final/e2_holdout_af/case_rows.jsonl` (calibrated levels) |
+| `results/link_failures_sndlib/figures/link_failure_curves` | `results/link_failures_sndlib/summary.json` |
+| `results/twin_error_sndlib/figures/twin_error_curves` | `results/twin_error_sndlib/sweep.csv` |
+

@@ -460,6 +460,9 @@ def main() -> None:
     for fn in (datasets, baselines, calibrated, af_section, e3_section, e4_section, gap_section, ablation_section,
                fallback_section, stats_section, claims, figures_section, not_done, comparison_other_work):
         L += fn()
+    from .sndlib_summary import section as sndlib_section  # SNDlib Abilene / Germany50 (empty if not run)
+
+    L += sndlib_section()
     (F / "RESULTS_SUMMARY.md").write_text("\n".join(L) + "\n", encoding="utf-8")
     print(f"wrote {F / 'RESULTS_SUMMARY.md'}")
 

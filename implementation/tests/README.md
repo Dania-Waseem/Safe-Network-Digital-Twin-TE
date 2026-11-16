@@ -1,6 +1,6 @@
 # Unit tests
 
-The suite contains 94 tests on small fixtures and short runs; none of them performs a full experiment.
+The suite contains 98 tests on small fixtures and short runs; none of them performs a full experiment.
 
 | File | Tests | Scope |
 |---|---:|---|
@@ -17,5 +17,6 @@ The suite contains 94 tests on small fixtures and short runs; none of them perfo
 | `test_scale_eval.py` | 3 | Scale evaluation and fallback classification |
 | `test_robustness_eval.py` | 5 | Multi-seed robustness helpers |
 | `test_ablation_study.py` | 5 | Audit helpers and offline ablation decision rules |
+| `test_sndlib.py` | 4 | SNDlib native-format parser, demand-archive reader and stratified sampler |
 
 The paired smoke test writes its outputs to `results/safety_gate/improvements/smoke_test_tmp/`.

@@ -1,0 +1,78 @@
+{
+  "frozen_config_source": "results/safety_gate/improvements/eval_runs/af_eval_k1_calibrated_devtopos_v1/frozen_gate_improvements_config.json",
+  "gate": {
+    "k": 1.0,
+    "utilisation_limit": 1.0,
+    "max_relative_std": null,
+    "min_capacity": 1e-12
+  },
+  "variants": [
+    "A_policy_only",
+    "B_original_twin_mean",
+    "C_original_twin_uncertainty",
+    "D_improved_twin_mean",
+    "E_improved_twin_calibrated_uncertainty",
+    "F_physics_oracle"
+  ],
+  "twins": {
+    "original": {
+      "path": "C:\\Users\\DELL\\Documents\\Safe-Network-Digital-Twin-TE\\models\\twin\\ensemble.pt",
+      "apply_conformal": false
+    },
+    "improved": {
+      "path": "C:\\Users\\DELL\\Documents\\Safe-Network-Digital-Twin-TE\\models\\twin_improved\\ensemble_physics_anchored.pt",
+      "apply_conformal": false
+    },
+    "improved_calibrated": {
+      "path": "C:\\Users\\DELL\\Documents\\Safe-Network-Digital-Twin-TE\\models\\twin_improved\\ensemble_physics_anchored_conformal.pt",
+      "apply_conformal": true
+    }
+  },
+  "policy": {
+    "checkpoint_id": "improved_stable",
+    "default_checkpoint": "C:\\Users\\DELL\\Documents\\Safe-Network-Digital-Twin-TE\\models\\policy\\improved\\recommended_stable.pt",
+    "checkpoints": {
+      "improved_stable": "C:\\Users\\DELL\\Documents\\Safe-Network-Digital-Twin-TE\\models\\policy\\improved\\recommended_stable.pt",
+      "improved_best": "C:\\Users\\DELL\\Documents\\Safe-Network-Digital-Twin-TE\\models\\policy\\improved\\best_checkpoint.pt",
+      "general_3epoch": "C:\\Users\\DELL\\Documents\\Safe-Network-Digital-Twin-TE\\models\\policy\\general_grl.pt"
+    },
+    "deterministic": true
+  },
+  "fallback": {
+    "policy": "feasible_then_least_violating",
+    "candidates": [
+      "shortest",
+      "equal"
+    ],
+    "oracle": "physics_capacity_violations",
+    "notes": "Same candidate set for B\u2013E. Prefer feasible; else least violations then lowest MLU."
+  },
+  "calibrated_targets": [
+    0.5,
+    0.7,
+    0.9,
+    1.1
+  ],
+  "calibration_index": "data/processed/calibrated_load/sndlib_scaled_tm_index.json",
+  "topology_authorization": {
+    "included": [
+      "Abilene",
+      "Germany50"
+    ],
+    "reason": "SNDlib holdout evaluation: single pass on additional unseen test topologies; frozen thresholds, twins and conformal scale; no tuning or recalibration."
+  },
+  "baselines": {
+    "frozen_p1": "models/baseline_p1/b4_freeze/grl_te_b4_freeze_seed100.pt",
+    "actor_v2": "models/policy_v2/v2_calload_normscore/best.pt"
+  },
+  "lp_solver": "All LPs use SciPy HiGHS (scipy.optimize.linprog, method='highs'). No Gurobi licence was available, so Teal/FIGRET-style Gurobi LPs are replaced by HiGHS.",
+  "environment": {
+    "python": "3.12.1",
+    "numpy": "2.5.3",
+    "scipy": "1.16.0",
+    "torch": "2.11.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_sha": "89e21f332c8f7b5056aa0fe7ab1a1faafccf9511",
+    "time_utc": "2026-11-16T11:01:38Z"
+  }
+}

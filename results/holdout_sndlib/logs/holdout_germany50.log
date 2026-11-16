@@ -1,0 +1,18 @@
+Germany50: 800 cases to run
+Germany50 [50/800] elapsed 6s eta 88s
+Germany50 [100/800] elapsed 12s eta 83s
+Germany50 [150/800] elapsed 18s eta 77s
+Germany50 [200/800] elapsed 24s eta 71s
+Germany50 [250/800] elapsed 30s eta 65s
+Germany50 [300/800] elapsed 36s eta 59s
+Germany50 [350/800] elapsed 42s eta 54s
+Germany50 [400/800] elapsed 48s eta 48s
+Germany50 [450/800] elapsed 54s eta 42s
+Germany50 [500/800] elapsed 60s eta 36s
+Germany50 [550/800] elapsed 66s eta 30s
+Germany50 [600/800] elapsed 72s eta 24s
+Germany50 [650/800] elapsed 79s eta 18s
+Germany50 [700/800] elapsed 85s eta 12s
+Germany50 [750/800] elapsed 1.5min eta 6s
+Germany50 [800/800] elapsed 1.6min eta 0s
+EXIT=0
