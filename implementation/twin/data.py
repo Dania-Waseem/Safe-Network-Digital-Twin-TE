@@ -17,6 +17,10 @@ PROCESSED = ROOT / "data" / "processed"
 SPLIT_ROOT = PROCESSED / "splits"
 
 READY = ("B4", "UsCarrier", "Cogentco", "GEANT", "Kdl")
+# Additional unseen test topologies with real SNDlib traffic. They are evaluation-only:
+# no model, threshold or calibration constant is fitted on them, and they are kept out of
+# READY so that no training or calibration loop iterates over them.
+SNDLIB_TEST = ("Abilene", "Germany50")
 
 
 @dataclass
@@ -43,7 +47,7 @@ def _as_numpy(value) -> np.ndarray:
 
 
 def load_topology(name: str) -> TopologyTensors:
-    if name not in READY:
+    if name not in READY and name not in SNDLIB_TEST:
         raise KeyError(f"{name} is not a completed topology for the twin")
     graph = torch.load(
         PROCESSED / "graph_data" / f"{name}_bipartite.pt",

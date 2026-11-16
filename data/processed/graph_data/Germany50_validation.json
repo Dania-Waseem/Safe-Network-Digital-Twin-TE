@@ -1,0 +1,19 @@
+{
+  "nodes": 50,
+  "directed_edges": 176,
+  "undirected_edges": 88,
+  "weakly_connected": true,
+  "weak_component_sizes": [
+    50
+  ],
+  "undirected_connected": true,
+  "undirected_component_sizes": [
+    50
+  ],
+  "strongly_connected": true,
+  "ordered_pairs_without_a_directed_path": 0,
+  "excluded_link_records": 0,
+  "warnings": [],
+  "capacity_note": "Capacities in Mbit/s. SNDlib gives no pre-installed capacity; one 40-unit module per undirected link, read as 40 Gbit/s, applied to both directions.",
+  "source": "data/raw/sndlib/germany50/germany50.txt"
+}

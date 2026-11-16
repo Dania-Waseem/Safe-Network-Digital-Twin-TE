@@ -1,0 +1,1531 @@
+{
+  "topology": "Germany50",
+  "network_file": "data/raw/sndlib/germany50/germany50.txt",
+  "archive": "data/raw/sndlib/germany50/directed-germany50-DFN-aggregated-5min-over-1day-native.tgz",
+  "nodes": 50,
+  "undirected_links": 88,
+  "directed_links": 176,
+  "connectivity": {
+    "nodes": 50,
+    "directed_edges": 176,
+    "undirected_edges": 88,
+    "weakly_connected": true,
+    "weak_component_sizes": [
+      50
+    ],
+    "undirected_connected": true,
+    "undirected_component_sizes": [
+      50
+    ],
+    "strongly_connected": true,
+    "ordered_pairs_without_a_directed_path": 0,
+    "excluded_link_records": 0,
+    "warnings": []
+  },
+  "topology_warnings": [],
+  "excluded_links": [],
+  "capacities_mbps": [
+    [
+      40000.0,
+      176
+    ]
+  ],
+  "capacity_records": [
+    {
+      "link_id": "L1",
+      "source": "Duesseldorf",
+      "target": "Essen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L2",
+      "source": "Dortmund",
+      "target": "Essen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L3",
+      "source": "Wesel",
+      "target": "Essen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L4",
+      "source": "Koeln",
+      "target": "Duesseldorf",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L5",
+      "source": "Aachen",
+      "target": "Koeln",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L6",
+      "source": "Koblenz",
+      "target": "Koeln",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L7",
+      "source": "Muenster",
+      "target": "Dortmund",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L8",
+      "source": "Siegen",
+      "target": "Dortmund",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L9",
+      "source": "Kassel",
+      "target": "Dortmund",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L10",
+      "source": "Wesel",
+      "target": "Aachen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L11",
+      "source": "Trier",
+      "target": "Aachen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L12",
+      "source": "Bielefeld",
+      "target": "Muenster",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L13",
+      "source": "Osnabrueck",
+      "target": "Muenster",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L14",
+      "source": "Siegen",
+      "target": "Koblenz",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L15",
+      "source": "Frankfurt",
+      "target": "Koblenz",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L16",
+      "source": "Kaiserslautern",
+      "target": "Koblenz",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L17",
+      "source": "Trier",
+      "target": "Koblenz",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L18",
+      "source": "Bielefeld",
+      "target": "Siegen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L19",
+      "source": "Giessen",
+      "target": "Siegen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L20",
+      "source": "Oldenburg",
+      "target": "Wesel",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          4150.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L21",
+      "source": "Norden",
+      "target": "Wesel",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          4150.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L22",
+      "source": "Leipzig",
+      "target": "Berlin",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L23",
+      "source": "Dresden",
+      "target": "Berlin",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          4150.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L24",
+      "source": "Schwerin",
+      "target": "Berlin",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          4150.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L25",
+      "source": "Magdeburg",
+      "target": "Berlin",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L26",
+      "source": "Greifswald",
+      "target": "Berlin",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          4150.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L27",
+      "source": "Dresden",
+      "target": "Leipzig",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L28",
+      "source": "Erfurt",
+      "target": "Leipzig",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L29",
+      "source": "Magdeburg",
+      "target": "Leipzig",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L30",
+      "source": "Bayreuth",
+      "target": "Leipzig",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          4150.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L31",
+      "source": "Erfurt",
+      "target": "Dresden",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          4150.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L32",
+      "source": "Chemnitz",
+      "target": "Dresden",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L33",
+      "source": "Chemnitz",
+      "target": "Erfurt",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L34",
+      "source": "Kassel",
+      "target": "Erfurt",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L35",
+      "source": "Wuerzburg",
+      "target": "Erfurt",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L36",
+      "source": "Bayreuth",
+      "target": "Chemnitz",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L37",
+      "source": "Magdeburg",
+      "target": "Schwerin",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          4150.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L38",
+      "source": "Greifswald",
+      "target": "Schwerin",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L39",
+      "source": "Hamburg",
+      "target": "Schwerin",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L40",
+      "source": "Kiel",
+      "target": "Schwerin",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L41",
+      "source": "Braunschweig",
+      "target": "Magdeburg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L42",
+      "source": "Kiel",
+      "target": "Hamburg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L43",
+      "source": "Hannover",
+      "target": "Hamburg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L44",
+      "source": "Braunschweig",
+      "target": "Hamburg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L45",
+      "source": "Oldenburg",
+      "target": "Bremen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L46",
+      "source": "Bremerhaven",
+      "target": "Bremen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L47",
+      "source": "Hannover",
+      "target": "Bremen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L48",
+      "source": "Flensburg",
+      "target": "Kiel",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L49",
+      "source": "Norden",
+      "target": "Oldenburg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L50",
+      "source": "Osnabrueck",
+      "target": "Oldenburg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L51",
+      "source": "Bremerhaven",
+      "target": "Flensburg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L52",
+      "source": "Bielefeld",
+      "target": "Hannover",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L53",
+      "source": "Braunschweig",
+      "target": "Hannover",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L54",
+      "source": "Osnabrueck",
+      "target": "Hannover",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L55",
+      "source": "Braunschweig",
+      "target": "Bielefeld",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L56",
+      "source": "Kassel",
+      "target": "Braunschweig",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L57",
+      "source": "Giessen",
+      "target": "Kassel",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L58",
+      "source": "Fulda",
+      "target": "Kassel",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L59",
+      "source": "Darmstadt",
+      "target": "Frankfurt",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L60",
+      "source": "Giessen",
+      "target": "Frankfurt",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L61",
+      "source": "Fulda",
+      "target": "Frankfurt",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L62",
+      "source": "Mannheim",
+      "target": "Darmstadt",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L63",
+      "source": "Kaiserslautern",
+      "target": "Darmstadt",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L64",
+      "source": "Karlsruhe",
+      "target": "Mannheim",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L65",
+      "source": "Saarbruecken",
+      "target": "Kaiserslautern",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L66",
+      "source": "Karlsruhe",
+      "target": "Kaiserslautern",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L67",
+      "source": "Fulda",
+      "target": "Giessen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L68",
+      "source": "Saarbruecken",
+      "target": "Trier",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L69",
+      "source": "Wuerzburg",
+      "target": "Fulda",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L70",
+      "source": "Karlsruhe",
+      "target": "Saarbruecken",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L71",
+      "source": "Karlsruhe",
+      "target": "Stuttgart",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L72",
+      "source": "Ulm",
+      "target": "Stuttgart",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L73",
+      "source": "Konstanz",
+      "target": "Stuttgart",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L74",
+      "source": "Wuerzburg",
+      "target": "Stuttgart",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L75",
+      "source": "Freiburg",
+      "target": "Karlsruhe",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L76",
+      "source": "Augsburg",
+      "target": "Ulm",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L77",
+      "source": "Freiburg",
+      "target": "Konstanz",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L78",
+      "source": "Kempten",
+      "target": "Konstanz",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L79",
+      "source": "Augsburg",
+      "target": "Muenchen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L80",
+      "source": "Kempten",
+      "target": "Muenchen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L81",
+      "source": "Passau",
+      "target": "Muenchen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L82",
+      "source": "Nuernberg",
+      "target": "Muenchen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L83",
+      "source": "Regensburg",
+      "target": "Muenchen",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L84",
+      "source": "Wuerzburg",
+      "target": "Augsburg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          4150.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L85",
+      "source": "Regensburg",
+      "target": "Passau",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L86",
+      "source": "Bayreuth",
+      "target": "Nuernberg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3290.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L87",
+      "source": "Wuerzburg",
+      "target": "Nuernberg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    },
+    {
+      "link_id": "L88",
+      "source": "Regensburg",
+      "target": "Nuernberg",
+      "pre_installed": 0.0,
+      "modules": [
+        [
+          40.0,
+          3720.0
+        ]
+      ],
+      "capacity_used_mbps": 40000.0,
+      "rule": "one installable module of 40 units, read as 40 Gbit/s"
+    }
+  ],
+  "network_meta": {},
+  "static_demands_in_network_file": 662,
+  "n_matrices": 288,
+  "first_time": "20050215-0000",
+  "last_time": "20050215-2355",
+  "granularity": [
+    "5min"
+  ],
+  "units": [
+    "MBITPERSEC"
+  ],
+  "node_sections_match_network": true,
+  "unknown_endpoint_records": 0,
+  "self_demand_records": 0,
+  "duplicate_records": 0,
+  "unparsed_lines": 0,
+  "non_finite_entries": 0,
+  "negative_entries": 0,
+  "all_zero_matrices": 0,
+  "removed": [],
+  "n_removed": 0,
+  "n_valid": 288,
+  "spike_runs": {
+    "n_runs": 7404,
+    "single_bin_runs": 4810,
+    "median_run_bins": 1.0,
+    "longest_run_bins": 116,
+    "share_of_spike_entries_in_runs_ge_12_bins": 0.17848867147270855
+  },
+  "spike_summary": {
+    "spike_entries_100x": 15536,
+    "spike_matrices_100x": 288,
+    "isolated_spike_entries": 2085,
+    "corrupt_spike_entries": 0,
+    "sustained_dominant_entries": 0,
+    "sustained_dominant_matrices": 0,
+    "pairs_with_zero_median": 1003,
+    "pairs_never_positive": 379,
+    "zero_entry_share": 0.41171201814058955
+  },
+  "sustained_dominant_pairs": {},
+  "excluded_b4_overlap": 0,
+  "n_eligible": 288,
+  "traffic_stats_all_valid": {
+    "n_matrices": 288,
+    "total_demand_mbps": {
+      "min": 1150.949661,
+      "p5": 2413.213876850001,
+      "median": 4998.574434999993,
+      "mean": 4907.306859868058,
+      "p95": 7159.621643849998,
+      "max": 7649.832117000005
+    },
+    "mean_total_by_hour_of_day": {
+      "0": 3638.2224575000037,
+      "1": 3075.1939858333367,
+      "2": 2971.128265333338,
+      "3": 2789.14149566667,
+      "4": 2530.2249772500018,
+      "5": 2363.933532750001,
+      "6": 2756.0314840833357,
+      "7": 3753.565958500003,
+      "8": 4843.521607083338,
+      "9": 5829.451565083338,
+      "10": 6441.120964083332,
+      "11": 6448.38477358333,
+      "12": 6804.991658416671,
+      "13": 6814.020713666668,
+      "14": 7254.188123666667,
+      "15": 7144.808232916671,
+      "16": 6620.150881750007,
+      "17": 6322.9258461666695,
+      "18": 5406.770889250002,
+      "19": 5253.942289833335,
+      "20": 4902.6895083333375,
+      "21": 4687.39467158334,
+      "22": 4728.799717416668,
+      "23": 4394.761037083334
+    },
+    "n_days": 1,
+    "daily_mean_total": {
+      "min": 4907.306859868058,
+      "max": 4907.306859868058
+    },
+    "pair_distribution": {
+      "n_pairs": 2450,
+      "top1_share": 0.03771952557125853,
+      "top10pct_pairs_share": 0.9417346815136021,
+      "pairs_for_80pct": 86,
+      "gini_mean_demand": 0.9475511684986845,
+      "mean_pair_demand_mbps": {
+        "median": 0.007695902777777778,
+        "max": 185.10128658680551
+      },
+      "top5_pairs": [
+        {
+          "pair": "Stuttgart->Frankfurt",
+          "mean_mbps": 185.10128658680551,
+          "share": 0.03771952557125853
+        },
+        {
+          "pair": "Kassel->Frankfurt",
+          "mean_mbps": 163.2376342951389,
+          "share": 0.033264199479778996
+        },
+        {
+          "pair": "Berlin->Frankfurt",
+          "mean_mbps": 159.8527834965278,
+          "share": 0.032574442165784145
+        },
+        {
+          "pair": "Aachen->Frankfurt",
+          "mean_mbps": 157.47826558333333,
+          "share": 0.03209056822412925
+        },
+        {
+          "pair": "Chemnitz->Frankfurt",
+          "mean_mbps": 144.34148426041668,
+          "share": 0.029413584351294802
+        }
+      ]
+    }
+  },
+  "traffic_stats_sample": {
+    "n_matrices": 200,
+    "total_demand_mbps": {
+      "min": 1150.949661,
+      "p5": 2482.214073950004,
+      "median": 5142.0852384999935,
+      "mean": 5083.377085875003,
+      "p95": 7296.62358180001,
+      "max": 7649.832117000005
+    },
+    "mean_total_by_hour_of_day": {
+      "0": 3649.4670503333386,
+      "1": 2904.82216016667,
+      "2": 2964.963412833338,
+      "3": 2805.4502295000025,
+      "4": 2530.0190741666684,
+      "5": 2341.4897951666685,
+      "6": 2726.4630371666694,
+      "7": 3763.908003833336,
+      "8": 4806.509517166671,
+      "9": 5805.947150166673,
+      "10": 6459.490547000001,
+      "11": 6453.796043333327,
+      "12": 6768.337220333337,
+      "13": 6810.677767666667,
+      "14": 7297.55677875,
+      "15": 7144.808232916671,
+      "16": 6620.150881750007,
+      "17": 6322.9258461666695,
+      "18": 5406.770889250002,
+      "19": 5253.942289833335,
+      "20": 4902.6895083333375,
+      "21": 4687.39467158334,
+      "22": 4728.799717416668,
+      "23": 4394.761037083334
+    },
+    "n_days": 1,
+    "daily_mean_total": {
+      "min": 5083.377085875003,
+      "max": 5083.377085875003
+    },
+    "pair_distribution": {
+      "n_pairs": 2450,
+      "top1_share": 0.03724121720893619,
+      "top10pct_pairs_share": 0.9434656535192814,
+      "pairs_for_80pct": 84,
+      "gini_mean_demand": 0.9484545914196503,
+      "mean_pair_demand_mbps": {
+        "median": 0.0068969125,
+        "max": 189.31115020999997
+      },
+      "top5_pairs": [
+        {
+          "pair": "Stuttgart->Frankfurt",
+          "mean_mbps": 189.31115020999997,
+          "share": 0.03724121720893619
+        },
+        {
+          "pair": "Kassel->Frankfurt",
+          "mean_mbps": 165.13342867,
+          "share": 0.03248498505626317
+        },
+        {
+          "pair": "Aachen->Frankfurt",
+          "mean_mbps": 164.59762114,
+          "share": 0.032379581203480175
+        },
+        {
+          "pair": "Berlin->Frankfurt",
+          "mean_mbps": 163.73470997,
+          "share": 0.03220982964749238
+        },
+        {
+          "pair": "Chemnitz->Frankfurt",
+          "mean_mbps": 147.144503075,
+          "share": 0.028946210479617023
+        }
+      ]
+    }
+  },
+  "sample": {
+    "size": 200,
+    "first": "20050215-0005",
+    "last": "20050215-2355",
+    "n_days": 1,
+    "hours_covered": 24,
+    "per_hour_min": 6,
+    "per_hour_max": 12,
+    "e3_size": 50
+  },
+  "paths": {
+    "topology": "Germany50",
+    "k_requested": 4,
+    "padded": false,
+    "backend": "networkx.shortest_simple_paths",
+    "cost": "min-hop; positive-capacity edge weight 1 (P1 generate_paths._weighted_copy)",
+    "tie_break": "NetworkX Yen heap order. This is the call used by frozen P1 generate_paths.py.",
+    "difference_from_p1": "P1 preprocessing/generate_paths.py _pad_paths repeats the shortest path when fewer than 4 simple paths exist. Paths are not repeated here.",
+    "demands": 2450,
+    "paths_generated": 9800,
+    "demands_with_fewer_than_4": 0,
+    "demands_with_no_path": 0,
+    "validation_problems": 0,
+    "positive_demand_pairs_without_path": 0
+  },
+  "bipartite": {
+    "file": "C:\\Users\\DELL\\Documents\\Safe-Network-Digital-Twin-TE\\data\\processed\\graph_data\\Germany50_bipartite.pt",
+    "link_nodes": 176,
+    "path_nodes": 9800,
+    "incidence_edges_one_direction": 46638,
+    "matrices": 200
+  },
+  "normalisation_denominator": 40000.0,
+  "other_archives": {
+    "directed-germany50-DFN-aggregated-1day-over-1month-native.tgz": {
+      "n_matrices": 28,
+      "first": "20050201",
+      "last": "20050228",
+      "granularity": [
+        "1day"
+      ],
+      "units": [
+        "MBITPERSEC"
+      ],
+      "n_valid": 28,
+      "total_demand_median": 4824.704692499997
+    },
+    "directed-germany50-DFN-aggregated-1month-over-1year-native.tgz": {
+      "n_matrices": 14,
+      "first": "200401",
+      "last": "200502",
+      "granularity": [
+        "1month"
+      ],
+      "units": [
+        "MBITPERSEC"
+      ],
+      "n_valid": 14,
+      "total_demand_median": 3863.9482940000034
+    }
+  }
+}
