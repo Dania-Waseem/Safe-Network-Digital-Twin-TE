@@ -1,0 +1,92 @@
+# germany50-readme.txt
+#
+# Project: SndLib
+#
+# Demand matrices from measurements in the German Research Network DFN
+
+*************
+Content:
+*************
+
+1. Origin
+2. Creation
+3. Format
+4. Remarks
+
+
+***********************
+1. Origin
+***********************
+
+The dynamic demand matrices contained in the archives
+  - directed-germany50-DFN-aggregated-5min-over-1day.tgz            (xml files)
+  - directed-germany50-DFN-aggregated-5min-over-1day-native.tgz     (native format files)
+  - directed-germany50-DFN-aggregated-1day-over-1month.tgz          (xml files)
+  - directed-germany50-DFN-aggregated-1day-over-1month-native.tgz   (native format files)
+  - directed-germany50-DFN-aggregated-1month-over-1year.tgz         (xml files)
+  - directed-germany50-DFN-aggregated-1month-over-1year-native.tgz  (native format files)
+are calculated from real-life accounting data
+in the German research network operated by the DFN-Verein
+http://www.dfn.de/.
+
+The data is taken and averaged in
+   - 5min steps over a day,
+   - daily steps over a month, and
+   - monthly steps over a year
+from measurements in the DFN network in the years 2004 and 2005.
+
+The original data consists of counted Bytes in the considered period
+(5min, day, month)
+
+**** NOTICE: THERE MIGHT BE BUGS IN THE DATA, see Remarks ****
+
+***********************
+2. Creation
+***********************
+
+The original DFN network consists of several hundred locations.
+These locations together with the accounting data are confidential.
+
+For this reason and also to provide data for the smaller sndlib networks,
+the traffic is aggregated from the DFN locations to the locations
+of the germany50 network with 50 nodes
+using shortest distances between the original locations and the nodes in the
+mentioned sndlib networks.
+
+- The measurement (Byte) values are converted to MBit/s demand values
+  and rounded up the 6th decimal place.
+- Zero demands are removed, that is, traffic
+  with value smaller than 0.0000005 MBit/s is considered to be 0.
+- The matrices are meant to be directed (just like the original data),
+  that is, there might be traffic between s -> t and also t -> s.
+- Loop traffic is already removed, that is, there is no demand between s <-> s
+
+***********************
+3. Format
+***********************
+
+For the new multiple demand matrix archives we decided NOT to introduce a new XML scheme
+nor data format but to use the existing SNDlib formats.
+This means that also all the available code (parsing/writing) can be used
+for the multiple matrices.
+
+A single demand matrix in the multiple matrices archive is just a Network object without a link section,
+that is, it consists of nodes and demands between the nodes. It follows that the Network
+parser/writer available in the SNDlib API can be used to parse/write a single demand matrix.
+The node sections for all single matrices in the germany50 archives are of course identical and
+correspond to the germany50 sndlib network.
+
+In addition to a node and a demand section a single demand matrix also has a Meta-Section
+giving additional information about the matrix such as the time stamp, the time horizon,
+the origin, and the data unit. The new SNDlib API 1.3 is able to handle this (optional)
+Meta-Section.
+
+***********************
+4. Remarks
+***********************
+
+We do not give any warranty for the correctness of the data.
+There might be mistakes already in the original accounting data.
+We might also have made mistakes in the creation of the data.
+
+

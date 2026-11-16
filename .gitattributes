@@ -2,3 +2,6 @@
 models/**/*.pt filter=lfs diff=lfs merge=lfs -text
 # Large processed graph tensor (was already in LFS)
 data/processed/graph_data/Kdl_bipartite.pt filter=lfs diff=lfs merge=lfs -text
+# Raw downloads are kept byte-for-byte (checksums in SOURCE.md): no line-ending conversion
+data/raw/sndlib/** -text
+data/raw/yates/** -text
