@@ -100,6 +100,12 @@ from the result files alone; every number in it cites its source file.
   topologies overload a link. Every twin-based gate (B–E) reduces unsafe accepts to zero on these
   topologies, as on the training topologies; the improved-twin gates (D, E) also do so under 1–3 link
   failures.
+- **Further unseen topologies (SNDlib).** On Abilene and Germany50 with measured traffic, the frozen gate
+  removes every unsafe accept (policy alone: 97.5 % and 74.0 % of cases overload) without false rejects, and
+  raises applied satisfaction from 0.655 to 0.911 (Abilene) and from 0.931 to 0.949 (Germany50), Holm-corrected
+  p < 1e-90 on each. The framework stays below the LP (0.982 and 0.989), and on Germany50 it only matches
+  ECMP, because the fallback is an equal split there; most rejected cases still overload after fallback.
+  Details are in §15 of `RESULTS_SUMMARY.md`.
 - **Applied quality.** On GEANT the framework raises mean demand satisfaction from 0.880 (policy alone)
   to 0.976 (paired difference +0.096, Holm-corrected p ≈ 7e-228) and has the best Friedman rank across
   40 blocks (χ² = 74.85, p ≈ 1e-14).
